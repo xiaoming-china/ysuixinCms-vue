@@ -1,0 +1,59 @@
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>后台登录</title>
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+	<link rel="stylesheet" href="../css/login.css" media="all" />
+	<link rel="stylesheet" href="../css/main.css" media="all" />
+</head>
+<body class="login">
+	<section>
+		<form class="form-signin" action="../index.html" id="loginForm" method="post">
+			<input type="text" name="username" value="" placeholder="Username" />
+			<input type="password" name="password" placeholder="Password" />
+			<button class="blue">登录</button>
+		</form>
+	</section>
+	<script src="../js/jquery-1.8.3.min.js"></script>
+	<script src="../js/jquery.validate.min.js"></script>
+	<script src="../js/jQuery.Form.js"></script>
+	<script type="text/javascript">
+    $(document).ready(function() {
+        $("#loginForm").validate({
+            submitHandler: function(form){
+             $(form).ajaxSubmit({
+              dataType:"json",
+              success:function(data){
+                  if( data.code = 200 ){
+                      alert("success");
+                  }else{
+                      alert("fail");
+                  }
+                }
+            }); 
+          },
+          rules: {
+             username:'required', 
+             password:'required'
+          },
+           messages: {
+             username: {
+              required:"请输入账号"
+             },
+             password:{
+              required:'请输入密码'
+             }
+          },
+          errorPlacement: function(error, element) { 
+  					//if (element.attr("name") == "txtNumber" )  {
+						// 	element.val(error)  
+						// }  
+          	element.attr('placeholder', $(error).text());
+          	element.addClass('input-error');
+					},
+
+        });
+    });
+    </script>
+</body>
+</html>

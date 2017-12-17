@@ -1,0 +1,213 @@
+<?php
+/**
+ * 栏目控制器
+ */
+namespace backend\controllers;
+
+use Yii;
+use backend\controllers\AdminBaseController;
+use common\models\Category;
+use common\models\Model;
+use yii\db\Connection;
+use yii\helpers\Url;
+use common\lib\PinYin;
+use common\lib\Tree;
+
+
+class CategoryController extends AdminBaseController{
+    public $layout = false;
+    /**
+     * @Author:          xiaoming
+     * @DateTime:        2017-11-13
+     * @name:栏目列表
+     * @copyright:       [copyright]
+     * @license:         [license]
+     * @return           [type]      [description]
+     */
+    public function actionCategoryList(){
+        if($this->isPost()){
+            $category_list = (new \yii\db\Query())
+            ->select('c.*,m.name AS model_name')
+            ->from(Category::tableName().'AS c')
+            ->leftJoin(Model::tableName().' AS m','m.id = c.modelid')
+            ->where(['c.is_delete'=>Category::DELETE_STATUS_FALSE])
+            ->all();
+            $allcategory = (new Tree())->navigation($category_list,0,0,'parentid','catid');
+            return $this->ajaxSuccess('获取成功','',$allcategory);
+        }else{
+            return $this->render('/category/category-list');
+        }
+    }
+    /**
+     * [actionGetCategoryList 根据模型ID获取栏目列表]
+     * @author:xiaoming
+     * @date:2017-12-15T15:21:36+0800
+     * @return                        [type] [description]
+     */
+    public function actionGetCategoryList(){
+        $m_id = $this->get('model_id','');
+        if($m_id == ''){
+          return $this->ajaxFail('参数异常,模型ID不能为空');
+        }
+        //所有栏目
+        $model = new Category();
+        $category_list = $model->find()
+        ->where(['modelid'=>$m_id,'is_delete'=>$model::DELETE_STATUS_FALSE])
+        ->asArray()->all();
+        $allcategory = (new Tree())->navigation($category_list,0,0,'parentid','catid');
+        return $this->ajaxSuccess('获取成功','',$allcategory);
+    }
+    /**
+     * @Author:          xiaoming
+     * @DateTime:        2017-11-08
+     * @name:description 添加栏目
+     * @copyright:       [copyright]
+     * @license:         [license]
+     * @return           [type]      [description]
+     */
+    public function actionAddCategory(){
+        $model = new Category();
+        $model->setScenario('add_category');
+        
+        if($this->isPost()){
+            $post = Yii::$app->request->post();
+            $parentid = $post['parentid'];
+            $post['letter'] = (new PinYin())->getAllPY($post['catname']);//拼音转换
+            $transaction = Yii::$app->db->beginTransaction();
+            try {  
+                if($model->load($post,'') && $model->validate()){
+                    $model_rs = $model->save();
+                    if(!$model_rs){
+                        $transaction->rollBack();
+                        return $this->ajaxFail('添加失败,未知错误');
+                    }
+                    $transaction->commit();
+                    return $this->ajaxSuccess('添加成功',Url::to(['/category/category-list']));
+                }else{
+                    return $this->ajaxFail('添加失败.'.current($model->getErrors())[0]);
+                }
+            }catch (Exception $e) {
+               $transaction->rollBack();
+               return $this->ajaxFail('添加失败,代码异常');
+            }
+        }else{
+            return $this->render('/category/add-category');
+        }
+    }
+    /**
+     * @Author:          xiaoming
+     * @DateTime:        2017-11-08
+     * @name:description 编辑栏目
+     * @copyright:       [copyright]
+     * @license:         [license]
+     * @return           [type]      [description]
+     */
+    public function actionEditCategory(){
+        if($this->isPost()){
+            $id = $this->post('catid','');
+            if($id == ''){
+              return $this->ajaxFail('参数异常,categoryID不能为空');
+            }
+            $model = (new Category())->findOne($id);
+            if(is_null($model)){
+                return $this->ajaxFail('编辑失败，未找到栏目信息');
+            }
+            $model->setScenario('edit_category');
+            $post = Yii::$app->request->post();
+            //拼音转换 
+            $post['letter'] = (new PinYin())->getAllPY($post['catname']);
+            $transaction = Yii::$app->db->beginTransaction();
+            try {  
+                if($model->load($post,'') && $model->validate()){
+                    $model_rs = $model->save();
+                    if(!$model_rs){
+                        $transaction->rollBack();
+                        return $this->ajaxFail('编辑失败,未知错误');
+                    }
+                    $transaction->commit();
+                    return $this->ajaxSuccess('编辑成功',Url::to(['/category/category-list']));
+                }else{
+                    return $this->ajaxFail('编辑失败.'.current($model->getErrors())[0]);
+                }
+            }catch (Exception $e) {
+               $transaction->rollBack();
+               return $this->ajaxFail('编辑失败,未知错误');
+            }
+        }else{
+            return $this->render('/category/edit-category');
+        }
+    }
+
+    /**
+     * @Author:          xiaoming
+     * @DateTime:        2017-11-08
+     * @name:description 删除栏目；假删除
+     * @copyright:       [copyright]
+     * @license:         [license]
+     * @return           [type]      [description]
+     */
+    public function actionDelCategory(){
+        if($this->isPost()){
+            $id        = $this->post('id','');
+            if($id == ''){
+                return $this->error('栏目ID不能为空');
+            }
+            $model = (new Category())->findOne($id);
+            if(is_null($model)){
+                return $this->ajaxFail('未找到相关数据');
+            }
+            //所有栏目
+            $all_category =(new Category())->find()
+            ->where(['is_delete'=>Model::DELETE_STATUS_FALSE])
+            ->asArray()
+            ->all();
+            //当前栏目的所有子级
+            $all_child = (new Tree())->getMenuTree($all_category, $id, 0,'parentid','catid');
+            array_push($all_child,$id);//将当前的栏目追加到子级数组
+            $find_all_category = (new Category())->find()
+                        ->where(['and',
+                            ['catid'=>$all_child],
+                            ['is_delete'=>Model::DELETE_STATUS_FALSE]
+                        ])->all();
+            $r = true;
+            foreach ($find_all_category as $all_model) {
+                $all_model->is_delete = Model::DELETE_STATUS_TRUE;
+                if($all_model->update(false)){
+                    $r = true;
+                }else{
+                    $r = false;
+                    break;
+                }
+            }
+            if($r === false){
+                return $this->ajaxFail('删除失败,未知错误');
+            }else{
+                return $this->ajaxSuccess('删除成功');
+            }
+        }
+    }
+    /**
+     * [actionGetCategoryInfo 获取栏目信息]
+     * @Author:xiaoming
+     * @DateTime        2017-12-15T21:55:48+0800
+     * @return          [type]                   [description]
+     */
+    public function actionGetCategoryInfo($catid = ''){
+        if($catid == ''){
+           return $this->ajaxFail('栏目信息获取失败');
+        }
+        $rs = (new Category())->find()
+                            ->where(['catid'=>$catid])
+                            ->asArray()
+                            ->one();
+        if(empty($rs)){
+           return $this->ajaxFail('栏目信息获取失败');
+        }
+        return $this->ajaxSuccess('获取成功','',$rs);
+    }
+
+
+
+
+
+}

@@ -1,0 +1,483 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <title>管理后台</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../css/zTree/zTreeStyle.css" rel="stylesheet" type="text/css" />
+    <link href="../css/basic.css" rel="stylesheet" type="text/css" />
+    <link href="../css/main.css" rel="stylesheet" type="text/css" />
+    <link href="../css/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+<!--树形开始-->
+<div class="zTreeDemoBackground">
+   <ul id="treeDemo" class="ztree"></ul>
+</div>
+<!--树形结束-->
+<div class="main-content">
+
+	<!--内容区域开始-->
+	<div class="content-main">
+		<div class="bread-nav">
+			<a href="#">首页 > </a>
+			<a href="#">文章 > </a>
+			<a href="#">文学 </a>
+		</div>
+		<div class="bread-do">
+			<a class="a-basic-btn" href="#">
+		  	  <i class="icon-plus" style="color:#006699;"></i> 添加内容
+		  	</a>
+		</div>
+		<div class="bread-nav">搜索</div>
+		<div class="basic-item-seach">
+			<form action="">
+				<label for="">
+					时间：
+					<input type="text" name="start_time" placeholder="开始时间" class="search-start_time"> -
+					<input type="text" name="end_time" placeholder="结束时间" class="search-end_time">
+				</label>
+				<label for="">
+					关键字：
+					<input type="text" name="title" placeholder="标题 / 摘要 / 作者" class="search-title">
+				</label>
+				<label for="">
+					状态：
+				  <select name="status" class="search-status">
+				  	<option value="">全部</option>
+					<option value="1">锁定</option>
+					<option value="2">未锁定</option>
+				  </select>
+			    </label>
+			    <button class="a-basic-btn">搜索</button>
+			</form>
+		</div>
+		<div class="basic-item">
+			<table width="100%">
+		        <colgroup>
+			        <col width="16">
+			        <!-- <col width="30"> -->
+			        <col width="30">
+			        <col width="160">
+			        <col width="80">
+			        <col width="90">
+			        <col width="90">
+			        <col width="90">
+		        </colgroup>
+		        <thead>
+		          <tr>
+		            <td><label><input type="checkbox" class="J_check_all" title="全选"></label></td>
+		            <td>排序</td>
+		            <!-- <td align="center">ID</td> -->
+		            <td>标题</td>
+		            <td align="center">点击量</td>
+		            <td align="center">作者</td>
+		            <td align="center"><span>发布时间</span></td>
+		            <td align="center">操作</td>
+		          </tr>
+		        </thead>
+		        <tbody>
+		        	<tr class="content-list1">
+			            <td><input type="checkbox" name="checkname" ></td>
+			            <td><input name="listorders[30]" class="list-orders-input" type="text" size="3" value="0"></td>
+			            <td>
+			            	<a href="#" target="_black">
+			            		<span style="">alt属性和title属性的区别与介绍</span>
+			            	</a>
+			            </td>
+			            <td align="center">0</td>
+			            <td align="center">admin</td>
+			            <td align="center">2013-06-22 21:32:25</td>
+			            <td align="center">
+			            	<a href="#">修改</a> | 
+			            	<a href="javascript:del_content(1);">删除</a> |  
+			            	<a href="/comment/comment.html">评论管理</a>   
+			            </td>
+          			</tr>
+          			<tr>
+			            <td><input type="checkbox" name="checkname" ></td>
+			            <td><input name="listorders[30]" class="list-orders-input" type="text" size="3" value="0"></td>
+			            <td>
+			            	<a href="#" target="_blank">
+			            		<span style="">alt属性和title属性的区别与介绍</span>
+			            	</a>
+			            </td>
+			            <td align="center">0</td>
+			            <td align="center">admin</td>
+			            <td align="center">2013-06-22 21:32:25</td>
+			            <td align="center">
+			            	<a href="#">修改</a> | 
+			            	<a href="#">删除</a> |  
+			            	<a href="/comment/comment.html">评论管理</a>        
+			            </td>
+          			</tr>
+          			<tr>
+			            <td><input type="checkbox" name="checkname" ></td>
+			            <td><input name="listorders[30]" class="list-orders-input" type="text" size="3" value="0"></td>
+			            <td>
+			            	<a href="#" target="_blank">
+			            		<span style="">alt属性和title属性的区别与介绍</span>
+			            	</a>
+			            </td>
+			            <td align="center">0</td>
+			            <td align="center">admin</td>
+			            <td align="center">2013-06-22 21:32:25</td>
+			            <td align="center">
+			            	<a href="#">修改</a> | 
+			            	<a href="#">删除</a>         
+			            </td>
+          			</tr> 
+          			<tr>
+			            <td><input type="checkbox" name="checkname" ></td>
+			            <td><input name="listorders[30]" class="list-orders-input" type="text" size="3" value="0"></td>
+			            <td>
+			            	<a href="#" target="_blank">
+			            		<span style="">alt属性和title属性的区别与介绍</span>
+			            	</a>
+			            </td>
+			            <td align="center">0</td>
+			            <td align="center">admin</td>
+			            <td align="center">2013-06-22 21:32:25</td>
+			            <td align="center">
+			            	<a href="#">修改</a> | 
+			            	<a href="#">删除</a>         
+			            </td>
+          			</tr> 
+          			<tr>
+			            <td><input type="checkbox" name="checkname" ></td>
+			            <td><input name="listorders[30]" class="list-orders-input" type="text" size="3" value="0"></td>
+			            <td>
+			            	<a href="#" target="_blank">
+			            		<span style="">alt属性和title属性的区别与介绍</span>
+			            	</a>
+			            </td>
+			            <td align="center">0</td>
+			            <td align="center">admin</td>
+			            <td align="center">2013-06-22 21:32:25</td>
+			            <td align="center">
+			            	<a href="#">修改</a> | 
+			            	<a href="#">删除</a>         
+			            </td>
+          			</tr> 
+          			<tr>
+			            <td><input type="checkbox" name="checkname" ></td>
+			            <td><input name="listorders[30]" class="list-orders-input" type="text" size="3" value="0"></td>
+			            <td>
+			            	<a href="#" target="_blank">
+			            		<span style="">alt属性和title属性的区别与介绍</span>
+			            	</a>
+			            </td>
+			            <td align="center">0</td>
+			            <td align="center">admin</td>
+			            <td align="center">2013-06-22 21:32:25</td>
+			            <td align="center">
+			            	<a href="#">修改</a> | 
+			            	<a href="#">删除</a>         
+			            </td>
+          			</tr> 
+          			<tr>
+			            <td><input type="checkbox" name="checkname" ></td>
+			            <td><input name="listorders[30]" class="list-orders-input" type="text" size="3" value="0"></td>
+			            <td>
+			            	<a href="#" target="_blank">
+			            		<span style="">alt属性和title属性的区别与介绍</span>
+			            	</a>
+			            </td>
+			            <td align="center">0</td>
+			            <td align="center">admin</td>
+			            <td align="center">2013-06-22 21:32:25</td>
+			            <td align="center">
+			            	<a href="#">修改</a> | 
+			            	<a href="#">删除</a>         
+			            </td>
+          			</tr> 
+          			<tr>
+			            <td><input type="checkbox" name="checkname" ></td>
+			            <td><input name="listorders[30]" class="list-orders-input" type="text" size="3" value="0"></td>
+			            <td>
+			            	<a href="#" target="_blank">
+			            		<span style="">alt属性和title属性的区别与介绍</span>
+			            	</a>
+			            </td>
+			            <td align="center">0</td>
+			            <td align="center">admin</td>
+			            <td align="center">2013-06-22 21:32:25</td>
+			            <td align="center">
+			            	<a href="#">修改</a> | 
+			            	<a href="#">删除</a>         
+			            </td>
+          			</tr> 
+          			<tr>
+			            <td><input type="checkbox" name="checkname" ></td>
+			            <td><input name="listorders[30]" class="list-orders-input" type="text" size="3" value="0"></td>
+			            <td>
+			            	<a href="#" target="_blank">
+			            		<span style="">alt属性和title属性的区别与介绍</span>
+			            	</a>
+			            </td>
+			            <td align="center">0</td>
+			            <td align="center">admin</td>
+			            <td align="center">2013-06-22 21:32:25</td>
+			            <td align="center">
+			            	<a href="#">修改</a> | 
+			            	<a href="#">删除</a>         
+			            </td>
+          			</tr> 
+          			<tr>
+			            <td><input type="checkbox" name="checkname" ></td>
+			            <td><input name="listorders[30]" class="list-orders-input" type="text" size="3" value="0"></td>
+			            <td>
+			            	<a href="#" target="_blank">
+			            		<span style="">alt属性和title属性的区别与介绍</span>
+			            	</a>
+			            </td>
+			            <td align="center">0</td>
+			            <td align="center">admin</td>
+			            <td align="center">2013-06-22 21:32:25</td>
+			            <td align="center">
+			            	<a href="#">修改</a> | 
+			            	<a href="#">删除</a>         
+			            </td>
+          			</tr>
+          			<tr>
+			            <td><input type="checkbox" name="checkname" ></td>
+			            <td><input name="listorders[30]" class="list-orders-input" type="text" size="3" value="0"></td>
+			            <td>
+			            	<a href="#" target="_blank">
+			            		<span style="">alt属性和title属性的区别与介绍</span>
+			            	</a>
+			            </td>
+			            <td align="center">0</td>
+			            <td align="center">admin</td>
+			            <td align="center">2013-06-22 21:32:25</td>
+			            <td align="center">
+			            	<a href="#">修改</a> | 
+			            	<a href="#">删除</a>         
+			            </td>
+          			</tr> 
+          			<tr>
+			            <td><input type="checkbox" name="checkname" ></td>
+			            <td><input name="listorders[30]" class="list-orders-input" type="text" size="3" value="0"></td>
+			            <td>
+			            	<a href="#" target="_blank">
+			            		<span style="">alt属性和title属性的区别与介绍</span>
+			            	</a>
+			            </td>
+			            <td align="center">0</td>
+			            <td align="center">admin</td>
+			            <td align="center">2013-06-22 21:32:25</td>
+			            <td align="center">
+			            	<a href="#">修改</a> | 
+			            	<a href="#">删除</a>         
+			            </td>
+          			</tr> 
+          			<tr>
+			            <td><input type="checkbox" name="checkname" ></td>
+			            <td><input name="listorders[30]" class="list-orders-input" type="text" size="3" value="0"></td>
+			            <td>
+			            	<a href="#" target="_blank">
+			            		<span style="">alt属性和title属性的区别与介绍</span>
+			            	</a>
+			            </td>
+			            <td align="center">0</td>
+			            <td align="center">admin</td>
+			            <td align="center">2013-06-22 21:32:25</td>
+			            <td align="center">
+			            	<a href="#">修改</a> | 
+			            	<a href="#">删除</a>         
+			            </td>
+          			</tr> 
+          			<tr>
+			            <td><input type="checkbox" name="checkname" ></td>
+			            <td><input name="listorders[30]" class="list-orders-input" type="text" size="3" value="0"></td>
+			            <td>
+			            	<a href="#" target="_blank">
+			            		<span style="">alt属性和title属性的区别与介绍</span>
+			            	</a>
+			            </td>
+			            <td align="center">0</td>
+			            <td align="center">admin</td>
+			            <td align="center">2013-06-22 21:32:25</td>
+			            <td align="center">
+			            	<a href="#">修改</a> | 
+			            	<a href="#">删除</a>         
+			            </td>
+          			</tr> 
+          			<tr>
+			            <td><input type="checkbox" name="checkname" ></td>
+			            <td><input name="listorders[30]" class="list-orders-input" type="text" size="3" value="0"></td>
+			            <td>
+			            	<a href="#" target="_blank">
+			            		<span style="">alt属性和title属性的区别与介绍</span>
+			            	</a>
+			            </td>
+			            <td align="center">0</td>
+			            <td align="center">admin</td>
+			            <td align="center">2013-06-22 21:32:25</td>
+			            <td align="center">
+			            	<a href="#">修改</a> | 
+			            	<a href="#">删除</a>         
+			            </td>
+          			</tr> 
+          			<tr>
+			            <td><input type="checkbox" name="checkname" ></td>
+			            <td><input name="listorders[30]" class="list-orders-input" type="text" size="3" value="0"></td>
+			            <td>
+			            	<a href="#" target="_blank">
+			            		<span style="">alt属性和title属性的区别与介绍</span>
+			            	</a>
+			            </td>
+			            <td align="center">0</td>
+			            <td align="center">admin</td>
+			            <td align="center">2013-06-22 21:32:25</td>
+			            <td align="center">
+			            	<a href="#">修改</a> | 
+			            	<a href="#">删除</a>         
+			            </td>
+          			</tr> 
+          			<tr>
+			            <td><input type="checkbox" name="checkname" ></td>
+			            <td><input name="listorders[30]" class="list-orders-input" type="text" size="3" value="0"></td>
+			            <td>
+			            	<a href="#" target="_blank">
+			            		<span style="">alt属性和title属性的区别与介绍</span>
+			            	</a>
+			            </td>
+			            <td align="center">0</td>
+			            <td align="center">admin</td>
+			            <td align="center">2013-06-22 21:32:25</td>
+			            <td align="center">
+			            	<a href="#">修改</a> | 
+			            	<a href="#">删除</a>         
+			            </td>
+          			</tr> 
+          			<tr>
+			            <td><input type="checkbox" name="checkname" ></td>
+			            <td><input name="listorders[30]" class="list-orders-input" type="text" size="3" value="0"></td>
+			            <td>
+			            	<a href="#" target="_blank">
+			            		<span style="">alt属性和title属性的区别与介绍</span>
+			            	</a>
+			            </td>
+			            <td align="center">0</td>
+			            <td align="center">admin</td>
+			            <td align="center">2013-06-22 21:32:25</td>
+			            <td align="center">
+			            	<a href="#">修改</a> | 
+			            	<a href="#">删除</a>         
+			            </td>
+          			</tr> 
+          			<tr>
+			            <td><input type="checkbox" name="checkname"></td>
+			            <td><input name="listorders[30]" class="list-orders-input" type="text" size="3" value="0"></td>
+			            <td>
+			            	<a href="#" target="_blank">
+			            		<span style="">alt属性和title属性的区别与介绍</span>
+			            	</a>
+			            </td>
+			            <td align="center">0</td>
+			            <td align="center">admin</td>
+			            <td align="center">2013-06-22 21:32:25</td>
+			            <td align="center">
+			            	<a href="#">修改</a> | 
+			            	<a href="#">删除</a>         
+			            </td>
+          			</tr>
+          			<tr>
+			            <td><input type="checkbox" name="checkname"></td>
+			            <td><input name="listorders[30]" class="list-orders-input" type="text" size="3" value="1"></td>
+			            <td>
+			            	<a href="#" target="_blank">
+			            		<span style="">alt属性和title属性的区别与介绍</span>
+			            	</a>
+			            </td>
+			            <td align="center">0</td>
+			            <td align="center">admin</td>
+			            <td align="center">2013-06-22 21:32:25</td>
+			            <td align="center">
+			            	<a href="#">修改</a> | 
+			            	<a href="#">删除</a>         
+			            </td>
+          			</tr>  
+          		</tbody>
+              </table>
+                <div class="item-page">
+                	<span>共12页 / 第1页</span>
+              		<a href="#">首页</a>
+              		<a href="#" class="current">1</a>
+              		<a href="#">2</a>
+              		<a href="#">3</a>
+              		<a href="#">尾页</a>
+                </div>
+		</div>
+		      <div class="btn_wrap_pd">
+		        <label style="margin-right: 20px;margin-left: 10px;">
+		        	<input type="checkbox" class="J_check_all" style="margin-right: 3px;">全选
+		        </label>                
+		        <a class="a-basic-btn">排序</a>
+		        <a class="a-basic-btn">审核</a>
+		        <a class="a-basic-btn">取消审核</a>
+		        <a class="a-basic-btn">删除</a>
+		        <a class="a-basic-btn">推送</a>
+		        <a class="a-basic-btn">批量移动</a>
+		        <a class="a-basic-btn">批量生成HTML</a>
+		      </div>
+	</div>
+
+
+
+
+</div>
+	<!--内容区域结束-->
+
+<script src="../js/jquery-1.8.1.min.js"></script>
+<script src="../js/jquery.ztree.core.js"></script>
+<script src="../js/jquery.nicescroll.js"></script>
+<script src="../js/main.js"></script>
+
+
+
+<script type="text/javascript">
+	var setting = {};
+	var zNodes =[
+		{ name:"全部",
+			children: [
+				{ name:"文章列表",
+					children: [
+						{ name:"文章分类1",url:"publish_content.html",'target':'main'},
+						{ name:"文章分类2",url:"publish_content.html",'target':'main'},
+						{ name:"文章分类3",url:"publish_content.html",'target':'main'},
+						{ name:"文章分类4",url:"publish_content.html",'target':'main'},
+					]},
+				{ name:"图片列表",
+					children: [
+						{ name:"图片分类1",url:"publish_content.html",'target':'main'},
+						{ name:"图片分类2",url:"publish_content.html",'target':'main'},
+						{ name:"图片分类3",url:"publish_content.html",'target':'main'},
+						{ name:"图片分类4",url:"publish_content.html",'target':'main'}
+					]},
+			]},
+	];
+	$(document).ready(function(){
+		$.fn.zTree.init($("#treeDemo"), setting, zNodes);
+		$.fn.zTree.getZTreeObj("treeDemo").expandAll(true);
+	});
+		//删除模型
+	function del_content(n){
+		var index = top.layer.confirm('确定删除此内容吗？', {
+		  title:'提示',
+		  btn: ['确定','取消']
+		}, function(){
+			top.layer.close(index);
+			top.layer.msg('删除成功', {
+		      time: 1500,
+		    },function(){
+		    	$('.content-list' + n).remove();
+			});
+		}, function(){});
+	}
+</script>
+	
+</body>
+</html>

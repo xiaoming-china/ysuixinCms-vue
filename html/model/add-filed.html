@@ -1,0 +1,272 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <title>管理后台-添加字段</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../css/zTree/zTreeStyle.css" rel="stylesheet" type="text/css" />
+    <link href="../css/basic.css" rel="stylesheet" type="text/css" />
+    <link href="../css/main.css" rel="stylesheet" type="text/css" />
+    <link href="../css/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+	<div class="main-content" style="margin: 10px 0px 0px 20px;">
+		<div class="bread-nav">
+			<a href="#">首页 > </a>
+			<a href="#">内容 > </a>
+			<a href="#">添加字段  </a>
+		</div>
+		<div class="basic-item">
+		<form action="?" method="post" class="form validate" id="J_Form">
+			<table class="add-table">
+				<tbody>
+		        	<tr>
+		              <th width="200">
+		              	<i class="requird"></i>字段名称
+						<p>中英文；最多10个字符；如性别</p>
+		              </th>
+		              <td><input type="text" class="input"></td>
+		            </tr>
+		            <tr>
+		              <th width="200">
+		              	<i class="requird"></i>字段标识
+		              	<p>只能为英文；最多10个字符；如：sex</p>
+		              </th>
+		              <td>
+		              	<input type="text" class="input" name="filed_mark">
+		              </td>
+		            </tr>
+		            <tr>
+		              <th width="200">
+		              	<i class="requird"></i>字段类型
+		              	<p>需要添加字段的类型；如：选择文本框，则会生成文本框的字段</p>
+		              </th>
+		              <td>
+		              		<select name="filed_type" class="input" name="filed_type">
+								<option value="">请选择字段类型</option>
+								<option value="1">文本框</option>
+								<option value="2">单选框</option>
+								<option value="3">多选框</option>
+								<option value="4">多文件上传</option>
+								<option value="5">单文件上传</option>
+								<option value="6">富文本编辑器</option>
+							</select>
+		              </td>
+		            </tr>
+		            <tr>
+		              <th width="200">
+		              	<i class="requird"></i>字段格式
+		              	<p>数据库生成的字段格式</p>
+		              </th>
+		              <td>
+		              		<select class="input" name="filed_format">
+								<option value="">请选择字段格式</option>
+								<option value="">数值型</option>
+								<option value="tinyint">&nbsp;&nbsp;&nbsp;&nbsp;|—— tinyint</option>
+								<option value="smallint">&nbsp;&nbsp;&nbsp;&nbsp;|—— smallint</option>
+								<option value="int">&nbsp;&nbsp;&nbsp;&nbsp;|—— int</option>
+								<option value="bigint">&nbsp;&nbsp;&nbsp;&nbsp;|—— bigint</option>
+								<option value="mediumint">&nbsp;&nbsp;&nbsp;&nbsp;|—— mediumint</option>
+								<option value="">浮点型</option>
+								<option value="float">&nbsp;&nbsp;&nbsp;&nbsp;|—— float</option>
+								<option value="double">&nbsp;&nbsp;&nbsp;&nbsp;|—— double</option>
+								<option value="decimal">&nbsp;&nbsp;&nbsp;&nbsp;|—— decimal</option>
+								<option value="">字符型</option>
+								<option value="char">&nbsp;&nbsp;&nbsp;&nbsp;|—— char</option>
+								<option value="varchar">&nbsp;&nbsp;&nbsp;&nbsp;|—— varchar</option>
+								<option value="tinytext">&nbsp;&nbsp;&nbsp;&nbsp;|—— tinytext</option>
+								<option value="text">&nbsp;&nbsp;&nbsp;&nbsp;|—— text</option>
+								<option value="mediumtext">&nbsp;&nbsp;&nbsp;&nbsp;|—— mediumtext</option>
+								<option value="longtext">&nbsp;&nbsp;&nbsp;&nbsp;|—— longtext</option>
+							</select>
+		              </td>
+		            </tr>
+		            <tr class="select_value_tr hide">
+		              <th width="200">
+		              	<i class="requird"></i>选项值
+		              	<p>单选框或者复选框选项值；格式为：选项名称|选项值。多个用英文;隔开。如：男|0;女|1</p>
+		              </th>
+		              <td>
+		              	<textarea class="input" name="select_value" style="height:100px;width:400px;"></textarea>
+		              </td>
+		            </tr>
+		            <tr>
+		              <th width="200">
+		              	<i class="requird"></i>是否必填
+		              </th>
+		              <td>
+		              		<input type="radio" name="no_empty" value="1" checked> 是
+							<input type="radio" name="no_empty" value="2"> 否
+		              </td>
+		            </tr>
+		            <tr>
+		              <th width="200">
+		              	<i class="requird"></i>值长度范围
+		              </th>
+		              <td>
+						最小值 <input type="text" class="input" name="max_length">
+						最大值 <input type="text" class="input" name="max_length">
+		              </td>
+		            </tr>
+		            <tr>
+		              <th width="200">
+		              	<i class="requird"></i>正则验证
+		              	<p>正则验证数据的合法性；如：正则验证数字为“^[0-9]*$”</p>
+		              </th>
+		              <td>
+						<input type="text" class="input" name="regular_fitter">
+		              </td>
+		            </tr>
+		            <tr>
+		              <th width="200">
+		              	<i class="requird"></i>必填时提示信息
+		              	<p>如果字段为必填时，用户未填写信息出现的提示。最多15个字符</p>
+		              </th>
+		              <td>
+						<input type="text" class="input" name="empty_info">
+		              </td>
+		            </tr>
+		            <tr>
+		              <th width="200">
+		              	<i class="requird"></i>错误提示信息
+		              	<p>如果字段为填写出错时出现的提示。如：格式不符合。</p>
+		              </th>
+		              <td>
+						<input type="text" class="input" name="error_info">
+		              </td>
+		            </tr>
+          		<tbody>
+			</table>
+			<div class="btn_wrap_pd" style="left:0;">
+		        <button type="submit" class="a-basic-btn">确定</button>
+		        <div class="table-info"></div>
+		    </div>
+		</form>
+		</div>
+	</div>
+
+
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/layer/2.3/layer.js"></script>
+<script src="../js/jquery.validate.min.js"></script>
+<script src="../js/jQuery.Form.js"></script>
+<script src="../js/main.js"></script>
+<script>
+	$(document).ready(function() {
+			//字段类型处理
+			$('select[name="filed_type"]').change(function(event) {
+				var value = $(this).val();
+				if(value == 2 || value == 3){
+					$('.select_value_tr').show();
+				}else{
+					$('.select_value_tr').hide();
+				}
+			});
+			//是否为空处理
+			$('input:radio[name="no_empty"]').change(function(event) {
+				var value = $(this).val();
+				if(value == 1){
+					$('.empty_info_tr').show();
+				}else{
+					$('.empty_info_tr').hide();
+				}
+			});
+		//添加字段表单验证
+		//验证字段标识为英文
+		jQuery.validator.addMethod("isEnglish", function(value, element) {   
+		    var reg= /^[A-Za-z]+$/;
+		    return this.optional(element) || (reg.test(value));
+		}, "字段标识只能为英文");
+
+		$("#J_Form").validate({
+			ignore: ".ignore",
+	        rules: {
+	            filed_name:{
+	            	required:true,
+	            	maxlength:10
+	            },
+	            filed_mark:{
+	            	required:true,
+	            	maxlength:10,
+	            	isEnglish:true
+	            },
+	            filed_type:{
+	            	required:true
+	            },
+	            filed_format:{
+	            	required:true
+	            },
+	            select_value:{
+	            	required:true
+	            },
+	            max_length:{
+	            	digits:true
+	            },
+	            empty_info:{
+	            	required:true,
+	            	maxlength:15
+	            },
+	            error_info:{
+	            	required:true,
+	            	maxlength:15
+	            },
+	        },
+	        messages: {
+	            filed_name:{
+	            	required:'字段名称不能为空',
+	            	maxlength:'字段名称最多10个字符'
+	            },
+	            filed_mark:{
+	            	required:'字段标识不能为空',
+	            	maxlength:'字段标识最多10个字符'
+	            },
+	            filed_type:{
+	            	required:'字段类型不能为空'
+	            },
+	            filed_format:{
+	            	required:'字段格式不能为空'
+	            },
+	            select_value:{
+	            	required:'字段选项值不能为空'
+	            },
+	            max_length:{
+	            	digits:'最大值必须为整数'
+	            },
+	            empty_info:{
+	            	required:'必填时提示信息不能为空',
+	            	maxlength:'必填时提示信息最多15个字符'
+	            },
+	            error_info:{
+	            	required:'错误提示信息为空',
+	            	maxlength:'错误提示信息最多15个字符'
+	            }
+	        },
+	        //errorLabelContainer: $('.error-info'),
+			errorPlacement: function(error, element) {
+			},
+			invalidHandler:function(form,validator){
+				$.each(validator.invalid, function(k,v) {
+					top.layer.alert(v + '！', {
+					  title:'提示'
+					});
+				    return false;
+				});
+			},
+			submitHandler: function(form){
+	            ajax_submit(form);
+	        },
+	    });
+		
+	});
+
+</script>
+
+
+
+
+
+
+	
+</body>
+</html>

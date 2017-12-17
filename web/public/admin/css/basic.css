@@ -1,0 +1,120 @@
+/*发布内容也ztree开始*/
+.zTreeDemoBackground{
+    width: 10%;
+    float: left;
+    border-right: 2px solid #E0E0E0;
+    position: fixed;
+    padding-top: 20px;
+    /*top: 65px;*/
+}
+.content-main{
+	width: 89%;
+	overflow: auto;
+	height: 100%;
+	float: right;
+	margin-top: 22px;
+}
+.table-form{
+    width: 100%;
+}
+.table-form tr{
+    height: 60px;
+    line-height: 60px;
+}
+.table-title{
+    width: 12%;
+    padding-right: 20px;
+    padding: 0 20px 0 20px;
+    vertical-align: initial;
+    text-align: right;
+}
+.table-text{
+    width: 30%;
+}
+.table-info{
+    padding-left: 10px;
+}
+/*发布内容ztree结束*/
+.template-list{
+    margin-top:15px;
+}
+.template-list .template-info{
+    float: left;
+    margin-right:40px;
+    position: relative;
+    cursor: pointer;
+}
+.template-list .template-info p{
+    margin: 10px 0 10px 0;
+}
+.template-list .template-info .title{
+    text-align: center;
+}
+.template-list .template-info .is-select{
+    display: block;
+    width: 100%;
+    height: 456px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.template-list .template-info .on{
+    background:url('../img/check40.png') no-repeat 50% 50% rgba(0,0,0,0.3);
+}
+.template-list .template-info  .cover{
+    width: 432px;
+    height: 456px;
+}
+.img-view{
+    padding: 4px 4px;
+    cursor: pointer;
+}
+/*
+===================
+输入框文本框长度
+===================
+*/
+.length_0{
+    width:20px;
+}
+.length_1{
+    width:50px;
+}
+.length_2{
+    width:110px;
+}
+.length_3{
+    width:170px;
+}
+.length_4{
+    width:230px;
+}
+.length_5{
+    width:290px;
+}
+.length_6{
+    width:350px;
+}
+/*
+===================
+选择select专属长度
+===================
+*/
+.select_1{
+    width:60px;
+}
+.select_2{
+    width:120px;
+}
+.select_3{
+    width:180px;
+}
+.select_4{
+    width:240px;
+}
+.select_5{
+    width:300px;
+}
+.select_6{
+    width:360px;
+}
