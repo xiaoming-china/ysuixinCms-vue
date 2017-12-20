@@ -21,7 +21,8 @@
         "yiisoft/yii2-imagine": "^2.1",
         "pjkui/kindeditor": "dev-master",
         
-        "myweishanli/yii2-ip2location": "^1.0"
+        "myweishanli/yii2-ip2location": "^1.0",
+        "trntv/yii2-file-kit": "^1.2"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",

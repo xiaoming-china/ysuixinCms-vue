@@ -1,10 +1,12 @@
 <?php
 namespace backend\controllers;
-use common\models\Upload;
+use common\lib\Upload;
+use common\lib\Image;
 use yii\web\UploadedFile;
 use yii\web\Controller;
 use yii;
-class UploadController extends Controller{
+use backend\controllers\AdminBaseController;
+class UploadController extends AdminBaseController{
     public function init(){
         $this->enableCsrfValidation = false;
     }
@@ -15,63 +17,37 @@ class UploadController extends Controller{
      * @return          [type]                   [description]
      */
     public function actionUpload (){
-        $model = new Upload();
-        $parameter = Yii::$app->request->get('parameter'); //配置参数
-        if (Yii::$app->request->isPost) {
-            $model->upload_type = 'img';
-            //echo $model->max_size;exit;
-            // $model->load(,'');
-            $model->file = UploadedFile::getInstanceByName('imgFile');
-            //检测上传类型
-            // if(!$model->checkType($model->file->extension)){
-            //     self::failUpload(1,'上传后缀不允许,只允许'.$parameter['ext']);
-            // }
-            // //检测上传大小
-            // if(!$model->checkSize($model->file->size)){
-            //     self::failUpload(1,'只允许大小为'.$parameter['max_size'].'的文件');
-            // }
-            //上传文件保存目录
-            $save_path = '../uploads/'.date('Ymd');
-            if(!$model->createDir($save_path)){
-                self::failUpload(1,$parameter['save_path'].'目录创建失败');
-            }
+        $upload = new Upload();
+        $upload->maxSize = 1024*1024;
+        $upload->exts = ['jpg','jpeg','png','gif'];
 
-            $fileName = $model->file->baseName . "." . $model->file->extension;
-            $dir = $save_path."/". $fileName;
-            //print_r(Yii::$app->request->hostInfo.'/'.$dir);exit;
-            if($model->file->saveAs($dir)){
-                $d['error'] = 0;
-                $d['url']   = Yii::$app->request->hostInfo.'/'.$dir;
-            }else{
-                $d['error']   = 1;
-                $d['message'] = $model->file->getHasError();
-            }
-            echo json_encode($d);
+        if($info = $upload->uploadOne($_FILES['imgFile'])){
+            $rs['name']      = $info['savename'];
+            $rs['base_url']  = Yii::$app->request->getHostInfo();
+            $rs['path']      = $upload->rootPath.$info['savepath'];
+            // $img = new Image();
+            // $path = $upload->rootPath.$info['savepath'];
+            // //缩略图
+            // $img->open($path.$info['savename']);
+            // $img->thumb($img->width()/2, $img->height()/2);
+
+            
+            // !$img->save($path.'thumb_'.$info['savename']) && return_msg('缩略图生成失败!');
+
+            // if($config['is_watermark']==1){
+
+            //     //水印图
+            //     if(is_file(substr($config['watermark_image'],1))){
+            //         $img->open($path.$info['savename']);
+            //         $img->water(substr($config['watermark_image'],1),$config['watermark_position']);
+            //         !$img->save($path.$info['savename']) && return_msg('添加水印失败!');
+            //     }
+            // }
+            return $this->ajaxSuccess('上传成功','',$rs);
+            
+        }else{
+            return $this->ajaxFail($upload->getError());
         }
-   }
-   /**
-    * [failUpload 上传返回错误数据]
-    * @Author:xiaoming
-    * @DateTime        2017-04-19T14:11:44+0800
-    * @return          [type]                   [description]
-    */
-   private static function failUpload($error = 1,$message=""){
-        $d['error'] = $error;
-        $d['message'] = $message;
-        echo json_encode($d);
-        exit;
-   }
-    /**
-    * [failUpload 上传成功错误数据]
-    * @Author:xiaoming
-    * @DateTime        2017-04-19T14:11:44+0800
-    * @return          [type]                   [description]
-    */
-   private static function successUpload($error = 0,$url=""){
-        $d['error'] = $error;
-        $d['url']   = $url;
-        echo json_encode($d);
-        exit;
    }
    /**
     * [actionDelPic 删除图片]

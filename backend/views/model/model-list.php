@@ -235,7 +235,7 @@
               <span v-if="!loading">确定</span>
               <span v-else>Loading...</span>
            </i-button>
-           <i-button type="info" @click="editModel=false;">取消</i-button>
+           <i-button type="info" @click="hideeditModel('ModelInfo')">取消</i-button>
         </p>
       </Modal>
 
@@ -410,6 +410,7 @@
                     params, 
                     'post',
                     function(res){
+                      _that.$Message.success('添加成功;');
                       _that.$refs[name].resetFields();
                       _that.showAddModel = false;
                       _that.getModelList();
@@ -429,6 +430,10 @@
             this.ModelInfo.desc   = this.modelList[key]['desc'];
             this.ModelInfo.status = this.modelList[key]['status'];
             this.editModel = true;
+          },
+          hideeditModel:function(name){
+            this.editModel = false;
+            this.$refs[name].resetFields();
           },
           editModelInfo:function(name){
             this.$refs[name].validate((valid) => {

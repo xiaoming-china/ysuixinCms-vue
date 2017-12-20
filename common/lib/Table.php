@@ -24,10 +24,13 @@ class Table extends BaseModel{
 			'content'     =>'text default ""',
 			'view'        =>'integer(11) default 0',
 			'url'         =>'varchar(500) default ""',
-			'status'	  =>'smallint(6) default 0',
+			'status'	  =>'smallint(6) default 1',
 			'sort'		  =>'smallint(6) default 1',
 			'is_delete'   =>'tinyint(2) default 2',
 			'create_by'   =>'varchar(20)',
+			'publish_time'  =>'integer(11)',
+			'allow_comment' =>'tinyint(2) default 1',
+			'show_template' =>'varchar(500)',
 			'created_at'    =>'integer(11)',
 			'update_at' =>'integer(11)',
 		];
@@ -53,9 +56,11 @@ class Table extends BaseModel{
 		    'radio' => 'varchar(255)',
 		    'check' => 'varchar(255)',
 		    'date' => 'int(11)',
-		    'downfile' => 'varchar(255)',
-		    'downfiles' => 'varchar(255)',
-		    'omnipotent' => 'varchar(255)',
+		    'pic_upload' => 'varchar(500)',
+		    'downfile' => 'varchar(500)',
+		    'downfiles' => 'varchar(500)',
+		    'omnipotent' => 'varchar(500)',
+		    
 		];
 		//可用默认模型字段
 		const modelTablesInsert = '/data/basic_field.sql'; 
@@ -115,14 +120,32 @@ class Table extends BaseModel{
 	 * @param           [type]$columns [表的列名称]
 	 * @return          [type][description]
 	 */
-	public static function addTable($table_name,$filed){
-		$table_name = Yii::$app->params['tablePrefix'].$table_name;
-		if(!$table_name){
+	public static function addTable($table_name = '',$filed){
+		if($table_name == ''){
 		  return false;
 		}
+		$table_name = Yii::$app->params['tablePrefix'].$table_name;
 		$rs = Yii::$app->db->createCommand()->createTable($table_name, $filed)->execute();
 		return $rs == 0 ? true : false;
 	}
+	/**
+	 * [dropTable 删除表]
+	 * @author:xiaoming
+	 * @date:2017-12-19T11:38:59+0800
+	 * @param                         string $table_name [description]
+	 * @return                        [type]             [description]
+	 */
+	public static function dropTable($table_name = ''){
+		if($table_name == ''){
+		  return false;
+		}
+		$table_name = Yii::$app->params['tablePrefix'].$table_name;
+
+		$rs = Yii::$app->db->createCommand()->dropTable($table)->execute();
+		return $rs == 0 ? true : false;
+	}
+
+	
 	/**
 	 * [renameTable 修改表名]
 	 * @Author:xiaoming
@@ -157,13 +180,12 @@ class Table extends BaseModel{
 			return false;
 		}
 		$modelTablesInsert = file_get_contents($d);
-  		$table_name = Yii::$app->params['tablePrefix'].'model_field';//获取数据库前缀
+  		$table_name = Yii::$app->params['tablePrefix'].'model_field';
         //表名，模型id替换
         $sql = str_replace(array('@tableName@', '@modelid@', '@createdAt@', '@updatedAt@'), array($table_name,$mId,time(),time()),$modelTablesInsert);
         //p($sql);
-		$rs = Yii::$app->db->createCommand($sql)->execute();
-		//p($rs);
-		return $rs = 1 ? true : false;
+		Yii::$app->db->createCommand($sql)->execute();
+		return true;
 	}
 	/**
 	 * [addColumn 增加列]

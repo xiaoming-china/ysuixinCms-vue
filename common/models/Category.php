@@ -6,6 +6,7 @@ use Yii;
 use common\models\BaseModel;
 use common\models\Model;
 use yii\db\Query;
+use common\lib\Tree;
 
 class Category extends BaseModel{
 
@@ -137,6 +138,38 @@ class Category extends BaseModel{
         ->asArray()
         ->all();
 
+    }
+    /**
+     * [actionGetCategoryList 根据模型ID获取栏目列表]
+     * @author:xiaoming
+     * @date:2017-12-15T15:21:36+0800
+     * @return                        [type] [description]
+     */
+    public function getCategoryList($model_id = ''){
+        if($model_id == ''){
+          return false;
+        }
+        $model = new Category();
+        $category_list = $model->find()
+        ->select('catid,parentid,catname')
+        ->where(['modelid'=>$model_id,'is_delete'=>$model::DELETE_STATUS_FALSE])
+        ->asArray()->all();
+        $all_category = self::manyArray($category_list, 0);
+        return $all_category;
+    }
+    private static function manyArray($cate,$pid = 0){
+        $arr = [];
+        foreach ($cate as $key => $value) {
+            $v = [];
+            if($value['parentid'] == $pid){
+                $v['catid']    = $value['catid'];
+                $v['title']    = $value['catname'];
+                $v['expand']   = true;
+                $v['children'] = self::manyArray($cate,$value['catid']);
+                $arr[] = $v;
+            }
+        }
+        return $arr;
     }
 
 

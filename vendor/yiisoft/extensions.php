@@ -66,4 +66,22 @@ return array (
       '@yii/debug' => $vendorDir . '/yiisoft/yii2-debug',
     ),
   ),
+  'yiisoft/yii2-jui' => 
+  array (
+    'name' => 'yiisoft/yii2-jui',
+    'version' => '2.0.6.0',
+    'alias' => 
+    array (
+      '@yii/jui' => $vendorDir . '/yiisoft/yii2-jui',
+    ),
+  ),
+  'trntv/yii2-file-kit' => 
+  array (
+    'name' => 'trntv/yii2-file-kit',
+    'version' => '1.2.1.0',
+    'alias' => 
+    array (
+      '@trntv/filekit' => $vendorDir . '/trntv/yii2-file-kit/src',
+    ),
+  ),
 );

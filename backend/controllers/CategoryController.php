@@ -49,12 +49,7 @@ class CategoryController extends AdminBaseController{
         if($m_id == ''){
           return $this->ajaxFail('参数异常,模型ID不能为空');
         }
-        //所有栏目
-        $model = new Category();
-        $category_list = $model->find()
-        ->where(['modelid'=>$m_id,'is_delete'=>$model::DELETE_STATUS_FALSE])
-        ->asArray()->all();
-        $allcategory = (new Tree())->navigation($category_list,0,0,'parentid','catid');
+        $allcategory = (new Category())->getCategoryList($m_id);
         return $this->ajaxSuccess('获取成功','',$allcategory);
     }
     /**

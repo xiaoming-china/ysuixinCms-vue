@@ -52,23 +52,12 @@ class ContentController extends AdminBaseController{
      * @return           [type]      [description]
      */
     public function actionAddContent(){
-        // $modelid = Yii::$app->request->get('modelid','');
-        // $catid   = Yii::$app->request->get('catid','');
-        // if($modelid == '' || $catid == ''){
-        //   return $this->error('模型ID或者栏目ID不能为空不能为空');
-        // }
-        // //获取当前栏目所属模型的所有字段
-        // $model_field = (new Field())->getModelField($modelid);
-        // if(empty($model_field)){
-        //  return $this->error('模型字段获取失败');
-        // }
-        // $category_info = (new Category())->getCategoryInfo($catid);
-        // if(!$model_field){
-        //  return $this->error('栏目信息获取失败');
-        // }
         $this->layout = false;
         if($this->isPost()){
             $post    = Yii::$app->request->post();
+            //p($post['publish_time']);
+            //date('Y-m-d H:i:s',strtotime($post['publish_time']));
+            p(strtotime($post['publish_time']));
             $post['category_id'] = $catid;
             $model_field = (new Field())->getModelField($modelid);
             //验证数据库字段的合法性
@@ -96,14 +85,18 @@ class ContentController extends AdminBaseController{
     public function actionGetModelField(){
         $modelid = Yii::$app->request->get('modelid','');
         if($modelid == ''){
-          return $this->error('模型ID不能为空');
+          return $this->ajaxFail('模型ID不能为空');
         }
         //获取当前栏目所属模型的所有字段
         $model_field = (new Field())->getModelField($modelid);
-        if(empty($model_field)){
-         return $this->error('模型字段获取失败');
+        //获取当前栏目所属模型的所有栏目
+        $all_category = (new Category())->getCategoryList($modelid);
+        if(!$model_field || !$all_category){
+            return $this->ajaxFail('添加内容数据获取失败');
         }
-         return $this->ajaxSuccess('获取成功','',$model_field);
+        $d['model_field']  = $model_field;
+        $d['all_category'] = $all_category;
+         return $this->ajaxSuccess('获取成功','',$d);
     }
 
     public function validateField($field = [],$data=[]){

@@ -293,7 +293,6 @@
                             <th id="field-params">
                               <Radio-Group v-model="configParams.type">
                                 <Radio label="date">日期</Radio>
-                                <Radio label="time">时间</Radio>
                                 <Radio label="dateAndTime">日期+时间</Radio>
                               </Radio-Group>
                             </th>

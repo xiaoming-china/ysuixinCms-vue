@@ -27,6 +27,7 @@ class Field extends BaseModel{
 
     const SELECT_TYPE = ['radio','checkbox','select'];//有选项值的类型
     const DATE = ['date','time','dateAndTime'];
+    const IMG  = ['pic_upload'];
 
 
 
@@ -95,19 +96,27 @@ class Field extends BaseModel{
             'is_delete'=>Field::DELETE_STATUS_FALSE,
             'is_hide'=>Field::NO_HIDE
         ])->asArray()->all();
-        if(!empty($model_field)){
-            foreach ($model_field as $key => $value) {
-               $seetings = unserialize($value['seetings']);
-               $model_field[$key]['seetings'] = $seetings;
-               if(in_array($value['type'], self::SELECT_TYPE)){
-                 $model_field[$key]['seetings']['default_value'] = self::selectValue($seetings);
-               }
-               if(in_array($value['type'], self::DATE)){
-                 $model_field[$key]['seetings']['default_value'] = self::seetingsDate($seetings);
-               }
-            }
+        $d = [];
+        foreach ($model_field as $key => $value) {
+           $t = [];
+           $t = $value;
+           $t['value'] = '';
+           $seetings = unserialize($value['seetings']);
+           $t['seetings'] = $seetings;
+           if(in_array($value['type'], self::SELECT_TYPE)){
+             $t['seetings']['default_value'] = self::selectValue($seetings)['select'];
+             $t['value'] = self::selectValue($seetings)['checked'];
+           }
+           if(in_array($value['type'], self::DATE)){
+             $t['seetings']['default_value'] = self::seetingsDate($seetings);
+             $t['value'] = self::seetingsDate($seetings);
+           }
+           if(in_array($value['type'], self::IMG)){
+            $t['value'] = [];
+           }
+           $d[] = $t;
         }
-        return $model_field;
+        return $d;
     }
     /**
      * [selectValue 字段选项值处理]
@@ -121,16 +130,20 @@ class Field extends BaseModel{
             return '';
         }
         $value1 = explode("\n",$seetings['default_value']);
-        $data = [];
+        $data  = $checked = [];
         foreach ($value1 as $k => $v) {
-            $str            = [];
+            $str = [];
             $value2         = explode('|',$v);
             $str['name']    = $value2[0];
             $str['value']   = $value2[1];
-            $str['checked'] = $value2[2];
+            if($value2[2] == 'true'){
+                array_push($checked, $value2[1]);
+            }
             $data[] = $str;
         }
-        return $data;
+        $d['select']  = $data;
+        $d['checked'] = $checked;
+        return $d;
     }
     /**
      * [seetingsDate 字段日期处理]

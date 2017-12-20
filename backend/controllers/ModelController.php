@@ -96,35 +96,34 @@ class ModelController extends AdminBaseController{
             $table = new Table();
             $model->setScenario('add_model');
             //检测模型表是否已存在
-            $tab_name = $d['e_name'];
-            $checkTable = $table->checkTable($tab_name);
+            $tabe_name = $d['e_name'];
+            $checkTable = $table->checkTable($tabe_name);
             if(!$checkTable){
-              return $this->ajaxFail('添加失败,'.$tab_name.'数据表已存在,请更换别名');
+              return $this->ajaxFail('添加失败,'.$tabe_name.'数据表已存在,请更换别名');
             }
-
             if($model->load($d,'') && $model->validate()){
-                if($model->save()){
-                    //创建表
-                    $creat_table = $table->addTable($tab_name,Table::BASIC_TABLE);
-                    if(!$creat_table){
-                        $transaction->rollBack();
-                        return $this->ajaxFail($tab_name.'表创建失败');
-                    }
-                    //添加基本数据
-                    $insert_field = $table->addBasicField($model->id);
-                    if(!$insert_field){
-                        $transaction->rollBack();
-                        return $this->ajaxFail($tab_name.'基本数据插入失败');
-                    }
-                    $transaction->commit();
-                    return $this->ajaxSuccess('添加成功');
-                }else{
+                if(!$model->save()){
+                    $transaction->rollBack();
                     return $this->ajaxFail('添加失败,未知错误');
                 }
+                //创建表
+                $creat_table = $table->addTable($tabe_name,Table::BASIC_TABLE);
+                if(!$creat_table){
+                    $transaction->rollBack();
+                    return $this->ajaxFail($tabe_name.'表创建失败');
+                }
+                //添加基本数据
+                $insert_field = $table->addBasicField($model->id);
+                if(!$insert_field){
+                    $table->dropTable($tabe_name);
+                    $transaction->rollBack();
+                    return $this->ajaxFail($tabe_name.'基本数据插入失败');
+                }
+                $transaction->commit();
+                return $this->ajaxSuccess('添加成功');
             }else{
                 return $this->ajaxFail('添加失败.'.current($model->getErrors())[0]);
             }
-
         }catch (Exception $e) {
            $transaction->rollBack();
            return $this->ajaxFail('添加失败,代码异常');
