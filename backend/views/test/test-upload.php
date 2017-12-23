@@ -11,10 +11,8 @@
 
 <body>
     <form>
-        <input type="text" value="" v-model="name" placeholder="请输入用户名">
-        <input type="text" value="" v-model="age" placeholder="请输入年龄">
         <input type="file" @change="getFile($event)">
-        <button @click="submitForm($event)">提交</button>
+        <button @click="submitForm($event,value)">提交</button>
     </form>
 
     <script>
@@ -23,8 +21,6 @@
             new Vue({
                 el: 'form',
                 data: {
-                    name: '',
-                    age: '',
                     file: ''
                 },
                 methods: {
@@ -33,20 +29,17 @@
                         console.log(this.file);
                     },
                     submitForm(event) {
+                        console.log(event);
                         event.preventDefault();
-                        let formData = new FormData();
-                        formData.append('name', this.name);
-                        formData.append('age', this.age);
+                        var formData = new FormData();
                         formData.append('File', this.file);
-
-                        let config = {
+                        var config = {
                             headers: {
                                 'Content-Type': 'multipart/form-data'
                             }
                         }
-
                         this.$http.post('/admin/upload/upload', formData, config).then(function (res) {
-                            if (res.status === 2000) {
+                            if (res.status === 200) {
                                 /*这里做处理*/
                                 alert(res.status);
                             }

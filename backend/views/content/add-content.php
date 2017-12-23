@@ -143,16 +143,16 @@
                       <span class="field-title">{{item.name}}</span>
                       <p v-if="item.name_desc != ''">{{item.name_desc}}</p>
                     </span>
-    	              <i-Input type="text" size="large" v-model="contentInfo[item.e_name]" v-if="item.type == 'text'">
+    	              <i-Input type="text" size="large" v-model="item.value" v-if="item.type == 'text'">
     	              </i-Input>
-    	              <i-Input type="textarea" v-model="contentInfo[item.e_name]" size="large" v-if="item.type == 'textarea'">
+    	              <i-Input type="textarea" v-model="item.value" size="large" v-if="item.type == 'textarea'">
     	              </i-Input>
-    	              <checkbox-Group v-model="contentInfo[item.e_name]" v-if="item.type == 'select' && item.seetings.type == 'checkbox'">
+    	              <checkbox-Group v-model="item.value" v-if="item.type == 'select' && item.seetings.type == 'checkbox'">
       				        <checkbox v-for="(v,k) in item.seetings.default_value" :label="v.value">
       				        	{{v.name}}
       				        </checkbox>
       				        </checkbox-Group>
-				              <Radio-Group v-if="item.type == 'select' && item.seetings.type == 'radio'" v-model="contentInfo[item.e_name]">
+				              <Radio-Group v-if="item.type == 'select' && item.seetings.type == 'radio'" v-model="item.value">
                          <Radio v-for="(v,k) in item.seetings.default_value" :label="v.value">{{v.name}}
                          </Radio>
                       </Radio-Group>
@@ -161,33 +161,29 @@
                       </Date-Picker>
           					  <!--日期选择器-->
           					  <!--日期时间选择器-->
-          					  <Date-Picker type="datetime" v-model="contentInfo[item.e_name]" format="yyyy-MM-dd HH:mm:ss" v-if="item.type == 'date' && item.seetings.type == 'dateAndTime'"@on-change="contentInfo[item.e_name]=$event" >
+          					  <Date-Picker type="datetime" v-model="item.value" format="yyyy-MM-dd HH:mm:ss" v-if="item.type == 'date' && item.seetings.type == 'dateAndTime'"@on-change="contentInfo[item.e_name]=$event" >
                       </Date-Picker>
           					  <!--日期时间选择器-->
                       <!--上传图片-->
-                      <template v-if = "item.type == 'pic_upload'">
-                          <div class="demo-upload-list" v-for="itemPic in uploadList">
-                            <img :src="itemPic.url">
-                            <div class="demo-upload-list-cover">
-                              <Icon type="ios-eye-outline" @click.native="handleView(itemPic.url)"></Icon>
-                              <Icon type="ios-trash-outline" @click.native="handleRemove(itemPic)"></Icon>
+                      <div v-if="item.type == 'pic_upload'">
+                        <div class="demo-upload-list" v-if="item.value != ''" 
+                        v-for="(p_item, p_key) in item.value ">
+                          <img v-bind:src='p_item' style="vertical-align: top;"> 
+                          <div class="demo-upload-list-cover">
+                          <Icon type="ios-eye-outline" @click.native="handleView(item.e_name,index,p_key)"></Icon>
+                          <Icon type="ios-trash-outline" @click.native="handleRemove(item.e_name,index,p_key)"></Icon>
+                           
+                          </div>
+                        </div>
+                        <div class="ivu-upload" style="display: inline-block; width: 58px;" @click="openFile(item.e_name);">
+                          <div class="ivu-upload ivu-upload-drag">
+                            <input type="file" multiple="multiple" class="ivu-upload-input upload" :id="item.e_name" @change="getFile($event,index,item.e_name)"> 
+                            <div style="width: 58px; height: 58px; line-height: 58px;">
+                             <i class="ivu-icon ivu-icon-camera" style="font-size: 20px;"></i>
                             </div>
                           </div>
-                          <Upload
-                              ref="upload"
-                              :show-upload-list="false"
-                              :on-success="handleSuccess"
-                              :max-size="2048"
-                              name="imgFile"
-                              multiple
-                              type="drag"
-                              action="/admin/upload/upload"
-                              style="display: inline-block;width:58px;">
-                              <div style="width: 58px;height:58px;line-height: 58px;">
-                                  <Icon type="camera" size="20"></Icon>
-                              </div>
-                          </Upload>
-                      </template>
+                        </div>
+                      </div>
                       <!--上传图片-->
     	          </Form-Item>
 
@@ -294,11 +290,10 @@
           modelId:'',
           catId:'',
           loading:false,
-          modelFieldList:[],
+          modelFieldList:{},
           categoryList: [],
           imgUrl: '',
           visible: false,
-          uploadList: [],
           contentInfo:{
             status:1,
             publish_time:'',
@@ -310,26 +305,48 @@
         mounted: function() {
 		      this.modelId = this.request('modelid');
 		      this.catId   = this.request('catid');
-          // this.uploadList = this.$refs.upload.fileList;
           this.getModelField();
         },
         methods: {
-          handleView (url) {
-            this.imgUrl = url;
-            this.visible = true;
+          openFile:function(obj){
+            $('#'+obj).click();
           },
-          handleRemove (key) {
-            this.uploadList.splice(key,1);
+          getFile(e,key,obj) {
+             var _that = this;
+              var file = e.target.files[0];
+              var formData = new FormData();
+              formData.append('File[]', file,file.name);
+              $.ajax({
+                  type:'post',
+                  url:'/admin/upload/upload',
+                  data:formData,
+                  dataType: "json",
+                  processData:false,
+                  contentType: false,
+                  success: function(res,textStatus,xhr){
+                      if(res.status == 1){
+                        var base_url = res.data.base_url;
+                        var path = res.data.path;
+                        var name = res.data.name;
+                        var url  = base_url +'/'+path+'/'+name;
+                        _that.modelFieldList[key].value.push(url);
+                        _that.$Message.success('上传成功');     
+                        // console.log(_that.modelFieldList);           
+                      }else{
+                        _that.$Message.warning('上传失败');
+                      }                   
+                  }
+              });
           },
-          handleSuccess (res, file) {
-            var url    = res.data.base_url+'/'+res.data.path+'/'+res.data.name;
-            this.uploadList.push({url: url});
-            return 1;
-            console.log(this.contentInfo);
+          handleView:function(e_name,item_key,p_key){
+            var _that = this;
+            console.log(_that.modelFieldList);   
+            _that.imgUrl = _that.modelFieldList[item_key].value[p_key];
+            _that.visible = true;
           },
-          handleBeforeUpload (name) {
-           
-            this.uploadList = [];
+          handleRemove:function(e_name,item_key,p_key){
+            var _that = this;
+            _that.modelFieldList[item_key].value.splice(p_key,1);
           },
           getTreeData:function(tree){
             var _that = this;
@@ -338,7 +355,6 @@
             for (var i = 0; i < length; i++) {
               _that.contentInfo.category_tree.push(tree[i].catid);
             }
-            console.log(_that.contentInfo.category_tree);
           },
           getModelField:function(){
             var _that = this;
@@ -351,12 +367,7 @@
               function(res){
                 _that.modelFieldList = res.data.model_field;
                 _that.categoryList   = res.data.all_category;
-                var count = res.data.model_field.length;
-                var data  = res.data.model_field;
-                for (var i = 0; i < count; i++) {
-                  _that.contentInfo[data[i]['e_name']] = data[i]['value'];
-                }
-                //console.log( _that.contentInfo);
+                // console.log(_that.modelFieldList);
               },
               function(res){
                 _that.$Message.warning('添加内容数据获取失败');
@@ -364,11 +375,15 @@
             );
           },
           addContent:function(name){
-             console.log( this.contentInfo);
             var _that = this;
+            var count = _that.modelFieldList.length;
+            var data  = _that.modelFieldList;
+            for (var i = 0; i < count; i++) {
+              _that.contentInfo[data[i]['e_name']] = data[i]['value'];
+            }
+            // console.log( _that.contentInfo);
       	    this.$refs[name].validate((valid) => {
                 if (valid) {
-                  console.log(_that.contentInfo);
                   $ajax(
                     '/admin/content/add-content',
                     _that.contentInfo,

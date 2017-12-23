@@ -55,9 +55,8 @@ class ContentController extends AdminBaseController{
         $this->layout = false;
         if($this->isPost()){
             $post    = Yii::$app->request->post();
-            //p($post['publish_time']);
+            p($post);
             //date('Y-m-d H:i:s',strtotime($post['publish_time']));
-            p(strtotime($post['publish_time']));
             $post['category_id'] = $catid;
             $model_field = (new Field())->getModelField($modelid);
             //验证数据库字段的合法性

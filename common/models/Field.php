@@ -99,7 +99,11 @@ class Field extends BaseModel{
         $d = [];
         foreach ($model_field as $key => $value) {
            $t = [];
-           $t = $value;
+           // $t = $value;
+           $t['name'] = $value['name'];
+           $t['e_name'] = $value['e_name'];
+           $t['name_desc'] = $value['name_desc'];
+           $t['type'] = $value['type'];
            $t['value'] = '';
            $seetings = unserialize($value['seetings']);
            $t['seetings'] = $seetings;
@@ -130,6 +134,7 @@ class Field extends BaseModel{
             return '';
         }
         $value1 = explode("\n",$seetings['default_value']);
+        // p($value1);
         $data  = $checked = [];
         foreach ($value1 as $k => $v) {
             $str = [];
