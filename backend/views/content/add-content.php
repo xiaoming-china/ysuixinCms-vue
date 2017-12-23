@@ -177,8 +177,6 @@
                               ref="upload"
                               :show-upload-list="false"
                               :on-success="handleSuccess"
-                              
-                              :before-upload="handleBeforeUpload(item.e_name)"
                               :max-size="2048"
                               name="imgFile"
                               multiple
@@ -326,6 +324,7 @@
           handleSuccess (res, file) {
             var url    = res.data.base_url+'/'+res.data.path+'/'+res.data.name;
             this.uploadList.push({url: url});
+            return 1;
             console.log(this.contentInfo);
           },
           handleBeforeUpload (name) {

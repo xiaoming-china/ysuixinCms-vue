@@ -21,7 +21,7 @@ class UploadController extends AdminBaseController{
         $upload->maxSize = 1024*1024;
         $upload->exts = ['jpg','jpeg','png','gif'];
 
-        if($info = $upload->uploadOne($_FILES['imgFile'])){
+        if($info = $upload->uploadOne($_FILES['File'])){
             $rs['name']      = $info['savename'];
             $rs['base_url']  = Yii::$app->request->getHostInfo();
             $rs['path']      = $upload->rootPath.$info['savepath'];
