@@ -199,66 +199,67 @@
             </Card>
 		  </Col>
       	</div>
-      	<div class="right-card">
-      		<div>
-      			<Col span="11">
-		            <Card>
-		                <p slot="title">
-		                	<Icon type="gear-a"></Icon> 
-		                	发布设置
-		                </p>
-		                <p class="seeting">状　　态：
-		                	<i-select size="small" v-model="contentInfo.status" style="width:100px !important;">
-		                      <i-option value="1">发布</i-option>
-		                      <i-option value="2">待审核</i-option>
-		                    </i-select>
-		                </p>
-		                <p class="seeting">发布时间：
-		                	<Date-Picker type="datetime" format="yyyy-MM-dd HH:mm:ss" :value="contentInfo.publish_time" style="width:200px !important;" size="small" @on-change="contentInfo.publish_time=$event" >
-		                	</Date-Picker>
-		                </p>
-		                <p>允许评论：
-		                	<Radio-Group v-model="contentInfo.allow_comment">
-                          <Radio label="1">允许</Radio>
-                          <Radio label="2">不允许</Radio>
-                      </Radio-Group>
-		                </p>
-		            </Card>
-		        </Col>
-      		</div>
-      		<div>
-      			<Col span="11">
-		            <Card>
-		                <p slot="title">
-		                	<Icon type="navicon-round"></Icon> 
-		                	发布栏目
-		                </p>
-		                <p>
-		                	<Tree :data="categoryList" show-checkbox v-on:on-check-change = "getTreeData" empty-text = "分类栏目为空,请先去添加栏目">
-                      </Tree>
-		                </p>
-		            </Card>
-		        </Col>
-      		</div>
-      		<div>
-      			<Col span="11">
-		            <Card>
-		                <p slot="title">
-		                	<Icon type="ios-book-outline"></Icon> 
-		                	模板设置
-		                </p>
-		                <p>
-		                	<i-select v-model="contentInfo.show_template">
-		                      <i-option value="show.php">show.php</i-option>
-		                      <i-option value="show_a.php">show_a.php</i-option>
-		                      <i-option value="show_b.php">show_b.php</i-option>
-		                      <i-option value="show_c.php">show_c.php</i-option>
-		                  </i-select>
-		                </p>
-		            </Card>
-		        </Col>
-      		</div>
-      	</div>
+            	<div class="right-card">
+            		<div>
+            			<Col span="11">
+      		            <Card>
+      		                <p slot="title">
+      		                	<Icon type="gear-a"></Icon> 
+      		                	发布设置
+      		                </p>
+      		                <p class="seeting">状　　态：
+      		                	<i-select size="small" v-model="contentInfo.status" style="width:100px !important;">
+      		                      <i-option value="1">发布</i-option>
+      		                      <i-option value="2">待审核</i-option>
+      		                    </i-select>
+      		                </p>
+      		                <p class="seeting">发布时间：
+      		                	<Date-Picker type="datetime" format="yyyy-MM-dd HH:mm:ss" :value="contentInfo.publish_time" style="width:200px !important;" size="small" @on-change="contentInfo.publish_time=$event" >
+      		                	</Date-Picker>
+      		                </p>
+      		                <p>允许评论：
+      		                	<Radio-Group v-model="contentInfo.allow_comment">
+                                <Radio label="1">允许</Radio>
+                                <Radio label="2">不允许</Radio>
+                            </Radio-Group>
+      		                </p>
+      		            </Card>
+      		        </Col>
+            		</div>
+            		<div>
+            			<Col span="11">
+      		            <Card>
+      		                <p slot="title">
+      		                	<Icon type="navicon-round"></Icon> 
+      		                	发布栏目
+      		                </p>
+      		                <p>
+      		                	<Tree :data="categoryList" show-checkbox v-on:on-check-change = "getTreeData" empty-text = "分类栏目为空,请先去添加栏目">
+                            </Tree>
+      		                </p>
+      		            </Card>
+      		        </Col>
+            		</div>
+            		<div>
+            			<Col span="11">
+      		            <Card>
+      		                <p slot="title">
+      		                	<Icon type="ios-book-outline"></Icon> 
+      		                	模板设置
+      		                </p>
+      		                <p>
+      		                	<i-select v-model="contentInfo.show_template">
+      		                      <i-option value="show.php">show.php</i-option>
+      		                      <i-option value="show_a.php">show_a.php</i-option>
+      		                      <i-option value="show_b.php">show_b.php</i-option>
+      		                      <i-option value="show_c.php">show_c.php</i-option>
+      		                  </i-select>
+      		                </p>
+      		            </Card>
+      		        </Col>
+            		</div>
+            	</div>
+          
       </div>
       <!--字段列表-->
 	    <div class="btn_wrap_pd" style="left: 0;text-align: center;">
@@ -306,6 +307,8 @@
           imgUrl: '',
           visible: false,
           contentInfo:{
+            modelId:'',
+            catId:'',
             status:"1",
             publish_time:'',
             allow_comment:1,
@@ -314,15 +317,21 @@
           }
         },
         mounted: function() {
-  	      this.modelId = this.request('modelid');
-  	      this.catId   = this.request('catid');
-          this.getModelField();
-          this.contentInfo.publish_time = this.getNowTime();
+          this.$nextTick(function () {
+            this.modelId = this.request('modelid');
+            this.catId   = this.request('catid');
+            this.contentInfo.catId   = this.request('catid');
+            this.contentInfo.modelId = this.request('modelid');
+            this.contentInfo.publish_time = this.getNowTime();
+            this.getModelField();
+          })
         },
         methods: {
+          //上传图片
           openFile:function(obj){
             $('#'+obj).click();
           },
+          //获取模型所有字段
           getFile(e,key,obj) {
              var _that = this;
               var file = e.target.files[0];
@@ -350,16 +359,19 @@
                   }
               });
           },
+          //查看图片
           handleView:function(e_name,item_key,p_key){
             var _that = this;
             console.log(_that.modelFieldList);   
             _that.imgUrl = _that.modelFieldList[item_key].value[p_key];
             _that.visible = true;
           },
+          //删除图片
           handleRemove:function(e_name,item_key,p_key){
             var _that = this;
             _that.modelFieldList[item_key].value.splice(p_key,1);
           },
+          //获取模型下所有栏目
           getTreeData:function(tree){
             var _that = this;
             _that.contentInfo.category_tree = [];
@@ -381,11 +393,12 @@
                 _that.categoryList   = res.data.all_category;
                 var length = res.data.model_field.length;
                 var data   = res.data.model_field;
-               //console.log(_that.modelFieldList);
                //加载所有是富文本的字段编辑器
                 for (var i = 0; i < length; i++) {
                     if(data[i]['type'] === 'editor'){
-                      UE.getEditor(data[i]['e_name']);
+                      UE.getEditor(data[i]['e_name'],{
+                        'autoFloatEnabled':false,
+                      });
                     }
                 }
               },
@@ -394,6 +407,7 @@
               },
             );
           },
+          //发布内容
           addContent:function(name){
             var _that = this;
             var count = _that.modelFieldList.length;
@@ -435,33 +449,33 @@
             location.href = url;
           },
           getNowTime:function(nows) {
-		    var date = new Date();
-		    var seperator1 = "-";
-		    var seperator2 = ":";
-		    var month = date.getMonth() + 1;
-		    var strDate = date.getDate();
-		    if (month >= 1 && month <= 9) {
-		        month = "0" + month;
-		    }
-		    if (strDate >= 0 && strDate <= 9) {
-		        strDate = "0" + strDate;
-		    }
-		    var currentdate = date.getFullYear() + seperator1 + 
-			    month + seperator1 + strDate
-			    + " " + date.getHours() + seperator2 + 
-			    date.getMinutes()
-			    + seperator2 + 
-			    date.getSeconds();
-		    return currentdate;
-          },
-	  	  //获取url参数
-		  request: function (name, url) {
-				url = url || window.location.search;
-				var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
-				var r = url.substr(1).match(reg);
-				if (r != null) return (r[2]);
-				return '';
-		  }
+      		    var date = new Date();
+      		    var seperator1 = "-";
+      		    var seperator2 = ":";
+      		    var month = date.getMonth() + 1;
+      		    var strDate = date.getDate();
+      		    if (month >= 1 && month <= 9) {
+      		        month = "0" + month;
+      		    }
+      		    if (strDate >= 0 && strDate <= 9) {
+      		        strDate = "0" + strDate;
+      		    }
+      		    var currentdate = date.getFullYear() + seperator1 + 
+      			    month + seperator1 + strDate
+      			    + " " + date.getHours() + seperator2 + 
+      			    date.getMinutes()
+      			    + seperator2 + 
+      			    date.getSeconds();
+      		    return currentdate;
+            },
+    	  	  //获取url参数
+    		  request: function (name, url) {
+    				url = url || window.location.search;
+    				var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+    				var r = url.substr(1).match(reg);
+    				if (r != null) return (r[2]);
+    				return '';
+    		  }
         }
     })
 </script>

@@ -56,13 +56,12 @@ class ContentController extends AdminBaseController{
         if($this->isPost()){
             $post    = Yii::$app->request->post();
             p($post);
-            //date('Y-m-d H:i:s',strtotime($post['publish_time']));
             $post['category_id'] = $catid;
             $model_field = (new Field())->getModelField($modelid);
             //验证数据库字段的合法性
             $validate = $this->validateField($model_field,$post);
             if($validate['status']){
-                $rs = $this->assembleSql($post,$modelid);
+                $rs = (new sqlQuery())->assembleSql($post,$modelid);
                 if($rs){
                     return $this->ajaxSuccess('发布成功',Url::to(['publish/'.$category_info['url']]));
                 }else{
@@ -75,7 +74,24 @@ class ContentController extends AdminBaseController{
             return $this->render('/content/add-content');
         }
     }
-    /**
+    public function validateField($field = [],$data=[]){
+        foreach ($field as $key => $value) {
+            foreach ($data as $k => $v) {
+                if(($value['e_name'] === $k) && $value['not_null'] == Field::NO_NULL){
+                    if($v == ''){
+                        $d['status']  = false;
+                        $d['message'] = $value['name'].'不能为空';
+                        return $d;
+                    }
+                }
+            }
+        }
+        $d['status'] = true;
+        $d['message'] = '';
+        return $d;
+    }
+
+        /**
      * [actionGetModelField 获取模型的所有字段，用于生成前端form]
      * @Author:xiaoming
      * @DateTime        2017-12-16T17:28:08+0800
@@ -97,36 +113,6 @@ class ContentController extends AdminBaseController{
         $d['model_field']  = $model_field;
         $d['all_category'] = $all_category;
          return $this->ajaxSuccess('获取成功','',$d);
-    }
-
-    public function validateField($field = [],$data=[]){
-        foreach ($field as $key => $value) {
-            foreach ($data as $k => $v) {
-                if(($value['e_name'] === $k) && $value['not_null'] == Field::NO_NULL){
-                    if($v == ''){
-                        $d['status']  = false;
-                        $d['message'] = $value['name'].'不能为空';
-                        return $d;
-                    }
-                }
-            }
-        }
-        $d['status'] = true;
-        $d['message'] = '';
-        return $d;
-    }
-    //组装数据插入sql
-    public function assembleSql($data = [],$modelid = ''){
-        if(empty($data) || $modelid == ''){
-            return false;
-        }
-        $model_info = (new Model())->getModelInfo($modelid);
-        if($model_info === false){
-            return false;
-        }
-        $table_name = Yii::$app->params['tablePrefix'].$model_info->e_name;
-        $rs = Yii::$app->db->createCommand()->insert($table_name, $data)->execute();
-        return $rs ? true : false;
     }
 
 

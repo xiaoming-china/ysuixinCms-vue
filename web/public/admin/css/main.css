@@ -314,6 +314,7 @@ body{
     text-align: center;
 }
 .btn_wrap_pd{
+    z-index: 999;
     width: 100%;
     padding: 12px 10px 12px 46px;
     left: 8%;

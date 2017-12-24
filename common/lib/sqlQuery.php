@@ -6,6 +6,9 @@ use yii;
 use yii\db\Command;
 use yii\db\Query;
 use common\lib\Page;
+use common\models\Model;
+
+
 
 /**
  * SQL操作类
@@ -21,7 +24,7 @@ class sqlQuery{
 	 * @param           integer                  $pageSize [description]
 	 * @return          [type]                             [description]
 	 */
-	public function selectData($table='',$param = []){
+	public static function selectData($table='',$param = []){
 		$pageSize = $param['pageSize'] == '' ? Yii::$app->params['default_page_size'] : $param['pageSize'];
 		$offset   = ($param['page'] - 1) * $pageSize;
 		$table_name = Yii::$app->params['tablePrefix'].$table;
@@ -42,5 +45,18 @@ class sqlQuery{
         $data['count'] = $sql->count();
         return $data;
 	}
+	//组装数据插入sql
+    public static function assembleSql($data = [],$modelid = ''){
+        if(empty($data) || $modelid == ''){
+            return false;
+        }
+        $model_info = (new Model())->getModelInfo($modelid);
+        if($model_info === false){
+            return false;
+        }
+        $table_name = Yii::$app->params['tablePrefix'].$model_info->e_name;
+        $rs = Yii::$app->db->createCommand()->insert($table_name, $data)->execute();
+        return $rs ? true : false;
+    }
 
 }
