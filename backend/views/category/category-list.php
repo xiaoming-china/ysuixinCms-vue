@@ -275,21 +275,6 @@
             location.href = url;
             //window.open(url);
           },
-          //格式化时间戳
-          getLocalTime:function(nows) {
-            if(nows == "" || nows == null){
-                return  "";
-            }else{
-                var now  = new Date(parseInt(nows)*1000);
-                var year=now.getFullYear();
-                var month=now.getMonth()+1;
-                var date=now.getDate();
-                var hour=now.getHours().toLocaleString().split("").length == 1 ?"0"+now.getHours():now.getHours();
-                var minute=now.getMinutes().toLocaleString().split("").length == 1 ?"0"+now.getMinutes():now.getMinutes();
-                var second=now.getSeconds().toLocaleString().split("").length == 1 ?"0"+now.getSeconds():now.getSeconds();
-                return year+"-"+month+"-"+date+"  "+hour+":"+minute+":"+second;
-            }
-          },
           	//获取url参数
     			request: function (name, url) {
     				url = url || window.location.search;

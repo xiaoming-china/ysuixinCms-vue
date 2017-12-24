@@ -99,7 +99,6 @@ class Field extends BaseModel{
         $d = [];
         foreach ($model_field as $key => $value) {
            $t = [];
-           // $t = $value;
            $t['name'] = $value['name'];
            $t['e_name'] = $value['e_name'];
            $t['name_desc'] = $value['name_desc'];
@@ -162,19 +161,23 @@ class Field extends BaseModel{
             return '';
         }
         if($seetings['type'] === 'date'){
-            if($seetings['default_value'] == self::CHECKED_FALSE){
+            if($seetings['default_value'] == '1'){
                $value = date('Y-m-d');
+           }else{
+                $value = '';
            } 
         }elseif($seetings['type'] === 'time'){
-            if($seetings['default_value'] == self::CHECKED_FALSE){
+            if($seetings['default_value'] == '1'){
                $value = date('H:i:s');
+           }else{
+                $value = '';
            } 
         }elseif($seetings['type'] === 'dateAndTime'){
-            if($seetings['default_value'] == self::CHECKED_FALSE){
+            if($seetings['default_value'] == '2'){
                $value = date('Y-m-d H:i:s');
+           }else{
+                $value = '';
            } 
-        }else{
-            $value = '';
         }
         return $value;
     }

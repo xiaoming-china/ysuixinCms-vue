@@ -168,9 +168,9 @@
                     </span>
                     <i-select v-model="categoryInfo.parentid">
                         <i-option value="0">无</i-option>
-						<i-option v-for="(value,key) in categoryList" :value="value.catid">
-							<span v-html ="value.html + value.catname"></span>
-						</i-option>
+            						<i-option v-for="(value,key) in categoryList" :value="value.catid">
+            							<span v-html="value.html + value.catname"></span>
+            						</i-option>
                     </i-select>
                 </Form-Item>
                 <Form-Item label="名称" prop="description">
@@ -301,6 +301,7 @@
 		            'get',
 		            function(res){
 		              _that.categoryList = res.data;
+                  console.log(res.data);
 		              _that.loading = false;
 		            },
 		            function(res){

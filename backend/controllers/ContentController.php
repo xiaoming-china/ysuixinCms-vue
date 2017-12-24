@@ -89,10 +89,11 @@ class ContentController extends AdminBaseController{
         //获取当前栏目所属模型的所有字段
         $model_field = (new Field())->getModelField($modelid);
         //获取当前栏目所属模型的所有栏目
-        $all_category = (new Category())->getCategoryList($modelid);
-        if(!$model_field || !$all_category){
+        $category_list = (new Category())->getCategoryList($modelid);
+        if(!$model_field || !$category_list){
             return $this->ajaxFail('添加内容数据获取失败');
         }
+        $all_category = (new Category())->manyArray($category_list, 0);
         $d['model_field']  = $model_field;
         $d['all_category'] = $all_category;
          return $this->ajaxSuccess('获取成功','',$d);

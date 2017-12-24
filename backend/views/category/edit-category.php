@@ -169,7 +169,7 @@
                     <i-select v-model="categoryInfo.parentid">
                         <i-option value="0">无</i-option>
 						<i-option v-for="(value,key) in categoryList" :value="value.catid">
-							<span v-html ="value.html + value.catname"></span>
+							<span v-html="value.html + value.catname"></span>
 						</i-option>
                     </i-select>
                 </Form-Item>

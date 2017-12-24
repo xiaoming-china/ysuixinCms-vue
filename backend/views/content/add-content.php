@@ -47,6 +47,7 @@
               position: relative !important;
               line-height: 32px !important;
               font-size: 12px !important;
+              padding: 0 0 20px 0;
           }
         .field-title{
           font-weight: 700;
@@ -67,6 +68,7 @@
         	margin-right: 10px;
         	/*padding-top: 30px;*/
         	float: left;
+          margin-bottom: 50px;
         }
   	  .right-card{
   	  	width: 21%;
@@ -148,22 +150,22 @@
     	              <i-Input type="textarea" v-model="item.value" size="large" v-if="item.type == 'textarea'">
     	              </i-Input>
     	              <checkbox-Group v-model="item.value" v-if="item.type == 'select' && item.seetings.type == 'checkbox'">
-      				        <checkbox v-for="(v,k) in item.seetings.default_value" :label="v.value">
-      				        	{{v.name}}
-      				        </checkbox>
-      				        </checkbox-Group>
-				              <Radio-Group v-if="item.type == 'select' && item.seetings.type == 'radio'" v-model="item.value">
+  				        <checkbox v-for="(v,k) in item.seetings.default_value" :label="v.value">
+  				         {{v.name}}
+  				        </checkbox>
+      				  </checkbox-Group>
+				       <Radio-Group v-if="item.type == 'select' && item.seetings.type == 'radio'" v-model="item.value">
                          <Radio v-for="(v,k) in item.seetings.default_value" :label="v.value">{{v.name}}
                          </Radio>
                       </Radio-Group>
                       <!--日期选择器-->
-                      <Date-Picker type="date" :value="contentInfo[item.e_name]" format="yyyy-MM-dd" v-if="item.type == 'date' && item.seetings.type == 'date'" @on-change="contentInfo[item.e_name]=$event">
+                      <Date-Picker type="date" :value="item.value" format="yyyy-MM-dd" v-if="item.type == 'date' && item.seetings.type == 'date'" @on-change="contentInfo[item.e_name]=$event">
                       </Date-Picker>
-          					  <!--日期选择器-->
-          					  <!--日期时间选择器-->
-          					  <Date-Picker type="datetime" v-model="item.value" format="yyyy-MM-dd HH:mm:ss" v-if="item.type == 'date' && item.seetings.type == 'dateAndTime'"@on-change="contentInfo[item.e_name]=$event" >
+  					  <!--日期选择器-->
+  					  <!--日期时间选择器-->
+  					  <Date-Picker type="datetime" :value="item.value" format="yyyy-MM-dd HH:mm:ss" v-if="item.type == 'date' && item.seetings.type == 'dateAndTime'"@on-change="contentInfo[item.e_name]=$event" >
                       </Date-Picker>
-          					  <!--日期时间选择器-->
+          				<!--日期时间选择器-->
                       <!--上传图片-->
                       <div v-if="item.type == 'pic_upload'">
                         <div class="demo-upload-list" v-if="item.value != ''" 
@@ -172,7 +174,6 @@
                           <div class="demo-upload-list-cover">
                           <Icon type="ios-eye-outline" @click.native="handleView(item.e_name,index,p_key)"></Icon>
                           <Icon type="ios-trash-outline" @click.native="handleRemove(item.e_name,index,p_key)"></Icon>
-                           
                           </div>
                         </div>
                         <div class="ivu-upload" style="display: inline-block; width: 58px;" @click="openFile(item.e_name);">
@@ -185,6 +186,13 @@
                         </div>
                       </div>
                       <!--上传图片-->
+                      <!--编辑器-->
+                      <div v-if="item.type == 'editor'" style="position: sticky !important;">
+                        <script :id="item.e_name" type="text/plain">
+                            {{item.value}}
+                        </script>
+                      </div>
+                      <!--编辑器-->
     	          </Form-Item>
 
               </i-Form>
@@ -206,7 +214,7 @@
 		                    </i-select>
 		                </p>
 		                <p class="seeting">发布时间：
-		                	<Date-Picker type="datetime" format="yyyy-MM-dd HH:mm:ss" :value="contentInfo.publish_time" style="width:200px !important;" size="small"   @on-change="contentInfo.publish_time=$event" >
+		                	<Date-Picker type="datetime" format="yyyy-MM-dd HH:mm:ss" :value="contentInfo.publish_time" style="width:200px !important;" size="small" @on-change="contentInfo.publish_time=$event" >
 		                	</Date-Picker>
 		                </p>
 		                <p>允许评论：
@@ -279,6 +287,9 @@
   <script src="/public/admin/js/jquery.nicescroll.js"></script>
   <script src="http://vuejs.org/js/vue.min.js"></script>
   <script src="http://unpkg.com/iview/dist/iview.min.js"></script>
+  <script src="/public/admin/ueditor/ueditor.config.js"></script>
+  <script src="/public/admin/ueditor/ueditor.all.min.js"> </script>
+  <script src="/public/admin/ueditor/lang/zh-cn/zh-cn.js"></script>
   <script src="/public/admin/js/main.js"></script>
   <script src="/public/admin/js/menu.js"></script>
 
@@ -295,7 +306,7 @@
           imgUrl: '',
           visible: false,
           contentInfo:{
-            status:1,
+            status:"1",
             publish_time:'',
             allow_comment:1,
             category_tree:[],
@@ -303,9 +314,10 @@
           }
         },
         mounted: function() {
-		      this.modelId = this.request('modelid');
-		      this.catId   = this.request('catid');
+  	      this.modelId = this.request('modelid');
+  	      this.catId   = this.request('catid');
           this.getModelField();
+          this.contentInfo.publish_time = this.getNowTime();
         },
         methods: {
           openFile:function(obj){
@@ -367,7 +379,15 @@
               function(res){
                 _that.modelFieldList = res.data.model_field;
                 _that.categoryList   = res.data.all_category;
-                // console.log(_that.modelFieldList);
+                var length = res.data.model_field.length;
+                var data   = res.data.model_field;
+               //console.log(_that.modelFieldList);
+               //加载所有是富文本的字段编辑器
+                for (var i = 0; i < length; i++) {
+                    if(data[i]['type'] === 'editor'){
+                      UE.getEditor(data[i]['e_name']);
+                    }
+                }
               },
               function(res){
                 _that.$Message.warning('添加内容数据获取失败');
@@ -380,6 +400,10 @@
             var data  = _that.modelFieldList;
             for (var i = 0; i < count; i++) {
               _that.contentInfo[data[i]['e_name']] = data[i]['value'];
+              //获取编辑器内容填充到数组
+              if(data[i]['type'] === 'editor'){
+                _that.contentInfo[data[i]['e_name']] = UE.getEditor(data[i]['e_name']).getContent();
+              }
             }
             // console.log( _that.contentInfo);
       	    this.$refs[name].validate((valid) => {
@@ -410,14 +434,34 @@
           	}
             location.href = url;
           },
-    	  	  //获取url参数
-    		  request: function (name, url) {
-    				url = url || window.location.search;
-    				var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
-    				var r = url.substr(1).match(reg);
-    				if (r != null) return (r[2]);
-    				return '';
-    		  }
+          getNowTime:function(nows) {
+		    var date = new Date();
+		    var seperator1 = "-";
+		    var seperator2 = ":";
+		    var month = date.getMonth() + 1;
+		    var strDate = date.getDate();
+		    if (month >= 1 && month <= 9) {
+		        month = "0" + month;
+		    }
+		    if (strDate >= 0 && strDate <= 9) {
+		        strDate = "0" + strDate;
+		    }
+		    var currentdate = date.getFullYear() + seperator1 + 
+			    month + seperator1 + strDate
+			    + " " + date.getHours() + seperator2 + 
+			    date.getMinutes()
+			    + seperator2 + 
+			    date.getSeconds();
+		    return currentdate;
+          },
+	  	  //获取url参数
+		  request: function (name, url) {
+				url = url || window.location.search;
+				var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+				var r = url.substr(1).match(reg);
+				if (r != null) return (r[2]);
+				return '';
+		  }
         }
     })
 </script>

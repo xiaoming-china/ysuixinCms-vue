@@ -154,10 +154,17 @@ class Category extends BaseModel{
         ->select('catid,parentid,catname')
         ->where(['modelid'=>$model_id,'is_delete'=>$model::DELETE_STATUS_FALSE])
         ->asArray()->all();
-        $all_category = self::manyArray($category_list, 0);
-        return $all_category;
+        return $category_list;
     }
-    private static function manyArray($cate,$pid = 0){
+    /**
+     * [manyArray 树形tree]
+     * @Author:xiaoming
+     * @DateTime        2017-12-23T22:08:48+0800
+     * @param           [type]                   $cate [description]
+     * @param           integer                  $pid  [description]
+     * @return          [type]                         [description]
+     */
+    public static function manyArray($cate,$pid = 0){
         $arr = [];
         foreach ($cate as $key => $value) {
             $v = [];
@@ -168,6 +175,32 @@ class Category extends BaseModel{
                 $v['children'] = self::manyArray($cate,$value['catid']);
                 $arr[] = $v;
             }
+        }
+        return $arr;
+    }
+    /**
+     * [navigation select形式tree]
+     * @param  [type]  $data [description]
+     * @param  integer $pid  [description]
+     * @param  integer $lev  [description]
+     * @return [type]        [description]
+     */
+    public static function HtmlManyArray($cate,$pid = 0,$lev = 0){
+        $t = $str = '';
+        if($lev != 0){
+          for($i = 0;$i < $lev;$i++){
+                $str = '<span style="margin-left:'.(($i*2)+2).'%;" class="icon-folder-open-alt">&nbsp;&nbsp└─&nbsp&nbsp;</span>';
+           }
+        }else{
+          $str = '<span class="icon-folder-close-alt" style="text-align:left;">&nbsp; </span>';
+        }
+        $arr = [];
+        foreach ($cate as $k => $v) {
+          if($v['parentid'] == $pid){
+            $v['html'] = $str;
+            $arr[]     = $v;
+            $arr = array_merge($arr,self::HtmlManyArray($cate,$v['catid'],$lev + 1));
+          }
         }
         return $arr;
     }
