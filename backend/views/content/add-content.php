@@ -325,10 +325,8 @@
             this.contentInfo.modelId = this.request('modelid');
             this.contentInfo.publish_time = this.getNowTime();
             this.getModelField();
+            
             //console.log(this.modelFieldList);
-        },
-        beforeUpdate(){
-          console.log(this.modelFieldList);
         },
         methods: {
           //上传图片
@@ -395,14 +393,16 @@
               function(res){
                 _that.modelFieldList = res.data.model_field;
                 _that.categoryList   = res.data.all_category;
-                var length = res.data.model_field.length;
-                var data   = res.data.model_field;
-               //加载所有是富文本的字段编辑器
-                for (var i = 0; i < length; i++) {
-                    if(data[i]['type'] === 'editor'){
-                      UE.getEditor(data[i]['e_name']);
-                    }
-                }
+                //加载所有是富文本的字段编辑器
+                setTimeout(function() {
+                  var length = res.data.model_field.length;
+                  var data   = res.data.model_field;
+                  for (var i = 0; i < length; i++) {
+                      if(data[i]['type'] === 'editor'){
+                        UE.getEditor(data[i]['e_name']);
+                      }
+                  }
+                }, 200);
               },
               function(res){
                 _that.$Message.warning('添加内容数据获取失败');
