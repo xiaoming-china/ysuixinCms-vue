@@ -306,9 +306,8 @@ class Uploader
         if (preg_match("/\{rand\:([\d]*)\}/i", $format, $matches)) {
             $format = preg_replace("/\{rand\:[\d]*\}/i", substr($randNum, 0, $matches[1]), $format);
         }
-
         $ext = $this->getFileExt();
-        return $format . $ext;
+        return '/'.$format . $ext;
     }
 
     /**
@@ -326,12 +325,13 @@ class Uploader
     private function getFilePath()
     {
         $fullname = $this->fullName;
-        $rootPath = $_SERVER['DOCUMENT_ROOT'];
+        $rootPath = $_SERVER['DOCUMENT_ROOT'].'/web/';
+
 
         if (substr($fullname, 0, 1) != '/') {
             $fullname = '/' . $fullname;
         }
-
+        //die($rootPath . $fullname);
         return $rootPath . $fullname;
     }
 

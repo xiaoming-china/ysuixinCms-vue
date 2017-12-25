@@ -7,6 +7,8 @@
     <link rel="stylesheet" type="text/css" href="http://unpkg.com/iview/dist/styles/iview.css">
     <link href="/public/admin/css/main.css" rel="stylesheet" type="text/css" />
     <link href="/public/admin/css/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="/public/admin/ueditor/themes/default/css/ueditor.css" type="text/css">
+
     <style>
 	   body{
   	    background: rgb(238, 238, 238);
@@ -149,12 +151,12 @@
     	              </i-Input>
     	              <i-Input type="textarea" v-model="item.value" size="large" v-if="item.type == 'textarea'">
     	              </i-Input>
-    	              <checkbox-Group v-model="item.value" v-if="item.type == 'select' && item.seetings.type == 'checkbox'">
-  				        <checkbox v-for="(v,k) in item.seetings.default_value" :label="v.value">
-  				         {{v.name}}
-  				        </checkbox>
-      				  </checkbox-Group>
-				       <Radio-Group v-if="item.type == 'select' && item.seetings.type == 'radio'" v-model="item.value">
+    	               <checkbox-Group v-model="item.value" v-if="item.type == 'select' && item.seetings.type == 'checkbox'">
+        				        <checkbox v-for="(v,k) in item.seetings.default_value" :label="v.value">
+        				         {{v.name}}
+        				        </checkbox>
+            				  </checkbox-Group>
+				              <Radio-Group v-if="item.type == 'select' && item.seetings.type == 'radio'" v-model="item.value">
                          <Radio v-for="(v,k) in item.seetings.default_value" :label="v.value">{{v.name}}
                          </Radio>
                       </Radio-Group>
@@ -162,10 +164,10 @@
                       <Date-Picker type="date" :value="item.value" format="yyyy-MM-dd" v-if="item.type == 'date' && item.seetings.type == 'date'" @on-change="contentInfo[item.e_name]=$event">
                       </Date-Picker>
   					  <!--日期选择器-->
-  					  <!--日期时间选择器-->
-  					  <Date-Picker type="datetime" :value="item.value" format="yyyy-MM-dd HH:mm:ss" v-if="item.type == 'date' && item.seetings.type == 'dateAndTime'"@on-change="contentInfo[item.e_name]=$event" >
-                      </Date-Picker>
-          				<!--日期时间选择器-->
+          					  <!--日期时间选择器-->
+          					  <Date-Picker type="datetime" :value="item.value" format="yyyy-MM-dd HH:mm:ss" v-if="item.type == 'date' && item.seetings.type == 'dateAndTime'"@on-change="contentInfo[item.e_name]=$event" >
+                          </Date-Picker>
+              				<!--日期时间选择器-->
                       <!--上传图片-->
                       <div v-if="item.type == 'pic_upload'">
                         <div class="demo-upload-list" v-if="item.value != ''" 
@@ -187,7 +189,7 @@
                       </div>
                       <!--上传图片-->
                       <!--编辑器-->
-                      <div v-if="item.type == 'editor'" style="position: sticky !important;">
+                      <div v-if="item.type == 'editor'" style="position: sticky !important;line-height: 0px !important; ">
                         <script :id="item.e_name" type="text/plain">
                             {{item.value}}
                         </script>
@@ -317,14 +319,16 @@
           }
         },
         mounted: function() {
-          this.$nextTick(function () {
             this.modelId = this.request('modelid');
             this.catId   = this.request('catid');
             this.contentInfo.catId   = this.request('catid');
             this.contentInfo.modelId = this.request('modelid');
             this.contentInfo.publish_time = this.getNowTime();
             this.getModelField();
-          })
+            //console.log(this.modelFieldList);
+        },
+        beforeUpdate(){
+          console.log(this.modelFieldList);
         },
         methods: {
           //上传图片
@@ -396,9 +400,7 @@
                //加载所有是富文本的字段编辑器
                 for (var i = 0; i < length; i++) {
                     if(data[i]['type'] === 'editor'){
-                      UE.getEditor(data[i]['e_name'],{
-                        'autoFloatEnabled':false,
-                      });
+                      UE.getEditor(data[i]['e_name']);
                     }
                 }
               },
