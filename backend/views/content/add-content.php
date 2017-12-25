@@ -325,41 +325,40 @@
             this.contentInfo.modelId = this.request('modelid');
             this.contentInfo.publish_time = this.getNowTime();
             this.getModelField();
-            
-            //console.log(this.modelFieldList);
         },
         methods: {
           //上传图片
           openFile:function(obj){
             $('#'+obj).click();
           },
-          //获取模型所有字段
           getFile(e,key,obj) {
              var _that = this;
-              var file = e.target.files[0];
+              var file = e.target.files;
               var formData = new FormData();
-              formData.append('File[]', file,file.name);
-              $.ajax({
-                  type:'post',
-                  url:'/admin/upload/upload',
-                  data:formData,
-                  dataType: "json",
-                  processData:false,
-                  contentType: false,
-                  success: function(res,textStatus,xhr){
-                      if(res.status == 1){
-                        var base_url = res.data.base_url;
-                        var path = res.data.path;
-                        var name = res.data.name;
-                        var url  = base_url +'/'+path+'/'+name;
-                        _that.modelFieldList[key].value.push(url);
-                        _that.$Message.success('上传成功');     
-                        // console.log(_that.modelFieldList);           
-                      }else{
-                        _that.$Message.warning('上传失败');
-                      }                   
-                  }
-              });
+              var length = file.length;
+              for (var i = 0; i < length; i++) {
+                formData.append('File', file[i],file[i].name);
+                $.ajax({
+                    type:'post',
+                    url:'/admin/upload/upload',
+                    data:formData,
+                    dataType: "json",
+                    processData:false,
+                    contentType: false,
+                    success: function(res,textStatus,xhr){
+                        if(res.status == 1){
+                          var base_url = res.data.base_url;
+                          var path = res.data.path;
+                          var name = res.data.name;
+                          var url  = base_url +'/'+path+'/'+name;
+                          _that.modelFieldList[key].value.push(url);
+                        }else{
+                          _that.$Message.warning(i+'张上传失败');
+                          return;
+                        }                  
+                    }
+                });
+              }
           },
           //查看图片
           handleView:function(e_name,item_key,p_key){
@@ -382,6 +381,7 @@
               _that.contentInfo.category_tree.push(tree[i].catid);
             }
           },
+          //获取模型所有字段
           getModelField:function(){
             var _that = this;
             $ajax(

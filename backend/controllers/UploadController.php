@@ -20,6 +20,7 @@ class UploadController extends AdminBaseController{
         $upload = new Upload();
         $upload->maxSize = 1024*1024;
         $upload->exts = ['jpg','jpeg','png','gif'];
+        $files = $_FILES['File'];
 
         if($info = $upload->uploadOne($_FILES['File'])){
             $rs['name']      = $info['savename'];
