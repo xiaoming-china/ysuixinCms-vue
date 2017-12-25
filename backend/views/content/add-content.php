@@ -178,9 +178,9 @@
                           <Icon type="ios-trash-outline" @click.native="handleRemove(item.e_name,index,p_key)"></Icon>
                           </div>
                         </div>
-                        <div class="ivu-upload" style="display: inline-block; width: 58px;" @click="openFile(item.e_name);">
+                        <div :id="'upload_'+item.e_name"  class="ivu-upload" style="display: inline-block; width: 58px;" @click="openFile(item.e_name);">
                           <div class="ivu-upload ivu-upload-drag">
-                            <input type="file" multiple="multiple" class="ivu-upload-input upload" :id="item.e_name" @change="getFile($event,index,item.e_name)"> 
+                            <input type="file" multiple="multiple" class="ivu-upload-input upload" :id="item.e_name" @change="getFile($event,index,item.e_name,item.seetings.many_select)"> 
                             <div style="width: 58px; height: 58px; line-height: 58px;">
                              <i class="ivu-icon ivu-icon-camera" style="font-size: 20px;"></i>
                             </div>
@@ -330,8 +330,8 @@
           openFile:function(obj){
             $('#'+obj).click();
           },
-          getFile(e,key,obj) {
-             var _that = this;
+          getFile(e,key,obj,is_many) {
+              var _that = this;
               var file = e.target.files;
               var formData = new FormData();
               var length = file.length;
@@ -351,6 +351,9 @@
                           var name = res.data.name;
                           var url  = base_url +'/'+path+'/'+name;
                           _that.modelFieldList[key].value.push(url);
+                          if(is_many === 'false'){
+                            $('#upload_'+obj).remove();
+                          }
                         }else{
                           _that.$Message.warning(i+'张上传失败');
                           return;
@@ -428,10 +431,11 @@
                     _that.contentInfo,
                     'post',
                     function(res){
-                     _that.$Message.warning('添加成功');
+                     _that.$Message.success('发布成功');
+                     location.href = res.url;
                     },
                     function(res){
-                      _that.$Message.warning('添加失败');
+                      _that.$Message.error('发布失败');
                     },
                   ); 
                 } else {

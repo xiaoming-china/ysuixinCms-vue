@@ -112,12 +112,12 @@
 			        <th style="width: 40px;">
 			          <Checkbox v-model="check_all"></Checkbox>
 			        </th>  
-					<th style="width: 250px;">标题</th> 
+					<th style="width: 250px;text-align:left;padding-left:30px;">标题</th> 
 					<th style="width: 50px;">点击量</th> 
 					<th style="width: 50px;">作者</th> 
 					<th style="width: 50px;">状态</th>
-			        <th style="width: 50px;">发布时间</th>
-			        <th style="width: 118px;">操作</th>
+			    <th style="width: 50px;">发布时间</th>
+			    <th style="width: 118px;">操作</th>
 				</tr>
 			</thead> 
 			<tbody>
@@ -134,7 +134,7 @@
 					  {{value.title}}
 					</td> 
 					<td>{{value.view}}</td> 
-					<td>{{value.status}}</td> 
+					<td>{{value.create_by}}</td> 
 					<td>
 						<span v-if="value.status == 0">待审核</span>
 						<span v-if="value.status == 1">已审核</span>

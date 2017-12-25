@@ -103,6 +103,7 @@ class Field extends BaseModel{
            $t['e_name'] = $value['e_name'];
            $t['name_desc'] = $value['name_desc'];
            $t['type'] = $value['type'];
+           $t['not_null'] = $value['not_null'];
            $t['value'] = '';
            $seetings = unserialize($value['seetings']);
            $t['seetings'] = $seetings;

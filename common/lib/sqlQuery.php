@@ -50,11 +50,17 @@ class sqlQuery{
         if(empty($data) || $modelid == ''){
             return false;
         }
+        p($data);
+        $data['created_at']    = time();
+        $data['update_at']     = time();
+        $data['publish_time']  = strtotime($data['publish_time']);
+        $data['create_by']     = Yii::$app->user->identity->username;
         $model_info = (new Model())->getModelInfo($modelid);
         if($model_info === false){
             return false;
         }
         $table_name = Yii::$app->params['tablePrefix'].$model_info->e_name;
+       //p(Yii::$app->db->createCommand()->insert($table_name, $data)->getRawSql());
         $rs = Yii::$app->db->createCommand()->insert($table_name, $data)->execute();
         return $rs ? true : false;
     }

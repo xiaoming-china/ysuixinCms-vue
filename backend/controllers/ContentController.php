@@ -54,20 +54,27 @@ class ContentController extends AdminBaseController{
     public function actionAddContent(){
         $this->layout = false;
         if($this->isPost()){
-            $post    = Yii::$app->request->post();
-            //p($post);
-            $post['category_id'] = $catid;
+            $r = Yii::$app->request;
+            $category_id = $r->post('catId','');
+            $modelid     = $r->post('modelId','');
+            if($category_id == '' || $modelid == ''){
+                return $this->ajaxFail('参数异常');
+            }
             $model_field = (new Field())->getModelField($modelid);
             //验证数据库字段的合法性
-            $validate = $this->validateField($model_field,$post);
-            p($validate);
+            
+            $data = $r->post();
+            $data['category_id'] = $category_id;
+            unset($data['modelId'],$data['catId']);
+            $validate = $this->validateField($model_field,$data);
+            // p($validate);
             if($validate['status']){
-                // $rs = (new sqlQuery())->assembleSql($post,$modelid);
-                // if($rs){
-                //     return $this->ajaxSuccess('发布成功',Url::to(['publish/'.$category_info['url']]));
-                // }else{
-                //     return $this->ajaxFail('发布失败，未知错误');
-                // }
+                $rs = (new sqlQuery())->assembleSql($data,$modelid);
+                if($rs){
+                    return $this->ajaxSuccess('发布成功',Url::to(['/content/list','catid'=>$category_id,'modelid'=>$modelid]));
+                }else{
+                    return $this->ajaxFail('发布失败，未知错误');
+                }
             }else{
                 return $this->ajaxFail($validate['message']);
             }
