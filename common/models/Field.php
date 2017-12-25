@@ -108,7 +108,7 @@ class Field extends BaseModel{
            $t['seetings'] = $seetings;
            if(in_array($value['type'], self::SELECT_TYPE)){
              $t['seetings']['default_value'] = self::selectValue($seetings)['select'];
-             $t['value'] = self::selectValue($seetings)['checked'];
+             $t['value'] = self::selectValue($seetings)['checked'][0];
            }
            if(in_array($value['type'], self::DATE)){
              $t['seetings']['default_value'] = self::seetingsDate($seetings);
@@ -140,8 +140,10 @@ class Field extends BaseModel{
             $value2         = explode('|',$v);
             $str['name']    = $value2[0];
             $str['value']   = $value2[1];
-            if($value2[2] == 'true'){
+            if($value2[2] == 'true' && $seetings['many_select'] == 'false'){
                 array_push($checked, $value2[1]);
+            }else{
+                $checked = $value2[1];
             }
             $data[] = $str;
         }

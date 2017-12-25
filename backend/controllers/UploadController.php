@@ -59,9 +59,9 @@ class UploadController extends AdminBaseController{
    public function actionDelPic(){
         $imgUrl = getcwd().'/'.Yii::$app->request->post('imgUrl');
         if(unlink($imgUrl)){
-           self::successUpload();
+           return $this->ajaxSuccess('删除成功');
         }else{
-            self::failUpload(1,'删除失败');
+            return $this->ajaxFail('删除失败');
         }
    }
 }

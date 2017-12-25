@@ -55,18 +55,19 @@ class ContentController extends AdminBaseController{
         $this->layout = false;
         if($this->isPost()){
             $post    = Yii::$app->request->post();
-            p($post);
+            //p($post);
             $post['category_id'] = $catid;
             $model_field = (new Field())->getModelField($modelid);
             //验证数据库字段的合法性
             $validate = $this->validateField($model_field,$post);
+            p($validate);
             if($validate['status']){
-                $rs = (new sqlQuery())->assembleSql($post,$modelid);
-                if($rs){
-                    return $this->ajaxSuccess('发布成功',Url::to(['publish/'.$category_info['url']]));
-                }else{
-                    return $this->ajaxFail('发布失败，未知错误');
-                }
+                // $rs = (new sqlQuery())->assembleSql($post,$modelid);
+                // if($rs){
+                //     return $this->ajaxSuccess('发布成功',Url::to(['publish/'.$category_info['url']]));
+                // }else{
+                //     return $this->ajaxFail('发布失败，未知错误');
+                // }
             }else{
                 return $this->ajaxFail($validate['message']);
             }
