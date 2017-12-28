@@ -78,6 +78,10 @@ class TestController extends AdminBaseController{
         $this->layout = false;
         return $this->render('/test/ueditor');
     }
+    public function actionTestUpload(){
+        $this->layout = false;
+        return $this->render('/test/test-upload');
+    }
 
 
 

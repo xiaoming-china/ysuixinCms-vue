@@ -96,8 +96,20 @@ class Field extends BaseModel{
             'is_delete'=>Field::DELETE_STATUS_FALSE,
             'is_hide'=>Field::NO_HIDE
         ])->asArray()->all();
+        return $model_field;
+    }
+    /**
+     * [EchoModelField 生成前端字段，输出到前端]
+     * @author:xiaoming
+     * @date:2017-12-26T10:02:53+0800
+     * @param                         [type] $data [description]
+     */
+    public static function EchoModelField($data = []){
+        if(empty($data)){
+            return false;
+        }
         $d = [];
-        foreach ($model_field as $key => $value) {
+        foreach ($data as $key => $value) {
            $t = [];
            $t['name'] = $value['name'];
            $t['e_name'] = $value['e_name'];

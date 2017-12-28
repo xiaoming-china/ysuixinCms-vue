@@ -140,9 +140,17 @@
 		    <Card>
       		  <i-Form ref="contentInfo" 
                 label-position="left"
-                :model="modelFieldList"
+                :model="contentInfo"
+                :rules="fieldInrules"
                 :label-width="200">
-                <Form-Item label="名称" prop="name" v-for="(item, index) in modelFieldList">
+                <Form-Item :label="item.name" 
+                :prop="item.e_name"
+                :rules="{
+                  required: item.not_null == 1 ? true : false, 
+                  message: item.name +'不能为空', 
+                  trigger: 'blur'
+                }"
+                v-for="(item, index) in modelFieldList">
                     <span slot="label">
                       <span class="field-title">{{item.name}}</span>
                       <p v-if="item.name_desc != ''">{{item.name_desc}}</p>
@@ -291,7 +299,6 @@
   <script src="http://unpkg.com/iview/dist/iview.min.js"></script>
   <script src="/public/admin/ueditor/ueditor.config.js"></script>
   <script src="/public/admin/ueditor/ueditor.all.min.js"> </script>
-  <script src="/public/admin/ueditor/lang/zh-cn/zh-cn.js"></script>
   <script src="/public/admin/js/main.js"></script>
   <script src="/public/admin/js/menu.js"></script>
 
@@ -305,6 +312,11 @@
           loading:false,
           modelFieldList:{},
           categoryList: [],
+          fieldInrules:{
+            // title: [
+            //     { required: true, message: '账号不能为空', trigger:'blur'}
+            // ]
+          },
           imgUrl: '',
           visible: false,
           contentInfo:{
@@ -352,7 +364,7 @@
                           var url  = base_url +'/'+path+'/'+name;
                           _that.modelFieldList[key].value.push(url);
                           if(is_many === 'false'){
-                            $('#upload_'+obj).remove();
+                            $('#upload_'+obj).hide();
                           }
                         }else{
                           _that.$Message.warning(i+'张上传失败');
@@ -365,7 +377,6 @@
           //查看图片
           handleView:function(e_name,item_key,p_key){
             var _that = this;
-            console.log(_that.modelFieldList);   
             _that.imgUrl = _that.modelFieldList[item_key].value[p_key];
             _that.visible = true;
           },
@@ -395,16 +406,17 @@
               function(res){
                 _that.modelFieldList = res.data.model_field;
                 _that.categoryList   = res.data.all_category;
+                //_that.fieldInrules   = res.data.field_validate;
                 //加载所有是富文本的字段编辑器
-                setTimeout(function() {
-                  var length = res.data.model_field.length;
-                  var data   = res.data.model_field;
-                  for (var i = 0; i < length; i++) {
-                      if(data[i]['type'] === 'editor'){
-                        UE.getEditor(data[i]['e_name']);
-                      }
-                  }
-                }, 200);
+                _that.$nextTick(function () {
+                    var length = res.data.model_field.length;
+                    var data   = res.data.model_field;
+                    for (var i = 0; i < length; i++) {
+                        if(data[i]['type'] === 'editor'){
+                          UE.getEditor(data[i]['e_name']);
+                        }
+                    }
+                });
               },
               function(res){
                 _that.$Message.warning('添加内容数据获取失败');
@@ -414,6 +426,7 @@
           //发布内容
           addContent:function(name){
             var _that = this;
+            console.log(_that.fieldInrules);
             var count = _that.modelFieldList.length;
             var data  = _that.modelFieldList;
             for (var i = 0; i < count; i++) {
@@ -439,7 +452,7 @@
                     },
                   ); 
                 } else {
-                    this.$Message.error('表单验证失败!');
+                    this.$Message.error('数据验证失败!');
                 }
             })
           },

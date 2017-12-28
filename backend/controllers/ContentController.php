@@ -9,6 +9,7 @@ use backend\controllers\AdminBaseController;
 use common\models\Category;
 use common\lib\Tree;
 use common\lib\sqlQuery;
+use common\lib\ValidateForm;
 use common\models\Field;
 use common\models\Model;
 use yii\db\Command;
@@ -111,15 +112,20 @@ class ContentController extends AdminBaseController{
           return $this->ajaxFail('模型ID不能为空');
         }
         //获取当前栏目所属模型的所有字段
-        $model_field = (new Field())->getModelField($modelid);
+        $model_data = (new Field())->getModelField($modelid);
+        $model_field = (new Field())->EchoModelField($model_data);
+        //生成前端Form验证
+        $field_validate = (new ValidateForm())->EchoValidateJs($model_data);
+
         //获取当前栏目所属模型的所有栏目
         $category_list = (new Category())->getCategoryList($modelid);
         if(!$model_field || !$category_list){
             return $this->ajaxFail('添加内容数据获取失败');
         }
         $all_category = (new Category())->manyArray($category_list, 0);
-        $d['model_field']  = $model_field;
-        $d['all_category'] = $all_category;
+        $d['model_field']    = $model_field;
+        $d['all_category']   = $all_category;
+        $d['field_validate'] = $field_validate;
          return $this->ajaxSuccess('获取成功','',$d);
     }
 
