@@ -67,8 +67,8 @@ class ContentController extends AdminBaseController{
             $data = $r->post();
             $data['category_id'] = $category_id;
             unset($data['modelId'],$data['catId']);
-            $validate = $this->validateField($model_field,$data);
-            // p($validate);
+            $validate = (new ValidateForm())->ValidateForm($model_field,$data);
+            p($validate);
             if($validate['status']){
                 $rs = (new sqlQuery())->assembleSql($data,$modelid);
                 if($rs){
@@ -83,24 +83,7 @@ class ContentController extends AdminBaseController{
             return $this->render('/content/add-content');
         }
     }
-    public function validateField($field = [],$data=[]){
-        foreach ($field as $key => $value) {
-            foreach ($data as $k => $v) {
-                if(($value['e_name'] === $k) && $value['not_null'] == Field::NO_NULL){
-                    if($v == ''){
-                        $d['status']  = false;
-                        $d['message'] = $value['name'].'不能为空';
-                        return $d;
-                    }
-                }
-            }
-        }
-        $d['status'] = true;
-        $d['message'] = '';
-        return $d;
-    }
-
-        /**
+    /**
      * [actionGetModelField 获取模型的所有字段，用于生成前端form]
      * @Author:xiaoming
      * @DateTime        2017-12-16T17:28:08+0800
@@ -115,7 +98,7 @@ class ContentController extends AdminBaseController{
         $model_data = (new Field())->getModelField($modelid);
         $model_field = (new Field())->EchoModelField($model_data);
         //生成前端Form验证
-        $field_validate = (new ValidateForm())->EchoValidateJs($model_data);
+        // $field_validate = (new ValidateForm())->EchoValidateJs($model_data);
 
         //获取当前栏目所属模型的所有栏目
         $category_list = (new Category())->getCategoryList($modelid);
@@ -125,8 +108,8 @@ class ContentController extends AdminBaseController{
         $all_category = (new Category())->manyArray($category_list, 0);
         $d['model_field']    = $model_field;
         $d['all_category']   = $all_category;
-        $d['field_validate'] = $field_validate;
-         return $this->ajaxSuccess('获取成功','',$d);
+        // $d['field_validate'] = $field_validate;
+        return $this->ajaxSuccess('获取成功','',$d);
     }
 
 

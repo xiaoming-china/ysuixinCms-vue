@@ -25,46 +25,57 @@ class ValidateForm extends BaseModel{
     const NO_NULL = 1;//不能为空
     const IS_NULL = 2;//能为空
     /**
-     * [EchoValidateJs 生成前端验证JS]
+     * [EchoValidateJs 验证发布内容的数据合法性]
      * @author:xiaoming
      * @date:2017-12-26T09:59:11+0800
      * @param                         [type] $dat [description]
      */
-    public function EchoValidateJs($data = []){
-        if(empty($data)){
+    public static function ValidateForm($model_field = [],$data=[]){
+        if(empty($model_field) || empty($data)){
             return false;
         }
-        // user_name: [
-        //     { required: true, message: '账号不能为空', trigger:'blur'}
-        // ],
-        $d = [];
-        foreach ($data as $key => $value) {
-            if($value['not_null'] == self::NO_NULL){
-                $t['title'] = [
-                    [
-                        'type'=> 'number',
-                        'required'=> true,
-                        'message' =>'不能为空',
-                        'trigger' =>'blur',
-                    ],
-                    [
-                        'type'=> 'number',
-                        'required'=> true,
-                        'message' =>'不能为空',
-                        'trigger' =>'blur',
-                    ]
-                ];
-                // if($value['not_null_info'] == ''){
-                //     $t[$value['e_name']]['message'] = $value['name'].'不能为空';
-                // }else{
-                //     $t[$value['e_name']]['message'] = $value['not_null_info'];
-                // }
-                // $t[$value['e_name']]['trigger'] = 'blur';
-                $d[] = $t; 
+        foreach ($model_field as $key => $value) {
+            foreach ($data as $k => $v) {
+                if(($value['e_name'] === $k)){
+                    if($value['not_null'] == Field::NO_NULL){
+                       self::ValidateNotNull($value,$v);
+                    }
+                }
             }
         }
-        return $d;
-
+        return true;
+    }
+    /**
+     * [ValidateNotNull 验证非空判断]
+     * @author:xiaoming
+     * @date:2017-12-29T15:57:28+0800
+     */
+    static function ValidateNotNull($value = '',$v = ''){
+        if($value == ''){
+            self::E('数据非空验证代码异常');
+        }
+        $info = '';
+        if($value['not_null_info'] != ''){
+            $info = $value['not_null_info'];
+        }else{
+            $info = $value['name'].'不能为空';
+        }
+        if($v == ''){
+            self::E($info);
+        }
+    }
+    /**
+     * [setErrorInfo 错误信息]
+     * @author:xiaoming
+     * @date:2017-12-29T17:45:45+0800
+     */
+    static function E($message = ''){
+        $d['status']  = 0;
+        $d['message'] = $message;
+        $d['url']     = '';
+        $d['data']    = '';
+        echo json_encode($d);
+        exit;
     }
 
 

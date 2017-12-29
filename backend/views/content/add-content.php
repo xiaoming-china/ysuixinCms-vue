@@ -138,21 +138,18 @@
       	<div class="left-card">
       	  <Col span="11">
 		    <Card>
-      		  <i-Form ref="contentInfo" 
+      		  <i-Form ref="modelFieldList"
                 label-position="left"
-                :model="contentInfo"
-                :rules="fieldInrules"
+                :model="modelFieldList"
                 :label-width="200">
                 <Form-Item :label="item.name" 
                 :prop="item.e_name"
-                :rules="{
-                  required: item.not_null == 1 ? true : false, 
-                  message: item.name +'不能为空', 
-                  trigger: 'blur'
-                }"
                 v-for="(item, index) in modelFieldList">
                     <span slot="label">
-                      <span class="field-title">{{item.name}}</span>
+                      <span class="field-title" 
+                      v-bind:class="[item.not_null == 1 ? 'requird' : '']">
+                        {{item.name}}
+                      </span>
                       <p v-if="item.name_desc != ''">{{item.name_desc}}</p>
                     </span>
     	              <i-Input type="text" size="large" v-model="item.value" v-if="item.type == 'text'">
@@ -178,7 +175,7 @@
               				<!--日期时间选择器-->
                       <!--上传图片-->
                       <div v-if="item.type == 'pic_upload'">
-                        <div class="demo-upload-list" v-if="item.value != ''" 
+                        <div class="demo-upload-list" v-if="item.value != '' && item.value instanceof Array" 
                         v-for="(p_item, p_key) in item.value ">
                           <img v-bind:src='p_item' style="vertical-align: top;"> 
                           <div class="demo-upload-list-cover">
@@ -273,13 +270,13 @@
       <!--字段列表-->
 	    <div class="btn_wrap_pd" style="left: 0;text-align: center;">
 	        <i-Button type="primary"
-	        @click="addContent('contentInfo')"
+	        @click="addContent('1')"
 	        :loading="loading">
 	          <span v-if="!loading">发布</span>
 	          <span v-else>Loading...</span>
 	        </i-Button>
 	        <i-Button type="primary"
-	        @click="addContent('contentInfo')"
+	        @click="addContent('2')"
 	        :loading="loading">
 	          <span v-if="!loading">保存草稿</span>
 	          <span v-else>Loading...</span>
@@ -312,11 +309,6 @@
           loading:false,
           modelFieldList:{},
           categoryList: [],
-          fieldInrules:{
-            // title: [
-            //     { required: true, message: '账号不能为空', trigger:'blur'}
-            // ]
-          },
           imgUrl: '',
           visible: false,
           contentInfo:{
@@ -347,6 +339,7 @@
               var file = e.target.files;
               var formData = new FormData();
               var length = file.length;
+              console.log(file);
               for (var i = 0; i < length; i++) {
                 formData.append('File', file[i],file[i].name);
                 $.ajax({
@@ -362,10 +355,10 @@
                           var path = res.data.path;
                           var name = res.data.name;
                           var url  = base_url +'/'+path+'/'+name;
-                          _that.modelFieldList[key].value.push(url);
                           if(is_many === 'false'){
                             $('#upload_'+obj).hide();
                           }
+                          _that.modelFieldList[key].value.push(url);
                         }else{
                           _that.$Message.warning(i+'张上传失败');
                           return;
@@ -406,7 +399,6 @@
               function(res){
                 _that.modelFieldList = res.data.model_field;
                 _that.categoryList   = res.data.all_category;
-                //_that.fieldInrules   = res.data.field_validate;
                 //加载所有是富文本的字段编辑器
                 _that.$nextTick(function () {
                     var length = res.data.model_field.length;
@@ -424,37 +416,77 @@
             );
           },
           //发布内容
-          addContent:function(name){
+          addContent:function(type){
             var _that = this;
-            console.log(_that.fieldInrules);
+            // var _that = this;
             var count = _that.modelFieldList.length;
             var data  = _that.modelFieldList;
+
             for (var i = 0; i < count; i++) {
               _that.contentInfo[data[i]['e_name']] = data[i]['value'];
               //获取编辑器内容填充到数组
               if(data[i]['type'] === 'editor'){
+                data[i]['value'] =  UE.getEditor(data[i]['e_name']).getContent();
                 _that.contentInfo[data[i]['e_name']] = UE.getEditor(data[i]['e_name']).getContent();
               }
             }
-            // console.log( _that.contentInfo);
-      	    this.$refs[name].validate((valid) => {
-                if (valid) {
-                  $ajax(
-                    '/admin/content/add-content',
-                    _that.contentInfo,
-                    'post',
-                    function(res){
-                     _that.$Message.success('发布成功');
-                     location.href = res.url;
-                    },
-                    function(res){
-                      _that.$Message.error('发布失败');
-                    },
-                  ); 
-                } else {
-                    this.$Message.error('数据验证失败!');
+            // if(!_that.contentValidate()){
+            //   return false;
+            // }
+            $ajax(
+                '/admin/content/add-content',
+                _that.contentInfo,
+                'post',
+                function(res){
+                 _that.$Message.success('发布成功');
+                 location.href = res.url;
+                },
+                function(res){
+                  _that.$Message.error('发布失败,'+res.message);
+                },
+                true
+            ); 
+          },
+          contentValidate:function(){
+            var _that = this;
+            var count = _that.modelFieldList.length;
+            var data  = _that.modelFieldList;
+
+            for (var i = 0; i < count; i++) {
+              //非空验证
+              if(data[i]['not_null'] == 1 && data[i]['value'] == ''){
+                if(data[i]['not_null_info'] !== ''){
+                  var not_null_info = data[i]['not_null_info'];
+                }else{
+                  var not_null_info = data[i]['name']+'不能为空';
                 }
-            })
+                _that.$Message.warning(not_null_info);
+                return false;
+              }
+              //text类型验证
+              if(data[i]['type'] === 'text' ||  data[i]['type'] === 'textarea'){
+                if(data[i]['value'].length > data[i]['seetings']['max_length']){
+                  _that.$Message.warning(data[i]['name']+'最多'+data[i]['seetings']['max_length']+'字符');
+                  return false;
+                }
+                if(data[i]['value'].length < data[i]['seetings']['min_length']){
+                  _that.$Message.warning(data[i]['name']+'最少'+data[i]['seetings']['min_length']+'字符');
+                  return false;
+                }
+                //pic_upload类型验证
+                if(data[i]['type'] === 'pic_upload'){
+                  if(data[i]['value'].length > data[i]['seetings']['max_length']){
+                    _that.$Message.warning(data[i]['name']+'最多'+data[i]['seetings']['max_length']+'张');
+                    return false;
+                  }
+                }
+              }
+            }
+            if(_that.contentInfo.category_tree.length <= 0){
+              _that.$Message.warning('请选择发布栏目');
+              return false;
+            }
+            return true;
           },
           location:function(type,catId){
           	var url = '';

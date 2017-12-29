@@ -111,13 +111,14 @@ class Field extends BaseModel{
         $d = [];
         foreach ($data as $key => $value) {
            $t = [];
-           $t['name'] = $value['name'];
-           $t['e_name'] = $value['e_name'];
-           $t['name_desc'] = $value['name_desc'];
-           $t['type'] = $value['type'];
-           $t['not_null'] = $value['not_null'];
-           $t['value'] = '';
-           $seetings = unserialize($value['seetings']);
+           $t['name']          = $value['name'];
+           $t['e_name']        = $value['e_name'];
+           $t['name_desc']     = $value['name_desc'];
+           $t['type']          = $value['type'];
+           $t['not_null']      = $value['not_null'];
+           $t['not_null_info'] = $value['not_null_info'];
+           $t['value']         = '';
+           $seetings      = unserialize($value['seetings']);
            $t['seetings'] = $seetings;
            if(in_array($value['type'], self::SELECT_TYPE)){
              $t['seetings']['default_value'] = self::selectValue($seetings)['select'];
@@ -133,6 +134,17 @@ class Field extends BaseModel{
            $d[] = $t;
         }
         return $d;
+    }
+    private static function imgValue($seetings = ''){
+        if($seetings == ''){
+            return '';
+        }
+        if($seetings['many_select'] === 'false'){
+            return '';
+        }else{
+            return [];
+        }
+
     }
     /**
      * [selectValue 字段选项值处理]
