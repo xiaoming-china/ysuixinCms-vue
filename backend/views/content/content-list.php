@@ -214,6 +214,8 @@
           loading:false,
           contentList:[],
           searchData:{
+            modelId:'',
+            catId:'',
             keyworlds:'',
             status:'-1',
             start_time:'',
@@ -227,6 +229,8 @@
         mounted: function() {
 		  this.modelId = this.request('modelid');
 		  this.catId   = this.request('catid');
+          this.searchData.modelId = this.request('modelid');
+          this.searchData.catId   = this.request('catid');
           this.getContentList();
         },
         methods: {

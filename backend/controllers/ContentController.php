@@ -52,38 +52,48 @@ class ContentController extends AdminBaseController{
      */
     public function actionAddContent(){
         $this->layout = false;
-        if($this->isPost()){
-            $r = Yii::$app->request;
-            $data = json_decode($r->post('data'),true);
-            $category_id = $data['category_id'];
-            $modelid     = $data['modelId'];
-            if($modelid == ''){
-                return $this->ajaxFail('参数异常');
-            }
-            if(empty($category_id)){
-                return $this->ajaxFail('请选择发布栏目');
-            }
-            $model_field = (new Field())->getModelField($modelid);
-            //验证数据库字段的合法性
-            $data['category_id'] = $category_id;
-            unset($data['modelId'],$data['catId']);
-            $content_data = (new ValidateForm())->content_data($model_field,$data);
-
-
-            $validate = (new ValidateForm())->ValidateForm($model_field,$content_data);
-            p($validate);
-            if($validate['status']){
-                $rs = (new sqlQuery())->assembleSql($data,$modelid);
-                if($rs){
+        try {
+            if($this->isPost()){
+                $transaction = Yii::$app->db->beginTransaction();
+                $r = Yii::$app->request;
+                $data = json_decode($r->post('data'),true);
+                $category_id = $data['category_id'];
+                $modelid     = $data['modelId'];
+                if($modelid == ''){
+                    return $this->ajaxFail('参数异常');
+                }
+                if(empty($category_id)){
+                    return $this->ajaxFail('请选择发布栏目');
+                }
+                $model_field = (new Field())->getModelField($modelid);
+                //验证数据库字段的合法性
+                $data['category_id'] = $category_id;
+                unset($data['modelId'],$data['catId']);
+                $content_data = (new ValidateForm())->content_data($model_field,$data);
+                $validate = (new ValidateForm())->ValidateForm($model_field,$content_data);
+                if($validate){
+                    //多栏目发布
+                    $fail = 0;
+                    foreach ($category_id as $k => $v){
+                        $content_data['category_id'] = $v;
+                        $rs = (new sqlQuery())->assembleSql($content_data,$modelid);
+                        if(!$rs){
+                            $fail++;
+                            break;
+                        }
+                    }
+                    if($fail > 0){
+                      $transaction->rollBack();
+                      return $this->ajaxFail('发布失败，未知错误');
+                    }
+                    $transaction->commit();
                     return $this->ajaxSuccess('发布成功',Url::to(['/content/list','catid'=>$category_id,'modelid'=>$modelid]));
-                }else{
-                    return $this->ajaxFail('发布失败，未知错误');
                 }
             }else{
-                return $this->ajaxFail($validate['message']);
+                return $this->render('/content/add-content');
             }
-        }else{
-            return $this->render('/content/add-content');
+        }catch (Exception $e) {
+            return $this->ajaxFail('代码异常');
         }
     }
     /**
@@ -106,7 +116,7 @@ class ContentController extends AdminBaseController{
         //获取当前栏目所属模型的所有栏目
         $category_list = (new Category())->getCategoryList($modelid);
         if(!$model_field || !$category_list){
-            return $this->ajaxFail('添加内容数据获取失败');
+            return $this->ajaxFail('未找到相关模型信息');
         }
         $all_category = (new Category())->manyArray($category_list, 0);
         $d['model_field']    = $model_field;

@@ -282,16 +282,14 @@
       <!--字段列表-->
 	    <div class="btn_wrap_pd" style="left: 0;text-align: center;">
 	        <i-Button type="primary"
-	        @click="addContent('1')"
+	        @click="addContent()"
 	        :loading="loading">
 	          <span v-if="!loading">发布</span>
 	          <span v-else>Loading...</span>
 	        </i-Button>
-	        <i-Button type="primary"
-	        @click="addContent('2')"
-	        :loading="loading">
-	          <span v-if="!loading">保存草稿</span>
-	          <span v-else>Loading...</span>
+	        <i-Button type="warning"
+	        @click="cancel()">
+	          <span>取消</span>
 	        </i-Button>
 	    </div>
         <Modal title="图片预览" v-model="visible">
@@ -339,6 +337,7 @@
             // this.contentInfo.catId   = this.request('catid');
             this.contentInfo.modelId = this.request('modelid');
             this.contentInfo.publish_time = this.getNowTime();
+            this.contentInfo.category_id.push(this.catId);
             this.getModelField();
         },
         methods: {
@@ -426,14 +425,13 @@
                 });
               },
               function(res){
-                _that.$Message.warning('添加内容数据获取失败');
+                _that.$Message.warning('未找到相关模型信息');
               },
             );
           },
           //发布内容
           addContent:function(type){
             var _that = this;
-            // var _that = this;
             var count = _that.modelFieldList.length;
             var data  = _that.modelFieldList;
 
@@ -446,18 +444,45 @@
                   _that.contentInfo[data[i]['e_name']] = data[i]['value'];
               }
             }
+            if(!_that.contentValidate()){
+                return false;
+            }
               $ajax(
                   '/admin/content/add-content',
                   {data : JSON.stringify(_that.contentInfo)},
                   'post',
                   function(res){
-                    _that.$Message.success('发布成功');
+                      var url = '/admin/content/list?catid='+_that.catId+'&modelid='+_that.modelId;
+                      _that.$Message.success({
+                          content:'发布成功',
+                          onClose:function(){
+                              location.href= url;
+                          }
+                      });
                   },
                   function(res){
                     _that.$Message.error('发布失败,'+res.message);
                   },
                   false
               );
+          },
+          cancel:function () {
+              var info = '';
+              info += '<p>如果你已填写内容，点击取消，将不会保存数据.</p>';
+              info += '<p>是否确认取消?</p>';
+              this.$Modal.confirm({
+                  title: '提示',
+                  content: info,
+                  okText: '取消',
+                  cancelText: '不取消',
+                  onOk: () => {
+                    var url = '/admin/content/list?catid='+catId+'&modelid='+modelId;
+                    location.href= url;
+                  },
+                  onCancel: () => {
+                    this.$Modal.remove();
+                  }
+              });
           },
           contentValidate:function(){
             var _that = this;
@@ -494,7 +519,7 @@
                 }
               }
             }
-            if(_that.contentInfo.category_tree.length <= 0){
+            if(_that.contentInfo.category_id.length <= 0){
               _that.$Message.warning('请选择发布栏目');
               return false;
             }

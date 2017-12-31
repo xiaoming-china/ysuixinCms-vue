@@ -35,13 +35,19 @@ class ValidateForm extends BaseModel{
             return false;
         }
         foreach ($model_field as $key => $value) {
+            $seetings = unserialize($value['seetings']);
             foreach ($data as $k => $v) {
                 if(($value['e_name'] === $k)){
+                    //非空验证
                     if($value['not_null'] == Field::NO_NULL){
                        self::ValidateNotNull($value,$v);
                     }
+                    //字符长度验证
+                    if(in_array($value['type'],Field::TEXT)){
+                        self::ValidateLength($value,$v);
+                    }
+
                 }
-//                echo $value['e_name'];
             }
         }
         return true;
@@ -61,9 +67,35 @@ class ValidateForm extends BaseModel{
         }else{
             $info = $value['name'].'不能为空';
         }
-        if($v == ''){
+        if($v == '' && $info != ''){
             BaseModel::E($info);
         }
+    }
+    /**
+     * [ValidateNotNull 验证字符长度]
+     * @author:xiaoming
+     * @date:2017-12-29T15:57:28+0800
+     */
+    static function ValidateLength($value = '',$v = ''){
+        if($value == ''){
+            self::E('字符长度验证数据异常');
+        }
+        $seetings = unserialize($value['seetings']);
+        //字符长度验证
+        if($seetings['min_length'] == 0 && $seetings['max_length'] == 0){
+            return true;
+        }
+        $info = '';
+        if(strlen($v) > $seetings['max_length']){
+            $info =  $value['name'].'最多'.$seetings['max_length'].'字符';
+        }
+        if(strlen($v) < $seetings['min_length']){
+            $info =  $value['name'].'最少'.$seetings['min_length'].'字符';
+        }
+        if($info != ''){
+            BaseModel::E($info);
+        }
+
     }
 
     /**
@@ -91,7 +123,6 @@ class ValidateForm extends BaseModel{
         }
         return $data;
     }
-
 
 
 

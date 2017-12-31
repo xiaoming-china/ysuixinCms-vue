@@ -28,6 +28,7 @@ class Field extends BaseModel{
     const SELECT_TYPE = ['radio','checkbox','select'];//有选项值的类型
     const DATE = ['date','time','dateAndTime'];
     const IMG  = ['pic_upload'];
+    const TEXT = ['text','textarea'];
 
 
 

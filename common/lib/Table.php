@@ -13,7 +13,8 @@ use common\models\BaseModel;
  */
 class Table extends BaseModel{
 	private $libPath = ''; //当前路径
-	//基本表
+    const table_data_Prefix = '_data';//副表后缀
+	//主表
 	const BASIC_TABLE = [
 			'id'          =>'pk',
 			'category_id' =>'integer(11) default 0',
@@ -34,6 +35,11 @@ class Table extends BaseModel{
 			'created_at'    =>'integer(11)',
 			'update_at' =>'integer(11)',
 		];
+        //副表
+        const TABLE_DATA = [
+            'id'          =>'integer(11) default 0',
+            'content'     =>'text default ""',
+        ];
 		//字段类型
 		const FIELDS_LIST = [
 		    'text' => '单行文本',
@@ -125,8 +131,11 @@ class Table extends BaseModel{
 		  return false;
 		}
 		$table_name = Yii::$app->params['tablePrefix'].$table_name;
-		$rs = Yii::$app->db->createCommand()->createTable($table_name, $filed)->execute();
-		return $rs == 0 ? true : false;
+		//创建主表
+		 Yii::$app->db->createCommand()->createTable($table_name, $filed)->execute();
+		//创建副表
+        Yii::$app->db->createCommand()->createTable($table_name.self::$table_data_Prefix, SELF::TABLE_DATA)->execute();
+		return true;
 	}
 	/**
 	 * [dropTable 删除表]
