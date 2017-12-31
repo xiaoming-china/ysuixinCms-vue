@@ -41,6 +41,7 @@ class ValidateForm extends BaseModel{
                        self::ValidateNotNull($value,$v);
                     }
                 }
+//                echo $value['e_name'];
             }
         }
         return true;
@@ -52,7 +53,7 @@ class ValidateForm extends BaseModel{
      */
     static function ValidateNotNull($value = '',$v = ''){
         if($value == ''){
-            self::E('数据非空验证代码异常');
+            self::E('数据非空验证数据异常');
         }
         $info = '';
         if($value['not_null_info'] != ''){
@@ -61,22 +62,36 @@ class ValidateForm extends BaseModel{
             $info = $value['name'].'不能为空';
         }
         if($v == ''){
-            self::E($info);
+            BaseModel::E($info);
         }
     }
+
     /**
-     * [setErrorInfo 错误信息]
-     * @author:xiaoming
-     * @date:2017-12-29T17:45:45+0800
+     * @Author:          xiaoming
+     * @DateTime:        2017/12/31 11:22
+     * @name:           将前端传送的数据重新组装，再进行合法性验证
+     * @param array $model_field
+     * @param array $data
+     * @return array
      */
-    static function E($message = ''){
-        $d['status']  = 0;
-        $d['message'] = $message;
-        $d['url']     = '';
-        $d['data']    = '';
-        echo json_encode($d);
-        exit;
+    public static function content_data($model_field = [],$data=[]){
+        foreach ($model_field as $k => $v){
+            $seetings = unserialize($v['seetings']);
+             if(in_array($v['type'], Field::IMG)){
+                if(!empty($data[$v['e_name']])){
+                    if($seetings['many_select'] == 'false'){
+                        $data[$v['e_name']] = $data[$v['e_name']][0];
+                    }else{
+                        $data[$v['e_name']] = serialize($data[$v['e_name']]);
+                    }
+                }else{
+                    $data[$v['e_name']] = '';
+                }
+             }
+        }
+        return $data;
     }
+
 
 
 

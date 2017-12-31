@@ -18,11 +18,9 @@ use yii\helpers\Url;
 class ContentController extends AdminBaseController{
     public $layout = false;
     /**
-     * @Author:          xiaoming
+     * @Author:          xiaominggit
      * @DateTime:        2017-11-15
      * @name:description 栏目内容列表,如果栏目id为空，则查询全部的内容列表
-     * @copyright:       [copyright]
-     * @license:         [license]
      * @return           [type]      [description]
      */
     public function actionList(){
@@ -56,18 +54,23 @@ class ContentController extends AdminBaseController{
         $this->layout = false;
         if($this->isPost()){
             $r = Yii::$app->request;
-            $category_id = $r->post('catId','');
-            $modelid     = $r->post('modelId','');
-            if($category_id == '' || $modelid == ''){
+            $data = json_decode($r->post('data'),true);
+            $category_id = $data['category_id'];
+            $modelid     = $data['modelId'];
+            if($modelid == ''){
                 return $this->ajaxFail('参数异常');
+            }
+            if(empty($category_id)){
+                return $this->ajaxFail('请选择发布栏目');
             }
             $model_field = (new Field())->getModelField($modelid);
             //验证数据库字段的合法性
-            
-            $data = $r->post();
             $data['category_id'] = $category_id;
             unset($data['modelId'],$data['catId']);
-            $validate = (new ValidateForm())->ValidateForm($model_field,$data);
+            $content_data = (new ValidateForm())->content_data($model_field,$data);
+
+
+            $validate = (new ValidateForm())->ValidateForm($model_field,$content_data);
             p($validate);
             if($validate['status']){
                 $rs = (new sqlQuery())->assembleSql($data,$modelid);

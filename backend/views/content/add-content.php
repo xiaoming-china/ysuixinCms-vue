@@ -175,7 +175,7 @@
               				<!--日期时间选择器-->
                       <!--上传图片-->
                       <div v-if="item.type == 'pic_upload'">
-                        <div class="demo-upload-list" v-if="item.value != '' && item.value instanceof Array" 
+                        <div class="demo-upload-list" v-if="item.value != ''"
                         v-for="(p_item, p_key) in item.value ">
                           <img v-bind:src='p_item' style="vertical-align: top;"> 
                           <div class="demo-upload-list-cover">
@@ -185,7 +185,19 @@
                         </div>
                         <div :id="'upload_'+item.e_name"  class="ivu-upload" style="display: inline-block; width: 58px;" @click="openFile(item.e_name);">
                           <div class="ivu-upload ivu-upload-drag">
-                            <input type="file" multiple="multiple" class="ivu-upload-input upload" :id="item.e_name" @change="getFile($event,index,item.e_name,item.seetings.many_select)"> 
+                              <span v-if="item.seetings.many_select === 'false'">
+                                  <input type="file"
+                                 class="ivu-upload-input upload"
+                                 :id="item.e_name"
+                                 @change="getFile($event,index,item.e_name,item.seetings.many_select)">
+                              </span>
+                              <span else>
+                                  <input type="file"
+                                  class="ivu-upload-input upload"
+                                  multiple = "multiple"
+                                  :id="item.e_name"
+                                  @change="getFile($event,index,item.e_name,item.seetings.many_select)">
+                              </span>
                             <div style="width: 58px; height: 58px; line-height: 58px;">
                              <i class="ivu-icon ivu-icon-camera" style="font-size: 20px;"></i>
                             </div>
@@ -317,14 +329,14 @@
             status:"1",
             publish_time:'',
             allow_comment:1,
-            category_tree:[],
+            category_id:[],
             show_template:'show.php'
           }
         },
         mounted: function() {
             this.modelId = this.request('modelid');
             this.catId   = this.request('catid');
-            this.contentInfo.catId   = this.request('catid');
+            // this.contentInfo.catId   = this.request('catid');
             this.contentInfo.modelId = this.request('modelid');
             this.contentInfo.publish_time = this.getNowTime();
             this.getModelField();
@@ -339,7 +351,6 @@
               var file = e.target.files;
               var formData = new FormData();
               var length = file.length;
-              console.log(file);
               for (var i = 0; i < length; i++) {
                 formData.append('File', file[i],file[i].name);
                 $.ajax({
@@ -377,14 +388,17 @@
           handleRemove:function(e_name,item_key,p_key){
             var _that = this;
             _that.modelFieldList[item_key].value.splice(p_key,1);
+            if(_that.modelFieldList[item_key].value.length == 0){
+                $('#upload_'+e_name).show();
+            }
           },
           //获取模型下所有栏目
           getTreeData:function(tree){
             var _that = this;
-            _that.contentInfo.category_tree = [];
+            _that.contentInfo.category_id = [];
             var length = tree.length;
             for (var i = 0; i < length; i++) {
-              _that.contentInfo.category_tree.push(tree[i].catid);
+              _that.contentInfo.category_id.push(tree[i].catid);
             }
           },
           //获取模型所有字段
@@ -404,6 +418,7 @@
                     var length = res.data.model_field.length;
                     var data   = res.data.model_field;
                     for (var i = 0; i < length; i++) {
+                        _that.contentInfo[data[i]['e_name']] = data[i]['value'];
                         if(data[i]['type'] === 'editor'){
                           UE.getEditor(data[i]['e_name']);
                         }
@@ -423,29 +438,26 @@
             var data  = _that.modelFieldList;
 
             for (var i = 0; i < count; i++) {
-              _that.contentInfo[data[i]['e_name']] = data[i]['value'];
               //获取编辑器内容填充到数组
               if(data[i]['type'] === 'editor'){
                 data[i]['value'] =  UE.getEditor(data[i]['e_name']).getContent();
                 _that.contentInfo[data[i]['e_name']] = UE.getEditor(data[i]['e_name']).getContent();
+              }else{
+                  _that.contentInfo[data[i]['e_name']] = data[i]['value'];
               }
             }
-            // if(!_that.contentValidate()){
-            //   return false;
-            // }
-            $ajax(
-                '/admin/content/add-content',
-                _that.contentInfo,
-                'post',
-                function(res){
-                 _that.$Message.success('发布成功');
-                 location.href = res.url;
-                },
-                function(res){
-                  _that.$Message.error('发布失败,'+res.message);
-                },
-                true
-            ); 
+              $ajax(
+                  '/admin/content/add-content',
+                  {data : JSON.stringify(_that.contentInfo)},
+                  'post',
+                  function(res){
+                    _that.$Message.success('发布成功');
+                  },
+                  function(res){
+                    _that.$Message.error('发布失败,'+res.message);
+                  },
+                  false
+              );
           },
           contentValidate:function(){
             var _that = this;
