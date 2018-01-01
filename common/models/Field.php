@@ -96,7 +96,7 @@ class Field extends BaseModel{
             'status'=>Field::OPEN_STATUS,
             'is_delete'=>Field::DELETE_STATUS_FALSE,
             'is_hide'=>Field::NO_HIDE
-        ])->asArray()->all();
+        ])->asArray()->orderBy('sort ASC')->all();
         return $model_field;
     }
     /**
