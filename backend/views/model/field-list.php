@@ -108,7 +108,7 @@
 				<tr>
                     <th style="width: 40px;">
                         <input type='checkbox'
-                               :checked="allData.length === fieldList.length"
+                               :checked="isCheckedAll"
                                @click='checkedAll()'>
                         &nbsp;
                     </th>
@@ -131,12 +131,19 @@
 				<tr v-for="(value,key) in fieldList" :key="key" v-else>
 			        <td>
                         <input type='checkbox'
-                               :checked="allData.indexOf(value.id)>=0"
-                               @click='checkedOne(value.id)'>
+                               :disabled = "value.is_style == 1"
+                               :style="{cursor: value.is_style == 1 ? 'no-drop' : ''}"
+                               :checked  = "allData.indexOf(value.id)>=0"
+                               @click    = "checkedOne(value.id)">
                         {{key + 1}}
                     </td>
 			        <td>
-                        <i-input type="text" name="sort" :value="1" style="width:60px;" size="small"></i-input>
+                        <i-input type="text"
+                                 :value="value.sort"
+                                 style="width:60px;"
+                                 size="small"
+                                 @on-change="changeSortNum($event,key)">
+                        </i-input>
                     </td>
 					<td>{{value.name}}</td> 
 					<td>{{value.e_name}}</td> 
@@ -167,22 +174,23 @@
       <!--字段列表-->
         <div class="btn_wrap_pd">
             <i-Button type="primary"
-                      @click="fieldSorts()"
+                      @click="checkedAll()"
                       :loading="loading">
-                <span v-if="!loading">排序</span>
-                <span v-else>Loading...</span>
+                <span v-if="isCheckedAll">取消全选</span>
+                <span v-else>全选</span>
             </i-Button>
             <i-Button type="primary"
-                      @click="allChangeStatus(1)"
-                      :loading="loading">
-                <span v-if="!loading">批量禁用</span>
-                <span v-else>Loading...</span>
+                      @click="fieldSorts()">
+                <span>排序</span>
             </i-Button>
             <i-Button type="primary"
-                      @click="fieldDels(2)"
+                      @click="allChangeStatus()"
                       :loading="loading">
-                <span v-if="!loading">批量删除</span>
-                <span v-else>Loading...</span>
+                <span>批量禁用</span>
+            </i-Button>
+            <i-Button type="primary"
+                      @click="alldeleteField()">
+                <span>批量删除</span>
             </i-Button>
         </div>
     </div>
@@ -211,7 +219,8 @@
             status:'-1',
           },
           isCheckedAll: false,
-          allData:[]
+          allData:[],
+          sortData:[]
         },
         mounted: function() {
 		  this.modelId            = this.request('model_id');
@@ -249,6 +258,14 @@
                 }
                 this.changeStatusField(data,2);
            },
+            alldeleteField:function () {
+                var data = this.allData;
+                if(data.length <= 0){
+                    this.$Message.warning('请选择数据');
+                    return;
+                }
+                this.deleteField(data);
+            },
           //更改字段状态
           changeStatusField:function(id,type) {
             //2禁用1开启;开启 or 禁用弹窗
@@ -272,6 +289,7 @@
                       _that.$Message.success(title+'成功');
                       _that.$Modal.remove();
                       _that.allData = [];
+                      _that.isCheckedAll = false;
                       _that.getFieldList();
                     },
                     function(res){
@@ -286,7 +304,7 @@
             });
           },
           //删除模型
-          deleteField:function(key,id){
+          deleteField:function(id){
             var _that = this;
             this.$Modal.confirm({
                 title:'删除确认',
@@ -318,7 +336,28 @@
                   this.$Modal.remove();
                 }
             });
-
+          },
+          //排序数据格式组装
+          changeSortNum:function (event,key){
+              var _that = this;
+              var re = /^[1-9]+[0-9]*]*$/;
+              var sort_num = !re.test(event.data) ? 0 : event.data;
+              var length   = this.fieldList.length;
+              this.sortData[key].sort = sort_num;
+          },
+          fieldSorts:function () {
+              var _that = this;
+              $ajax(
+                  '/admin/field/field-sort',
+                  {data:_that.sortData},
+                  'post',
+                  function(res){
+                      _that.$Message.success('排序成功');
+                  },
+                  function(res){
+                      _that.$Message.warning('排序失败，未知错误');
+                  },
+              );
           },
           //获取字段列表
           getFieldList:function(){
@@ -329,6 +368,11 @@
               'get',
               function(res){
                 _that.fieldList = res.data.list;
+                var length      = res.data.list.length;
+                //push数据到排序数组
+                for(var i = 0;i < length;i++){
+                    _that.sortData.push({id:res.data.list[i]['id'],sort: res.data.list[i]['sort']});
+                }
               },
               function(res){
                 _that.$Message.warning('获取失败');

@@ -210,25 +210,32 @@ class FieldController extends AdminBaseController{
      * @return           [type]      [description]
      */
     public function actionChangeFieldStatus(){
-        if($this->isPost()){
-            $id     = $this->post('id','');
-            $status = $this->post('status','');
-            //p($id);
-            $model = (new Field())->find()->where(['id'=>$id])->all();
-            $fail = 0;
-            foreach ($model as $m) {
-                if($m->is_style != Field::IS_STYLE){
-                    $m->status = $status;
-                    $rs = $m->update(false);
-                    if(!$rs){
-                        $fail++;
+        try {
+            $transaction = Yii::$app->db->beginTransaction();
+            if($this->isPost()) {
+                $id = $this->post('id', '');
+                $status = $this->post('status', '');
+                $model = (new Field())->find()->where(['id' => $id])->all();
+                $fail = 0;
+                foreach ($model as $m) {
+                    if ($m->is_style != Field::IS_STYLE) {
+                        $m->status = $status;
+                        $rs = $m->update(false);
+                        if (!$rs) {
+                            $fail++;
+                        }
                     }
                 }
+                if ($fail > 0) {
+                    $transaction->rollBack();
+                    return $this->ajaxFail('操作失败,未知错误');
+                }
+                $transaction->commit();
+                return $this->ajaxSuccess('操作成功');
             }
-            if($fail > 0){
-                return $this->ajaxFail('操作失败,未知错误');
-            }
-            return $this->ajaxSuccess('操作成功');
+        }catch (Exception $e) {
+            $transaction->rollBack();
+            return $this->error($e->getMessage());
         }
     }
         /**
@@ -240,25 +247,68 @@ class FieldController extends AdminBaseController{
      * @return           [type]      [description]
      */
     public function actionDelField(){
-        if($this->isPost()){
-            $d['id']        = $this->post('id','');
-            $d['is_delete'] = Field::DELETE_STATUS_TRUE;
-
-            $model = (new Field())->findOne($d['id']);
-            if(is_null($model)){
-                return $this->ajaxFail('未找到相关数据');
-            }
-            if($model->load($d,'') && $model->validate()){
-                $model->is_delete  = $d['is_delete'];
-                $model->updated_at = time();
-                if($model->save()){
-                   return $this->ajaxSuccess('删除成功');
-                }else{
-                    return $this->ajaxFail('删除失败,未知错误');
+        try {
+            $transaction = Yii::$app->db->beginTransaction();
+            if($this->isPost()) {
+                $id = $this->post('id', '');
+                $model = (new Field())->find()->where(['id' => $id])->all();
+                $fail = 0;
+                foreach ($model as $m) {
+                    if ($m->is_style != Field::IS_STYLE) {
+                        $m->is_delete  = Field::DELETE_STATUS_TRUE;
+                        $m->updated_at = time();
+                        $rs = $m->update(false);
+                        if (!$rs) {
+                            $fail++;
+                        }
+                    }
                 }
-            }else{
-                return $this->ajaxFail('删除失败.'.current($model->getErrors())[0]);
+                if ($fail > 0) {
+                    $transaction->rollBack();
+                    return $this->ajaxFail('操作失败,未知错误');
+                }
+                $transaction->commit();
+                return $this->ajaxSuccess('操作成功');
             }
+        }catch (Exception $e) {
+            $transaction->rollBack();
+            return $this->error($e->getMessage());
+        }
+    }
+    /**
+     * @Author:          xiaoming
+     * @DateTime:        2017-11-08
+     * @name:description 字段排序
+     * @copyright:       [copyright]
+     * @license:         [license]
+     * @return           [type]      [description]
+     */
+    public function actionFieldSort(){
+        try {
+            $transaction = Yii::$app->db->beginTransaction();
+            if($this->isPost()) {
+                $data = $this->post('data',[]);
+                $fail = 0;
+                foreach ($data as $k => $v){
+                    $model = (new Field())->findOne($v['id']);
+                    if(!is_null($model)){
+                        $model->sort = $v['sort'];
+                        $rs = $model->save(false);
+                         if (!$rs) {
+                            $fail++;
+                        }
+                    }
+                }
+                if ($fail > 0) {
+                    $transaction->rollBack();
+                    return $this->ajaxFail('操作失败,未知错误');
+                }
+                $transaction->commit();
+                return $this->ajaxSuccess('操作成功');
+            }
+        }catch (Exception $e) {
+            $transaction->rollBack();
+            return $this->error($e->getMessage());
         }
     }
     /**
