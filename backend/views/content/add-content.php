@@ -228,7 +228,8 @@
       		                <p class="seeting">状　　态：
       		                	<i-select size="small" v-model="contentInfo.status" style="width:100px !important;">
       		                      <i-option value="1">发布</i-option>
-      		                      <i-option value="2">待审核</i-option>
+                                  <i-option value="2">存为草稿</i-option>
+      		                      <i-option value="3">待审核</i-option>
       		                    </i-select>
       		                </p>
       		                <p class="seeting">发布时间：
@@ -287,10 +288,10 @@
 	          <span v-if="!loading">发布</span>
 	          <span v-else>Loading...</span>
 	        </i-Button>
-	        <i-Button type="warning"
-	        @click="cancel()">
-	          <span>取消</span>
-	        </i-Button>
+<!--	        <i-Button type="warning"-->
+<!--	        @click="cancel()">-->
+<!--	          <span>取消</span>-->
+<!--	        </i-Button>-->
 	    </div>
         <Modal title="图片预览" v-model="visible">
             <img :src=imgUrl v-if="visible" style="width: 100%"/>

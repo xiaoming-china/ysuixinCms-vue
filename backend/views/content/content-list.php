@@ -136,8 +136,9 @@
 					<td>{{value.view}}</td> 
 					<td>{{value.create_by}}</td> 
 					<td>
-						<span v-if="value.status == 0">待审核</span>
-						<span v-if="value.status == 1">已审核</span>
+						<span v-if="value.status == 1">已发布</span>
+						<span v-if="value.status == 2">存为草稿</span>
+                        <span v-if="value.status == 3">待审核</span>
 					</td> 
 					<td>{{getLocalTime(value.created_at)}}</td>
 			        <td v-if="value.is_style != 1">

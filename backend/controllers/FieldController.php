@@ -211,26 +211,24 @@ class FieldController extends AdminBaseController{
      */
     public function actionChangeFieldStatus(){
         if($this->isPost()){
-            $d['id']     = $this->post('id','');
-            $d['status'] = $this->post('status','');
-
-            $model = (new Field())->findOne($d['id']);
-            if(is_null($model)){
-                return $this->ajaxFail('未找到相关数据');
-            }
-            if($model->is_style == Field::IS_STYLE){
-                return $this->ajaxFail('系统字段，不能操作');
-            }
-            if($model->load($d,'') && $model->validate()){
-                $model->status     = $d['status'];
-                if($model->save()){
-                   return $this->ajaxSuccess('操作成功');
-                }else{
-                    return $this->ajaxFail('操作失败,未知错误');
+            $id     = $this->post('id','');
+            $status = $this->post('status','');
+            //p($id);
+            $model = (new Field())->find()->where(['id'=>$id])->all();
+            $fail = 0;
+            foreach ($model as $m) {
+                if($m->is_style != Field::IS_STYLE){
+                    $m->status = $status;
+                    $rs = $m->update(false);
+                    if(!$rs){
+                        $fail++;
+                    }
                 }
-            }else{
-                return $this->ajaxFail('操作失败.'.current($model->getErrors())[0]);
             }
+            if($fail > 0){
+                return $this->ajaxFail('操作失败,未知错误');
+            }
+            return $this->ajaxSuccess('操作成功');
         }
     }
         /**

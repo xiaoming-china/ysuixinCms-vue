@@ -106,27 +106,38 @@
 		<table class="table table72 table-striped">
 			<thead>
 				<tr>
-	        <th style="width: 40px;">
-	          <Checkbox v-model="check_all"></Checkbox>
-	        </th> 
-					<th style="width: 40px;">编号</th> 
-					<th style="width: 80px;">名称</th> 
-					<th style="width: 80px;">标识</th> 
-					<th style="width: 120px;">是否系统字段</th> 
-					<th style="width: 40px;">状态</th>
-			        <th style="width: 110px;">添加时间</th>
-			        <th style="width: 128px;">操作</th>
+                    <th style="width: 40px;">
+                        <input type='checkbox'
+                               :checked="allData.length === fieldList.length"
+                               @click='checkedAll()'>
+                        &nbsp;
+                    </th>
+                    <th style="width: 40px;">排序</th>
+                    <th style="width: 80px;">名称</th>
+                    <th style="width: 80px;">标识</th>
+                    <th style="width: 40px;">是否系统字段</th>
+                    <th style="width: 40px;">状态</th>
+                    <th style="width: 110px;">添加时间</th>
+                    <th style="width: 128px;">操作</th>
 				</tr>
-			</thead> 
+			</thead>
 			<tbody>
 			    <tr v-if="fieldList.length == 0">
 			          <td colspan="8">
 			              <p class="t-center">暂无数据</p>
 			          </td>
 			    </tr>
+
 				<tr v-for="(value,key) in fieldList" :key="key" v-else>
-			        <td><Checkbox v-model="check_all":value="value.id"></Checkbox></td> 
-			        <td>{{key + 1}}</td>
+			        <td>
+                        <input type='checkbox'
+                               :checked="allData.indexOf(value.id)>=0"
+                               @click='checkedOne(value.id)'>
+                        {{key + 1}}
+                    </td>
+			        <td>
+                        <i-input type="text" name="sort" :value="1" style="width:60px;" size="small"></i-input>
+                    </td>
 					<td>{{value.name}}</td> 
 					<td>{{value.e_name}}</td> 
 					<td>
@@ -142,8 +153,8 @@
 			          <span><a href="#"@click="location(2,value.id);">编辑</a>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
 			          <span><a href="#"@click="deleteField(key,value.id);">删除</a>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
 			          <span>
-			            <a href="#" v-if="value.status == 1" @click="changeStatusField(value.id,2,key);">禁用</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-			            <a href="#" v-else @click="changeStatusField(value.id,1,key);">开启</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+			            <a href="#" v-if="value.status == 1" @click="changeStatusField(value.id,2);">禁用</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+			            <a href="#" v-else @click="changeStatusField(value.id,1);">开启</a>&nbsp;&nbsp;|&nbsp;&nbsp;
 			          </span>
 			        </td> 
 			        <td v-if="value.is_style == 1">
@@ -154,6 +165,26 @@
 		</table>
       </div>
       <!--字段列表-->
+        <div class="btn_wrap_pd">
+            <i-Button type="primary"
+                      @click="fieldSorts()"
+                      :loading="loading">
+                <span v-if="!loading">排序</span>
+                <span v-else>Loading...</span>
+            </i-Button>
+            <i-Button type="primary"
+                      @click="allChangeStatus(1)"
+                      :loading="loading">
+                <span v-if="!loading">批量禁用</span>
+                <span v-else>Loading...</span>
+            </i-Button>
+            <i-Button type="primary"
+                      @click="fieldDels(2)"
+                      :loading="loading">
+                <span v-if="!loading">批量删除</span>
+                <span v-else>Loading...</span>
+            </i-Button>
+        </div>
     </div>
     <!--主体内容区结束-->
 
@@ -179,16 +210,47 @@
             keyworlds:'',
             status:'-1',
           },
-          check_all:false,
+          isCheckedAll: false,
+          allData:[]
         },
         mounted: function() {
-		      this.modelId            = this.request('model_id');
-		      this.searchData.modelId = this.request('model_id');
+		  this.modelId            = this.request('model_id');
+		  this.searchData.modelId = this.request('model_id');
           this.getFieldList();
         },
         methods: {
+            checkedOne (id) {
+                let idIndex = this.allData.indexOf(id)
+                if (idIndex >= 0) {
+                    this.allData.splice(idIndex, 1);
+                } else {
+                    this.allData.push(id);
+                }
+            },
+            checkedAll:function () {
+                this.isCheckedAll = !this.isCheckedAll;
+                if (this.isCheckedAll) {
+                    this.allData = [];
+                    var length =  this.fieldList.length;
+                    for(var i = 0;i < length;i++){
+                        if(this.fieldList[i]['is_style'] == 2){
+                            this.allData.push(this.fieldList[i]['id']);
+                        }
+                    }
+                } else {
+                    this.allData = []
+                }
+           },
+           allChangeStatus:function () {
+                var data = this.allData;
+                if(data.length <= 0){
+                    this.$Message.warning('请选择数据');
+                    return;
+                }
+                this.changeStatusField(data,2);
+           },
           //更改字段状态
-          changeStatusField:function(id,type,key) {
+          changeStatusField:function(id,type) {
             //2禁用1开启;开启 or 禁用弹窗
             var _that = this;
             var title = type == 1 ? '开启' : '禁用';
@@ -209,10 +271,11 @@
                     function(res){
                       _that.$Message.success(title+'成功');
                       _that.$Modal.remove();
-                      _that.fieldList[key].status = type == 1 ? 1 : 2;
+                      _that.allData = [];
+                      _that.getFieldList();
                     },
                     function(res){
-                      _that.$Message.warning(title+'失败;'+res.info);
+                      _that.$Message.warning(res.message);
                     },
                     false
                   );
