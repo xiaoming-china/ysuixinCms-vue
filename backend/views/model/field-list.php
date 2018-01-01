@@ -339,17 +339,15 @@
           },
           //排序数据格式组装
           changeSortNum:function (event,key){
-              var _that = this;
               var re = /^[1-9]+[0-9]*]*$/;
               var sort_num = !re.test(event.data) ? 0 : event.data;
-              var length   = this.fieldList.length;
-              this.sortData[key].sort = sort_num;
+              this.fieldList[key].sort = sort_num;
           },
           fieldSorts:function () {
               var _that = this;
               $ajax(
                   '/admin/field/field-sort',
-                  {data:_that.sortData},
+                  {data:_that.fieldList},
                   'post',
                   function(res){
                       _that.$Message.success('排序成功');
@@ -369,10 +367,6 @@
               function(res){
                 _that.fieldList = res.data.list;
                 var length      = res.data.list.length;
-                //push数据到排序数组
-                for(var i = 0;i < length;i++){
-                    _that.sortData.push({id:res.data.list[i]['id'],sort: res.data.list[i]['sort']});
-                }
               },
               function(res){
                 _that.$Message.warning('获取失败');
