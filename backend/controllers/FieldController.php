@@ -93,6 +93,7 @@ class FieldController extends AdminBaseController{
                     'error_info'    =>$fieldInfo['error_info'],
                     'is_hide'       =>$fieldInfo['is_hide'],
                     'regular'       =>$fieldInfo['regular'],
+                    'sort'          =>6,
                     'seetings'      =>serialize($configParams),
                 ];
                 if($model->load($d,'') && $model->validate()){
