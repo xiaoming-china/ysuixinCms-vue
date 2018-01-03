@@ -26,14 +26,15 @@ class sqlQuery extends BaseModel{
 	 * @return          [type]                             [description]
 	 */
 	public static function selectData($table='',$param = []){
-		$pageSize = $param['pageSize'] == '' ? Yii::$app->params['default_page_size'] : $param['pageSize'];
-		$offset   = ($param['page'] - 1) * $pageSize;
-		$table_name = Yii::$app->params['tablePrefix'].$table;
-
+        $pageSize   = $param['pageSize'] == '' ? Yii::$app->params['default_page_size'] : $param['pageSize'];
+        $offset     = ($param['page'] - 1) * $pageSize;
+        $table_name = Yii::$app->params['tablePrefix'].$table;
 		$sql  = (new Query())->from($table_name.' AS t')->where(['t.is_delete'=>2]);
-		if($param['start_time'] != '' && $param['end_time'] != ''){
-			$sql->andwhere(['between', 'created_at', $param['start_time'], $param['end_time']]);
-		}
+        if($param['start_time'] != '' && $param['end_time'] != ''){
+            $start_time = strtotime(date('Y-m-d',strtotime($param['start_time']) - 86400).' 23:59:59');
+            $end_time = strtotime(date('Y-m-d',strtotime($param['end_time']) + 86400).' 00:00:00');
+            $sql->andFilterWhere(['between', 'created_at', $start_time, $end_time]);
+        }
 		$sql->andFilterWhere(['or', ['like', 'title', $param['keyworlds']], ['like', 'create_by', $param['keyworlds']],['like', 'keywords', $param['keyworlds']]]);
 		if($param['status'] != '-1'){
 			$sql->andWhere(['=', 'status', $param['status']]);
@@ -72,6 +73,7 @@ class sqlQuery extends BaseModel{
                 $table_data[$k] = $v;
             }
         }
+
         //插入主表数据
         if(!empty($basic)){
             $rs = Yii::$app->db->createCommand()->insert($table_name, $basic)->execute();
@@ -81,6 +83,7 @@ class sqlQuery extends BaseModel{
         }
         //插入副表数据
         if(!empty($table_data)){
+
             $table_data['id'] = Yii::$app->db->getLastInsertID();
             $rs = Yii::$app->db->createCommand()->insert($table_name.Table::TABLE_DATA_PREFIX, $table_data)->execute();
             if(!$rs){
@@ -147,6 +150,7 @@ class sqlQuery extends BaseModel{
                 $table_data[$k] = $v;
             }
         }
+
         //p(Yii::$app->db->createCommand()->update($table_name, $basic, 'id = '.$id)->getRawSql());
         //插入主表数据
         if(!empty($basic)){

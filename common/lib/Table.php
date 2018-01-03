@@ -22,7 +22,6 @@ class Table extends BaseModel{
 			'keywords'    =>'varchar(30) default ""',
 			'thumb'       =>'varchar(500) default ""',
 			'desc'        =>'varchar(200) default ""',
-			'content'     =>'text default ""',
 			'view'        =>'integer(11) default 0',
 			'url'         =>'varchar(500) default ""',
 			'status'	  =>'smallint(6) default 1',

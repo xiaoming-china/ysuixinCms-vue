@@ -278,7 +278,9 @@
         },
         methods: {
 	    	select_model:function(event){
-	    		this.getCategoryList(event);
+	    		if(event != ''){
+            this.getCategoryList(event);
+          }
 	    	},
 	    	getCategoryInfo:function(catid){
 	    		var _that = this;
@@ -303,10 +305,9 @@
 		            'post',
 		            function(res){
 		              _that.modelList = res.data;
-		              _that.loading = false;
 		            },
 		            function(res){
-		              _that.loading = true;
+		              _that.$Message.error('获取模型数据失败;');
 		            }
 		        );
 	    	},

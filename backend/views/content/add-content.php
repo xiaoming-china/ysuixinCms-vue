@@ -453,6 +453,9 @@
                   _that.contentInfo[data[i]['e_name']] = data[i]['value'];
               }
             }
+            if(_that.contentInfo.status != 2){
+              _that.contentInfo.publish_time = _that.getNowTime();
+            }
             if(!_that.contentValidate()){
                 return false;
             }

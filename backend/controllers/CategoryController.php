@@ -50,7 +50,7 @@ class CategoryController extends AdminBaseController{
           return $this->ajaxFail('参数异常,模型ID不能为空');
         }
         $category_list = (new Category())->getCategoryList($m_id);
-        if(!$category_list){
+        if($category_list === false){
             return $this->ajaxFail('栏目列表获取失败');
         }
         $all_category = (new Category())->HtmlManyArray($category_list,$pid = 0);

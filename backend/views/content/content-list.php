@@ -92,7 +92,7 @@
                     </i-Input>
                   </div>
                   <div>
-                  	<Date-Picker type="daterange" placeholder="发布时间" style="width: 100%;" v-on:on-change="selectTime"></Date-Picker>
+                  	<Date-Picker type="datetimerange" placeholder="发布时间" style="width: 100%;" v-on:on-change="selectTime"></Date-Picker>
                   </div>
                   <div>
                     <i-select v-model="searchData.status">

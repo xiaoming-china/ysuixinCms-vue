@@ -102,7 +102,7 @@
             </div>
       </div>
       <!--模型列表-->
-      <div class="card">
+      <div class="card" style="margin-bottom: 80px;">
 		<table class="table table72 table-striped">
 			<thead>
 				<tr>

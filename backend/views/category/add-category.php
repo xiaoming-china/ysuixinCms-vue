@@ -276,7 +276,9 @@
         },
         methods: {
 	    	select_model:function(event){
-	    		this.getCategoryList(event);
+          if(event != ''){
+            this.getCategoryList(event);
+          }
 	    	},
 	    	getModelList:function(){
 	    		var _that = this;
@@ -301,11 +303,9 @@
 		            'get',
 		            function(res){
 		              _that.categoryList = res.data;
-                  console.log(res.data);
-		              _that.loading = false;
 		            },
 		            function(res){
-		              _that.loading = true;
+		              _that.$Message.error('获取模型数据失败;');
 		            }
 		        );
 	    	},
