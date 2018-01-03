@@ -86,10 +86,10 @@ class ValidateForm extends BaseModel{
             return true;
         }
         $info = '';
-        if(strlen($v) > $seetings['max_length']){
+        if(mb_strlen($v) > $seetings['max_length']){
             $info =  $value['name'].'最多'.$seetings['max_length'].'字符';
         }
-        if(strlen($v) < $seetings['min_length']){
+        if(mb_strlen($v) < $seetings['min_length']){
             $info =  $value['name'].'最少'.$seetings['min_length'].'字符';
         }
         if($info != ''){

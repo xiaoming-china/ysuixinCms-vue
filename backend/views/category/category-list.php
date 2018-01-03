@@ -130,11 +130,23 @@
             <span v-if = "value.type == 2" >单页面</span>
           </td>
 			        <td>
-			          <span><a href="#"@click="location(2,value.catid,'');">编辑</a>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
-			          <span><a href="#"@click="deleteCategory(key,value.catid);">删除</a>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
 			          <span>
-			            <a href="#" @click="location(1,value.catid,value.modelid);">查看数据</a>
+                   <a href="#"@click="location(2,value.catid,'');">编辑栏目</a>
+                   &nbsp;&nbsp;|&nbsp;&nbsp;
+                </span>
+			          <span>
+                   <a href="#"@click="deleteCategory(key,value.catid);">删除栏目</a>
+                   &nbsp;&nbsp;|&nbsp;&nbsp;
+                </span>
+			          <span>
+			            <a href="#" v-if="value.type == 1" @click="location(1,value.catid,value.modelid);">
+                  查看内容&nbsp;&nbsp;|&nbsp;&nbsp;
+                  </a>
 			          </span>
+                <span>
+                  <a href="#" v-if="value.type == 1"  @click="location(3,value.catid,value.modelid);">发布内容</a>
+                  <a href="#" v-if="value.type == 2"  @click="location(3,value.catid,value.modelid);">编辑单页</a>
+                </span>
 			        </td>
 				</tr>
 			</tbody>
@@ -271,9 +283,12 @@
           	  case 2:
                 url = '/admin/category/edit-category?catid='+categoryId;
           		break;
+              case 3:
+                url = '/admin/content/add-content?catid='+categoryId+'&modelid='+modelId;
+              break;
           	}
-            location.href = url;
-            //window.open(url);
+            //location.href = url;
+            window.open(url);
           },
           	//获取url参数
     			request: function (name, url) {

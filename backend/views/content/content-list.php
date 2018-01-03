@@ -97,8 +97,10 @@
                   <div>
                     <i-select v-model="searchData.status">
                         <i-option value="-1">全部</i-option>
-                        <i-option value="1">审核</i-option>
-                        <i-option value="0">未审核</i-option>
+                        <i-option value="1">已发布</i-option>
+                        <i-option value="2">等待发布</i-option>
+                        <i-option value="3">存为草稿</i-option>
+                        <i-option value="4">待审核</i-option>
                     </i-select>
                   </div>
               <i-button @click="getContentList();">搜索</i-button>
@@ -137,17 +139,23 @@
 					<td>{{value.create_by}}</td> 
 					<td>
 						<span v-if="value.status == 1">已发布</span>
-						<span v-if="value.status == 2">存为草稿</span>
-                        <span v-if="value.status == 3">待审核</span>
+            <span v-if="value.status == 2">等待发布</span>
+						<span v-if="value.status == 3">存为草稿</span>
+            <span v-if="value.status == 4">待审核</span>
 					</td> 
-					<td>{{getLocalTime(value.created_at)}}</td>
+					<td>
+            <span v-if="value.status == 1">{{getLocalTime(value.publish_time)}}</span>
+            <span v-if="value.status == 2">{{getLocalTime(value.publish_time)}}</span>
+            <span v-if="value.status == 3">存为草稿</span>
+            <span v-if="value.status == 4">待审核</span>
+          </td>
 			        <td v-if="value.is_style != 1">
 			          <span><a href="#"@click="location(2,value.id);">编辑</a>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
 			          <span><a href="#"@click="deleteField(key,value.id);">删除</a>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
-			          <span>
+<!-- 			          <span>
 			            <a href="#" v-if="value.status == 1" @click="changeStatusField(value.id,2,key);">禁用</a>&nbsp;&nbsp;|&nbsp;&nbsp;
 			            <a href="#" v-else @click="changeStatusField(value.id,1,key);">开启</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-			          </span>
+			          </span> -->
 			        </td> 
 			        <td v-if="value.is_style == 1">
 			          系统字段，暂不可操作
@@ -303,12 +311,12 @@
               },
             );
           },
-          location:function(type,catId){
+          location:function(type,id){
           	var url = '';
           	switch(type){
           	  case 1:url = '/admin/content/add-content?modelid='+this.modelId+'&catid='+this.catId;
           		break;
-          	  case 2:url = '/admin/field/edit-field?model_id='+this.modelId+'&field_id='+fieldId;
+          	  case 2:url = '/admin/content/edit-content?modelid='+this.modelId+'&catid='+this.catId+'&id='+id;
           		break;
           	}
             location.href = url;

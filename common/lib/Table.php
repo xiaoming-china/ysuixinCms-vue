@@ -13,7 +13,7 @@ use common\models\BaseModel;
  */
 class Table extends BaseModel{
 	private $libPath = ''; //当前路径
-    const table_data_Prefix = '_data';//副表后缀
+    const TABLE_DATA_PREFIX = '_data';//副表后缀
 	//主表
 	const BASIC_TABLE = [
 			'id'          =>'pk',
@@ -94,11 +94,11 @@ class Table extends BaseModel{
 	 * @return          [type]                               [description]
 	 */
 	public static function checkTable($table_name) {
-
 		$allTable = Yii::$app->db->getSchema()->getTableNames();//获取全部表名
 		$Prefix   = Yii::$app->params['tablePrefix'];//获取数据库前缀
 		$table_name = $Prefix.$table_name;
-		if(in_array($table_name, $allTable)){
+		
+		if(!in_array($table_name, $allTable)){
 			return false;
 		}
 		return $table_name;
@@ -134,7 +134,7 @@ class Table extends BaseModel{
 		//创建主表
 		 Yii::$app->db->createCommand()->createTable($table_name, $filed)->execute();
 		//创建副表
-        Yii::$app->db->createCommand()->createTable($table_name.self::$table_data_Prefix, SELF::TABLE_DATA)->execute();
+        Yii::$app->db->createCommand()->createTable($table_name.self::TABLE_DATA_PREFIX, self::TABLE_DATA)->execute();
 		return true;
 	}
 	/**

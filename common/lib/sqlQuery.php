@@ -55,7 +55,7 @@ class sqlQuery extends BaseModel{
         }
         $data['created_at']    = time();
         $data['update_at']     = time();
-        $data['publish_time']  = strtotime($data['publish_time']);
+        $data['publish_time']  = $data['publish_time'] != '' ? strtotime($data['publish_time']) :'';
         $data['create_by']     = Yii::$app->user->identity->username;
         $model_info = (new Model())->getModelInfo($modelid);
         if($model_info === false){
@@ -82,7 +82,85 @@ class sqlQuery extends BaseModel{
         //插入副表数据
         if(!empty($table_data)){
             $table_data['id'] = Yii::$app->db->getLastInsertID();
-            $rs = Yii::$app->db->createCommand()->insert($table_name.Table::table_data_Prefix, $table_data)->execute();
+            $rs = Yii::$app->db->createCommand()->insert($table_name.Table::TABLE_DATA_PREFIX, $table_data)->execute();
+            if(!$rs){
+                return false;
+            }
+        }
+        return true;
+    }
+    /**
+     * [getContent 查询数据]
+     * @author:xiaoming
+     * @date:2018-01-02T15:50:45+0800
+     * @param                         string $table [description]
+     * @return                        [type]        [description]
+     */
+    public function selectContentData($table='',$id='',$field=[]){
+        if($table =='' || $id ==''){
+            return false;
+        }
+        $TableName = (new Table())->checkTable($table);
+        if(!$TableName){
+            return false;
+        }
+        $sql = (new Query())->from($TableName.' AS c')->where(['c.id'=>$id]);
+        $sql->join('LEFT JOIN',$TableName.Table::TABLE_DATA_PREFIX. ' AS d','c.id = d.id');
+        
+        if(!empty($field)){
+            foreach ($field as $key => $value) {
+                $sql->addSelect($value['e_name']);
+            }
+            $sql->addSelect('c.category_id,
+                c.status,
+                c.publish_time,
+                c.allow_comment,
+                c.show_template,
+                d.content'
+            );
+        }else{
+            $sql->select('c.*,d.content');
+        }
+        $rs = $sql->one();
+        return $rs;
+    }
+    //组装数据更新sql
+    public static function updateAssembleSql($data = [],$modelid = '',$id = ''){
+        if(empty($data) || $modelid == ''||$id == ''){
+            return false;
+        }
+        $data['update_at']     = time();
+        $data['publish_time']  = $data['publish_time'] != '' ? strtotime($data['publish_time']) :'';
+        $data['create_by']     = Yii::$app->user->identity->username;
+        $model_info = (new Model())->getModelInfo($modelid);
+        if($model_info === false){
+            BaseModel::E('模型数据异常');
+        }
+        $table_name = Yii::$app->params['tablePrefix'].$model_info->e_name;
+       //p(Yii::$app->db->createCommand()->insert($table_name, $data)->getRawSql());
+        //判断字段属于主表还是副表
+        $basic = $table_data = [];
+        foreach ($data as $k => $v){
+            if(Table::checkColumn($model_info->e_name,$k)){
+                $basic[$k] = $v;
+            }else{
+                $table_data[$k] = $v;
+            }
+        }
+        //p(Yii::$app->db->createCommand()->update($table_name, $basic, 'id = '.$id)->getRawSql());
+        //插入主表数据
+        if(!empty($basic)){
+            $rs = Yii::$app->db->createCommand()->update(
+                $table_name, 
+                $basic, 
+                'id = '.$id)->execute();
+            if(!$rs){
+                return false;
+            }
+        }
+        //插入副表数据
+        if(!empty($table_data)){
+          $rs = Yii::$app->db->createCommand()->update($table_name.Table::TABLE_DATA_PREFIX, $table_data, 'id = '.$id)->execute();
             if(!$rs){
                 return false;
             }

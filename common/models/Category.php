@@ -141,19 +141,23 @@ class Category extends BaseModel{
     }
     /**
      * [actionGetCategoryList 根据模型ID获取栏目列表]
-     * @author:xiaoming
+     * @author:xiaoming 
      * @date:2017-12-15T15:21:36+0800
+     * is_page 是否查询单页
      * @return                        [type] [description]
      */
-    public function getCategoryList($model_id = ''){
+    public function getCategoryList($model_id = '',$is_page = true){
         if($model_id == ''){
           return false;
         }
         $model = new Category();
-        $category_list = $model->find()
-        ->select('catid,parentid,catname')
-        ->where(['modelid'=>$model_id,'is_delete'=>$model::DELETE_STATUS_FALSE])
-        ->asArray()->all();
+        $sql = $model->find()
+        ->select('catid,parentid,catname,type')
+        ->where(['modelid'=>$model_id,'is_delete'=>$model::DELETE_STATUS_FALSE]);
+        if(!$is_page){
+            $sql->andwhere(['type'=>1]);
+        }
+        $category_list = $sql->asArray()->all();
         return $category_list;
     }
     /**
@@ -170,6 +174,7 @@ class Category extends BaseModel{
             $v = [];
             if($value['parentid'] == $pid){
                 $v['catid']    = $value['catid'];
+                $v['type']     = $value['type'];
                 $v['title']    = $value['catname'];
                 $v['expand']   = true;
                 $v['children'] = self::manyArray($cate,$value['catid']);

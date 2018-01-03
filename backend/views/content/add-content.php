@@ -226,13 +226,14 @@
       		                	发布设置
       		                </p>
       		                <p class="seeting">状　　态：
-      		                	<i-select size="small" v-model="contentInfo.status" style="width:100px !important;">
-      		                      <i-option value="1">发布</i-option>
-                                  <i-option value="2">存为草稿</i-option>
-      		                      <i-option value="3">待审核</i-option>
+      		                	<i-select size="small" v-model="contentInfo.status" style="width:100px !important;" @on-change="selectStatus">
+      		                      <i-option value="1">立即发布</i-option>
+                                <i-option value="2">定时发布</i-option>
+                                <i-option value="3">存为草稿</i-option>
+      		                      <i-option value="4">待审核</i-option>
       		                    </i-select>
       		                </p>
-      		                <p class="seeting">发布时间：
+      		                <p class="seeting" v-if="contentInfo.status == 2">发布时间：
       		                	<Date-Picker type="datetime" format="yyyy-MM-dd HH:mm:ss" :value="contentInfo.publish_time" style="width:200px !important;" size="small" @on-change="contentInfo.publish_time=$event" >
       		                	</Date-Picker>
       		                </p>
@@ -342,6 +343,13 @@
             this.getModelField();
         },
         methods: {
+          selectStatus:function(event){
+            // if(event == 2){
+              this.contentInfo.publish_time = this.getNowTime();
+            // }else{
+            //   this.contentInfo.publish_time = '';
+            // }
+          },
           //上传图片
           openFile:function(obj){
             $('#'+obj).click();
@@ -464,7 +472,7 @@
                   function(res){
                     _that.$Message.error('发布失败,'+res.message);
                   },
-                  false
+                  true
               );
           },
           cancel:function () {
