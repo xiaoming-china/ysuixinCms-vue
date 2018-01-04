@@ -199,7 +199,7 @@ body{
     overflow:auto;
 }
 .main-content .left-nav ul .parent-nav-item{
-    padding: 8px 0px 8px 0px;
+    padding: 0px 0px 8px 0px;
     overflow: hidden;
 }
 .main-content .left-nav ul .parent-nav-item span{
@@ -207,23 +207,23 @@ body{
     font-weight: 400;
     cursor: pointer;
     padding-bottom: 7px;
-   /* display: block;*/
+    display: block;
     font-size: 12px;
 }
 .main-content .left-nav ul .parent-nav-item .sub-nav-item{
-    background: red;
+    overflow: hidden;
 }
 .main-content .left-nav ul .parent-nav-item .sub-nav-item a{
     float: left;
     width: 82%;
-    padding: 7px 0px 7px 7px;
+    padding: 0px 0px 7px 7px;
     color: #333;
-    font-style: normal;
+    /*font-style: normal;*/
     font-size:12px;
 }
 .right-content{
     float: left;
-    margin-left: 10%;
+    margin-left: 9%;
     width: 88%;
     padding-top: 55px;
 }

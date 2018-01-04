@@ -57,24 +57,25 @@
           },
           login_list:function(){
             var _this = this;
-            axios.get('/admin/index/main').then(function (res) {
-              if(res.data.status == 1){
-                var data = res.data.data.login_list;
-                var length = data.length;
-                for (var i = 0; i < length; i++) {
-                  _this.login_log.push({
-                    created_at: data[i].created_at,
-                    username:data[i].username,
-                    ip:data[i].ip
-                  });
+            $ajax(
+                '/admin/index/main',
+                '', 
+                'get',
+                function(res){
+                  var data = res.data.login_list;
+                  var length = data.length;
+                  for (var i = 0; i < length; i++) {
+                    _this.login_log.push({
+                      created_at: data[i].created_at,
+                      username:data[i].username,
+                      ip:data[i].ip
+                    });
+                  }
+                },
+                function(res){
+                  console.log('请求失败,服务器错误');
                 }
-              }else{
-                _this.msg('请求错误');
-              }
-            })
-            .catch(function (error) {
-              _this.msg('请求失败,服务器错误');
-            });
+            );
           }
       }
     })
