@@ -8883,3 +8883,196 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1515059951.117
     'REQUEST_TIME' => 1515059951
 ]
+2018-01-04 13:37:18 [127.0.0.1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Trying to get property of non-object' in G:\xampp\htdocs\vueDemo\backend\views\layouts\main-admin.php:26
+Stack trace:
+#0 G:\xampp\htdocs\vueDemo\backend\views\layouts\main-admin.php(26): yii\base\ErrorHandler->handleError(8, 'Trying to get p...', 'G:\\xampp\\htdocs...', 26, Array)
+#1 G:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\View.php(330): require('G:\\xampp\\htdocs...')
+#2 G:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\View.php(250): yii\base\View->renderPhpFile('G:\\xampp\\htdocs...', Array)
+#3 G:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(396): yii\base\View->renderFile('G:\\xampp\\htdocs...', Array, Object(backend\controllers\IndexController))
+#4 G:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(382): yii\base\Controller->renderContent('<div class="rig...')
+#5 G:\xampp\htdocs\vueDemo\backend\controllers\IndexController.php(26): yii\base\Controller->render('index')
+#6 [internal function]: backend\controllers\IndexController->actionIndex()
+#7 G:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 G:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#9 G:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('index', Array)
+#10 G:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('', Array)
+#11 G:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 G:\xampp\htdocs\vueDemo\web\admin\index.php(20): yii\base\Application->run()
+#13 {main}
+2018-01-04 13:37:18 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'MIBDIRS' => 'G:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'G:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'vuedemo.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\ProgramData\\ComposerSetup\\bin;D:\\php55n;G:\\xampp\\php;G:\\Git\\cmd;F:\\python;C:\\Program Files\\Microsoft\\Web Platform Installer\\;C:\\Program Files (x86)\\Microsoft ASP.NET\\ASP.NET Web Pages\\v1.0\\;C:\\Program Files (x86)\\Windows Kits\\8.0\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.23 (Win32) OpenSSL/1.0.2h PHP/5.6.28 Server at vuedemo.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2h PHP/5.6.28'
+    'SERVER_NAME' => 'vuedemo.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'G:/xampp/htdocs/vueDemo/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'G:/xampp/htdocs/vueDemo/web'
+    'SERVER_ADMIN' => 'vueDemo.com'
+    'SCRIPT_FILENAME' => 'G:/xampp/htdocs/vueDemo/web/admin/index.php'
+    'REMOTE_PORT' => '8941'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/admin/'
+    'SCRIPT_NAME' => '/admin/index.php'
+    'PHP_SELF' => '/admin/index.php'
+    'REQUEST_TIME_FLOAT' => 1515069438.162
+    'REQUEST_TIME' => 1515069438
+]
+2018-01-04 13:37:18 [127.0.0.1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Trying to get property of non-object' in G:\xampp\htdocs\vueDemo\backend\views\layouts\main-admin.php:26
+Stack trace:
+#0 G:\xampp\htdocs\vueDemo\backend\views\layouts\main-admin.php(26): yii\base\ErrorHandler->handleError(8, 'Trying to get p...', 'G:\\xampp\\htdocs...', 26, Array)
+#1 G:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\View.php(330): require('G:\\xampp\\htdocs...')
+#2 G:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\View.php(250): yii\base\View->renderPhpFile('G:\\xampp\\htdocs...', Array)
+#3 G:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(396): yii\base\View->renderFile('G:\\xampp\\htdocs...', Array, Object(backend\controllers\IndexController))
+#4 G:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(382): yii\base\Controller->renderContent('<div class="rig...')
+#5 G:\xampp\htdocs\vueDemo\backend\controllers\IndexController.php(26): yii\base\Controller->render('index')
+#6 [internal function]: backend\controllers\IndexController->actionIndex()
+#7 G:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 G:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#9 G:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('index', Array)
+#10 G:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('', Array)
+#11 G:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 G:\xampp\htdocs\vueDemo\web\admin\index.php(20): yii\base\Application->run()
+#13 {main}
+2018-01-04 13:37:18 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'MIBDIRS' => 'G:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'G:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'vuedemo.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\ProgramData\\ComposerSetup\\bin;D:\\php55n;G:\\xampp\\php;G:\\Git\\cmd;F:\\python;C:\\Program Files\\Microsoft\\Web Platform Installer\\;C:\\Program Files (x86)\\Microsoft ASP.NET\\ASP.NET Web Pages\\v1.0\\;C:\\Program Files (x86)\\Windows Kits\\8.0\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.23 (Win32) OpenSSL/1.0.2h PHP/5.6.28 Server at vuedemo.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2h PHP/5.6.28'
+    'SERVER_NAME' => 'vuedemo.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'G:/xampp/htdocs/vueDemo/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'G:/xampp/htdocs/vueDemo/web'
+    'SERVER_ADMIN' => 'vueDemo.com'
+    'SCRIPT_FILENAME' => 'G:/xampp/htdocs/vueDemo/web/admin/index.php'
+    'REMOTE_PORT' => '8942'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/admin/'
+    'SCRIPT_NAME' => '/admin/index.php'
+    'PHP_SELF' => '/admin/index.php'
+    'REQUEST_TIME_FLOAT' => 1515069438.873
+    'REQUEST_TIME' => 1515069438
+]
+2018-01-04 13:37:51 [127.0.0.1][5][4090hjhduhhdcepuu82dcms9r4][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "publish/img/favicon.html".' in G:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php:532
+Stack trace:
+#0 G:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('publish/img/fav...', Array)
+#1 G:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 G:\xampp\htdocs\vueDemo\web\admin\index.php(20): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in G:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php:114
+Stack trace:
+#0 G:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 G:\xampp\htdocs\vueDemo\web\admin\index.php(20): yii\base\Application->run()
+#2 {main}
+2018-01-04 13:37:51 [127.0.0.1][5][4090hjhduhhdcepuu82dcms9r4][info][application] $_COOKIE = [
+    'advanced-frontend' => 'cl6d8966noens2p7rb5f69acr5'
+    '_csrf-frontend' => '8f23fc88b9ed644423e1013696001ec6f2df5432b428adf57ddabd951df853b5a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"\"ANÕµß@¾ž%óþüäVÔ~é•ù»©!e¡\"\";}'
+    'advanced-backend' => '4090hjhduhhdcepuu82dcms9r4'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 5
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'G:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'G:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'G:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'G:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'vuedemo.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36'
+    'HTTP_ACCEPT' => 'image/webp,image/apng,image/*,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://vuedemo.com/admin/publish/content-index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'advanced-frontend=cl6d8966noens2p7rb5f69acr5; _csrf-frontend=8f23fc88b9ed644423e1013696001ec6f2df5432b428adf57ddabd951df853b5a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22%22AN%D5%B5%90%DF%40%BE%9E%25%F3%FE%FC%E4V%15%02%D4%7E%08%E9%11%95%F9%7F%BB%A9%21e%A1%22%22%3B%7D; advanced-backend=4090hjhduhhdcepuu82dcms9r4'
+    'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\ProgramData\\ComposerSetup\\bin;D:\\php55n;G:\\xampp\\php;G:\\Git\\cmd;F:\\python;C:\\Program Files\\Microsoft\\Web Platform Installer\\;C:\\Program Files (x86)\\Microsoft ASP.NET\\ASP.NET Web Pages\\v1.0\\;C:\\Program Files (x86)\\Windows Kits\\8.0\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.23 (Win32) OpenSSL/1.0.2h PHP/5.6.28 Server at vuedemo.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2h PHP/5.6.28'
+    'SERVER_NAME' => 'vuedemo.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'G:/xampp/htdocs/vueDemo/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'G:/xampp/htdocs/vueDemo/web'
+    'SERVER_ADMIN' => 'vueDemo.com'
+    'SCRIPT_FILENAME' => 'G:/xampp/htdocs/vueDemo/web/admin/index.php'
+    'REMOTE_PORT' => '9013'
+    'REDIRECT_URL' => '/admin/publish/img/favicon.html'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/admin/publish/img/favicon.html'
+    'SCRIPT_NAME' => '/admin/index.php'
+    'PHP_SELF' => '/admin/index.php'
+    'REQUEST_TIME_FLOAT' => 1515069471.685
+    'REQUEST_TIME' => 1515069471
+]

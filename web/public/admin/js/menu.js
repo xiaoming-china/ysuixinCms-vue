@@ -1,7 +1,7 @@
 $(document).ready(function() {
       //获取全部菜单,先查询本地存储，没有，再请求接口
        var menuList = JSON.parse(localStorage.getItem("menuList"));
-       if(menuList == null || menuList.length == 0){
+       if(menuList == null){
           $.post('/admin/menu/menu-list', function(res) {
               if(res.status == 1){
                 pushTopMenu(res.data);
@@ -42,7 +42,7 @@ $(document).ready(function() {
         var seconde_menu = '';
         var item = $(this).attr('item');
         localStorage.setItem("topIndex",item);
-        secondeMenu(menuList,item);//二级菜单
+        secondeMenu(JSON.parse(localStorage.getItem("menuList")),item);//二级菜单
       });
       //push顶部菜单,并且选中上一页选中的菜单
        function pushTopMenu(menuList){
@@ -53,11 +53,13 @@ $(document).ready(function() {
           $('#top-menu').append(top_menu);
           var topIndex = localStorage.getItem("topIndex");
           if(topIndex != null){
+              secondeMenu(menuList,parseInt(topIndex));
             $('#top-menu > li').eq(topIndex).addClass('on').siblings().removeClass('on');
           }else{
+              secondeMenu(menuList,0);
             $('#top-menu > li').eq(0).addClass('on').siblings().removeClass('on');
           }
-          secondeMenu(menuList,parseInt(topIndex));
+
        }
        //处理二级菜单
        function secondeMenu(menuList,item){

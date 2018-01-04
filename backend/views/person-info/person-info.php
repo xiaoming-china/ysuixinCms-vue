@@ -46,7 +46,7 @@
                           @click="changePassword('passwordline')" 
                           :loading="loading" 
                           style="float: right;width:92px;">
-                            <span v-if="!loading">修改</span>
+                            <span v-if="!loading1">修改</span>
                             <span v-else>Loading...</span>
                         </i-Button>
                       </Form-Item>
@@ -86,6 +86,7 @@
                   reply_new_pass:''
               },
               loading:false,
+              loading1:false,
               ruleInline: {
                 user_name: [
                     { required: true, message: '账号不能为空', trigger:'blur'}
@@ -140,7 +141,7 @@
               this.$refs[name].validate((valid) => {
                 if (valid) {
                     var _that = this;
-                    _that.loading = true;
+                    _that.loading1 = true;
                     $ajax(
                         '/admin/person-info/change-password',
                         {
@@ -155,7 +156,7 @@
                            });
                         },
                         function(res){
-                          _that.loading = true;
+                          _that.loading1 = true;
                         }
                     );
                 }
