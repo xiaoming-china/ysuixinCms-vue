@@ -98,7 +98,7 @@ class ModelController extends AdminBaseController{
             //检测模型表是否已存在
             $tabe_name = $d['e_name'];
             $checkTable = $table->checkTable($tabe_name);
-            if(!$checkTable){
+            if($checkTable){
               return $this->ajaxFail('添加失败,'.$tabe_name.'数据表已存在,请更换别名');
             }
             if($model->load($d,'') && $model->validate()){
@@ -163,7 +163,7 @@ class ModelController extends AdminBaseController{
                 //当旧表名和新表名不相等的时候才修改
                 if($old_tabe_name != $new_tabe_name){
                     $checkTable = $table->checkTable($new_tabe_name);
-                    if(!$checkTable){
+                    if($checkTable){
                       return $this->ajaxFail('编辑失败,'.$new_tabe_name.'数据表已存在,请更换别名');
                     }
                      //修改表名

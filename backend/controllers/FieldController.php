@@ -38,6 +38,7 @@ class FieldController extends AdminBaseController{
             }
             $sql  = (new Field())->find()->where(['model_id'=>$model_id]);
             $sql->andWhere(['=','is_delete',Field::DELETE_STATUS_FALSE]);
+            $sql->andWhere(['=','is_hide',Field::NO_HIDE]);
             $sql->andFilterWhere(['or',
                 ['like','name',$this->get('keyworlds')],
                 ['like','e_name',$this->get('keyworlds')],

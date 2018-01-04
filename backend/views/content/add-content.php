@@ -434,7 +434,7 @@
                 });
               },
               function(res){
-                _that.$Message.warning('未找到相关模型信息');
+                _that.$Message.warning(res.message);
               },
             );
           },

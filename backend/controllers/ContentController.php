@@ -268,14 +268,14 @@ class ContentController extends AdminBaseController{
         //获取当前栏目所属模型的所有字段
         $model_data = (new Field())->getModelField($modelid);
         $model_field = (new Field())->EchoModelField($model_data);
+        if(!$model_field){
+            return $this->ajaxFail('未找到模型字段,可能是模型的字段全部被禁用或者被删除');
+        }
         //生成前端Form验证
         // $field_validate = (new ValidateForm())->EchoValidateJs($model_data);
 
         //获取当前栏目所属模型的所有栏目
         $category_list = (new Category())->getCategoryList($modelid,false);
-        if(!$model_field || !$category_list){
-            return $this->ajaxFail('未找到相关模型信息');
-        }
         $all_category = (new Category())->manyArray($category_list, 0);
         $d['model_field']    = $model_field;
         $d['all_category']   = $all_category;
