@@ -199,7 +199,7 @@ body{
     overflow:auto;
 }
 .main-content .left-nav ul .parent-nav-item{
-    padding: 0px 0px 8px 0px;
+    padding: 0px 0px 0px 0px;
     overflow: hidden;
 }
 .main-content .left-nav ul .parent-nav-item span{
@@ -216,7 +216,7 @@ body{
 .main-content .left-nav ul .parent-nav-item .sub-nav-item a{
     float: left;
     width: 82%;
-    padding: 0px 0px 7px 7px;
+    padding: 0px 0px 15px 12px;
     color: #333;
     /*font-style: normal;*/
     font-size:12px;

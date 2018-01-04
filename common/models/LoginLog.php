@@ -52,7 +52,7 @@ class LoginLog extends \yii\db\ActiveRecord{
      * @param            [type]      $ip      [description]
      * @param            [type]      $desc    [description]
      */
-    public function addLog($username,$desc){
+    public static function addLog($username,$desc){
         $model = new LoginLog();
         $ip   = Yii::$app->request->userIP;
         $area = (new Ip2Location())->getLocation($ip)->toArray();

@@ -116,21 +116,23 @@
                 if (valid) {
                     var _that = this;
                     _that.loading = true;
-                    var params = new URLSearchParams();
-                    params.append('user_email', _that.formInline.user_email);
-    				        params.append('desc', _that.formInline.use_desc);
-                    axios.post('/admin/person-info/person-info',params).then(function (res) {
-                       if (res.data.status == 1) {
+
+                    $ajax(
+                        '/admin/person-info/person-info',
+                        {
+                          user_email:_that.formInline.user_email,
+                          desc:_that.formInline.use_desc
+                        }, 
+                        'post',
+                        function(res){
                            _that.$Message.success({
                               content:'修改成功',
                            });
-                       }else{
-                            _that.$Message.warning(res.data.message);
-                       }
-                      _that.loading = false;
-                    }).catch(function (error) {
-                        _that.$Message.error('请求失败,服务器错误');
-                    });
+                        },
+                        function(res){
+                          _that.loading = true;
+                        }
+                    );
                 }
               })
             },
@@ -139,39 +141,42 @@
                 if (valid) {
                     var _that = this;
                     _that.loading = true;
-                    var params = new URLSearchParams();
-                    params.append('old_pass', _that.passwordline.old_pass);
-                    params.append('new_pass', _that.passwordline.new_pass);
-                    params.append('reply_new_pass', _that.passwordline.reply_new_pass);
-                    axios.post('/admin/person-info/change-password',params).then(function (res) {
-                       if (res.data.status == 1) {
+                    $ajax(
+                        '/admin/person-info/change-password',
+                        {
+                          old_pass:_that.passwordline.old_pass,
+                          new_pass:_that.passwordline.new_pass,
+                          reply_new_pass:_that.passwordline.reply_new_pass
+                        }, 
+                        'post',
+                        function(res){
                            _that.$Message.success({
                               content:'修改成功',
-                              onClose:function(){
-                                _that.handleReset(name);
-                              }
                            });
-                       }else{
-                            _that.$Message.warning(res.data.message);
-                       }
-                       _that.loading = false;
-                    }).catch(function (error) {
-                        _that.$Message.error('请求失败,服务器错误');
-                    });
+                        },
+                        function(res){
+                          _that.loading = true;
+                        }
+                    );
                 }
               })
             },
             getUserInfo:function(){
             	var _that = this;
-            	axios.post('/admin/person-info/get-user-info').then(function (res) {
-                   if (res.data.status == 1) {
-                   	_that.formInline.user_name  = res.data.data.username;
-                   	_that.formInline.user_email = res.data.data.email;
-                   	_that.formInline.user_desc  = res.data.data.desc;
-                   }
-                }).catch(function (error) {
-                    _that.$Message.error('请求失败,服务器错误');
-                });
+              $ajax(
+                  '/admin/person-info/get-user-info',
+                  '', 
+                  'post',
+                  function(res){
+                    _that.formInline.user_name  = res.data.username;
+                    _that.formInline.user_email = res.data.email;
+                    _that.formInline.user_desc  = res.data.desc;
+                  },
+                  function(res){
+                    _that.loading = true;
+                  }
+              );
+
             },
              handleReset:function(name) {
                 this.$refs[name].resetFields();
