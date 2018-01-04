@@ -92,5 +92,20 @@ function $ajax(url, postData, type, succCallback, errorCallback,loading){
             }                   
         }
     });
+    //退出
+    $('#logout').click(function(){
+        $ajax(
+            '/admin/public/logout',
+             '', 
+             'post',
+              function(res){
+                localStorage.clear()
+                location.href = '/admin/public/login';
+              }, 
+              function(res){
+                console.log('服务器错误');
+              }
+        );
+    })
 }
 

@@ -23,7 +23,9 @@
       </ul>
     </div>
     <div class="nav-other">
-      <span>欢迎你：<?=Yii::$app->user->identity->username; ?> <a href="/admin/public/logout">【退出】</a></span>
+      <span>欢迎你：<?=Yii::$app->user->identity->username; ?> 
+          <a href="#" id="logout">【退出】</a>
+      </span>
       <span></span>
     </div> 
   </header>

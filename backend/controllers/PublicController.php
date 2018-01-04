@@ -53,7 +53,7 @@ class PublicController extends AdminBaseController{
      */
     public function actionLogout(){
         Yii::$app->user->logout();
-        return $this->render('login');
+       return $this->ajaxSuccess('退出成功');
     }
 
 

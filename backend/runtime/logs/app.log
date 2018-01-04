@@ -8221,3 +8221,665 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1515049936.666
     'REQUEST_TIME' => 1515049936
 ]
+2018-01-04 17:35:01 [127.0.0.1][5][lofvfrt0bq38lubah2fs822j34][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: config/config-basic in F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php:127
+Stack trace:
+#0 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('config-basic', Array)
+#1 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('config/config-b...', Array)
+#2 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 F:\xampp\htdocs\vueDemo\web\admin\index.php(20): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php:114
+Stack trace:
+#0 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 F:\xampp\htdocs\vueDemo\web\admin\index.php(20): yii\base\Application->run()
+#2 {main}
+2018-01-04 17:35:01 [127.0.0.1][5][lofvfrt0bq38lubah2fs822j34][info][application] $_COOKIE = [
+    'select-top-menu' => '1'
+    'all_menu' => '[object Object],[object Object],[object Object],[object Object]'
+    'advanced-frontend' => 'cb9pj52g2o5r7r29998sgtk3bq'
+    '_csrf-frontend' => '98d137118754c5efac84e5844aac5bf21c2e28959fa61dc2491740940a8ee549a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"R¢Vì×[x·7y:(éÝ¢èÊ`@“‡ýoXÅ\";}'
+    'advanced-backend' => 'lofvfrt0bq38lubah2fs822j34'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 5
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'vuedemo.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://vuedemo.com/admin/person-info/person-info'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'select-top-menu=1; all_menu=%5Bobject%20Object%5D%2C%5Bobject%20Object%5D%2C%5Bobject%20Object%5D%2C%5Bobject%20Object%5D; advanced-frontend=cb9pj52g2o5r7r29998sgtk3bq; _csrf-frontend=98d137118754c5efac84e5844aac5bf21c2e28959fa61dc2491740940a8ee549a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22R%A2%17V%EC%D7%5B%06x%B77%90y%3A%28%E9%06%DD%14%A2%E8%CA%60%40%93%87%FD%05oX%C5%0E%22%3B%7D; advanced-backend=lofvfrt0bq38lubah2fs822j34'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;F:\\java\\bin;F:\\java\\jre\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;F:\\xampp\\php;F:\\Git\\cmd;F:\\Gow\\bin;C:\\Program Files\\nodejs\\;F:\\java/bin;F:\\java/jre/bin;F:\\python;F:\\xampp\\php;C:\\Users\\Admin\\AppData\\Roaming\\npm;%USERPROFILE%\\AppData\\Local\\Microsoft\\WindowsApps;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1 Server at vuedemo.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1'
+    'SERVER_NAME' => 'vuedemo.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'F:/xampp/htdocs/vueDemo/web/admin/index.php'
+    'REMOTE_PORT' => '44212'
+    'REDIRECT_URL' => '/admin/config/config-basic'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/admin/config/config-basic'
+    'SCRIPT_NAME' => '/admin/index.php'
+    'PHP_SELF' => '/admin/index.php'
+    'REQUEST_TIME_FLOAT' => 1515058501.441
+    'REQUEST_TIME' => 1515058501
+]
+2018-01-04 17:49:27 [127.0.0.1][-][5n5he71qcc8nu2i8ef32vd14a2][error][yii\base\ErrorException:8] yii\base\ErrorException: Trying to get property of non-object in F:\xampp\htdocs\vueDemo\backend\views\layouts\main-admin.php:26
+Stack trace:
+#0 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\View.php(250): yii\web\View->renderPhpFile()
+#1 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(396): yii\web\View->renderFile()
+#2 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(382): backend\controllers\IndexController->renderContent()
+#3 F:\xampp\htdocs\vueDemo\backend\controllers\IndexController.php(26): backend\controllers\IndexController->render()
+#4 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php(57): backend\controllers\IndexController->actionIndex()
+#5 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php(57): ::call_user_func_array:{F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php:57}()
+#6 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams()
+#7 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(523): backend\controllers\IndexController->runAction()
+#8 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php(102): yii\web\Application->runAction()
+#9 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest()
+#10 F:\xampp\htdocs\vueDemo\web\admin\index.php(20): yii\web\Application->run()
+#11 {main}
+2018-01-04 17:49:27 [127.0.0.1][-][5n5he71qcc8nu2i8ef32vd14a2][info][application] $_COOKIE = [
+    'select-top-menu' => '1'
+    'all_menu' => '[object Object],[object Object],[object Object],[object Object]'
+    'advanced-frontend' => 'cb9pj52g2o5r7r29998sgtk3bq'
+    '_csrf-frontend' => '98d137118754c5efac84e5844aac5bf21c2e28959fa61dc2491740940a8ee549a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"R¢Vì×[x·7y:(éÝ¢èÊ`@“‡ýoXÅ\";}'
+    'advanced-backend' => '5n5he71qcc8nu2i8ef32vd14a2'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'vuedemo.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://vuedemo.com/admin/public/logout'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'select-top-menu=1; all_menu=%5Bobject%20Object%5D%2C%5Bobject%20Object%5D%2C%5Bobject%20Object%5D%2C%5Bobject%20Object%5D; advanced-frontend=cb9pj52g2o5r7r29998sgtk3bq; _csrf-frontend=98d137118754c5efac84e5844aac5bf21c2e28959fa61dc2491740940a8ee549a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22R%A2%17V%EC%D7%5B%06x%B77%90y%3A%28%E9%06%DD%14%A2%E8%CA%60%40%93%87%FD%05oX%C5%0E%22%3B%7D; advanced-backend=5n5he71qcc8nu2i8ef32vd14a2'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;F:\\java\\bin;F:\\java\\jre\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;F:\\xampp\\php;F:\\Git\\cmd;F:\\Gow\\bin;C:\\Program Files\\nodejs\\;F:\\java/bin;F:\\java/jre/bin;F:\\python;F:\\xampp\\php;C:\\Users\\Admin\\AppData\\Roaming\\npm;%USERPROFILE%\\AppData\\Local\\Microsoft\\WindowsApps;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1 Server at vuedemo.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1'
+    'SERVER_NAME' => 'vuedemo.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'F:/xampp/htdocs/vueDemo/web/admin/index.php'
+    'REMOTE_PORT' => '45869'
+    'REDIRECT_URL' => '/admin/index/index'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/admin/index/index'
+    'SCRIPT_NAME' => '/admin/index.php'
+    'PHP_SELF' => '/admin/index.php'
+    'REQUEST_TIME_FLOAT' => 1515059367.181
+    'REQUEST_TIME' => 1515059367
+]
+2018-01-04 17:49:31 [127.0.0.1][-][5n5he71qcc8nu2i8ef32vd14a2][error][yii\base\ErrorException:8] yii\base\ErrorException: Trying to get property of non-object in F:\xampp\htdocs\vueDemo\backend\views\layouts\main-admin.php:26
+Stack trace:
+#0 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\View.php(250): yii\web\View->renderPhpFile()
+#1 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(396): yii\web\View->renderFile()
+#2 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(382): backend\controllers\IndexController->renderContent()
+#3 F:\xampp\htdocs\vueDemo\backend\controllers\IndexController.php(26): backend\controllers\IndexController->render()
+#4 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php(57): backend\controllers\IndexController->actionIndex()
+#5 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php(57): ::call_user_func_array:{F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php:57}()
+#6 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams()
+#7 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(523): backend\controllers\IndexController->runAction()
+#8 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php(102): yii\web\Application->runAction()
+#9 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest()
+#10 F:\xampp\htdocs\vueDemo\web\admin\index.php(20): yii\web\Application->run()
+#11 {main}
+2018-01-04 17:49:31 [127.0.0.1][-][5n5he71qcc8nu2i8ef32vd14a2][info][application] $_COOKIE = [
+    'select-top-menu' => '1'
+    'all_menu' => '[object Object],[object Object],[object Object],[object Object]'
+    'advanced-frontend' => 'cb9pj52g2o5r7r29998sgtk3bq'
+    '_csrf-frontend' => '98d137118754c5efac84e5844aac5bf21c2e28959fa61dc2491740940a8ee549a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"R¢Vì×[x·7y:(éÝ¢èÊ`@“‡ýoXÅ\";}'
+    'advanced-backend' => '5n5he71qcc8nu2i8ef32vd14a2'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'vuedemo.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://vuedemo.com/admin/public/logout'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'select-top-menu=1; all_menu=%5Bobject%20Object%5D%2C%5Bobject%20Object%5D%2C%5Bobject%20Object%5D%2C%5Bobject%20Object%5D; advanced-frontend=cb9pj52g2o5r7r29998sgtk3bq; _csrf-frontend=98d137118754c5efac84e5844aac5bf21c2e28959fa61dc2491740940a8ee549a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22R%A2%17V%EC%D7%5B%06x%B77%90y%3A%28%E9%06%DD%14%A2%E8%CA%60%40%93%87%FD%05oX%C5%0E%22%3B%7D; advanced-backend=5n5he71qcc8nu2i8ef32vd14a2'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;F:\\java\\bin;F:\\java\\jre\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;F:\\xampp\\php;F:\\Git\\cmd;F:\\Gow\\bin;C:\\Program Files\\nodejs\\;F:\\java/bin;F:\\java/jre/bin;F:\\python;F:\\xampp\\php;C:\\Users\\Admin\\AppData\\Roaming\\npm;%USERPROFILE%\\AppData\\Local\\Microsoft\\WindowsApps;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1 Server at vuedemo.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1'
+    'SERVER_NAME' => 'vuedemo.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'F:/xampp/htdocs/vueDemo/web/admin/index.php'
+    'REMOTE_PORT' => '45878'
+    'REDIRECT_URL' => '/admin/index/index'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/admin/index/index'
+    'SCRIPT_NAME' => '/admin/index.php'
+    'PHP_SELF' => '/admin/index.php'
+    'REQUEST_TIME_FLOAT' => 1515059370.995
+    'REQUEST_TIME' => 1515059370
+]
+2018-01-04 17:51:22 [127.0.0.1][-][nrisfrrdka5of82no8utpk6443][error][yii\base\ErrorException:8] yii\base\ErrorException: Trying to get property of non-object in F:\xampp\htdocs\vueDemo\backend\views\layouts\main-admin.php:26
+Stack trace:
+#0 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\View.php(250): yii\web\View->renderPhpFile()
+#1 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(396): yii\web\View->renderFile()
+#2 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(382): backend\controllers\IndexController->renderContent()
+#3 F:\xampp\htdocs\vueDemo\backend\controllers\IndexController.php(26): backend\controllers\IndexController->render()
+#4 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php(57): backend\controllers\IndexController->actionIndex()
+#5 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php(57): ::call_user_func_array:{F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php:57}()
+#6 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams()
+#7 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(523): backend\controllers\IndexController->runAction()
+#8 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php(102): yii\web\Application->runAction()
+#9 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest()
+#10 F:\xampp\htdocs\vueDemo\web\admin\index.php(20): yii\web\Application->run()
+#11 {main}
+2018-01-04 17:51:22 [127.0.0.1][-][nrisfrrdka5of82no8utpk6443][info][application] $_COOKIE = [
+    'select-top-menu' => '1'
+    'all_menu' => '[object Object],[object Object],[object Object],[object Object]'
+    'advanced-frontend' => 'cb9pj52g2o5r7r29998sgtk3bq'
+    '_csrf-frontend' => '98d137118754c5efac84e5844aac5bf21c2e28959fa61dc2491740940a8ee549a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"R¢Vì×[x·7y:(éÝ¢èÊ`@“‡ýoXÅ\";}'
+    'advanced-backend' => 'nrisfrrdka5of82no8utpk6443'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'vuedemo.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://vuedemo.com/admin/public/login'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'select-top-menu=1; all_menu=%5Bobject%20Object%5D%2C%5Bobject%20Object%5D%2C%5Bobject%20Object%5D%2C%5Bobject%20Object%5D; advanced-frontend=cb9pj52g2o5r7r29998sgtk3bq; _csrf-frontend=98d137118754c5efac84e5844aac5bf21c2e28959fa61dc2491740940a8ee549a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22R%A2%17V%EC%D7%5B%06x%B77%90y%3A%28%E9%06%DD%14%A2%E8%CA%60%40%93%87%FD%05oX%C5%0E%22%3B%7D; advanced-backend=nrisfrrdka5of82no8utpk6443'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;F:\\java\\bin;F:\\java\\jre\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;F:\\xampp\\php;F:\\Git\\cmd;F:\\Gow\\bin;C:\\Program Files\\nodejs\\;F:\\java/bin;F:\\java/jre/bin;F:\\python;F:\\xampp\\php;C:\\Users\\Admin\\AppData\\Roaming\\npm;%USERPROFILE%\\AppData\\Local\\Microsoft\\WindowsApps;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1 Server at vuedemo.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1'
+    'SERVER_NAME' => 'vuedemo.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'F:/xampp/htdocs/vueDemo/web/admin/index.php'
+    'REMOTE_PORT' => '46063'
+    'REDIRECT_URL' => '/admin/index/index'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/admin/index/index'
+    'SCRIPT_NAME' => '/admin/index.php'
+    'PHP_SELF' => '/admin/index.php'
+    'REQUEST_TIME_FLOAT' => 1515059482.052
+    'REQUEST_TIME' => 1515059482
+]
+2018-01-04 17:51:39 [127.0.0.1][-][nrisfrrdka5of82no8utpk6443][error][yii\base\ErrorException:8] yii\base\ErrorException: Trying to get property of non-object in F:\xampp\htdocs\vueDemo\backend\views\layouts\main-admin.php:26
+Stack trace:
+#0 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\View.php(250): yii\web\View->renderPhpFile()
+#1 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(396): yii\web\View->renderFile()
+#2 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(382): backend\controllers\IndexController->renderContent()
+#3 F:\xampp\htdocs\vueDemo\backend\controllers\IndexController.php(26): backend\controllers\IndexController->render()
+#4 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php(57): backend\controllers\IndexController->actionIndex()
+#5 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php(57): ::call_user_func_array:{F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php:57}()
+#6 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams()
+#7 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(523): backend\controllers\IndexController->runAction()
+#8 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php(102): yii\web\Application->runAction()
+#9 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest()
+#10 F:\xampp\htdocs\vueDemo\web\admin\index.php(20): yii\web\Application->run()
+#11 {main}
+2018-01-04 17:51:39 [127.0.0.1][-][nrisfrrdka5of82no8utpk6443][info][application] $_COOKIE = [
+    'select-top-menu' => '1'
+    'all_menu' => '[object Object],[object Object],[object Object],[object Object]'
+    'advanced-frontend' => 'cb9pj52g2o5r7r29998sgtk3bq'
+    '_csrf-frontend' => '98d137118754c5efac84e5844aac5bf21c2e28959fa61dc2491740940a8ee549a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"R¢Vì×[x·7y:(éÝ¢èÊ`@“‡ýoXÅ\";}'
+    'advanced-backend' => 'nrisfrrdka5of82no8utpk6443'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'vuedemo.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'select-top-menu=1; all_menu=%5Bobject%20Object%5D%2C%5Bobject%20Object%5D%2C%5Bobject%20Object%5D%2C%5Bobject%20Object%5D; advanced-frontend=cb9pj52g2o5r7r29998sgtk3bq; _csrf-frontend=98d137118754c5efac84e5844aac5bf21c2e28959fa61dc2491740940a8ee549a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22R%A2%17V%EC%D7%5B%06x%B77%90y%3A%28%E9%06%DD%14%A2%E8%CA%60%40%93%87%FD%05oX%C5%0E%22%3B%7D; advanced-backend=nrisfrrdka5of82no8utpk6443'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;F:\\java\\bin;F:\\java\\jre\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;F:\\xampp\\php;F:\\Git\\cmd;F:\\Gow\\bin;C:\\Program Files\\nodejs\\;F:\\java/bin;F:\\java/jre/bin;F:\\python;F:\\xampp\\php;C:\\Users\\Admin\\AppData\\Roaming\\npm;%USERPROFILE%\\AppData\\Local\\Microsoft\\WindowsApps;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1 Server at vuedemo.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1'
+    'SERVER_NAME' => 'vuedemo.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'F:/xampp/htdocs/vueDemo/web/admin/index.php'
+    'REMOTE_PORT' => '46097'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/admin/'
+    'SCRIPT_NAME' => '/admin/index.php'
+    'PHP_SELF' => '/admin/index.php'
+    'REQUEST_TIME_FLOAT' => 1515059499.47
+    'REQUEST_TIME' => 1515059499
+]
+2018-01-04 17:51:43 [127.0.0.1][-][nrisfrrdka5of82no8utpk6443][error][yii\base\ErrorException:8] yii\base\ErrorException: Trying to get property of non-object in F:\xampp\htdocs\vueDemo\backend\views\layouts\main-admin.php:26
+Stack trace:
+#0 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\View.php(250): yii\web\View->renderPhpFile()
+#1 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(396): yii\web\View->renderFile()
+#2 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(382): backend\controllers\IndexController->renderContent()
+#3 F:\xampp\htdocs\vueDemo\backend\controllers\IndexController.php(26): backend\controllers\IndexController->render()
+#4 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php(57): backend\controllers\IndexController->actionIndex()
+#5 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php(57): ::call_user_func_array:{F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php:57}()
+#6 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams()
+#7 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(523): backend\controllers\IndexController->runAction()
+#8 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php(102): yii\web\Application->runAction()
+#9 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest()
+#10 F:\xampp\htdocs\vueDemo\web\admin\index.php(20): yii\web\Application->run()
+#11 {main}
+2018-01-04 17:51:43 [127.0.0.1][-][nrisfrrdka5of82no8utpk6443][info][application] $_COOKIE = [
+    'select-top-menu' => '1'
+    'all_menu' => '[object Object],[object Object],[object Object],[object Object]'
+    'advanced-frontend' => 'cb9pj52g2o5r7r29998sgtk3bq'
+    '_csrf-frontend' => '98d137118754c5efac84e5844aac5bf21c2e28959fa61dc2491740940a8ee549a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"R¢Vì×[x·7y:(éÝ¢èÊ`@“‡ýoXÅ\";}'
+    'advanced-backend' => 'nrisfrrdka5of82no8utpk6443'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'vuedemo.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'select-top-menu=1; all_menu=%5Bobject%20Object%5D%2C%5Bobject%20Object%5D%2C%5Bobject%20Object%5D%2C%5Bobject%20Object%5D; advanced-frontend=cb9pj52g2o5r7r29998sgtk3bq; _csrf-frontend=98d137118754c5efac84e5844aac5bf21c2e28959fa61dc2491740940a8ee549a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22R%A2%17V%EC%D7%5B%06x%B77%90y%3A%28%E9%06%DD%14%A2%E8%CA%60%40%93%87%FD%05oX%C5%0E%22%3B%7D; advanced-backend=nrisfrrdka5of82no8utpk6443'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;F:\\java\\bin;F:\\java\\jre\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;F:\\xampp\\php;F:\\Git\\cmd;F:\\Gow\\bin;C:\\Program Files\\nodejs\\;F:\\java/bin;F:\\java/jre/bin;F:\\python;F:\\xampp\\php;C:\\Users\\Admin\\AppData\\Roaming\\npm;%USERPROFILE%\\AppData\\Local\\Microsoft\\WindowsApps;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1 Server at vuedemo.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1'
+    'SERVER_NAME' => 'vuedemo.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'F:/xampp/htdocs/vueDemo/web/admin/index.php'
+    'REMOTE_PORT' => '46113'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/admin/'
+    'SCRIPT_NAME' => '/admin/index.php'
+    'PHP_SELF' => '/admin/index.php'
+    'REQUEST_TIME_FLOAT' => 1515059503.167
+    'REQUEST_TIME' => 1515059503
+]
+2018-01-04 17:56:37 [127.0.0.1][-][ieomh4d350b06okot64r3v1fts][error][yii\base\ErrorException:8] yii\base\ErrorException: Trying to get property of non-object in F:\xampp\htdocs\vueDemo\backend\views\layouts\main-admin.php:26
+Stack trace:
+#0 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\View.php(250): yii\web\View->renderPhpFile()
+#1 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(396): yii\web\View->renderFile()
+#2 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(382): backend\controllers\IndexController->renderContent()
+#3 F:\xampp\htdocs\vueDemo\backend\controllers\IndexController.php(26): backend\controllers\IndexController->render()
+#4 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php(57): backend\controllers\IndexController->actionIndex()
+#5 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php(57): ::call_user_func_array:{F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php:57}()
+#6 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams()
+#7 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(523): backend\controllers\IndexController->runAction()
+#8 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php(102): yii\web\Application->runAction()
+#9 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest()
+#10 F:\xampp\htdocs\vueDemo\web\admin\index.php(20): yii\web\Application->run()
+#11 {main}
+2018-01-04 17:56:36 [127.0.0.1][-][ieomh4d350b06okot64r3v1fts][info][application] $_COOKIE = [
+    'select-top-menu' => '1'
+    'all_menu' => '[object Object],[object Object],[object Object],[object Object]'
+    'advanced-frontend' => 'cb9pj52g2o5r7r29998sgtk3bq'
+    '_csrf-frontend' => '98d137118754c5efac84e5844aac5bf21c2e28959fa61dc2491740940a8ee549a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"R¢Vì×[x·7y:(éÝ¢èÊ`@“‡ýoXÅ\";}'
+    'advanced-backend' => 'ieomh4d350b06okot64r3v1fts'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'vuedemo.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://vuedemo.com/admin/public/login'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'select-top-menu=1; all_menu=%5Bobject%20Object%5D%2C%5Bobject%20Object%5D%2C%5Bobject%20Object%5D%2C%5Bobject%20Object%5D; advanced-frontend=cb9pj52g2o5r7r29998sgtk3bq; _csrf-frontend=98d137118754c5efac84e5844aac5bf21c2e28959fa61dc2491740940a8ee549a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22R%A2%17V%EC%D7%5B%06x%B77%90y%3A%28%E9%06%DD%14%A2%E8%CA%60%40%93%87%FD%05oX%C5%0E%22%3B%7D; advanced-backend=ieomh4d350b06okot64r3v1fts'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;F:\\java\\bin;F:\\java\\jre\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;F:\\xampp\\php;F:\\Git\\cmd;F:\\Gow\\bin;C:\\Program Files\\nodejs\\;F:\\java/bin;F:\\java/jre/bin;F:\\python;F:\\xampp\\php;C:\\Users\\Admin\\AppData\\Roaming\\npm;%USERPROFILE%\\AppData\\Local\\Microsoft\\WindowsApps;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1 Server at vuedemo.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1'
+    'SERVER_NAME' => 'vuedemo.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'F:/xampp/htdocs/vueDemo/web/admin/index.php'
+    'REMOTE_PORT' => '46703'
+    'REDIRECT_URL' => '/admin/index/index'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/admin/index/index'
+    'SCRIPT_NAME' => '/admin/index.php'
+    'PHP_SELF' => '/admin/index.php'
+    'REQUEST_TIME_FLOAT' => 1515059796.98
+    'REQUEST_TIME' => 1515059796
+]
+2018-01-04 17:59:11 [127.0.0.1][5][8u2squsm6cqe150idv9fep0pr2][error][yii\db\Exception] PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'cmsDemo.cms_swen' doesn't exist in F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Command.php:915
+Stack trace:
+#0 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Command.php(915): PDOStatement->execute()
+#1 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#2 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Query.php(213): yii\db\Command->queryAll()
+#3 F:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php(49): yii\db\Query->all()
+#4 F:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php(44): common\lib\sqlQuery::selectData('swen', Array)
+#5 [internal function]: backend\controllers\ContentController->actionList()
+#6 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#7 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#8 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('list', Array)
+#9 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('content/list', Array)
+#10 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 F:\xampp\htdocs\vueDemo\web\admin\index.php(20): yii\base\Application->run()
+#12 {main}
+
+Next yii\db\Exception: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'cmsDemo.cms_swen' doesn't exist
+The SQL being executed was: SELECT * FROM `cms_swen` `t` WHERE (`t`.`is_delete`=2) AND (`category_id` = '72') ORDER BY `created_at` DESC LIMIT 20 in F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Schema.php:636
+Stack trace:
+#0 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Command.php(930): yii\db\Schema->convertException(Object(PDOException), 'SELECT * FROM `...')
+#1 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#2 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Query.php(213): yii\db\Command->queryAll()
+#3 F:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php(49): yii\db\Query->all()
+#4 F:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php(44): common\lib\sqlQuery::selectData('swen', Array)
+#5 [internal function]: backend\controllers\ContentController->actionList()
+#6 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#7 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#8 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('list', Array)
+#9 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('content/list', Array)
+#10 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 F:\xampp\htdocs\vueDemo\web\admin\index.php(20): yii\base\Application->run()
+#12 {main}
+Additional Information:
+Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'cmsDemo.cms_swen' doesn't exist
+)
+
+2018-01-04 17:59:11 [127.0.0.1][5][8u2squsm6cqe150idv9fep0pr2][info][application] $_GET = [
+    'modelId' => '60'
+    'catId' => '72'
+    'param' => [
+        'modelId' => '60'
+        'catId' => '72'
+        'keyworlds' => ''
+        'status' => '-1'
+        'start_time' => ''
+        'end_time' => ''
+        'total' => '0'
+        'page' => '0'
+        'pageSize' => '20'
+    ]
+]
+
+$_COOKIE = [
+    'select-top-menu' => '1'
+    'all_menu' => '[object Object],[object Object],[object Object],[object Object]'
+    'advanced-frontend' => 'cb9pj52g2o5r7r29998sgtk3bq'
+    '_csrf-frontend' => '98d137118754c5efac84e5844aac5bf21c2e28959fa61dc2491740940a8ee549a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"R¢Vì×[x·7y:(éÝ¢èÊ`@“‡ýoXÅ\";}'
+    'advanced-backend' => '8u2squsm6cqe150idv9fep0pr2'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 5
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'vuedemo.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36'
+    'HTTP_REFERER' => 'http://vuedemo.com/admin/content/list?catid=72&modelid=60'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'select-top-menu=1; all_menu=%5Bobject%20Object%5D%2C%5Bobject%20Object%5D%2C%5Bobject%20Object%5D%2C%5Bobject%20Object%5D; advanced-frontend=cb9pj52g2o5r7r29998sgtk3bq; _csrf-frontend=98d137118754c5efac84e5844aac5bf21c2e28959fa61dc2491740940a8ee549a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22R%A2%17V%EC%D7%5B%06x%B77%90y%3A%28%E9%06%DD%14%A2%E8%CA%60%40%93%87%FD%05oX%C5%0E%22%3B%7D; advanced-backend=8u2squsm6cqe150idv9fep0pr2'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;F:\\java\\bin;F:\\java\\jre\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;F:\\xampp\\php;F:\\Git\\cmd;F:\\Gow\\bin;C:\\Program Files\\nodejs\\;F:\\java/bin;F:\\java/jre/bin;F:\\python;F:\\xampp\\php;C:\\Users\\Admin\\AppData\\Roaming\\npm;%USERPROFILE%\\AppData\\Local\\Microsoft\\WindowsApps;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1 Server at vuedemo.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1'
+    'SERVER_NAME' => 'vuedemo.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'F:/xampp/htdocs/vueDemo/web/admin/index.php'
+    'REMOTE_PORT' => '47013'
+    'REDIRECT_URL' => '/admin/content/list'
+    'REDIRECT_QUERY_STRING' => 'modelId=60&catId=72&param%5BmodelId%5D=60&param%5BcatId%5D=72&param%5Bkeyworlds%5D=&param%5Bstatus%5D=-1&param%5Bstart_time%5D=&param%5Bend_time%5D=&param%5Btotal%5D=0&param%5Bpage%5D=0&param%5BpageSize%5D=20'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'modelId=60&catId=72&param%5BmodelId%5D=60&param%5BcatId%5D=72&param%5Bkeyworlds%5D=&param%5Bstatus%5D=-1&param%5Bstart_time%5D=&param%5Bend_time%5D=&param%5Btotal%5D=0&param%5Bpage%5D=0&param%5BpageSize%5D=20'
+    'REQUEST_URI' => '/admin/content/list?modelId=60&catId=72&param%5BmodelId%5D=60&param%5BcatId%5D=72&param%5Bkeyworlds%5D=&param%5Bstatus%5D=-1&param%5Bstart_time%5D=&param%5Bend_time%5D=&param%5Btotal%5D=0&param%5Bpage%5D=0&param%5BpageSize%5D=20'
+    'SCRIPT_NAME' => '/admin/index.php'
+    'PHP_SELF' => '/admin/index.php'
+    'REQUEST_TIME_FLOAT' => 1515059951.117
+    'REQUEST_TIME' => 1515059951
+]
