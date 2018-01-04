@@ -22,7 +22,7 @@ class IndexController extends AdminBaseController{
      * @return           [type]      [description]
      */
     public function actionIndex(){
-        $this->layout = false;
+        $this->layout = 'main-admin';
         return $this->render('index');
     }
     /**

@@ -13,7 +13,7 @@ use common\models\Config;
 
 
 class ConfigController extends AdminBaseController{
-    public $layout = false;
+    public $layout = 'main-admin';
     public $uId;
 
     public function init(){

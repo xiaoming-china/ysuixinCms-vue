@@ -17,7 +17,7 @@ use yii\db\Command;
 use yii\helpers\Url;
 
 class ContentController extends AdminBaseController{
-    public $layout = false;
+    public $layout = 'main-admin';
     const NOW_PUBLISH    = 1;//立即发布
     const TIMING_PUBLISH = 2;//定时发布
     const DRAFTS         = 3;//草稿箱

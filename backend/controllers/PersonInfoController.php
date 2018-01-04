@@ -13,7 +13,7 @@ use yii\base\InvalidParamException;
 use yii\web\BadRequestHttpException;
 
 class PersonInfoController extends AdminBaseController{
-	public $layout = false;
+	public $layout = 'main-admin';
     /**
      * @Author:          xiaoming
      * @DateTime:        2017-10-09

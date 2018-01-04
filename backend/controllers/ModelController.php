@@ -14,7 +14,7 @@ use yii\helpers\Url;
 
 
 class ModelController extends AdminBaseController{
-    public $layout = false;
+    public $layout = 'main-admin';
 
     /**
      * @Author:          xiaoming

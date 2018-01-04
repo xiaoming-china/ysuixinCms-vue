@@ -11,7 +11,7 @@ use backend\models\SystemInfo;
 
 
 class CommentController extends AdminBaseController{
-    public $layout = false;
+    public $layout = 'main-admin';
     public $uId;
 
     public function init(){
