@@ -208,7 +208,7 @@ class ContentController extends AdminBaseController{
         }
         $ModelInfo = (new Model())->getModelInfo($modelId);
         if(!$ModelInfo){
-            $this->error('模型数据获取失败');
+            return $this->ajaxFail('模型数据获取失败');
         }
         //获取当前栏目所属模型的所有字段
         $model_data  = (new Field())->getModelField($modelId);
@@ -281,6 +281,37 @@ class ContentController extends AdminBaseController{
         $d['all_category']   = $all_category;
         // $d['field_validate'] = $field_validate;
         return $this->ajaxSuccess('获取成功','',$d);
+    }
+    /**
+     * [actionDelContent 删除内容]
+     * @author:xiaoming
+     * @date:2018-01-03T17:13:10+0800
+     * @return                        [type] [description]
+     */
+    public function actionDelContent(){
+        try {
+            if($this->isPost()){
+                $transaction = Yii::$app->db->beginTransaction();
+                $modelId = $this->post('modelid','');
+                $id      = $this->post('id',[]);
+                if($modelId == '' || empty($id)){
+                    return $this->ajaxFail('数据查找失败,参数异常');
+                }
+                $ModelInfo = (new Model())->getModelInfo($modelId);
+                if(!$ModelInfo){
+                    return $this->ajaxFail('模型数据查找失败');
+                }
+                $rs = (new sqlQuery())->delContent($ModelInfo->e_name,implode(',', $id));//当前数据的字段
+                if(!$rs){
+                    $transaction->rollBack();
+                    return $this->ajaxFail('删除失败，未知错误');
+                }
+                $transaction->commit();
+                return $this->ajaxSuccess('删除成功');
+            }
+        }catch (Exception $e) {
+            return $this->ajaxFail('代码异常');
+        }
     }
 
 

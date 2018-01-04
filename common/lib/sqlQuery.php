@@ -9,6 +9,7 @@ use common\lib\Page;
 use common\models\Model;
 use common\models\BaseModel;
 use common\lib\Table;
+use yii\Helper\ArrayHelper;
 
 
 /**
@@ -140,7 +141,6 @@ class sqlQuery extends BaseModel{
             BaseModel::E('模型数据异常');
         }
         $table_name = Yii::$app->params['tablePrefix'].$model_info->e_name;
-       //p(Yii::$app->db->createCommand()->insert($table_name, $data)->getRawSql());
         //判断字段属于主表还是副表
         $basic = $table_data = [];
         foreach ($data as $k => $v){
@@ -150,7 +150,6 @@ class sqlQuery extends BaseModel{
                 $table_data[$k] = $v;
             }
         }
-
         //p(Yii::$app->db->createCommand()->update($table_name, $basic, 'id = '.$id)->getRawSql());
         //插入主表数据
         if(!empty($basic)){
@@ -168,6 +167,26 @@ class sqlQuery extends BaseModel{
             if(!$rs){
                 return false;
             }
+        }
+        return true;
+    }
+    /**
+     * [delContent 删除数据]
+     * @author:xiaoming
+     * @date:2018-01-04T08:41:23+0800
+     * @param                         string $table [description]
+     * @param                         string $id    [description]
+     * @return                        [type]        [description]
+     */
+    public function delContent($table='',$id=[]){
+        if($table == ''|| empty($id)){
+            return false;
+        }
+        $table_name = Yii::$app->params['tablePrefix'].$table;
+        $rs = Yii::$app->db->createCommand()->delete($table_name, 'id in ('.$id.')')->execute();
+        $rs1 = Yii::$app->db->createCommand()->delete($table_name.Table::TABLE_DATA_PREFIX, 'id in ('.$id.')')->execute();
+        if(!$rs && $rs1){
+            return false;
         }
         return true;
     }

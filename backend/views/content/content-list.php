@@ -112,7 +112,10 @@
 			<thead>
 				<tr>
 			        <th style="width: 40px;">
-			          <Checkbox v-model="check_all"></Checkbox>
+			          <input type='checkbox'
+                               :checked="isCheckedAll"
+                               @click='checkedAll()'>
+                        &nbsp;
 			        </th>  
 					<th style="width: 250px;text-align:left;padding-left:30px;">标题</th> 
 					<th style="width: 50px;">点击量</th> 
@@ -130,7 +133,12 @@
 			    </tr>
 				<tr v-for="(value,key) in contentList" :key="key" v-else>
 			        <td>
-			        	<Checkbox v-model="check_all":value="value.id"></Checkbox>{{key + 1}}
+			        	<input type='checkbox'
+                               :disabled = "value.is_style == 1"
+                               :style="{cursor: value.is_style == 1 ? 'no-drop' : ''}"
+                               :checked  = "allData.indexOf(value.id)>=0"
+                               @click    = "checkedOne(value.id)">
+                               {{key + 1}}
 			        </td> 
 					<td style="text-align:left;padding-left:30px;">
 					  {{value.title}}
@@ -151,7 +159,7 @@
           </td>
 			        <td v-if="value.is_style != 1">
 			          <span><a href="#"@click="location(2,value.id);">编辑</a>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
-			          <span><a href="#"@click="deleteField(key,value.id);">删除</a>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+			          <span><a href="#"@click="deleteContent(value.id);">删除</a>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
 <!-- 			          <span>
 			            <a href="#" v-if="value.status == 1" @click="changeStatusField(value.id,2,key);">禁用</a>&nbsp;&nbsp;|&nbsp;&nbsp;
 			            <a href="#" v-else @click="changeStatusField(value.id,1,key);">开启</a>&nbsp;&nbsp;|&nbsp;&nbsp;
@@ -170,10 +178,16 @@
       </div>
       <!--字段列表-->
 	    <div class="btn_wrap_pd">
+          <i-Button type="primary"
+                      @click="checkedAll()"
+                      :loading="loading">
+              <span v-if="isCheckedAll">取消全选</span>
+              <span v-else>全选</span>
+          </i-Button>
 	        <i-Button type="primary"
 	        @click="addField('fieldInfo')"
 	        :loading="loading">
-	          <span v-if="!loading">审核</span>
+	          <span v-if="!loading">批量审核</span>
 	          <span v-else>Loading...</span>
 	        </i-Button>
 	        <i-Button type="primary"
@@ -185,7 +199,7 @@
 	        <i-Button type="primary"
 	        @click="addField('fieldInfo')"
 	        :loading="loading">
-	          <span v-if="!loading">推送</span>
+	          <span v-if="!loading">批量推送</span>
 	          <span v-else>Loading...</span>
 	        </i-Button>
 	        <i-Button type="primary"
@@ -195,10 +209,8 @@
 	          <span v-else>Loading...</span>
 	        </i-Button>
 	        <i-Button type="primary"
-	        @click="addField('fieldInfo')"
-	        :loading="loading">
-	          <span v-if="!loading">删除</span>
-	          <span v-else>Loading...</span>
+	        @click="alldeleteContent()">
+	          <span>批量删除</span>
 	        </i-Button>
 	    </div>
     </div>
@@ -221,6 +233,8 @@
           modelId:'',
           catId:'',
           loading:false,
+          isCheckedAll: false,
+          allData:[],
           contentList:[],
           searchData:{
             modelId:'',
@@ -228,7 +242,7 @@
             keyworlds:'',
             status:'-1',
             start_time:'',
-			end_time:'',
+			      end_time:'',
             total:0,
             page:0,
             pageSize:20
@@ -243,6 +257,26 @@
           this.getContentList();
         },
         methods: {
+          checkedOne (id) {
+                var idIndex = this.allData.indexOf(id)
+                if (idIndex >= 0) {
+                    this.allData.splice(idIndex, 1);
+                } else {
+                    this.allData.push(id);
+                }
+            },
+            checkedAll:function () {
+                this.isCheckedAll = !this.isCheckedAll;
+                if (this.isCheckedAll) {
+                    this.allData = [];
+                    var length =  this.contentList.length;
+                    for(var i = 0;i < length;i++){
+                      this.allData.push(this.contentList[i]['id']);
+                    }
+                } else {
+                    this.allData = []
+                }
+           },
         //去往第几页
           pageChange: function(page){
               this.searchData.page = page;
@@ -258,9 +292,19 @@
 			this.searchData.start_time = data[0];
 			this.searchData.end_time   = data[1];
           },
-          //删除模型
-          deleteField:function(key,id){
+          //批量删除
+          alldeleteContent:function () {
+                var data = this.allData;
+                if(data.length <= 0){
+                    this.$Message.warning('请选择数据');
+                    return;
+                }
+                this.deleteContent(data);
+            },
+          //删除内容
+          deleteContent:function(id){
             var _that = this;
+            _that.allData.push(id);
             this.$Modal.confirm({
                 title:'删除确认',
                 width:300,
@@ -269,19 +313,20 @@
                 onOk: () => {
                   _that.loading = true;
                   var params = {
-                    'id':id
+                    'id':_that.allData,
+                    'modelid':_that.modelId
                   };
                   $ajax(
-                    '/admin/field/del-field', 
+                    '/admin/content/del-content', 
                     params,
                     'post',
                     function(res){
                       _that.$Message.success('删除成功');
                       _that.$Modal.remove();
-                      _that.getFieldList();
+                      _that.getContentList();
                     },
                     function(res){
-                      _that.$Message.warning('删除失败;'+res.info);
+                      _that.$Message.warning(res.info);
                     },
                     false
                   );

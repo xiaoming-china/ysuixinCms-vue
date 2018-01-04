@@ -229,7 +229,7 @@
         },
         methods: {
             checkedOne (id) {
-                let idIndex = this.allData.indexOf(id)
+                var idIndex = this.allData.indexOf(id)
                 if (idIndex >= 0) {
                     this.allData.splice(idIndex, 1);
                 } else {
