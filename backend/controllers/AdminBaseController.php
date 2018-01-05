@@ -36,6 +36,7 @@ class AdminBaseController extends Controller{
         $isComList = in_array($action->id, ['login','logout']);
         if (!Yii::$app->user->getId() && !$isComList) {
             return $this->redirect(['/public/login']);
+            exit;
         }
         return parent::beforeAction($action);
     }

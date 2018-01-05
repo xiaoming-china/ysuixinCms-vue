@@ -23,7 +23,10 @@
       </ul>
     </div>
     <div class="nav-other">
-      <span>欢迎你：<?=Yii::$app->user->identity->username; ?> 
+      <span>欢迎你：<?=
+        isset(Yii::$app->user->identity->username) ? 
+        Yii::$app->user->identity->username : ''; 
+      ?> 
           <a href="#" id="logout">【退出】</a>
       </span>
       <span></span>

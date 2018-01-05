@@ -25,6 +25,9 @@ class PublicController extends AdminBaseController{
      * @return string
      */
     public function actionLogin(){
+        if (Yii::$app->user->getId()) {
+            return $this->redirect(['/index/index']);
+        }
         if (isPost()) {
             $d['username'] = Yii::$app->request->post('username');
             $d['password'] = Yii::$app->request->post('password');

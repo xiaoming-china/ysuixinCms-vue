@@ -12,7 +12,7 @@ use backend\models\SystemInfo;
 
 
 class IndexController extends AdminBaseController{
-
+   public $layout = 'main-admin';
     /**
      * @Author:          xiaoming
      * @DateTime:        2017-10-09
@@ -22,7 +22,7 @@ class IndexController extends AdminBaseController{
      * @return           [type]      [description]
      */
     public function actionIndex(){
-        $this->layout = 'main-admin';
+        
         return $this->render('index');
     }
     /**
@@ -34,7 +34,6 @@ class IndexController extends AdminBaseController{
      * @return           [type]      [description]
      */
     public function actionMain(){
-        $this->layout = false;
         //登录日志列表
         $login_list = LoginLog::find()->limit(10)->asArray()->orderBy('created_at DESC')->all();
         foreach ($login_list as $key => $value) {
