@@ -1,202 +1,174 @@
-<?php
-  use yii\helpers\Html;
-  use yii\helpers\Url;
-?>
-<!doctype html>
-<html class="no-js" lang="en">
-<head>
-    <title>管理后台</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link href="/public/admin/css/basic.css" rel="stylesheet" type="text/css" />
-    <link href="/public/admin/css/main.css" rel="stylesheet" type="text/css" />
-    <link href="/public/admin/css/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css" />
-</head>
-<body>
-	<div class="main-content" style="margin: 10px 0px 0px 20px;">
-		<div class="bread-nav">
-			<a href="#">首页 > </a>
-			<a href="#">内容 > </a>
-			<a href="#">评论管理  </a>
-		</div>
-		
-		<div class="basic-item-seach">
-			<form action="">
-				<label for="">
-					时间：
-					<input type="text" name="start_time" placeholder="开始时间" class="search-start_time"> -
-					<input type="text" name="end_time" placeholder="结束时间" class="search-end_time">
-				</label>
-				<label for="">
-					关键字：
-					<input type="text" name="title" placeholder="内容 / 作者" class="search-title">
-				</label>
-				<label for="">
-					状态：
-				  <select name="status" class="search-status">
-				  	<option value="">全部</option>
-					<option value="1">通过</option>
-					<option value="2">未通过</option>
-				  </select>
-			    </label>
-			    <button class="a-basic-btn">搜索</button>
-			</form>
-		</div>
-		<div class="basic-item">
-			<table style="width:100%;">
-				<colgroup>
-			        <col width="16">
-			        <col width="160">
-			        <col width="">
-			        <col width="">
-			        <col width="">
-			        <col width="">
-		        </colgroup>
-		        <thead>
-		          <tr>
-		            <td><label><input type="checkbox" class="J_check_all"></label></td>
-		            <td>ID</td>
-		            <td>作者</td>
-		            <td>内容</td>
-		            <td>回复内容</td>
-		            <td>状态</td>
-		            <td align="center"><span>评论时间</span></td>
-		            <td align="center">操作</td>
-		          </tr>
-		        </thead>
-		        <tbody>
-		        	<tr class="comment-list1">
-			            <td><input type="checkbox" name="checkname" ></td>
-			            <td>20</td>
-			            <td>作者</td>
-			            <td>描内容内容内容内容内容述</td>
-			            <td class="status1">回复回复回复回复回复</td>
-			            <td>√</td>
-			            <td align="center">2017-9-20 11：03</td>
-			            <td align="center">
-			            	<a href="javascript:look_comment(1);">查看</a> |
-			            	<a href="javascript:del_comment(1);">删除</a>     
-			            </td>
-          			</tr>
-		        	<tr class="comment-list2">
-			            <td><input type="checkbox" name="checkname" ></td>
-			            <td>20</td>
-			            <td>作者</td>
-			            <td>描内容内容内容内容内容述</td>
-			            <td class="status1">回复回复回复回复回复</td>
-			            <td>✘</td>
-			            <td align="center">2017-9-20 11：03</td>
-			            <td align="center">
-			            	<a href="javascript:look_comment(2);">查看</a> |
-			            	<a href="javascript:del_comment(2);">删除</a>     
-			            </td>
-          			</tr>
-          		</tbody>
-              </table>
-                <div class="item-page">
-                	<span>共12页 / 第1页</span>
-              		<a href="#">首页</a>
-              		<a href="#" class="current">1</a>
-              		<a href="#">2</a>
-              		<a href="#">3</a>
-              		<a href="#">尾页</a>
-                </div>
-		</div>
-	</div>
+<!--主体内容区开始-->
+    <div class="right-content" id="app" v-cloak>
+      <div class="card">
+      	<div class="first-title">
+			<a href="" class="crumbs">首页 <e class="crumbs-symbol">></e></a>
+			<a href="" class="crumbs">内容 <e class="crumbs-symbol">></e></a>
+			<a href="" class="crumbs">评论管理</a>
+      	</div>
+      </div>
+      <div class="card">
+        <div class="first-title">搜索</div>
+            <div class="search-box">
+                  <div>
+                    <i-Input v-model="searchData.keyworlds" placeholder = "关键字">
+                    </i-Input>
+                  </div>
+                  <div>
+                  	<Date-Picker type="datetimerange" placeholder="评论时间" style="width: 100%;" v-on:on-change="selectTime"></Date-Picker>
+                  </div>
+                  <div>
+                  </div>
+              <i-button @click="getComment();">搜索</i-button>
+            </div>
+      </div>
+      <!--模型列表-->
+      <div class="card">
+		<table class="table table72 table-striped">
+			<thead>
+				<tr>
+		        <th style="width: 40px;">编号</th>  
+				<th style="width: 50px;">评论者</th> 
+				<th style="width: 200px;">评论内容</th> 
+				<th style="width: 200px;">回复内容</th> 
+				<th style="width: 50px;">状态</th>
+			    <th style="width: 80px;">评论时间</th>
+			    <th style="width: 80px;">回复时间</th>
+			    <th style="width: 100px;">操作</th>
+				</tr>
+			</thead> 
+			<tbody>
+			    <tr v-if="commentList.length == 0">
+			          <td colspan="8">
+			              <p class="t-center">暂无数据</p>
+			          </td>
+			    </tr>
+				<tr v-for="(value,key) in commentList" :key="key" v-else>
+			        <td>{{key + 1}}</td> 
+					<td>{{value.title}}</td> 
+					<td>{{value.view}}</td> 
+					<td>{{value.create_by}}</td> 
+					<td>
+						<span v-if="value.status == 1">已展示</span>
+            			<span v-if="value.status == 2">已隐藏</span>
+					</td> 
+					<td>
+			            <span v-if="value.status == 1">{{getLocalTime(value.comment_at)}}</span>
+			            <span v-if="value.status == 2">{{getLocalTime(value.re_at)}}</span>
+			        </td>
+			        <td>
+			          <span>
+			          	<a href="#"@click="location(2,value.id);">查看</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+			          </span>
+			        </td>
+				</tr>
+			</tbody>
+		</table>
+          <Page :total="searchData.total" show-sizer show-elevator show-total
+          v-on:on-change="pageChange"
+          v-on:on-page-size-change="sizeChange">
+          </Page>
+      </div>
+      <!--字段列表-->
+    </div>
+    <!--主体内容区结束-->
+
+  </div>
 
 
-		<!--查看评论model-->
-	<div class="comment-model" style="display:none;">
-		<div style="margin:0 auto;width:80%;" class="model">
-			<form action="?" method="post" class="form validate" id="J_Form">
-				<div class="form-group">
-				    <label>作者</label>
-				    <input type="text" class="form-control form-control-text" name="model_name" disabled>
-				</div>
-				<div class="form-group">
-				    <label>评论内容</label>
-				    <textarea rows="6" class="form-control" name="comment_desc" disabled></textarea>
-				</div>
-				<div class="form-group">
-				    <label><i class="requird"></i>回复内容</label>
-				    <textarea rows="6" class="form-control" placeholder="请输入回复" name="reply_desc"></textarea>
-				</div>
-				<div class="form-group">
-				    <label for="name">状态</label>
-				    <input type="radio" name="status" value = "1" checked> 通过
-				    <input type="radio" name="status" value = "2"> 未通过
-				</div>
-				 <div class="error-info"></div>
-			</form>
-		</div>
-
-	</div>
-<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/layer/2.3/layer.js"></script>
-<script src="/public/admin/js/jquery.validate.min.js"></script>
-<script src="/public/admin/js/jQuery.Form.js"></script>
-<script src="/public/admin/js/main.js"></script>
 <script>
-	//删除评论
-	//n,id
-	function del_comment(n){
-		var index = top.layer.confirm('确定删除此评论？', {
-		  btn: ['确定','取消']
-		}, function(){
-			top.layer.close(index);
-			top.layer.msg('删除成功', {
-		      time: 1500,
-		    },function(){
-		    	$('.comment-list' + n).remove();
-			});
-		}, function(){});
-	}
-	//查看评论
-	function look_comment(m,n){
-		top.layer.open({
-		  type: 1,
-		  title:'查看评论',
-		  area: ['500px', 'auto'],
-		  content: $('.comment-model').html(),
-		  btn:['确定','取消'],
-		  success:function(){
-		  	valid();
+    new Vue({
+        el: '#app',
+        data:{
+          commentList:[],
+          searchData:{
+            modelId:'',
+            catId:'',
+            keyworlds:'',
+            status:'-1',
+            start_time:'',
+			end_time:'',
+            total:0,
+            page:0,
+            pageSize:20
+          },
+        },
+        mounted: function() {
+          this.getComment();
+        },
+        methods: {
+        //去往第几页
+          pageChange: function(page){
+              this.searchData.page = page;
+              this.getContentList();
+          },
+          //每页显示几条
+          sizeChange: function(size){
+              this.searchData.pageSize = size;
+              this.getContentList();
+          },
+          selectTime:function(time){
+          	var data = time.toString().split(",");
+			this.searchData.start_time = data[0];
+			this.searchData.end_time   = data[1];
+          },
+          getComment:function(){
+            var _that = this;
+            $ajax(
+              '/admin/content/list',
+              {
+              	modelId:_that.modelId,
+              	catId:_that.catId,
+              	param:_that.searchData,
+              },
+              'get',
+              function(res){
+                _that.commentList = res.data.list;
+                _that.searchData.total = res.data.count;
+              },
+              function(res){
+                _that.$Message.warning('获取失败');
+              },
+            );
+          },
+          location:function(type,id){
+          	var url = '';
+          	switch(type){
+          	  case 1:url = '/admin/content/add-content?modelid='+this.modelId+'&catid='+this.catId;
+          		break;
+          	  case 2:url = '/admin/content/edit-content?modelid='+this.modelId+'&catid='+this.catId+'&id='+id;
+          		break;
+          	}
+            location.href = url;
+          },
+          //格式化时间戳
+          getLocalTime:function(nows) {
+            if(nows == "" || nows == null){
+                return  "";
+            }else{
+                var now  = new Date(parseInt(nows)*1000);
+                var year=now.getFullYear();
+                var month=now.getMonth()+1;
+                var date=now.getDate();
+                var hour=now.getHours().toLocaleString().split("").length == 1 ?"0"+now.getHours():now.getHours();
+                var minute=now.getMinutes().toLocaleString().split("").length == 1 ?"0"+now.getMinutes():now.getMinutes();
+                var second=now.getSeconds().toLocaleString().split("").length == 1 ?"0"+now.getSeconds():now.getSeconds();
+                return year+"-"+month+"-"+date+"  "+hour+":"+minute+":"+second;
+            }
+          },
+	  	  //获取url参数
+		  request: function (name, url) {
+				url = url || window.location.search;
+				var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+				var r = url.substr(1).match(reg);
+				if (r != null) return (r[2]);
+				return '';
 		  },
-		  yes:function(){
-		  	$(window.parent.document).find(".layui-layer-content>.model>#J_Form").submit();
-		  }
-		});
-	}
-	//回复评论表单验证
-	function valid(){
-		$(window.parent.document).find(".layui-layer-content>.model>#J_Form").validate({
-			focusCleanup:true,
-			focusInvalid:false,
-	        rules: {
-	            reply_desc:{
-	            	required:true,
-	            	maxlength:80
-	            }
-	        },
-	        messages: {
-	            reply_desc: {
-	              required:"回复内容长度为1~80个字符",
-	              maxlength:'回复内容长度必须为1~80个字符'
-	            }
-	        },
-	        errorLabelContainer: $(window.parent.document).find(".layui-layer-content>.model").find('.error-info'),
-			submitHandler: function(form){
-	            ajax_submit(form);
-	        },
-	    });
-	}
+        }
+    })
 </script>
 
 
 
-
-
-
-	
 </body>
 </html>
