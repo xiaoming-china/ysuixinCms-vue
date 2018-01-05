@@ -88,7 +88,8 @@
 			        <td v-if="value.is_style != 1">
 			          <span><a href="#"@click="location(2,value.id);">编辑</a>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
 			          <span><a href="#"@click="deleteContent(value.id);">删除</a>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
-<!-- 			          <span>
+<!--                 <span><a href="#"@click="location(3,value.id);">查看评论</a>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+			          <span>
 			            <a href="#" v-if="value.status == 1" @click="changeStatusField(value.id,2,key);">禁用</a>&nbsp;&nbsp;|&nbsp;&nbsp;
 			            <a href="#" v-else @click="changeStatusField(value.id,1,key);">开启</a>&nbsp;&nbsp;|&nbsp;&nbsp;
 			          </span> -->
@@ -284,6 +285,8 @@
           		break;
           	  case 2:url = '/admin/content/edit-content?modelid='+this.modelId+'&catid='+this.catId+'&id='+id;
           		break;
+              case 3:url = '/admin/comment/comment-list?id='+id+'&catid='+this.catId;
+              break;
           	}
             location.href = url;
           },

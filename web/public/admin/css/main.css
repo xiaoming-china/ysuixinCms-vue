@@ -356,3 +356,22 @@ body{
     color: #333;
     text-decoration: none;
 }
+.comment-re-list{  
+    height:400px;  
+    overflow-y: auto;
+}  
+.comment-re-list::-webkit-scrollbar{  
+    width:4px;  
+    height:4px;  
+}  
+.comment-re-list::-webkit-scrollbar-track{  
+    background: #E6E6E6;  
+    border-radius:2px;  
+}  
+.comment-re-list::-webkit-scrollbar-thumb{  
+    background: #747474;  
+    border-radius:2px;  
+}  
+.comment-re-list::-webkit-scrollbar-corner{  
+    background: #E6E6E6;  
+} 

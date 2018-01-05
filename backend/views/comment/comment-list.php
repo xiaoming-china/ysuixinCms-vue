@@ -11,7 +11,7 @@
         <div class="first-title">搜索</div>
             <div class="search-box">
                   <div>
-                    <i-Input v-model="searchData.keyworlds" placeholder = "关键字">
+                    <i-Input v-model="searchData.keyworlds" placeholder = "评论内容 /  回复内容">
                     </i-Input>
                   </div>
                   <div>
@@ -28,37 +28,46 @@
 			<thead>
 				<tr>
 		        <th style="width: 40px;">编号</th>  
+		        <th style="width: 120px;">评论内容</th> 
+		        <th style="width: 50px;">所属栏目</th>
 				<th style="width: 50px;">评论者</th> 
-				<th style="width: 200px;">评论内容</th> 
-				<th style="width: 200px;">回复内容</th> 
+				<!--<th style="width: 200px;">回复内容</th>  -->
 				<th style="width: 50px;">状态</th>
-			    <th style="width: 80px;">评论时间</th>
-			    <th style="width: 80px;">回复时间</th>
-			    <th style="width: 100px;">操作</th>
+			    <th style="width: 60px;">评论时间</th>
+			    <th style="width: 60px;">回复时间</th>
+			    <th style="width: 60px;">操作</th>
 				</tr>
 			</thead> 
 			<tbody>
-			    <tr v-if="commentList.length == 0">
+			    <tr v-if="commentTopList.length == 0">
 			          <td colspan="8">
 			              <p class="t-center">暂无数据</p>
 			          </td>
 			    </tr>
-				<tr v-for="(value,key) in commentList" :key="key" v-else>
+				<tr v-for="(value,key) in commentTopList" :key="key" v-else>
 			        <td>{{key + 1}}</td> 
-					<td>{{value.title}}</td> 
-					<td>{{value.view}}</td> 
-					<td>{{value.create_by}}</td> 
+			        <td>
+						<span :title="value.content_title">{{strLen(value.content_title,0,15)}}</span>
+			        </td> 
+			        <td>{{value.catname}}</td> 
+					<td>{{value.commen_user}}</td> 
+<!-- 					<td>{{strLen(value.comment_content,0,20)}}</td> 
+					<td>
+						<span v-if="value.re_content == ''">暂未回复</span>
+            			<span else>{{strLen(value.re_content,0,20)}}</span>
+					</td>  -->
 					<td>
 						<span v-if="value.status == 1">已展示</span>
             			<span v-if="value.status == 2">已隐藏</span>
 					</td> 
-					<td>
-			            <span v-if="value.status == 1">{{getLocalTime(value.comment_at)}}</span>
-			            <span v-if="value.status == 2">{{getLocalTime(value.re_at)}}</span>
-			        </td>
+					<td>{{getLocalTime(value.comment_at)}}</td>
+			        <td>
+						<span v-if="value.re_content == ''"></span>
+            			<span else>{{getLocalTime(value.re_at)}}</span>
+					</td> 
 			        <td>
 			          <span>
-			          	<a href="#"@click="location(2,value.id);">查看</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+			          	<a href="#"@click="viewComment(value.id);">查看</a>
 			          </span>
 			        </td>
 				</tr>
@@ -70,17 +79,238 @@
           </Page>
       </div>
       <!--字段列表-->
+          <!--编辑模型-->
+  <Modal v-model="commentModel" width="500" :mask-closable="false">
+    <p slot="header">
+        <span>查看评论</span>
+    </p>
+    <ul class="comment-re-list">
+		<li>
+			<p>评论者:admin&nbsp;&nbsp;时间:2017-11-08 17:50</p>
+			<p>评论内容</p>
+		</li>
+				<li>
+			<p>评论者:admin&nbsp;&nbsp;时间:2017-11-08 17:50</p>
+			<p>评论内容</p>
+		</li>
+				<li>
+			<p>评论者:admin&nbsp;&nbsp;时间:2017-11-08 17:50</p>
+			<p>评论内容</p>
+		</li>
+				<li>
+			<p>评论者:admin&nbsp;&nbsp;时间:2017-11-08 17:50</p>
+			<p>评论内容</p>
+		</li>
+				<li>
+			<p>评论者:admin&nbsp;&nbsp;时间:2017-11-08 17:50</p>
+			<p>评论内容</p>
+		</li>
+				<li>
+			<p>评论者:admin&nbsp;&nbsp;时间:2017-11-08 17:50</p>
+			<p>评论内容</p>
+		</li>
+				<li>
+			<p>评论者:admin&nbsp;&nbsp;时间:2017-11-08 17:50</p>
+			<p>评论内容</p>
+		</li>
+				<li>
+			<p>评论者:admin&nbsp;&nbsp;时间:2017-11-08 17:50</p>
+			<p>评论内容</p>
+		</li>
+				<li>
+			<p>评论者:admin&nbsp;&nbsp;时间:2017-11-08 17:50</p>
+			<p>评论内容</p>
+		</li>
+				<li>
+			<p>评论者:admin&nbsp;&nbsp;时间:2017-11-08 17:50</p>
+			<p>评论内容</p>
+		</li>
+				<li>
+			<p>评论者:admin&nbsp;&nbsp;时间:2017-11-08 17:50</p>
+			<p>评论内容</p>
+		</li>
+				<li>
+			<p>评论者:admin&nbsp;&nbsp;时间:2017-11-08 17:50</p>
+			<p>评论内容</p>
+		</li>
+				<li>
+			<p>评论者:admin&nbsp;&nbsp;时间:2017-11-08 17:50</p>
+			<p>评论内容</p>
+		</li>
+				<li>
+			<p>评论者:admin&nbsp;&nbsp;时间:2017-11-08 17:50</p>
+			<p>评论内容</p>
+		</li>
+				<li>
+			<p>评论者:admin&nbsp;&nbsp;时间:2017-11-08 17:50</p>
+			<p>评论内容</p>
+		</li>
+				<li>
+			<p>评论者:admin&nbsp;&nbsp;时间:2017-11-08 17:50</p>
+			<p>评论内容</p>
+		</li>
+				<li>
+			<p>评论者:admin&nbsp;&nbsp;时间:2017-11-08 17:50</p>
+			<p>评论内容</p>
+		</li>
+				<li>
+			<p>评论者:admin&nbsp;&nbsp;时间:2017-11-08 17:50</p>
+			<p>评论内容</p>
+		</li>
+				<li>
+			<p>评论者:admin&nbsp;&nbsp;时间:2017-11-08 17:50</p>
+			<p>评论内容</p>
+		</li>
+				<li>
+			<p>评论者:admin&nbsp;&nbsp;时间:2017-11-08 17:50</p>
+			<p>评论内容</p>
+		</li>
+				<li>
+			<p>评论者:admin&nbsp;&nbsp;时间:2017-11-08 17:50</p>
+			<p>评论内容</p>
+		</li>
+				<li>
+			<p>评论者:admin&nbsp;&nbsp;时间:2017-11-08 17:50</p>
+			<p>评论内容</p>
+		</li>
+				<li>
+			<p>评论者:admin&nbsp;&nbsp;时间:2017-11-08 17:50</p>
+			<p>评论内容</p>
+		</li>
+				<li>
+			<p>评论者:admin&nbsp;&nbsp;时间:2017-11-08 17:50</p>
+			<p>评论内容</p>
+		</li>
+				<li>
+			<p>评论者:admin&nbsp;&nbsp;时间:2017-11-08 17:50</p>
+			<p>评论内容</p>
+		</li>
+				<li>
+			<p>评论者:admin&nbsp;&nbsp;时间:2017-11-08 17:50</p>
+			<p>评论内容</p>
+		</li>
+				<li>
+			<p>评论者:admin&nbsp;&nbsp;时间:2017-11-08 17:50</p>
+			<p>评论内容</p>
+		</li>
+				<li>
+			<p>评论者:admin&nbsp;&nbsp;时间:2017-11-08 17:50</p>
+			<p>评论内容</p>
+		</li>
+				<li>
+			<p>评论者:admin&nbsp;&nbsp;时间:2017-11-08 17:50</p>
+			<p>评论内容</p>
+		</li>
+				<li>
+			<p>评论者:admin&nbsp;&nbsp;时间:2017-11-08 17:50</p>
+			<p>评论内容</p>
+		</li>
+				<li>
+			<p>评论者:admin&nbsp;&nbsp;时间:2017-11-08 17:50</p>
+			<p>评论内容</p>
+		</li>
+				<li>
+			<p>评论者:admin&nbsp;&nbsp;时间:2017-11-08 17:50</p>
+			<p>评论内容</p>
+		</li>
+				<li>
+			<p>评论者:admin&nbsp;&nbsp;时间:2017-11-08 17:50</p>
+			<p>评论内容</p>
+		</li>
+				<li>
+			<p>评论者:admin&nbsp;&nbsp;时间:2017-11-08 17:50</p>
+			<p>评论内容</p>
+		</li>
+				<li>
+			<p>评论者:admin&nbsp;&nbsp;时间:2017-11-08 17:50</p>
+			<p>评论内容</p>
+		</li>
+				<li>
+			<p>评论者:admin&nbsp;&nbsp;时间:2017-11-08 17:50</p>
+			<p>评论内容</p>
+		</li>
+				<li>
+			<p>评论者:admin&nbsp;&nbsp;时间:2017-11-08 17:50</p>
+			<p>评论内容</p>
+		</li>
+				<li>
+			<p>评论者:admin&nbsp;&nbsp;时间:2017-11-08 17:50</p>
+			<p>评论内容</p>
+		</li>
+				<li>
+			<p>评论者:admin&nbsp;&nbsp;时间:2017-11-08 17:50</p>
+			<p>评论内容</p>
+		</li>
+				<li>
+			<p>评论者:admin&nbsp;&nbsp;时间:2017-11-08 17:50</p>
+			<p>评论内容</p>
+		</li>
+				<li>
+			<p>评论者:admin&nbsp;&nbsp;时间:2017-11-08 17:50</p>
+			<p>评论内容</p>
+		</li>
+				<li>
+			<p>评论者:admin&nbsp;&nbsp;时间:2017-11-08 17:50</p>
+			<p>评论内容</p>
+		</li>
+				<li>
+			<p>评论者:admin&nbsp;&nbsp;时间:2017-11-08 17:50</p>
+			<p>评论内容</p>
+		</li>
+				<li>
+			<p>评论者:admin&nbsp;&nbsp;时间:2017-11-08 17:50</p>
+			<p>评论内容</p>
+		</li>
+				<li>
+			<p>评论者:admin&nbsp;&nbsp;时间:2017-11-08 17:50</p>
+			<p>评论内容</p>
+		</li>
+				<li>
+			<p>评论者:admin&nbsp;&nbsp;时间:2017-11-08 17:50</p>
+			<p>评论内容</p>
+		</li>
+				<li>
+			<p>评论者:admin&nbsp;&nbsp;时间:2017-11-08 17:50</p>
+			<p>评论内容</p>
+		</li>
+				<li>
+			<p>评论者:admin&nbsp;&nbsp;时间:2017-11-08 17:50</p>
+			<p>评论内容</p>
+		</li>
+    </ul>
+
+    <!-- <i-Form ref="ModelInfo">
+        <Form-Item label="描述" prop="desc">
+            <i-Input type="textarea"
+                      size="large"
+                      placeholder = "最多30个字符">
+                    </i-Input>
+        </Form-Item>
+    </i-Form> -->
+    <br>
+    <p slot="footer">
+<!--        <i-button type="primary">
+          <span v-if="!loading">确定</span>
+          <span v-else>Loading...</span>
+       </i-button> -->
+       <i-button type="info" @click="commentModel=false">关闭</i-button>
+    </p>
+  </Modal>
     </div>
     <!--主体内容区结束-->
 
   </div>
 
 
+
 <script>
     new Vue({
         el: '#app',
         data:{
-          commentList:[],
+          loading:false,
+          commentModel:false,
+          commentTopList:[],
+		  commentReList:[],
           searchData:{
             modelId:'',
             catId:'',
@@ -115,21 +345,20 @@
           getComment:function(){
             var _that = this;
             $ajax(
-              '/admin/content/list',
-              {
-              	modelId:_that.modelId,
-              	catId:_that.catId,
-              	param:_that.searchData,
-              },
+              '/admin/comment/comment-list',
+              {id:_that.request('id'),catid:_that.request('catid')},
               'get',
               function(res){
-                _that.commentList = res.data.list;
+                _that.commentTopList = res.data.list;
                 _that.searchData.total = res.data.count;
               },
               function(res){
                 _that.$Message.warning('获取失败');
               },
             );
+          },
+          viewComment:function(k){
+          	this.commentModel = true;
           },
           location:function(type,id){
           	var url = '';
@@ -164,6 +393,11 @@
 				if (r != null) return (r[2]);
 				return '';
 		  },
+		  //截取字符串
+		  strLen:function(str,start,end){
+		  	return str.slice(start, end)+'......';
+		  }
+		  
         }
     })
 </script>
