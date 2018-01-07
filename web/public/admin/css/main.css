@@ -26,6 +26,12 @@ textarea{
 .clear{
     clear: both;
 }
+.pull-left{
+    float: left;
+}
+.pull-right{
+    float: right;
+}
 .requird:before{
     content: "*";
     display: inline-block;
@@ -357,9 +363,13 @@ body{
     text-decoration: none;
 }
 .comment-re-list{  
-    height:400px;  
+    height:500px;
     overflow-y: auto;
-}  
+}
+.comment-re-list li{
+    margin-bottom: 20px;
+    cursor: pointer;
+}
 .comment-re-list::-webkit-scrollbar{  
     width:4px;  
     height:4px;  
@@ -374,4 +384,36 @@ body{
 }  
 .comment-re-list::-webkit-scrollbar-corner{  
     background: #E6E6E6;  
-} 
+}
+.comment-user-info{
+    padding-left: 10px;
+}
+.comment-content{
+    padding: 10px 10px 0 43px;
+    color: #333;
+    font-size: 14px;
+}
+.comment-re-title{
+    margin: 30px;
+    text-align: center;
+    background-color: #fff;
+}
+.comment-re-title-line:before{
+    content: '';
+    display: block;
+    height: 1px;
+    width: 100%;
+    background-color: #999;/*颜色需与主题大背景色一致*/
+    position: relative;
+    top: 10px;/*调节线高*/
+    left: 0;
+}
+.comment-re-title-line .title-text{
+    display: inline-block;
+    background: #fff;
+    color: #333;
+    padding: 0 18px 0 18px;
+    position: relative;
+    font-size: 14px;
+    font-weight: 500;
+}

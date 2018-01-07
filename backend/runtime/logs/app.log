@@ -1,0 +1,301 @@
+2018-01-07 05:19:50 [127.0.0.1][-][3n2ho6cu08s3ph602v92bpmk00][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [2002] ÓÉÓÚÁ¬½Ó·½ÔÚÒ»¶ÎÊ±¼äºóÃ»ÓÐÕýÈ·´ð¸´»òÁ¬½ÓµÄÖ÷»úÃ»ÓÐ·´Ó¦£¬Á¬½Ó³¢ÊÔÊ§°Ü¡£
+' in G:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Connection.php:646
+Stack trace:
+#0 G:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Connection.php(646): PDO->__construct('mysql:host=47.9...', 'cmsDemo', 'huwangmingDemo', NULL)
+#1 G:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Connection.php(579): yii\db\Connection->createPdoInstance()
+#2 G:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Connection.php(928): yii\db\Connection->open()
+#3 G:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Connection.php(915): yii\db\Connection->getMasterPdo()
+#4 G:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Command.php(219): yii\db\Connection->getSlavePdo()
+#5 G:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Command.php(910): yii\db\Command->prepare(true)
+#6 G:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Command.php(376): yii\db\Command->queryInternal('fetch', NULL)
+#7 G:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Query.php(253): yii\db\Command->queryOne()
+#8 G:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\ActiveQuery.php(294): yii\db\Query->one(NULL)
+#9 G:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\BaseActiveRecord.php(107): yii\db\ActiveQuery->one()
+#10 G:\xampp\htdocs\vueDemo\common\models\User.php(48): yii\db\BaseActiveRecord::findOne(Array)
+#11 G:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\User.php(657): common\models\User::findIdentity(5)
+#12 G:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\User.php(188): yii\web\User->renewAuthStatus()
+#13 G:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\User.php(333): yii\web\User->getIdentity()
+#14 G:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Component.php(132): yii\web\User->getIsGuest()
+#15 G:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2-debug\panels\UserPanel.php(75): yii\base\Component->__get('isGuest')
+#16 G:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Object.php(107): yii\debug\panels\UserPanel->init()
+#17 [internal function]: yii\base\Object->__construct(Array)
+#18 G:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\di\Container.php(381): ReflectionClass->newInstanceArgs(Array)
+#19 G:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\di\Container.php(156): yii\di\Container->build('yii\\debug\\panel...', Array, Array)
+#20 G:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\BaseYii.php(348): yii\di\Container->get('yii\\debug\\panel...', Array, Array)
+#21 G:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2-debug\Module.php(177): yii\BaseYii::createObject(Array)
+#22 G:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2-debug\Module.php(149): yii\debug\Module->initPanels()
+#23 G:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Object.php(107): yii\debug\Module->init()
+#24 G:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(158): yii\base\Object->__construct(Array)
+#25 [internal function]: yii\base\Module->__construct('debug', Object(yii\web\Application), Array)
+#26 G:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\di\Container.php(375): ReflectionClass->newInstanceArgs(Array)
+#27 G:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\di\Container.php(156): yii\di\Container->build('yii\\debug\\Modul...', Array, Array)
+#28 G:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\BaseYii.php(348): yii\di\Container->get('yii\\debug\\Modul...', Array, Array)
+#29 G:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(423): yii\BaseYii::createObject(Array, Array)
+#30 G:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(309): yii\base\Module->getModule('debug')
+#31 G:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php(69): yii\base\Application->bootstrap()
+#32 G:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(272): yii\web\Application->bootstrap()
+#33 G:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Object.php(107): yii\base\Application->init()
+#34 G:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(205): yii\base\Object->__construct(Array)
+#35 G:\xampp\htdocs\vueDemo\web\admin\index.php(18): yii\base\Application->__construct(Array)
+#36 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [2002] ÓÉÓÚÁ¬½Ó·½ÔÚÒ»¶ÎÊ±¼äºóÃ»ÓÐÕýÈ·´ð¸´»òÁ¬½ÓµÄÖ÷»úÃ»ÓÐ·´Ó¦£¬Á¬½Ó³¢ÊÔÊ§°Ü¡£
+' in G:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Connection.php:584
+Stack trace:
+#0 G:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Connection.php(928): yii\db\Connection->open()
+#1 G:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Connection.php(915): yii\db\Connection->getMasterPdo()
+#2 G:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Command.php(219): yii\db\Connection->getSlavePdo()
+#3 G:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Command.php(910): yii\db\Command->prepare(true)
+#4 G:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Command.php(376): yii\db\Command->queryInternal('fetch', NULL)
+#5 G:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Query.php(253): yii\db\Command->queryOne()
+#6 G:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\ActiveQuery.php(294): yii\db\Query->one(NULL)
+#7 G:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\BaseActiveRecord.php(107): yii\db\ActiveQuery->one()
+#8 G:\xampp\htdocs\vueDemo\common\models\User.php(48): yii\db\BaseActiveRecord::findOne(Array)
+#9 G:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\User.php(657): common\models\User::findIdentity(5)
+#10 G:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\User.php(188): yii\web\User->renewAuthStatus()
+#11 G:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\User.php(333): yii\web\User->getIdentity()
+#12 G:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Component.php(132): yii\web\User->getIsGuest()
+#13 G:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2-debug\panels\UserPanel.php(75): yii\base\Component->__get('isGuest')
+#14 G:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Object.php(107): yii\debug\panels\UserPanel->init()
+#15 [internal function]: yii\base\Object->__construct(Array)
+#16 G:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\di\Container.php(381): ReflectionClass->newInstanceArgs(Array)
+#17 G:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\di\Container.php(156): yii\di\Container->build('yii\\debug\\panel...', Array, Array)
+#18 G:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\BaseYii.php(348): yii\di\Container->get('yii\\debug\\panel...', Array, Array)
+#19 G:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2-debug\Module.php(177): yii\BaseYii::createObject(Array)
+#20 G:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2-debug\Module.php(149): yii\debug\Module->initPanels()
+#21 G:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Object.php(107): yii\debug\Module->init()
+#22 G:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(158): yii\base\Object->__construct(Array)
+#23 [internal function]: yii\base\Module->__construct('debug', Object(yii\web\Application), Array)
+#24 G:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\di\Container.php(375): ReflectionClass->newInstanceArgs(Array)
+#25 G:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\di\Container.php(156): yii\di\Container->build('yii\\debug\\Modul...', Array, Array)
+#26 G:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\BaseYii.php(348): yii\di\Container->get('yii\\debug\\Modul...', Array, Array)
+#27 G:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(423): yii\BaseYii::createObject(Array, Array)
+#28 G:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(309): yii\base\Module->getModule('debug')
+#29 G:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php(69): yii\base\Application->bootstrap()
+#30 G:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(272): yii\web\Application->bootstrap()
+#31 G:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Object.php(107): yii\base\Application->init()
+#32 G:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(205): yii\base\Object->__construct(Array)
+#33 G:\xampp\htdocs\vueDemo\web\admin\index.php(18): yii\base\Application->__construct(Array)
+#34 {main}
+Additional Information:
+
+2018-01-07 05:19:29 [127.0.0.1][-][3n2ho6cu08s3ph602v92bpmk00][info][application] $_GET = [
+    'id' => ''
+    'catid' => ''
+]
+
+$_COOKIE = [
+    'advanced-frontend' => '83bdj6ecacjic1e6bu5p02iio0'
+    '_csrf-frontend' => 'cb887442dda20992289262e344f6fd3915179768db6e0d4ea8cd24ec4f87d2eca:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"Q?Ž+b¿â‰e~µðBêêi9¿šü;ÅÙY ¡É…ãj•´\";}'
+    'advanced-backend' => '3n2ho6cu08s3ph602v92bpmk00'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 5
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'G:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'G:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'G:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'G:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'vuedemo.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36'
+    'HTTP_REFERER' => 'http://vuedemo.com/admin/comment/comment-list'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'advanced-frontend=83bdj6ecacjic1e6bu5p02iio0; _csrf-frontend=cb887442dda20992289262e344f6fd3915179768db6e0d4ea8cd24ec4f87d2eca%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22Q%3F%8E%2Bb%BF%E2%89e%7E%B5%F0B%EA%EAi9%BF%9A%FC%3B%C5%D9Y+%A1%C9%85%E3j%95%B4%22%3B%7D; advanced-backend=3n2ho6cu08s3ph602v92bpmk00'
+    'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\ProgramData\\ComposerSetup\\bin;D:\\php55n;G:\\xampp\\php;G:\\Git\\cmd;F:\\python;C:\\Program Files\\Microsoft\\Web Platform Installer\\;C:\\Program Files (x86)\\Microsoft ASP.NET\\ASP.NET Web Pages\\v1.0\\;C:\\Program Files (x86)\\Windows Kits\\8.0\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.23 (Win32) OpenSSL/1.0.2h PHP/5.6.28 Server at vuedemo.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2h PHP/5.6.28'
+    'SERVER_NAME' => 'vuedemo.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'G:/xampp/htdocs/vueDemo/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'G:/xampp/htdocs/vueDemo/web'
+    'SERVER_ADMIN' => 'vueDemo.com'
+    'SCRIPT_FILENAME' => 'G:/xampp/htdocs/vueDemo/web/admin/index.php'
+    'REMOTE_PORT' => '7605'
+    'REDIRECT_URL' => '/admin/comment/comment-list'
+    'REDIRECT_QUERY_STRING' => 'id=&catid='
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'id=&catid='
+    'REQUEST_URI' => '/admin/comment/comment-list?id=&catid='
+    'SCRIPT_NAME' => '/admin/index.php'
+    'PHP_SELF' => '/admin/index.php'
+    'REQUEST_TIME_FLOAT' => 1515298769.053
+    'REQUEST_TIME' => 1515298769
+]
+2018-01-07 05:27:26 [127.0.0.1][5][3n2ho6cu08s3ph602v92bpmk00][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "comment/images/hz01.jpg".' in G:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php:532
+Stack trace:
+#0 G:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('comment/images/...', Array)
+#1 G:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 G:\xampp\htdocs\vueDemo\web\admin\index.php(20): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in G:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php:114
+Stack trace:
+#0 G:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 G:\xampp\htdocs\vueDemo\web\admin\index.php(20): yii\base\Application->run()
+#2 {main}
+2018-01-07 05:27:26 [127.0.0.1][5][3n2ho6cu08s3ph602v92bpmk00][info][application] $_COOKIE = [
+    'advanced-frontend' => '83bdj6ecacjic1e6bu5p02iio0'
+    '_csrf-frontend' => 'cb887442dda20992289262e344f6fd3915179768db6e0d4ea8cd24ec4f87d2eca:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"Q?Ž+b¿â‰e~µðBêêi9¿šü;ÅÙY ¡É…ãj•´\";}'
+    'advanced-backend' => '3n2ho6cu08s3ph602v92bpmk00'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 5
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'G:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'G:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'G:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'G:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'vuedemo.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36'
+    'HTTP_ACCEPT' => 'image/webp,image/apng,image/*,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://vuedemo.com/admin/comment/comment-list'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'advanced-frontend=83bdj6ecacjic1e6bu5p02iio0; _csrf-frontend=cb887442dda20992289262e344f6fd3915179768db6e0d4ea8cd24ec4f87d2eca%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22Q%3F%8E%2Bb%BF%E2%89e%7E%B5%F0B%EA%EAi9%BF%9A%FC%3B%C5%D9Y+%A1%C9%85%E3j%95%B4%22%3B%7D; advanced-backend=3n2ho6cu08s3ph602v92bpmk00'
+    'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\ProgramData\\ComposerSetup\\bin;D:\\php55n;G:\\xampp\\php;G:\\Git\\cmd;F:\\python;C:\\Program Files\\Microsoft\\Web Platform Installer\\;C:\\Program Files (x86)\\Microsoft ASP.NET\\ASP.NET Web Pages\\v1.0\\;C:\\Program Files (x86)\\Windows Kits\\8.0\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.23 (Win32) OpenSSL/1.0.2h PHP/5.6.28 Server at vuedemo.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2h PHP/5.6.28'
+    'SERVER_NAME' => 'vuedemo.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'G:/xampp/htdocs/vueDemo/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'G:/xampp/htdocs/vueDemo/web'
+    'SERVER_ADMIN' => 'vueDemo.com'
+    'SCRIPT_FILENAME' => 'G:/xampp/htdocs/vueDemo/web/admin/index.php'
+    'REMOTE_PORT' => '8539'
+    'REDIRECT_URL' => '/admin/comment/images/hz01.jpg'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/admin/comment/images/hz01.jpg'
+    'SCRIPT_NAME' => '/admin/index.php'
+    'PHP_SELF' => '/admin/index.php'
+    'REQUEST_TIME_FLOAT' => 1515299246.306
+    'REQUEST_TIME' => 1515299246
+]
+2018-01-07 05:28:12 [127.0.0.1][5][3n2ho6cu08s3ph602v92bpmk00][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "comment/images/hz01.jpg".' in G:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php:532
+Stack trace:
+#0 G:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('comment/images/...', Array)
+#1 G:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 G:\xampp\htdocs\vueDemo\web\admin\index.php(20): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in G:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php:114
+Stack trace:
+#0 G:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 G:\xampp\htdocs\vueDemo\web\admin\index.php(20): yii\base\Application->run()
+#2 {main}
+2018-01-07 05:28:12 [127.0.0.1][5][3n2ho6cu08s3ph602v92bpmk00][info][application] $_COOKIE = [
+    'advanced-frontend' => '83bdj6ecacjic1e6bu5p02iio0'
+    '_csrf-frontend' => 'cb887442dda20992289262e344f6fd3915179768db6e0d4ea8cd24ec4f87d2eca:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"Q?Ž+b¿â‰e~µðBêêi9¿šü;ÅÙY ¡É…ãj•´\";}'
+    'advanced-backend' => '3n2ho6cu08s3ph602v92bpmk00'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 5
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'G:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'G:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'G:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'G:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'vuedemo.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36'
+    'HTTP_ACCEPT' => 'image/webp,image/apng,image/*,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://vuedemo.com/admin/comment/comment-list'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'advanced-frontend=83bdj6ecacjic1e6bu5p02iio0; _csrf-frontend=cb887442dda20992289262e344f6fd3915179768db6e0d4ea8cd24ec4f87d2eca%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22Q%3F%8E%2Bb%BF%E2%89e%7E%B5%F0B%EA%EAi9%BF%9A%FC%3B%C5%D9Y+%A1%C9%85%E3j%95%B4%22%3B%7D; advanced-backend=3n2ho6cu08s3ph602v92bpmk00'
+    'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\ProgramData\\ComposerSetup\\bin;D:\\php55n;G:\\xampp\\php;G:\\Git\\cmd;F:\\python;C:\\Program Files\\Microsoft\\Web Platform Installer\\;C:\\Program Files (x86)\\Microsoft ASP.NET\\ASP.NET Web Pages\\v1.0\\;C:\\Program Files (x86)\\Windows Kits\\8.0\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.23 (Win32) OpenSSL/1.0.2h PHP/5.6.28 Server at vuedemo.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2h PHP/5.6.28'
+    'SERVER_NAME' => 'vuedemo.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'G:/xampp/htdocs/vueDemo/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'G:/xampp/htdocs/vueDemo/web'
+    'SERVER_ADMIN' => 'vueDemo.com'
+    'SCRIPT_FILENAME' => 'G:/xampp/htdocs/vueDemo/web/admin/index.php'
+    'REMOTE_PORT' => '8605'
+    'REDIRECT_URL' => '/admin/comment/images/hz01.jpg'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/admin/comment/images/hz01.jpg'
+    'SCRIPT_NAME' => '/admin/index.php'
+    'PHP_SELF' => '/admin/index.php'
+    'REQUEST_TIME_FLOAT' => 1515299292.551
+    'REQUEST_TIME' => 1515299292
+]

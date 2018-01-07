@@ -28,7 +28,7 @@
 			<thead>
 				<tr>
 		        <th style="width: 40px;">编号</th>  
-		        <th style="width: 120px;">评论内容</th> 
+		        <th style="width: 120px;">所属内容</th>
 		        <th style="width: 50px;">所属栏目</th>
 				<th style="width: 50px;">评论者</th> 
 				<!--<th style="width: 200px;">回复内容</th>  -->
@@ -67,7 +67,7 @@
 					</td> 
 			        <td>
 			          <span>
-			          	<a href="#"@click="viewComment(value.id);">查看</a>
+			          	<a href="#"@click="viewComment(value.id);">查看评论</a>
 			          </span>
 			        </td>
 				</tr>
@@ -80,203 +80,109 @@
       </div>
       <!--字段列表-->
           <!--编辑模型-->
-  <Modal v-model="commentModel" width="500" :mask-closable="false">
+  <Modal v-model="commentModel" width="670" :mask-closable="false" >
     <p slot="header">
         <span>查看评论</span>
     </p>
     <ul class="comment-re-list">
-		<li>
-			<p>评论者:admin&nbsp;&nbsp;时间:2017-11-08 17:50</p>
-			<p>评论内容</p>
+		<li @click="reComment();" title="点击回复">
+            <div class="pull-left "><Avatar icon="person"/></div>
+            <div class="pull-left comment-user-info">
+                <p>用户名</p>
+                <p>2017-11-08 17:50</p>
+            </div>
+            <div class="clear"></div>
+			<div class="comment-content">中国的封门村，现在已经人尽皆知了，那是人们口中津津乐道的第一鬼城，也是让人望而却步的探险胜地。
+                但你是否知道，在东北一个偏僻的小角落，坐落着一座荒芜的村庄，那里，是一个比封门村更为邪门的地方。
+                因为这村子太邪门，知道的人因为忌讳，不愿意去说，而不知道的人也就一直不知道了。
+                故而这村子虽为**，却没有封门村的名声叫得响亮。
+                我小时候，就生活在这里，曾亲眼目睹了村子的变迁，目睹了一切的发生……
+            </div>
+            <div class="comment-re-title">
+                <div class="comment-re-title-line">
+                    <span class="title-text">全部回复</span>
+                </div>
+            </div>
 		</li>
-				<li>
-			<p>评论者:admin&nbsp;&nbsp;时间:2017-11-08 17:50</p>
-			<p>评论内容</p>
-		</li>
-				<li>
-			<p>评论者:admin&nbsp;&nbsp;时间:2017-11-08 17:50</p>
-			<p>评论内容</p>
-		</li>
-				<li>
-			<p>评论者:admin&nbsp;&nbsp;时间:2017-11-08 17:50</p>
-			<p>评论内容</p>
-		</li>
-				<li>
-			<p>评论者:admin&nbsp;&nbsp;时间:2017-11-08 17:50</p>
-			<p>评论内容</p>
-		</li>
-				<li>
-			<p>评论者:admin&nbsp;&nbsp;时间:2017-11-08 17:50</p>
-			<p>评论内容</p>
-		</li>
-				<li>
-			<p>评论者:admin&nbsp;&nbsp;时间:2017-11-08 17:50</p>
-			<p>评论内容</p>
-		</li>
-				<li>
-			<p>评论者:admin&nbsp;&nbsp;时间:2017-11-08 17:50</p>
-			<p>评论内容</p>
-		</li>
-				<li>
-			<p>评论者:admin&nbsp;&nbsp;时间:2017-11-08 17:50</p>
-			<p>评论内容</p>
-		</li>
-				<li>
-			<p>评论者:admin&nbsp;&nbsp;时间:2017-11-08 17:50</p>
-			<p>评论内容</p>
-		</li>
-				<li>
-			<p>评论者:admin&nbsp;&nbsp;时间:2017-11-08 17:50</p>
-			<p>评论内容</p>
-		</li>
-				<li>
-			<p>评论者:admin&nbsp;&nbsp;时间:2017-11-08 17:50</p>
-			<p>评论内容</p>
-		</li>
-				<li>
-			<p>评论者:admin&nbsp;&nbsp;时间:2017-11-08 17:50</p>
-			<p>评论内容</p>
-		</li>
-				<li>
-			<p>评论者:admin&nbsp;&nbsp;时间:2017-11-08 17:50</p>
-			<p>评论内容</p>
-		</li>
-				<li>
-			<p>评论者:admin&nbsp;&nbsp;时间:2017-11-08 17:50</p>
-			<p>评论内容</p>
-		</li>
-				<li>
-			<p>评论者:admin&nbsp;&nbsp;时间:2017-11-08 17:50</p>
-			<p>评论内容</p>
-		</li>
-				<li>
-			<p>评论者:admin&nbsp;&nbsp;时间:2017-11-08 17:50</p>
-			<p>评论内容</p>
-		</li>
-				<li>
-			<p>评论者:admin&nbsp;&nbsp;时间:2017-11-08 17:50</p>
-			<p>评论内容</p>
-		</li>
-				<li>
-			<p>评论者:admin&nbsp;&nbsp;时间:2017-11-08 17:50</p>
-			<p>评论内容</p>
-		</li>
-				<li>
-			<p>评论者:admin&nbsp;&nbsp;时间:2017-11-08 17:50</p>
-			<p>评论内容</p>
-		</li>
-				<li>
-			<p>评论者:admin&nbsp;&nbsp;时间:2017-11-08 17:50</p>
-			<p>评论内容</p>
-		</li>
-				<li>
-			<p>评论者:admin&nbsp;&nbsp;时间:2017-11-08 17:50</p>
-			<p>评论内容</p>
-		</li>
-				<li>
-			<p>评论者:admin&nbsp;&nbsp;时间:2017-11-08 17:50</p>
-			<p>评论内容</p>
-		</li>
-				<li>
-			<p>评论者:admin&nbsp;&nbsp;时间:2017-11-08 17:50</p>
-			<p>评论内容</p>
-		</li>
-				<li>
-			<p>评论者:admin&nbsp;&nbsp;时间:2017-11-08 17:50</p>
-			<p>评论内容</p>
-		</li>
-				<li>
-			<p>评论者:admin&nbsp;&nbsp;时间:2017-11-08 17:50</p>
-			<p>评论内容</p>
-		</li>
-				<li>
-			<p>评论者:admin&nbsp;&nbsp;时间:2017-11-08 17:50</p>
-			<p>评论内容</p>
-		</li>
-				<li>
-			<p>评论者:admin&nbsp;&nbsp;时间:2017-11-08 17:50</p>
-			<p>评论内容</p>
-		</li>
-				<li>
-			<p>评论者:admin&nbsp;&nbsp;时间:2017-11-08 17:50</p>
-			<p>评论内容</p>
-		</li>
-				<li>
-			<p>评论者:admin&nbsp;&nbsp;时间:2017-11-08 17:50</p>
-			<p>评论内容</p>
-		</li>
-				<li>
-			<p>评论者:admin&nbsp;&nbsp;时间:2017-11-08 17:50</p>
-			<p>评论内容</p>
-		</li>
-				<li>
-			<p>评论者:admin&nbsp;&nbsp;时间:2017-11-08 17:50</p>
-			<p>评论内容</p>
-		</li>
-				<li>
-			<p>评论者:admin&nbsp;&nbsp;时间:2017-11-08 17:50</p>
-			<p>评论内容</p>
-		</li>
-				<li>
-			<p>评论者:admin&nbsp;&nbsp;时间:2017-11-08 17:50</p>
-			<p>评论内容</p>
-		</li>
-				<li>
-			<p>评论者:admin&nbsp;&nbsp;时间:2017-11-08 17:50</p>
-			<p>评论内容</p>
-		</li>
-				<li>
-			<p>评论者:admin&nbsp;&nbsp;时间:2017-11-08 17:50</p>
-			<p>评论内容</p>
-		</li>
-				<li>
-			<p>评论者:admin&nbsp;&nbsp;时间:2017-11-08 17:50</p>
-			<p>评论内容</p>
-		</li>
-				<li>
-			<p>评论者:admin&nbsp;&nbsp;时间:2017-11-08 17:50</p>
-			<p>评论内容</p>
-		</li>
-				<li>
-			<p>评论者:admin&nbsp;&nbsp;时间:2017-11-08 17:50</p>
-			<p>评论内容</p>
-		</li>
-				<li>
-			<p>评论者:admin&nbsp;&nbsp;时间:2017-11-08 17:50</p>
-			<p>评论内容</p>
-		</li>
-				<li>
-			<p>评论者:admin&nbsp;&nbsp;时间:2017-11-08 17:50</p>
-			<p>评论内容</p>
-		</li>
-				<li>
-			<p>评论者:admin&nbsp;&nbsp;时间:2017-11-08 17:50</p>
-			<p>评论内容</p>
-		</li>
-				<li>
-			<p>评论者:admin&nbsp;&nbsp;时间:2017-11-08 17:50</p>
-			<p>评论内容</p>
-		</li>
-				<li>
-			<p>评论者:admin&nbsp;&nbsp;时间:2017-11-08 17:50</p>
-			<p>评论内容</p>
-		</li>
-				<li>
-			<p>评论者:admin&nbsp;&nbsp;时间:2017-11-08 17:50</p>
-			<p>评论内容</p>
-		</li>
-				<li>
-			<p>评论者:admin&nbsp;&nbsp;时间:2017-11-08 17:50</p>
-			<p>评论内容</p>
-		</li>
-				<li>
-			<p>评论者:admin&nbsp;&nbsp;时间:2017-11-08 17:50</p>
-			<p>评论内容</p>
-		</li>
-				<li>
-			<p>评论者:admin&nbsp;&nbsp;时间:2017-11-08 17:50</p>
-			<p>评论内容</p>
-		</li>
+        <li>
+            <div class="pull-left "><Avatar icon="person"/></div>
+            <div class="pull-left comment-user-info">
+                <p>用户名</p>
+                <p>2017-11-08 17:50</p>
+            </div>
+            <div class="clear"></div>
+            <div class="comment-content">中国的封门村，现在已经人尽皆知了，那是人们口中津津乐道的第一鬼城，也是让人望而却步的探险胜地。
+                但你是否知道，在东北一个偏僻的小角落，坐落着一座荒芜的村庄，那里，是一个比封门村更为邪门的地方。
+                因为这村子太邪门，知道的人因为忌讳，不愿意去说，而不知道的人也就一直不知道了。
+                故而这村子虽为**，却没有封门村的名声叫得响亮。
+                我小时候，就生活在这里，曾亲眼目睹了村子的变迁，目睹了一切的发生……
+            </div>
+        </li>
+        <li>
+            <div class="pull-left "><Avatar icon="person"/></div>
+            <div class="pull-left comment-user-info">
+                <p>用户名</p>
+                <p>2017-11-08 17:50</p>
+            </div>
+            <div class="clear"></div>
+            <div class="comment-content">中国的封门村，现在已经人尽皆知了，那是人们口中津津乐道的第一鬼城，也是让人望而却步的探险胜地。
+                但你是否知道，在东北一个偏僻的小角落，坐落着一座荒芜的村庄，那里，是一个比封门村更为邪门的地方。
+                因为这村子太邪门，知道的人因为忌讳，不愿意去说，而不知道的人也就一直不知道了。
+                故而这村子虽为**，却没有封门村的名声叫得响亮。
+                我小时候，就生活在这里，曾亲眼目睹了村子的变迁，目睹了一切的发生……
+            </div>
+        </li>
+        <li>
+            <div class="pull-left "><Avatar icon="person"/></div>
+            <div class="pull-left comment-user-info">
+                <p>用户名</p>
+                <p>2017-11-08 17:50</p>
+            </div>
+            <div class="clear"></div>
+            <div class="comment-content">中国的封门村，现在已经人尽皆知了，那是人们口中津津乐道的第一鬼城，也是让人望而却步的探险胜地。
+                但你是否知道，在东北一个偏僻的小角落，坐落着一座荒芜的村庄，那里，是一个比封门村更为邪门的地方。
+                因为这村子太邪门，知道的人因为忌讳，不愿意去说，而不知道的人也就一直不知道了。
+                故而这村子虽为**，却没有封门村的名声叫得响亮。
+                我小时候，就生活在这里，曾亲眼目睹了村子的变迁，目睹了一切的发生……
+            </div>
+        </li>
+        <li>
+            <div class="pull-left "><Avatar icon="person"/></div>
+            <div class="pull-left comment-user-info">
+                <p>用户名</p>
+                <p>2017-11-08 17:50</p>
+            </div>
+            <div class="clear"></div>
+            <div class="comment-content">中国的封门村，现在已经人尽皆知了，那是人们口中津津乐道的第一鬼城，也是让人望而却步的探险胜地。
+                但你是否知道，在东北一个偏僻的小角落，坐落着一座荒芜的村庄，那里，是一个比封门村更为邪门的地方。
+                因为这村子太邪门，知道的人因为忌讳，不愿意去说，而不知道的人也就一直不知道了。
+                故而这村子虽为**，却没有封门村的名声叫得响亮。
+                我小时候，就生活在这里，曾亲眼目睹了村子的变迁，目睹了一切的发生……
+            </div>
+        </li>
+        <li>
+            <div class="pull-left "><Avatar icon="person"/></div>
+            <div class="pull-left comment-user-info">
+                <p>用户名</p>
+                <p>2017-11-08 17:50</p>
+            </div>
+            <div class="clear"></div>
+            <div class="comment-content">中国的封门村，现在已经人尽皆知了，那是人们口中津津乐道的第一鬼城，也是让人望而却步的探险胜地。
+                但你是否知道，在东北一个偏僻的小角落，坐落着一座荒芜的村庄，那里，是一个比封门村更为邪门的地方。
+                因为这村子太邪门，知道的人因为忌讳，不愿意去说，而不知道的人也就一直不知道了。
+                故而这村子虽为**，却没有封门村的名声叫得响亮。
+                我小时候，就生活在这里，曾亲眼目睹了村子的变迁，目睹了一切的发生……
+            </div>
+        </li>
+        <div class="comment-re-title">
+            <div class="comment-re-title-line">
+                <span class="title-text">回复内容</span>
+            </div>
+        </div>
+        <div class="re-comment-text">
+            回复内容框
+
+        </div>
     </ul>
 
     <!-- <i-Form ref="ModelInfo">
@@ -288,13 +194,7 @@
         </Form-Item>
     </i-Form> -->
     <br>
-    <p slot="footer">
-<!--        <i-button type="primary">
-          <span v-if="!loading">确定</span>
-          <span v-else>Loading...</span>
-       </i-button> -->
-       <i-button type="info" @click="commentModel=false">关闭</i-button>
-    </p>
+    <p slot="footer"></p>
   </Modal>
     </div>
     <!--主体内容区结束-->
@@ -308,7 +208,7 @@
         el: '#app',
         data:{
           loading:false,
-          commentModel:false,
+          commentModel:true,
           commentTopList:[],
 		  commentReList:[],
           searchData:{
@@ -359,6 +259,9 @@
           },
           viewComment:function(k){
           	this.commentModel = true;
+          },
+          reComment:function () {
+              alert();
           },
           location:function(type,id){
           	var url = '';
