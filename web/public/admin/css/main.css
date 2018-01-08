@@ -417,3 +417,14 @@ body{
     font-size: 14px;
     font-weight: 500;
 }
+.re-content{
+    padding: 10px 10px 0 43px;
+        margin: 30px;
+}
+.re-comment-text{
+    position: absolute;
+    height: 50px;
+    bottom: 2px;
+    left: 0;
+    width: 100%;
+}

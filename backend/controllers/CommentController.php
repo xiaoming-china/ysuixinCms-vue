@@ -40,10 +40,12 @@ class CommentController extends AdminBaseController{
                 ['like','c.comment_content',$this->get('keyworlds')],
                 ['like','c.re_content',$this->get('keyworlds')]
             ]);
-            $d['count'] = $sql->count();
+            $sql->andWhere(['parent_id'=>0]);
+            $d['count'] = $sql->groupBy('content_id')->count();
             $d['list'] =  $sql->orderBy('comment_at DESC')
                               ->limit($pageSize)
                               ->offset($offset)
+                              ->groupBy('content_id')
                               ->all();
 
             return $this->ajaxSuccess('获取成功','',$d);
@@ -51,6 +53,33 @@ class CommentController extends AdminBaseController{
         }else{
             return $this->render('/comment/comment-list');
         }
+    }
+    /**
+     * [actionGetCommentDetail 获取每一篇内容的评论]
+     * @author:xiaoming
+     * @date:2018-01-08T19:25:13+0800
+     * @return                        [type] [description]
+     */
+    public function actionGetCommentDetail($id = ''){
+        if($id == ''){
+            return $this->ajaxFail('评论获取失败，参数异常');
+        }
+        $rs = (new Comment())->find()->where(['content_id'=>$id])->all();
+        $list = self::manyArray($rs);
+        return $this->ajaxSuccess('获取成功','',$list);
+
+    }
+    public static function manyArray($cate,$pid = 0){
+        $arr = [];
+        foreach ($cate as $key => $value) {
+            $v = [];
+            if($value['parent_id'] == $pid){
+                $v[]    = $value;
+                $v['children'] = self::manyArray($cate,$value['id']);
+                $arr[] = $v;
+            }
+        }
+        return $arr;
     }
 
 

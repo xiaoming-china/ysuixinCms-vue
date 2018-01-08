@@ -30,9 +30,7 @@
 		        <th style="width: 40px;">编号</th>  
 		        <th style="width: 120px;">所属内容</th>
 		        <th style="width: 50px;">所属栏目</th>
-				<th style="width: 50px;">评论者</th> 
-				<!--<th style="width: 200px;">回复内容</th>  -->
-				<th style="width: 50px;">状态</th>
+				<th style="width: 50px;">评论者</th>
 			    <th style="width: 60px;">评论时间</th>
 			    <th style="width: 60px;">回复时间</th>
 			    <th style="width: 60px;">操作</th>
@@ -51,15 +49,6 @@
 			        </td> 
 			        <td>{{value.catname}}</td> 
 					<td>{{value.commen_user}}</td> 
-<!-- 					<td>{{strLen(value.comment_content,0,20)}}</td> 
-					<td>
-						<span v-if="value.re_content == ''">暂未回复</span>
-            			<span else>{{strLen(value.re_content,0,20)}}</span>
-					</td>  -->
-					<td>
-						<span v-if="value.status == 1">已展示</span>
-            			<span v-if="value.status == 2">已隐藏</span>
-					</td> 
 					<td>{{getLocalTime(value.comment_at)}}</td>
 			        <td>
 						<span v-if="value.re_content == ''"></span>
@@ -67,7 +56,7 @@
 					</td> 
 			        <td>
 			          <span>
-			          	<a href="#"@click="viewComment(value.id);">查看评论</a>
+			          	<a href="#"@click="viewComment(value.content_id);">查看评论</a>
 			          </span>
 			        </td>
 				</tr>
@@ -85,114 +74,36 @@
         <span>查看评论</span>
     </p>
     <ul class="comment-re-list">
-		<li @click="reComment();" title="点击回复">
+    	<li v-if="commentTopList.length == 0">暂无数据</li>
+        <li @click="reComment();" title="点击回复" v-for="(v,k) in commentReList" v-else>
             <div class="pull-left "><Avatar icon="person"/></div>
             <div class="pull-left comment-user-info">
-                <p>用户名</p>
+                <p>{{v.comment_user}}</p>
                 <p>2017-11-08 17:50</p>
             </div>
             <div class="clear"></div>
-			<div class="comment-content">中国的封门村，现在已经人尽皆知了，那是人们口中津津乐道的第一鬼城，也是让人望而却步的探险胜地。
-                但你是否知道，在东北一个偏僻的小角落，坐落着一座荒芜的村庄，那里，是一个比封门村更为邪门的地方。
-                因为这村子太邪门，知道的人因为忌讳，不愿意去说，而不知道的人也就一直不知道了。
-                故而这村子虽为**，却没有封门村的名声叫得响亮。
-                我小时候，就生活在这里，曾亲眼目睹了村子的变迁，目睹了一切的发生……
-            </div>
-            <div class="comment-re-title">
-                <div class="comment-re-title-line">
-                    <span class="title-text">全部回复</span>
-                </div>
-            </div>
-		</li>
-        <li>
-            <div class="pull-left "><Avatar icon="person"/></div>
-            <div class="pull-left comment-user-info">
-                <p>用户名</p>
-                <p>2017-11-08 17:50</p>
-            </div>
-            <div class="clear"></div>
-            <div class="comment-content">中国的封门村，现在已经人尽皆知了，那是人们口中津津乐道的第一鬼城，也是让人望而却步的探险胜地。
-                但你是否知道，在东北一个偏僻的小角落，坐落着一座荒芜的村庄，那里，是一个比封门村更为邪门的地方。
-                因为这村子太邪门，知道的人因为忌讳，不愿意去说，而不知道的人也就一直不知道了。
-                故而这村子虽为**，却没有封门村的名声叫得响亮。
-                我小时候，就生活在这里，曾亲眼目睹了村子的变迁，目睹了一切的发生……
-            </div>
-        </li>
-        <li>
-            <div class="pull-left "><Avatar icon="person"/></div>
-            <div class="pull-left comment-user-info">
-                <p>用户名</p>
-                <p>2017-11-08 17:50</p>
-            </div>
-            <div class="clear"></div>
-            <div class="comment-content">中国的封门村，现在已经人尽皆知了，那是人们口中津津乐道的第一鬼城，也是让人望而却步的探险胜地。
-                但你是否知道，在东北一个偏僻的小角落，坐落着一座荒芜的村庄，那里，是一个比封门村更为邪门的地方。
-                因为这村子太邪门，知道的人因为忌讳，不愿意去说，而不知道的人也就一直不知道了。
-                故而这村子虽为**，却没有封门村的名声叫得响亮。
-                我小时候，就生活在这里，曾亲眼目睹了村子的变迁，目睹了一切的发生……
-            </div>
-        </li>
-        <li>
-            <div class="pull-left "><Avatar icon="person"/></div>
-            <div class="pull-left comment-user-info">
-                <p>用户名</p>
-                <p>2017-11-08 17:50</p>
-            </div>
-            <div class="clear"></div>
-            <div class="comment-content">中国的封门村，现在已经人尽皆知了，那是人们口中津津乐道的第一鬼城，也是让人望而却步的探险胜地。
-                但你是否知道，在东北一个偏僻的小角落，坐落着一座荒芜的村庄，那里，是一个比封门村更为邪门的地方。
-                因为这村子太邪门，知道的人因为忌讳，不愿意去说，而不知道的人也就一直不知道了。
-                故而这村子虽为**，却没有封门村的名声叫得响亮。
-                我小时候，就生活在这里，曾亲眼目睹了村子的变迁，目睹了一切的发生……
-            </div>
-        </li>
-        <li>
-            <div class="pull-left "><Avatar icon="person"/></div>
-            <div class="pull-left comment-user-info">
-                <p>用户名</p>
-                <p>2017-11-08 17:50</p>
-            </div>
-            <div class="clear"></div>
-            <div class="comment-content">中国的封门村，现在已经人尽皆知了，那是人们口中津津乐道的第一鬼城，也是让人望而却步的探险胜地。
-                但你是否知道，在东北一个偏僻的小角落，坐落着一座荒芜的村庄，那里，是一个比封门村更为邪门的地方。
-                因为这村子太邪门，知道的人因为忌讳，不愿意去说，而不知道的人也就一直不知道了。
-                故而这村子虽为**，却没有封门村的名声叫得响亮。
-                我小时候，就生活在这里，曾亲眼目睹了村子的变迁，目睹了一切的发生……
-            </div>
-        </li>
-        <li>
-            <div class="pull-left "><Avatar icon="person"/></div>
-            <div class="pull-left comment-user-info">
-                <p>用户名</p>
-                <p>2017-11-08 17:50</p>
-            </div>
-            <div class="clear"></div>
-            <div class="comment-content">中国的封门村，现在已经人尽皆知了，那是人们口中津津乐道的第一鬼城，也是让人望而却步的探险胜地。
-                但你是否知道，在东北一个偏僻的小角落，坐落着一座荒芜的村庄，那里，是一个比封门村更为邪门的地方。
-                因为这村子太邪门，知道的人因为忌讳，不愿意去说，而不知道的人也就一直不知道了。
-                故而这村子虽为**，却没有封门村的名声叫得响亮。
-                我小时候，就生活在这里，曾亲眼目睹了村子的变迁，目睹了一切的发生……
+            <div class="comment-content">{{v.comment_content}}</div>
+            <div class="re-content" @click="reComment();" title="点击回复" v-for="(vv,kk) in v.children" 
+            v-if="v.children.length !=0">
+	            <div class="pull-left "><Avatar icon="person"/></div>
+	            <div class="pull-left comment-user-info">
+	                <p>{{vv.comment_user}}</p>
+	                <p>2017-11-08 17:50</p>
+	            </div>
+	            <div class="clear"></div>
+	            <div class="comment-content">{{vv.comment_content}}</div>
             </div>
         </li>
         <div class="comment-re-title">
             <div class="comment-re-title-line">
-                <span class="title-text">回复内容</span>
+                <span class="title-text">评论结束</span>
             </div>
         </div>
+        <div class="clear"></div>
         <div class="re-comment-text">
-            回复内容框
-
+             <i-Input type="textarea" placeholder="请输入回复"></i-Input>
         </div>
     </ul>
-
-    <!-- <i-Form ref="ModelInfo">
-        <Form-Item label="描述" prop="desc">
-            <i-Input type="textarea"
-                      size="large"
-                      placeholder = "最多30个字符">
-                    </i-Input>
-        </Form-Item>
-    </i-Form> -->
     <br>
     <p slot="footer"></p>
   </Modal>
@@ -208,7 +119,7 @@
         el: '#app',
         data:{
           loading:false,
-          commentModel:true,
+          commentModel:false,
           commentTopList:[],
 		  commentReList:[],
           searchData:{
@@ -257,8 +168,21 @@
               },
             );
           },
-          viewComment:function(k){
-          	this.commentModel = true;
+          viewComment:function(id){
+          	var _that = this;
+          	_that.commentModel = true;
+          	$ajax(
+              '/admin/comment/get-comment-detail',
+              {id:id},
+              'get',
+              function(res){
+                _that.commentReList = res.data;
+              },
+              function(res){
+                _that.$Message.warning('获取失败');
+              },
+            );
+
           },
           reComment:function () {
               alert();
