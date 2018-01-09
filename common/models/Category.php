@@ -134,7 +134,7 @@ class Category extends BaseModel{
     public function getAllCategory(){
         return (new Category())->find()
         ->where(['is_delete'=>Category::DELETE_STATUS_FALSE])
-        ->select('catid,catname,url,parentid')
+        ->select('catid,catname,url,parentid,type')
         ->asArray()
         ->all();
 
@@ -176,6 +176,9 @@ class Category extends BaseModel{
                 $v['catid']    = $value['catid'];
                 $v['type']     = $value['type'];
                 $v['title']    = $value['catname'];
+                $v['name']     = $value['catname'];
+                $v['url']      = '/admin/content/list?catId='.$value['catid'];
+                $v['target']  = '_self';
                 $v['expand']   = true;
                 $v['children'] = self::manyArray($cate,$value['catid']);
                 $arr[] = $v;

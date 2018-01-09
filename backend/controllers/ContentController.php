@@ -23,6 +23,21 @@ class ContentController extends AdminBaseController{
     const DRAFTS         = 3;//草稿箱
     const AUDITOR        = 4;//等待审核
     /**
+     * [actionIndex 内容列表首页]
+     * @author:xiaoming
+     * @date:2018-01-09T17:49:13+0800
+     * @return                        [type] [description]
+     */
+    public function actionIndex(){
+        if($this->isPost()){
+            $allcategory   = (new Category())->getAllCategory();
+            $category_list = (new Category())->manyArray($allcategory);
+            return $this->ajaxSuccess('获取成功','',$category_list);
+        }else{
+            return $this->render('/content/index');
+        }
+    }
+    /**
      * @Author:          xiaoming
      * @DateTime:        2017-11-15
      * @name:description 栏目内容列表,如果栏目id为空，则查询全部的内容列表
