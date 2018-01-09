@@ -34,7 +34,7 @@ class Comment extends BaseModel
     {
         return [
             [['category_id', 'content_id', 'commen_user', 'comment_content'], 'required'],
-            [['category_id', 'content_id', 'status', 'comment_at', 're_at'], 'integer'],
+            [['category_id', 'content_id', 'status'], 'integer'],
             [['commen_user'], 'string', 'max' => 30],
             [['comment_content', 're_content'], 'string', 'max' => 500],
         ];
@@ -53,8 +53,6 @@ class Comment extends BaseModel
             'comment_content' => 'Comment Content',
             're_content' => 'Re Content',
             'status' => 'Status',
-            'comment_at' => 'Comment At',
-            're_at' => 'Re At',
         ];
     }
 }

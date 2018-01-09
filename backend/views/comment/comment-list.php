@@ -15,9 +15,7 @@
                     </i-Input>
                   </div>
                   <div>
-                  	<Date-Picker type="datetimerange" placeholder="评论时间" style="width: 100%;" v-on:on-change="selectTime"></Date-Picker>
-                  </div>
-                  <div>
+                   <Date-Picker type="datetimerange" placeholder="评论时间" style="width: 100%;" v-on:on-change="selectTime"></Date-Picker>
                   </div>
               <i-button @click="getComment();">搜索</i-button>
             </div>
@@ -27,12 +25,10 @@
 		<table class="table table72 table-striped">
 			<thead>
 				<tr>
-		        <th style="width: 40px;">编号</th>  
-		        <th style="width: 120px;">所属内容</th>
+		        <th style="width: 20px;">编号</th>  
+		        <th style="width: 150px;">所属内容</th>
 		        <th style="width: 50px;">所属栏目</th>
-				<th style="width: 50px;">评论者</th>
 			    <th style="width: 60px;">评论时间</th>
-			    <th style="width: 60px;">回复时间</th>
 			    <th style="width: 60px;">操作</th>
 				</tr>
 			</thead> 
@@ -45,15 +41,10 @@
 				<tr v-for="(value,key) in commentTopList" :key="key" v-else>
 			        <td>{{key + 1}}</td> 
 			        <td>
-						<span :title="value.content_title">{{strLen(value.content_title,0,15)}}</span>
+						<span :title="value.content_title">{{value.content_title}}</span>
 			        </td> 
 			        <td>{{value.catname}}</td> 
-					<td>{{value.commen_user}}</td> 
-					<td>{{getLocalTime(value.comment_at)}}</td>
-			        <td>
-						<span v-if="value.re_content == ''"></span>
-            			<span else>{{getLocalTime(value.re_at)}}</span>
-					</td> 
+					<td>{{getLocalTime(value.created_at)}}</td>
 			        <td>
 			          <span>
 			          	<a href="#"@click="viewComment(value.content_id);">查看评论</a>
@@ -69,44 +60,53 @@
       </div>
       <!--字段列表-->
           <!--编辑模型-->
-  <Modal v-model="commentModel" width="670" :mask-closable="false" >
-    <p slot="header">
-        <span>查看评论</span>
-    </p>
-    <ul class="comment-re-list">
-    	<li v-if="commentTopList.length == 0">暂无数据</li>
-        <li @click="reComment();" title="点击回复" v-for="(v,k) in commentReList" v-else>
-            <div class="pull-left "><Avatar icon="person"/></div>
-            <div class="pull-left comment-user-info">
-                <p>{{v.comment_user}}</p>
-                <p>2017-11-08 17:50</p>
-            </div>
-            <div class="clear"></div>
-            <div class="comment-content">{{v.comment_content}}</div>
-            <div class="re-content" @click="reComment();" title="点击回复" v-for="(vv,kk) in v.children" 
-            v-if="v.children.length !=0">
-	            <div class="pull-left "><Avatar icon="person"/></div>
-	            <div class="pull-left comment-user-info">
-	                <p>{{vv.comment_user}}</p>
-	                <p>2017-11-08 17:50</p>
-	            </div>
-	            <div class="clear"></div>
-	            <div class="comment-content">{{vv.comment_content}}</div>
-            </div>
-        </li>
-        <div class="comment-re-title">
-            <div class="comment-re-title-line">
-                <span class="title-text">评论结束</span>
-            </div>
-        </div>
-        <div class="clear"></div>
-        <div class="re-comment-text">
-             <i-Input type="textarea" placeholder="请输入回复"></i-Input>
-        </div>
-    </ul>
-    <br>
-    <p slot="footer"></p>
-  </Modal>
+		  <Modal v-model="commentModel" width="670" :mask-closable="false" >
+		    <p slot="header">
+		        <span>查看评论</span>
+		    </p>
+		    <ul class="comment-re-list">
+		    	<li v-if="commentTopList.length == 0">暂无数据</li>
+		        <li v-for="(v,k) in commentReList" v-else>
+		            <div class="pull-left "><Avatar icon="person"/></div>
+		            <div class="pull-left comment-user-info">
+		                <p>{{v.comment_user}}</p>
+		                <p>{{getLocalTime(v.created_at)}}</p>
+		            </div>
+		            <div class="clear"></div>
+		            <div class="comment-content" @click="reComment(v.id,v.comment_user);" title="点击回复">
+		            {{v.comment_content}}
+		            </div>
+		            <div class="re-content" v-for="(vv,kk) in v.children" 
+		            v-if="v.children.length !=0">
+			            <div class="pull-left "><Avatar icon="person"/></div>
+			            <div class="pull-left comment-user-info">
+			                <p>{{vv.comment_user}}</p>
+			                <p>{{getLocalTime(vv.created_at)}}</p>
+			            </div>
+			            <div class="clear"></div>
+			            <div class="comment-content" @click="reComment(v.id,vv.comment_user);" title="点击回复">
+			            <span v-if="vv.re_user != ''" class="re-user">回复&nbsp;&nbsp;{{vv.re_user}}：</span>{{vv.comment_content}}
+			            </div>
+		            </div>
+		        </li>
+		        <div class="comment-re-title">
+		            <div class="comment-re-title-line">
+		                <span class="title-text">评论结束</span>
+		            </div>
+		        </div>
+		        <div class="clear"></div>
+		        <div class="re-comment-text">
+		             <i-Input type="textarea" element-id="reTextarea" 
+		             placeholder="请输入回复" 
+		             v-model="reCommentData.content"
+		             style="width:88% !important;">
+		             </i-Input>
+		             <i-button class="re-button" @click="reCommentSubmit()">回复</i-button>
+		        </div>
+		    </ul>
+		    <br>
+		    <p slot="footer"></p>
+		  </Modal>
     </div>
     <!--主体内容区结束-->
 
@@ -118,24 +118,27 @@
     new Vue({
         el: '#app',
         data:{
+          commentId:'',
           loading:false,
           commentModel:false,
           commentTopList:[],
 		  commentReList:[],
+		  reCommentData:{
+		  	id:'',
+		  	re_user:'',
+		  	content:''
+		  },
           searchData:{
-            modelId:'',
-            catId:'',
             keyworlds:'',
             status:'-1',
-            start_time:'',
-			end_time:'',
             total:0,
             page:0,
             pageSize:20
           },
         },
-        mounted: function() {
-          this.getComment();
+        mounted: function () {
+            var _that = this;
+            _that.getComment();
         },
         methods: {
         //去往第几页
@@ -157,7 +160,7 @@
             var _that = this;
             $ajax(
               '/admin/comment/comment-list',
-              {id:_that.request('id'),catid:_that.request('catid')},
+              _that.searchData,
               'get',
               function(res){
                 _that.commentTopList = res.data.list;
@@ -170,7 +173,8 @@
           },
           viewComment:function(id){
           	var _that = this;
-          	_that.commentModel = true;
+				_that.commentModel = true;
+				_that.commentId    = id;
           	$ajax(
               '/admin/comment/get-comment-detail',
               {id:id},
@@ -182,10 +186,44 @@
                 _that.$Message.warning('获取失败');
               },
             );
-
           },
-          reComment:function () {
-              alert();
+          reComment:function (id,name) {
+          	var _that = this;
+			_that.reCommentData.id      = id;
+			_that.reCommentData.re_user = name;
+			$('#reTextarea').attr('placeholder','回复'+name);
+          },
+          reCommentSubmit:function(){
+          	var _that = this;
+          	if(_that.reCommentData.id == ''){
+          		_that.$Message.warning('请选择要回复的内容');
+          		return false;
+          	}
+          	if(_that.reCommentData.re_user == ''){
+          		_that.$Message.warning('请选择要回复的内容');
+          		return false;
+          	}
+          	if(_that.reCommentData.content == ''){
+          		_that.$Message.warning('请输入回复内容');
+          		return false;
+          	}
+          	$ajax(
+              '/admin/comment/re-comment',
+              _that.reCommentData,
+              'post',
+              function(res){
+              	_that.$Message.success('回复成功');
+              	$('#reTextarea').val('');
+              	$('#reTextarea').attr('placeholder','请输入回复');
+				_that.reCommentData.id      = '';
+				_that.reCommentData.re_user = '';
+				_that.reCommentData.content = '';
+                _that.viewComment(_that.commentId);
+              },
+              function(res){
+                _that.$Message.warning(res.message);
+              },
+            );
           },
           location:function(type,id){
           	var url = '';
