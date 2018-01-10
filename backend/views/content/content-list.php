@@ -317,10 +317,9 @@
                                   }
                               },
                           onClick:function(event, treeId, treeNode){
-                            //栏目ID
-                            var catid = treeNode.catid;
+                            var catid = treeNode.catid;//栏目ID
                             //保存当前点击的栏目ID
-                            // setCookie('tree_catid',catid,1);
+                            sessionStorage.setItem("tree_catid",catid);
                           }
                           }
                       };
@@ -337,11 +336,11 @@
                             }
                           });
                           //定位到上次打开的栏目，进行展开tree_catid
-                          // var tree_catid = getCookie('tree_catid');
-                          // if(tree_catid){
-                          //   var nodes = zTree.getNodesByParam("catid", tree_catid, null);
-                          //   zTree.selectNode(nodes[0]);
-                          // }
+                          var tree_catid = sessionStorage.getItem("tree_catid");
+                          if(tree_catid != null){
+                            var nodes = zTree.getNodesByParam("catid", tree_catid, null);
+                            zTree.selectNode(nodes[0]);
+                          }
                       _that.categoryList = res.data;
                     },
                     function(res){}

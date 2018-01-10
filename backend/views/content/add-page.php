@@ -221,7 +221,8 @@
                       _that.$Message.success({
                           content:'发布成功',
                           onClose:function(){
-                              location.href= url;
+                            location.reload();
+                              //location.href= url;
                           }
                       });
                   },

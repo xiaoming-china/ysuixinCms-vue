@@ -99,7 +99,7 @@ function $ajax(url, postData, type, succCallback, errorCallback,loading){
              '', 
              'post',
               function(res){
-                localStorage.clear()
+                sessionStorage.clear()
                 location.href = '/admin/public/login';
               }, 
               function(res){

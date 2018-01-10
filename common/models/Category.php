@@ -183,7 +183,11 @@ class Category extends BaseModel{
                 if($value['child'] == self::IS_HAVE_CHILD){
                     $v['url']  = '#';
                 }else{
-                    $v['url']  = '/admin/content/list?modelId='.$value['modelid'].'&catId='.$value['catid'];
+                    if($value['type'] == self::STSTEM_CATEGORY){
+                        $v['url']  = '/admin/content/list?modelId='.$value['modelid'].'&catId='.$value['catid'];
+                    }else{
+                        $v['url']  = '/admin/content/add-content?modelid='.$value['modelid'].'&catid='.$value['catid'];
+                    }
                 }
                 $v['target']   = '_self';
                 $v['expand']   = true;
