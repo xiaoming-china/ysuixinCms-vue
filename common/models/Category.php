@@ -19,6 +19,8 @@ class Category extends BaseModel{
     const STSTEM_CATEGORY = 1;//内部栏目
     const PAGE_CATEGORY = 2;//单页面
 
+    const IS_HAVE_CHILD = 1;//存在子栏目
+
 
 
     public static function tableName(){
@@ -134,7 +136,7 @@ class Category extends BaseModel{
     public function getAllCategory(){
         return (new Category())->find()
         ->where(['is_delete'=>Category::DELETE_STATUS_FALSE])
-        ->select('catid,catname,url,parentid,type')
+        ->select('catid,modelid,catname,url,parentid,type,child')
         ->asArray()
         ->all();
 
@@ -152,7 +154,7 @@ class Category extends BaseModel{
         }
         $model = new Category();
         $sql = $model->find()
-        ->select('catid,parentid,catname,type')
+        ->select('catid,parentid,catname,type,modelid,child')
         ->where(['modelid'=>$model_id,'is_delete'=>$model::DELETE_STATUS_FALSE]);
         if(!$is_page){
             $sql->andwhere(['type'=>1]);
@@ -177,8 +179,13 @@ class Category extends BaseModel{
                 $v['type']     = $value['type'];
                 $v['title']    = $value['catname'];
                 $v['name']     = $value['catname'];
-                $v['url']      = '/admin/content/list?catId='.$value['catid'];
-                $v['target']  = '_self';
+                $v['parentid'] = $value['parentid'];
+                if($value['child'] == self::IS_HAVE_CHILD){
+                    $v['url']  = '#';
+                }else{
+                    $v['url']  = '/admin/content/list?modelId='.$value['modelid'].'&catId='.$value['catid'];
+                }
+                $v['target']   = '_self';
                 $v['expand']   = true;
                 $v['children'] = self::manyArray($cate,$value['catid']);
                 $arr[] = $v;

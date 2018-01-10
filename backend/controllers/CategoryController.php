@@ -73,9 +73,24 @@ class CategoryController extends AdminBaseController{
             $parentid = $post['parentid'];
             $post['letter'] = (new PinYin())->getAllPY($post['catname']);//拼音转换
             $transaction = Yii::$app->db->beginTransaction();
+
             try {  
                 if($model->load($post,'') && $model->validate()){
                     $model_rs = $model->save();
+                    if($parentid != 0){
+                        $parentInfo = (new Category())->findOne($parentid);
+                        if(is_null($parentInfo)){
+                            $transaction->rollBack();
+                            return $this->ajaxFail('添加失败,未查找到父级信息');
+                        }else{
+                            $parentInfo->child = Category::IS_HAVE_CHILD;
+                            $parent_rs = $parentInfo->save(false);
+                            if(!$parent_rs){
+                                $transaction->rollBack();
+                                return $this->ajaxFail('添加失败,未知错误');
+                            }
+                        }
+                    }
                     if(!$model_rs){
                         $transaction->rollBack();
                         return $this->ajaxFail('添加失败,未知错误');
@@ -107,6 +122,7 @@ class CategoryController extends AdminBaseController{
             if($id == ''){
               return $this->ajaxFail('参数异常,categoryID不能为空');
             }
+            $parentid = $this->post('parentid');
             $model = (new Category())->findOne($id);
             if(is_null($model)){
                 return $this->ajaxFail('编辑失败，未找到栏目信息');
@@ -119,6 +135,20 @@ class CategoryController extends AdminBaseController{
             try {  
                 if($model->load($post,'') && $model->validate()){
                     $model_rs = $model->save();
+                    if($parentid != 0){
+                        $parentInfo = (new Category())->findOne($parentid);
+                        if(is_null($parentInfo)){
+                            $transaction->rollBack();
+                            return $this->ajaxFail('添加失败,未查找到父级信息');
+                        }else{
+                            $parentInfo->child = Category::IS_HAVE_CHILD;
+                            $parent_rs = $parentInfo->save(false);
+                            if(!$parent_rs){
+                                $transaction->rollBack();
+                                return $this->ajaxFail('添加失败,未知错误');
+                            }
+                        }
+                    }
                     if(!$model_rs){
                         $transaction->rollBack();
                         return $this->ajaxFail('编辑失败,未知错误');

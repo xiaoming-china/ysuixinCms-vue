@@ -1,12 +1,13 @@
-<link href="/public/admin/css/zTree/zTreeStyle.css" rel="stylesheet" type="text/css" />
 <div class="right-content" id="app">
   <div class="card">
-  <div v-if="categoryList.length =0">暂无栏目，请先添加栏目</div>
-  <div else>
-    <ul id="treeDemo" class="ztree"></ul>
+    <div class="zTree-list-box" v-if="categoryList.length =0">暂无栏目，请先添加栏目</div>
+    <div class="zTree-list-box"  else>
+      <ul id="treeDemo" class="ztree"></ul>
+    </div>
   </div>
+  <div class="card">
+    <div class="content-list-box">请选择左侧栏目</div>
   </div>
-
 </div>
 
 
@@ -28,8 +29,53 @@
               '', 
               'post',
               function(res){
-                $.fn.zTree.init($("#treeDemo"), {}, res.data);
-                $.fn.zTree.getZTreeObj("treeDemo").expandAll(true);
+              //配置
+                var setting = {
+                    data: {
+                        key: {
+                            name: "name"
+                        },
+                        simpleData: {
+                            enable: true,
+                            idKey: "catid",
+                            pIdKey: "parentid",
+                        }
+                    },
+                    callback: {
+                        beforeClick: function (treeId, treeNode) {
+                            if (treeNode.isParent) {
+                                zTree.expandNode(treeNode);
+                                return false;
+                            } else {
+                                return true;
+                            }
+                        },
+                    onClick:function(event, treeId, treeNode){
+                      //栏目ID
+                      var catid = treeNode.catid;
+                      //保存当前点击的栏目ID
+                      // setCookie('tree_catid',catid,1);
+                    }
+                    }
+                };
+                    var zTree = null;
+                    $.fn.zTree.init($("#treeDemo"), setting, res.data);
+                    zTree = $.fn.zTree.getZTreeObj("treeDemo");
+                    $("#ztree_expandAll").click(function(){
+                      if($(this).data("open")){
+                        zTree.expandAll(false);
+                        $(this).data("open",false);
+                      }else{
+                        zTree.expandAll(true);
+                        $(this).data("open",true);
+                      }
+                    });
+                    //定位到上次打开的栏目，进行展开tree_catid
+                    // var tree_catid = getCookie('tree_catid');
+                    // if(tree_catid){
+                    //   var nodes = zTree.getNodesByParam("catid", tree_catid, null);
+                    //   zTree.selectNode(nodes[0]);
+                    // }
                 _that.categoryList = res.data;
               },
               function(res){}
@@ -40,7 +86,7 @@
   </script>
 
 
-<script src="/public/admin/js/jquery.ztree.core.js"></script>
+
 
 </body>
 </html>

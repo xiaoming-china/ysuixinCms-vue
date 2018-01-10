@@ -447,3 +447,20 @@ body{
     background: #006699 !important;
     color:#fff;
 }
+.zTree-list-box{
+    width: 118px;
+    height: 100%;
+    /*background: red;*/
+    position:fixed;
+    top: 50px;
+    padding-top: 18px;
+    border-right: 1px solid #E0E0E0;
+    float: left;
+}
+.content-list-box{
+    width: 91%;
+    float: right;
+    /*background: red;*/
+    left: 118px;
+    /*position:fixed;*/
+}

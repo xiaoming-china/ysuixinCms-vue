@@ -64,9 +64,9 @@
                 </span>
 			          <span>
                    <a href="#"@click="deleteCategory(key,value.catid);">删除栏目</a>
-                   &nbsp;&nbsp;|&nbsp;&nbsp;
+                   <!-- &nbsp;&nbsp;|&nbsp;&nbsp; -->
                 </span>
-			          <span>
+<!-- 			          <span>
 			            <a href="#" v-if="value.type == 1" @click="location(1,value.catid,value.modelid);">
                   查看内容&nbsp;&nbsp;|&nbsp;&nbsp;
                   </a>
@@ -74,7 +74,7 @@
                 <span>
                   <a href="#" v-if="value.type == 1"  @click="location(3,value.catid,value.modelid);">发布内容</a>
                   <a href="#" v-if="value.type == 2"  @click="location(3,value.catid,value.modelid);">编辑单页</a>
-                </span>
+                </span> -->
 			        </td>
 				</tr>
 			</tbody>

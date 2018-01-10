@@ -6,12 +6,14 @@
     <link rel="stylesheet" type="text/css" href="http://unpkg.com/iview/dist/styles/iview.css">
     <link href="/public/admin/css/main.css" rel="stylesheet" type="text/css" />
     <link href="/public/admin/css/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css" />
+    <link href="/public/admin/css/zTree/zTreeStyle.css" rel="stylesheet" type="text/css" />
     <script src="/public/admin/js/jquery-1.8.1.min.js"></script>
     <script src="/public/admin/js/jquery.nicescroll.js"></script>
     <script src="/public/admin/js/main.js"></script>
     <script src="/public/admin/js/menu.js"></script>
     <script src="http://vuejs.org/js/vue.min.js"></script>
     <script src="http://unpkg.com/iview/dist/iview.min.js"></script>
+    <script src="/public/admin/js/jquery.ztree.core.js"></script>
 </head>
 <body>
 
