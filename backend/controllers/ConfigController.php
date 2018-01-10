@@ -9,6 +9,8 @@ use backend\controllers\AdminBaseController;
 use common\models\LoginLog;
 use backend\models\SystemInfo;
 use common\models\Config;
+use common\lib\File;
+
 
 
 
@@ -29,7 +31,15 @@ class ConfigController extends AdminBaseController{
      * @return           [type]      [description]
      */
     public function actionTemplateList(){
-        return $this->render('/template/template-list');
+        if($this->isPost()){
+            $data = [];
+            //p(Template);
+            $t = (new File())->getFiles(Template,true);
+            p($t);
+            return $this->ajaxSuccess('获取成功','',$data);
+        }else{
+            return $this->render('/template/template-list');
+        }
     }
     /**
      * @Author:          xiaoming

@@ -464,3 +464,33 @@ body{
     left: 118px;
     /*position:fixed;*/
 }
+.template-list{
+    margin-top:15px;
+}
+.template-list .template-info{
+    float: left;
+    margin-right:40px;
+    position: relative;
+    cursor: pointer;
+}
+.template-list .template-info p{
+    margin: 10px 0 10px 0;
+}
+.template-list .template-info .title{
+    text-align: center;
+}
+.template-list .template-info .is-select{
+    display: block;
+    width: 100%;
+    height: 456px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.template-list .template-info .on{
+    background:url('../img/check40.png') no-repeat 50% 50% rgba(0,0,0,0.3);
+}
+.template-list .template-info  .cover{
+    width: 432px;
+    height: 456px;
+}

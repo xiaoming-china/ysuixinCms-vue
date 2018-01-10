@@ -15,7 +15,7 @@ use yii\web\ServerErrorHttpException;
 
 
 class FieldController extends AdminBaseController{
-    public $layout = false;
+    public $layout = 'main-admin';
     public $fieldConfigPath;
     public function init() {
         parent::init();

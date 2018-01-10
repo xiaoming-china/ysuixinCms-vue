@@ -28,7 +28,7 @@ class File{
             }           
             $dp->close();
         }else{
-            $this->scanfiles($files,$path);
+            $this->scanfiles($files,$path,true);
         }              
         return $files;
     }
