@@ -1,6 +1,6 @@
 
     <!--主体内容区开始-->
-    <div class="right-content" id="app">
+    <div class="right-content" id="app" v-cloak>
       <div class="card">
           <Tabs value="name1">
             <Tab-Pane label="修改个人信息" name="name1">

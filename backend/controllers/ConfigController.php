@@ -11,9 +11,6 @@ use backend\models\SystemInfo;
 use common\models\Config;
 use common\lib\File;
 
-
-
-
 class ConfigController extends AdminBaseController{
     public $layout = 'main-admin';
     public $uId;
@@ -49,7 +46,6 @@ class ConfigController extends AdminBaseController{
             }else{
                 $template['list'] = [];
             }
-
             return $this->ajaxSuccess('获取成功','',$template);
         }else{
             return $this->render('/template/template-list');
@@ -84,7 +80,44 @@ class ConfigController extends AdminBaseController{
      * @return           [type]      [description]
      */
     public function actionBasic(){
-        return $this->render('/config/basic');
+        if($this->isPost()){
+            $transaction = Yii::$app->db->beginTransaction();
+            $data = Yii::$app->request->post();
+            $fail = 0;
+            foreach ($data as $key => $value) {
+                $info = (new Config())->findOne(['varname'=>$key]);
+                if(!is_null($info)){
+                    $info->value = $value;
+                    $rs = $info->save(false);
+                    if(!$rs){
+                        $fail++;
+                    }
+                }
+            }
+            if($fail > 0){
+                $transaction->rollBack();
+                return $this->ajaxFail('更改失败，未知错误');
+            }
+            Config::getAllConfig(true);
+            $transaction->commit();
+            return $this->ajaxSuccess('更改成功');
+        }else{
+            return $this->render('/config/basic');
+        }
+    }
+    /**
+     * @Author:          xiaoming
+     * @DateTime:        2017-10-09
+     * @name:获取参数设置
+     * @copyright:       [copyright]
+     * @license:         [license]
+     * @return           [type]      [description]
+     */
+    public function actionGetConfig(){
+        if($this->isPost()){
+            $rs = Config::getAllConfig();
+            return $this->ajaxSuccess('获取成功','',$rs);
+        }
     }
      /**
      * @Author:          xiaoming
