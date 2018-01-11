@@ -55,11 +55,11 @@
       <!--1s-->
       <Tabs value="1" v-on:on-click="tabs_change">
         <Tab-Pane label="基本配置" name="1">
-          <i-Form ref="basicInline" 
-            label-position="left" 
-            :model="basicInline" 
-            :rules="basicRules"
-            :label-width="150">
+            <i-Form ref="basicInline" 
+                label-position="left" 
+                :model="basicInline" 
+                :rules="basicRules"
+                :label-width="150">
               <Form-Item label="名称" prop="sitename">
                   <span slot="label">
                     <span class="field-title">站点名称</span>
@@ -113,14 +113,77 @@
                   </span>
                   <i-Input type="text" v-model="basicInline.contactsmail"></i-Input>
               </Form-Item>
-          </i-Form>
+            </i-Form>
         </Tab-Pane>
         <!--1s-->
         <!--2s-->
-        <Tab-Pane label="高级配置" name="2">
-            
+        <Tab-Pane label="附件配置" name="2">
+            <i-Form ref="fileInline" 
+                label-position="left" 
+                :model="fileInline" 
+                :rules="fileRules"
+                :label-width="150">
+              <Form-Item label="名称" prop="uploadmaxsize">
+                  <span slot="label">
+                    <span class="field-title">允许上传附件大小</span>
+                    <p>单位：kb</p>
+                  </span>
+                  <i-Input type="text" v-model="fileInline.uploadmaxsize"></i-Input>
+              </Form-Item>
+              <Form-Item label="名称" prop="uploadallowext">
+                  <span slot="label">
+                    <span class="field-title">允许上传附件类型</span>
+                    <p>多个请用&nbsp;|&nbsp;隔开</p>
+                  </span>
+                  <i-Input type="text" v-model="fileInline.uploadallowext"></i-Input>
+              </Form-Item>
+              <Form-Item label="名称" prop="watermarkenable">
+                  <span slot="label">
+                    <span class="field-title">是否开启图片水印</span>
+                    <p>最多300个字符；</p>
+                  </span>
+                  <Radio-Group v-model="fileInline.watermarkenable">
+                    <Radio label="1">开启</Radio>
+                    <Radio label="2">关闭</Radio>
+                  </Radio-Group>
+              </Form-Item>
+
+              <Form-Item label="名称" prop="watermarkimg">
+                  <span slot="label">
+                    <span class="field-title">水印图片</span>
+                  </span>
+                  <Radio-Group v-model="fileInline.watermarkimg">
+                    <Radio label="1">开启</Radio>
+                    <Radio label="2">关闭</Radio>
+                  </Radio-Group>
+              </Form-Item>
+              <Form-Item label="名称" prop="watermarkpct">
+                  <span slot="label">
+                    <span class="field-title">水印透明度</span>
+                    <p>最多15个字符；如:意随心</p>
+                  </span>
+                  <i-Input type="text" v-model="fileInline.watermarkpct" :maxlength=15></i-Input>
+              </Form-Item>
+              <Form-Item label="名称" prop="watermarkpos">
+                  <span slot="label">
+                    <span class="field-title">水印位置</span>
+                  </span>
+                  <i-Select v-model="fileInline.watermarkpos" transfer="true" style="width:200px">
+                    <i-Option value="1">左上角</i-Option>
+                    <i-Option value="2">上居中</i-Option>
+                    <i-Option value="3">右上角</i-Option>
+                    <i-Option value="4">左居中</i-Option>
+                    <i-Option value="5">居中</i-Option>
+                    <i-Option value="6">右居中</i-Option>
+                    <i-Option value="7">左下角</i-Option>
+                    <i-Option value="8">下居中</i-Option>
+                    <i-Option value="9">右下角</i-Option>
+                  </i-Select>
+              </Form-Item>
+            </i-Form>
         </Tab-Pane>
         <!--2s-->
+        
       </Tabs>
       <div class="btn_wrap_pd">
         <i-Button type="primary"
@@ -131,7 +194,7 @@
           <span v-else>Loading...</span>
         </i-Button>
         <i-Button type="primary"
-        @click="config('fieldInfo')"
+        @click="config('fileInline')"
         :loading="loading"
         style="width:92px;" v-if="button == 2">
           <span v-if="!loading">确定</span>
@@ -156,6 +219,14 @@
                   sitecontacts:'',
                   contactsmail:'',
               },
+              fileInline:{
+                uploadmaxsize:2024,
+                uploadallowext:'jpg|jpeg|gif|bmp|png|doc|docx|xls|xlsx|ppt|pptx|pdf|txt|rar|zip|swf',
+                watermarkenable:1,
+                watermarkimg:'/public/admin/img/logo.png',
+                watermarkpct:80,
+                watermarkpos:'5'
+              },
               loading:false,
               button:1,
               basicRules: {
@@ -178,6 +249,15 @@
                     { type: 'email', message: '邮箱格式不正确', trigger:'blur'}
                 ],
               },
+              fileRules: {
+                uploadmaxsize: [
+                    { type:'number', message: '只能为数字1', trigger:'blur'}
+                ],
+                // watermarkpct: [
+                //     //{ Range:[0,100], message: '最大只能为100', trigger:'blur'},
+                //     { type:'number', message: '只能为数字', trigger:'blur'}
+                // ],
+              }
             }
         },
         mounted: function() {
