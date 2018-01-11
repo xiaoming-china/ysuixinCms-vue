@@ -70,6 +70,7 @@
                     function(res){
                       _that.$Message.warning('更改失败');
                     },
+                    false
                   );
                 },
                 onCancel: () => {

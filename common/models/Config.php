@@ -16,7 +16,6 @@ use common\models\BaseModel;
  */
 class Config extends \yii\db\ActiveRecord{
     const THEME_NAME = 'theme';
-    const CATCH_VS = '20';//缓存版本，清除缓存只需要修改该值
     /**
      * @inheritdoc
      */
