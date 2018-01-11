@@ -32,14 +32,48 @@ class ConfigController extends AdminBaseController{
      */
     public function actionTemplateList(){
         if($this->isPost()){
-            $data = [];
-            //p(Template);
-            $t = (new File())->getFiles(Template,true);
-            p($t);
-            return $this->ajaxSuccess('获取成功','',$data);
+            $files = (new File())->getFiles(Template,true);
+            if(!empty($files)){
+                $t = [];
+                foreach ($files as $key => $value) {
+                    $d['name']   = $key;
+                    if($key === Config::getOneConfig(Config::THEME_NAME)){
+                        $d['used']   = 1;
+                    }else{
+                        $d['used']   = 0;
+                    }
+                    $d['icover'] = '/template/'.$key.'/'.$value[1];
+                    $t[] = $d;
+                }
+                $template['list'] = $t;
+            }else{
+                $template['list'] = [];
+            }
+
+            return $this->ajaxSuccess('获取成功','',$template);
         }else{
             return $this->render('/template/template-list');
         }
+    }
+    /**
+     * [actionChangeTemplate 更换模板]
+     * @author:xiaoming
+     * @date:2018-01-11T09:17:33+0800
+     * @return                        [type] [description]
+     */
+    public function actionChangeTemplate(){
+        $name = $this->post('temp_name','');
+        if($name == ''){
+            return $this->ajaxFail('更改失败，参数异常');
+        }
+        $theme_info = (new Config())->findOne(['varname'=>Config::THEME_NAME]);
+        $theme_info->value = $name;
+        $rs = $theme_info->save(false);
+        if($rs){
+            Config::getAllConfig(true);//重新生成配置缓存
+            return $this->ajaxSuccess('更改成功');
+        }
+        return $this->ajaxFail('更改失败，未知错误');
     }
     /**
      * @Author:          xiaoming

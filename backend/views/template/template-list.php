@@ -9,31 +9,17 @@
       	</div>
       </div>
       <div class="card" style="margin-bottom: 80px;">
-        <div class="template-list">
+        <div class="template-list" v-for ="(value,key) in templateList" @click="changeTemp(value.name)">
     			<div class="template-info">
-    				<p class="cover"><img src="/public/admin/img/preview.jpg" alt=""></p>
-    				<p class="title">默认模板(当前模板)</p>
-    				<p class="is-select on"></p>
-    			</div>
-    			<div class="template-info">
-    				<p class="cover"><img src="/public/admin/img/preview.jpg" alt=""></p>
-    				<p class="title">默认模板</p>
-    				<p class="is-select"></p>
-    			</div>
-    			<div class="template-info">
-    				<p class="cover"><img src="/public/admin/img/preview.jpg" alt=""></p>
-    				<p class="title">默认模板</p>
-    				<p class="is-select"></p>
-    			</div>
-    			<div class="template-info">
-    				<p class="cover"><img src="/public/admin/img/preview.jpg" alt=""></p>
-    				<p class="title">默认模板</p>
-    				<p class="is-select"></p>
+    				<p class="cover"><img :src="value.icover" alt=""></p>
+    				<p class="title">
+              {{value.name}}
+              <span v-if="value.used == 1">(当前模板)</span>
+            </p>
+    				<p class="is-select" :class="value.used == 1 ? 'on' :''" :id="value.name"></p>
     			</div>
   		  </div>
-
       </div>
-
     </div>
     <!--主体内容区结束-->
 
@@ -46,10 +32,10 @@
           templateList:[],
         },
         mounted: function() {
-          this.getTemplateListList();
+          this.getTemplateList();
         },
         methods: {
-          getTemplateListList:function(){
+          getTemplateList:function(){
             var _that = this;
             $ajax(
               '/admin/config/template-list', 
@@ -63,6 +49,34 @@
               },
             );
           },
+          changeTemp:function(name){
+            var _that = this;
+            _that.$Modal.confirm({
+                title:'操作确认',
+                width:300,
+                loading:true,
+                content:'<p>是否确定使用此模板?</p>',
+                onOk: () => {
+                  $ajax(
+                    '/admin/config/change-template', 
+                    {temp_name:name}, 
+                    'post',
+                    function(res){
+                      $('.is-select').removeClass('on');
+                      $('#'+name).addClass('on');
+                      _that.$Modal.remove();
+                      _that.getTemplateList();
+                    },
+                    function(res){
+                      _that.$Message.warning('更改失败');
+                    },
+                  );
+                },
+                onCancel: () => {
+                  _that.$Modal.remove();
+                }
+            });
+          }
         }
     })
 </script>
