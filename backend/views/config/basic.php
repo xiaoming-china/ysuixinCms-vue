@@ -143,7 +143,7 @@
                     <span class="field-title">允许上传附件大小</span>
                     <p>单位：kb</p>
                   </span>
-                  <i-Input type="text" v-model="fileInline.uploadmaxsize" number="true"></i-Input>
+                  <i-Input type="text" v-model="fileInline.uploadmaxsize"></i-Input>
               </Form-Item>
               <Form-Item label="名称" prop="uploadallowext">
                   <span slot="label">
@@ -191,7 +191,7 @@
                     <span class="field-title">水印透明度</span>
                     <p>最多15个字符；如:意随心</p>
                   </span>
-                  <i-Input type="text" v-model="fileInline.watermarkpct" number="true"></i-Input>
+                  <i-Input type="text" v-model="fileInline.watermarkpct"></i-Input>
               </Form-Item>
               <Form-Item label="名称" prop="watermarkpos">
                   <span slot="label">
@@ -223,7 +223,7 @@
           <span v-else>Loading...</span>
         </i-Button>
         <i-Button type="primary"
-        @click="config('fileInline')"
+        @click="configFile('fileInline')"
         :loading="loading"
         style="width:92px;" v-if="button == 2">
           <span v-if="!loading">确定</span>
@@ -250,9 +250,9 @@
               },
               fileInline:{
                 uploadmaxsize:2024,
-                uploadallowext:'jpg|jpeg|gif|bmp|png|doc|docx|xls|xlsx|ppt|pptx|pdf|txt|rar|zip|swf',
+                uploadallowext:'',
                 watermarkenable:1,
-                watermarkimg:'/public/admin/img/logo.png',
+                watermarkimg:'',
                 watermarkpct:80,
                 watermarkpos:'5'
               },
@@ -282,12 +282,12 @@
                 ],
               },
               fileRules: {
-                uploadmaxsize: [
-                    { type:'number', message: '只能为数字', trigger:'blur'}
+                uploadmaxsize:[
+                    {pattern :"^[0-9]*$", message: '只能为数字', trigger:'blur'}
                 ],
                 watermarkpct: [
-                    { Range:[0,100], message: '范围只能为0~100', trigger:'blur'},
-                    { type:'number', message: '只能为数字', trigger:'blur'}
+                    {pattern :"^[0-9]*$", min:0,max:100, message: '范围只能为0~100', trigger:'blur'},
+                    {pattern :"^[0-9]*$", message: '只能为数字', trigger:'blur'}
                 ],
               }
             }
@@ -310,13 +310,18 @@
                 function(res){
                   var data  = res.data;
                   var basic = _that.basicInline;
+                  var file  = _that.fileInline;
                   for(var i in data) {
                       if(Object.prototype.hasOwnProperty.call(data,i)) { 
                           if(basic[i] != undefined){
                             basic[i] = data[i];
                           }
+                          if(file[i] != undefined){
+                            file[i]  = data[i];
+                          }
                       }
                   }
+                  console.log(file);
                 },
                 function(res){
                   _that.$Message.warning('配置信息获取失败');
@@ -331,6 +336,27 @@
                     $ajax(
                       '/admin/config/basic', 
                       _that.basicInline, 
+                      'post',
+                      function(res){
+                        _that.$Message.success('操作成功');
+                        _that.loading = false;
+                      },
+                      function(res){
+                        _that.$Message.warning(res.message);
+                        _that.loading = false;
+                      }
+                    );
+                }
+              })
+            },
+            configFile:function(name) {
+              this.$refs[name].validate((valid) => {
+                if (valid) {
+                    var _that = this;
+                    _that.loading = true;
+                    $ajax(
+                      '/admin/config/basic', 
+                      _that.fileInline, 
                       'post',
                       function(res){
                         _that.$Message.success('操作成功');
