@@ -117,7 +117,6 @@
                 if (valid) {
                     var _that = this;
                     _that.loading = true;
-
                     $ajax(
                         '/admin/person-info/person-info',
                         {
@@ -129,9 +128,10 @@
                            _that.$Message.success({
                               content:'修改成功',
                            });
+                           _that.loading = false;
                         },
                         function(res){
-                          _that.loading = true;
+                          _that.loading = false;
                         }
                     );
                 }
@@ -154,9 +154,10 @@
                            _that.$Message.success({
                               content:'修改成功',
                            });
+                           _that.loading1 = false;
                         },
                         function(res){
-                          _that.loading1 = true;
+                          _that.loading1 = false;
                         }
                     );
                 }
