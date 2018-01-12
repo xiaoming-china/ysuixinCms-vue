@@ -1,0 +1,1122 @@
+a:12:{s:6:"config";s:2225:"a:5:{s:10:"phpVersion";s:6:"5.6.28";s:10:"yiiVersion";s:6:"2.0.12";s:11:"application";a:8:{s:3:"yii";s:6:"2.0.12";s:4:"name";s:14:"My Application";s:7:"version";s:3:"1.0";s:8:"language";s:5:"en-US";s:14:"sourceLanguage";s:5:"en-US";s:7:"charset";s:5:"UTF-8";s:3:"env";s:3:"dev";s:5:"debug";b:1;}s:3:"php";a:5:{s:7:"version";s:6:"5.6.28";s:6:"xdebug";b:0;s:3:"apc";b:0;s:8:"memcache";b:0;s:9:"memcached";b:0;}s:10:"extensions";a:9:{s:16:"yiisoft/yii2-gii";a:3:{s:4:"name";s:16:"yiisoft/yii2-gii";s:7:"version";s:7:"2.0.5.0";s:5:"alias";a:1:{s:8:"@yii/gii";s:47:"G:\xampp\htdocs\vueDemo\vendor/yiisoft/yii2-gii";}}s:18:"yiisoft/yii2-faker";a:3:{s:4:"name";s:18:"yiisoft/yii2-faker";s:7:"version";s:7:"2.0.3.0";s:5:"alias";a:1:{s:10:"@yii/faker";s:49:"G:\xampp\htdocs\vueDemo\vendor/yiisoft/yii2-faker";}}s:20:"yiisoft/yii2-imagine";a:3:{s:4:"name";s:20:"yiisoft/yii2-imagine";s:7:"version";s:7:"2.1.0.0";s:5:"alias";a:1:{s:12:"@yii/imagine";s:51:"G:\xampp\htdocs\vueDemo\vendor/yiisoft/yii2-imagine";}}s:24:"yiisoft/yii2-swiftmailer";a:3:{s:4:"name";s:24:"yiisoft/yii2-swiftmailer";s:7:"version";s:7:"2.0.7.0";s:5:"alias";a:1:{s:16:"@yii/swiftmailer";s:55:"G:\xampp\htdocs\vueDemo\vendor/yiisoft/yii2-swiftmailer";}}s:28:"myweishanli/yii2-ip2location";a:3:{s:4:"name";s:28:"myweishanli/yii2-ip2location";s:7:"version";s:7:"1.0.0.0";s:5:"alias";a:1:{s:16:"@wsl/ip2location";s:63:"G:\xampp\htdocs\vueDemo\vendor/myweishanli/yii2-ip2location/src";}}s:22:"yiisoft/yii2-bootstrap";a:3:{s:4:"name";s:22:"yiisoft/yii2-bootstrap";s:7:"version";s:7:"2.0.7.0";s:5:"alias";a:1:{s:14:"@yii/bootstrap";s:53:"G:\xampp\htdocs\vueDemo\vendor/yiisoft/yii2-bootstrap";}}s:18:"yiisoft/yii2-debug";a:3:{s:4:"name";s:18:"yiisoft/yii2-debug";s:7:"version";s:8:"2.0.12.0";s:5:"alias";a:1:{s:10:"@yii/debug";s:49:"G:\xampp\htdocs\vueDemo\vendor/yiisoft/yii2-debug";}}s:16:"yiisoft/yii2-jui";a:3:{s:4:"name";s:16:"yiisoft/yii2-jui";s:7:"version";s:7:"2.0.6.0";s:5:"alias";a:1:{s:8:"@yii/jui";s:47:"G:\xampp\htdocs\vueDemo\vendor/yiisoft/yii2-jui";}}s:19:"trntv/yii2-file-kit";a:3:{s:4:"name";s:19:"trntv/yii2-file-kit";s:7:"version";s:7:"1.2.1.0";s:5:"alias";a:1:{s:14:"@trntv/filekit";s:54:"G:\xampp\htdocs\vueDemo\vendor/trntv/yii2-file-kit/src";}}}}";s:7:"request";s:9083:"a:14:{s:7:"flashes";a:0:{}s:10:"statusCode";i:200;s:14:"requestHeaders";a:12:{s:4:"host";s:11:"vuedemo.com";s:10:"connection";s:10:"keep-alive";s:14:"content-length";s:4:"1271";s:6:"accept";s:46:"application/json, text/javascript, */*; q=0.01";s:6:"origin";s:18:"http://vuedemo.com";s:16:"x-requested-with";s:14:"XMLHttpRequest";s:10:"user-agent";s:114:"Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36";s:12:"content-type";s:48:"application/x-www-form-urlencoded; charset=UTF-8";s:7:"referer";s:70:"http://vuedemo.com/admin/content/edit-content?modelid=59&catid=71&id=7";s:15:"accept-encoding";s:13:"gzip, deflate";s:15:"accept-language";s:14:"zh-CN,zh;q=0.9";s:6:"cookie";s:332:"advanced-frontend=fb6jf7dffc9ljsvqeiu328ic23; _csrf-frontend=393be8f20d03d18c83ec6cb59152b45b269d6c36dc8188d3e946155330324191a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22%A8%60%14%21%FC%94%3C%B0B%A7%B0U%B4%19d%95iD%07%B7%F9%D4D%E3%F2%C9%8CT%DB%16%02%8B%22%3B%7D; advanced-backend=ks0t1ne0tu9ml4o9sia763fb07";}s:15:"responseHeaders";a:8:{s:12:"X-Powered-By";s:10:"PHP/5.6.28";s:7:"Expires";s:29:"Thu, 19 Nov 1981 08:52:00 GMT";s:13:"Cache-Control";s:62:"no-store, no-cache, must-revalidate, post-check=0, pre-check=0";s:6:"Pragma";s:8:"no-cache";s:12:"Content-Type";s:31:"application/json; charset=UTF-8";s:11:"X-Debug-Tag";s:13:"5a56078ba7372";s:16:"X-Debug-Duration";s:3:"896";s:12:"X-Debug-Link";s:43:"/admin/debug/default/view?tag=5a56078ba7372";}s:5:"route";s:20:"content/edit-content";s:6:"action";s:58:"backend\controllers\ContentController::actionEditContent()";s:12:"actionParams";a:0:{}s:11:"requestBody";a:3:{s:12:"Content Type";s:48:"application/x-www-form-urlencoded; charset=UTF-8";s:3:"Raw";s:1271:"data=%7B%22modelId%22%3A%2259%22%2C%22catId%22%3A%2271%22%2C%22id%22%3A%227%22%2C%22status%22%3A%222%22%2C%22publish_time%22%3A%222018-01-10+20%3A31%3A3%22%2C%22allow_comment%22%3A%221%22%2C%22show_template%22%3A%22show.php%22%2C%22title%22%3A%22%E6%A0%87%E9%A2%98%22%2C%22keywords%22%3A%22%22%2C%22desc%22%3A%22%22%2C%22thumb%22%3A%5B%22%22%5D%2C%22content%22%3A%22%3Cp%3E%26nbsp%3B+%26nbsp%3B+%26nbsp%3B+%26nbsp%3B+%26nbsp%3B+%26nbsp%3B+%26nbsp%3B+%26nbsp%3B+%26nbsp%3B+%26nbsp%3B+%26nbsp%3B+%26nbsp%3B+%26nbsp%3B+%26nbsp%3B%3Cspan+style%3D%5C%22color%3A+rgb(73%2C+80%2C+96)%3B+font-family%3A+%26quot%3BHiragino+Sans+GB%26quot%3B%2C+Helvetica%2C+%26quot%3BPingFang+SC%26quot%3B%2C+%26quot%3BMicrosoft+YaHei%26quot%3B%2C+%E5%BE%AE%E8%BD%AF%E9%9B%85%E9%BB%91%2C+Arial%2C+sans-serif%3B+font-size%3A+12px%3B+font-weight%3A+700%3B+background-color%3A+rgb(255%2C+255%2C+255)%3B%5C%22%3E%E5%86%85%E5%AE%B9%E8%AF%A6%E6%83%85123%3C%2Fspan%3E%3C%2Fp%3E%3C!--+%3Cspan+v-html%3D%5C%22item.value%5C%22%3E%3C%2Fspan%3E+--%3E%3C!--+%3Cspan+v-html%3D%5C%22item.value%5C%22%3E%3C%2Fspan%3E+--%3E%3C!--+%3Cspan+v-html%3D%5C%22item.value%5C%22%3E%3C%2Fspan%3E+--%3E%22%2C%22personPic%22%3A%5B%22http%3A%2F%2Fvuedemo.com%2F..%2Fuploads%2Fimages%2F2018-01-03%2F%2F5a4cbfc15cb36.jpg%22%5D%7D";s:17:"Decoded to Params";a:1:{s:4:"data";s:796:"{"modelId":"59","catId":"71","id":"7","status":"2","publish_time":"2018-01-10 20:31:3","allow_comment":"1","show_template":"show.php","title":"标题","keywords":"","desc":"","thumb":[""],"content":"<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style=\"color: rgb(73, 80, 96); font-family: &quot;Hiragino Sans GB&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, 微软雅黑, Arial, sans-serif; font-size: 12px; font-weight: 700; background-color: rgb(255, 255, 255);\">内容详情123</span></p><!-- <span v-html=\"item.value\"></span> --><!-- <span v-html=\"item.value\"></span> --><!-- <span v-html=\"item.value\"></span> -->","personPic":["http://vuedemo.com/../uploads/images/2018-01-03//5a4cbfc15cb36.jpg"]}";}}s:6:"SERVER";a:53:{s:16:"REDIRECT_MIBDIRS";s:24:"G:/xampp/php/extras/mibs";s:19:"REDIRECT_MYSQL_HOME";s:16:"\xampp\mysql\bin";s:21:"REDIRECT_OPENSSL_CONF";s:31:"G:/xampp/apache/bin/openssl.cnf";s:29:"REDIRECT_PHP_PEAR_SYSCONF_DIR";s:10:"\xampp\php";s:14:"REDIRECT_PHPRC";s:10:"\xampp\php";s:12:"REDIRECT_TMP";s:10:"\xampp\tmp";s:15:"REDIRECT_STATUS";s:3:"200";s:7:"MIBDIRS";s:24:"G:/xampp/php/extras/mibs";s:10:"MYSQL_HOME";s:16:"\xampp\mysql\bin";s:12:"OPENSSL_CONF";s:31:"G:/xampp/apache/bin/openssl.cnf";s:20:"PHP_PEAR_SYSCONF_DIR";s:10:"\xampp\php";s:5:"PHPRC";s:10:"\xampp\php";s:3:"TMP";s:10:"\xampp\tmp";s:9:"HTTP_HOST";s:11:"vuedemo.com";s:15:"HTTP_CONNECTION";s:10:"keep-alive";s:14:"CONTENT_LENGTH";s:4:"1271";s:11:"HTTP_ACCEPT";s:46:"application/json, text/javascript, */*; q=0.01";s:11:"HTTP_ORIGIN";s:18:"http://vuedemo.com";s:21:"HTTP_X_REQUESTED_WITH";s:14:"XMLHttpRequest";s:15:"HTTP_USER_AGENT";s:114:"Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36";s:12:"CONTENT_TYPE";s:48:"application/x-www-form-urlencoded; charset=UTF-8";s:12:"HTTP_REFERER";s:70:"http://vuedemo.com/admin/content/edit-content?modelid=59&catid=71&id=7";s:20:"HTTP_ACCEPT_ENCODING";s:13:"gzip, deflate";s:20:"HTTP_ACCEPT_LANGUAGE";s:14:"zh-CN,zh;q=0.9";s:11:"HTTP_COOKIE";s:332:"advanced-frontend=fb6jf7dffc9ljsvqeiu328ic23; _csrf-frontend=393be8f20d03d18c83ec6cb59152b45b269d6c36dc8188d3e946155330324191a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22%A8%60%14%21%FC%94%3C%B0B%A7%B0U%B4%19d%95iD%07%B7%F9%D4D%E3%F2%C9%8CT%DB%16%02%8B%22%3B%7D; advanced-backend=ks0t1ne0tu9ml4o9sia763fb07";s:4:"PATH";s:990:"C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\ProgramData\ComposerSetup\bin;D:\php55n;G:\xampp\php;G:\Git\cmd;F:\python;C:\Program Files\Microsoft\Web Platform Installer\;C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET Web Pages\v1.0\;C:\Program Files (x86)\Windows Kits\8.0\Windows Performance Toolkit\;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\";s:10:"SystemRoot";s:10:"C:\Windows";s:7:"COMSPEC";s:27:"C:\Windows\system32\cmd.exe";s:7:"PATHEXT";s:53:".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC";s:6:"WINDIR";s:10:"C:\Windows";s:16:"SERVER_SIGNATURE";s:97:"<address>Apache/2.4.23 (Win32) OpenSSL/1.0.2h PHP/5.6.28 Server at vuedemo.com Port 80</address>
+";s:15:"SERVER_SOFTWARE";s:47:"Apache/2.4.23 (Win32) OpenSSL/1.0.2h PHP/5.6.28";s:11:"SERVER_NAME";s:11:"vuedemo.com";s:11:"SERVER_ADDR";s:9:"127.0.0.1";s:11:"SERVER_PORT";s:2:"80";s:11:"REMOTE_ADDR";s:9:"127.0.0.1";s:13:"DOCUMENT_ROOT";s:27:"G:/xampp/htdocs/vueDemo/web";s:14:"REQUEST_SCHEME";s:4:"http";s:14:"CONTEXT_PREFIX";s:0:"";s:21:"CONTEXT_DOCUMENT_ROOT";s:27:"G:/xampp/htdocs/vueDemo/web";s:12:"SERVER_ADMIN";s:11:"vueDemo.com";s:15:"SCRIPT_FILENAME";s:43:"G:/xampp/htdocs/vueDemo/web/admin/index.php";s:11:"REMOTE_PORT";s:4:"4531";s:12:"REDIRECT_URL";s:27:"/admin/content/edit-content";s:17:"GATEWAY_INTERFACE";s:7:"CGI/1.1";s:15:"SERVER_PROTOCOL";s:8:"HTTP/1.1";s:14:"REQUEST_METHOD";s:4:"POST";s:12:"QUERY_STRING";s:0:"";s:11:"REQUEST_URI";s:27:"/admin/content/edit-content";s:11:"SCRIPT_NAME";s:16:"/admin/index.php";s:8:"PHP_SELF";s:16:"/admin/index.php";s:18:"REQUEST_TIME_FLOAT";d:1515587467.4430001;s:12:"REQUEST_TIME";i:1515587467;}s:3:"GET";a:0:{}s:4:"POST";a:1:{s:4:"data";s:796:"{"modelId":"59","catId":"71","id":"7","status":"2","publish_time":"2018-01-10 20:31:3","allow_comment":"1","show_template":"show.php","title":"标题","keywords":"","desc":"","thumb":[""],"content":"<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style=\"color: rgb(73, 80, 96); font-family: &quot;Hiragino Sans GB&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, 微软雅黑, Arial, sans-serif; font-size: 12px; font-weight: 700; background-color: rgb(255, 255, 255);\">内容详情123</span></p><!-- <span v-html=\"item.value\"></span> --><!-- <span v-html=\"item.value\"></span> --><!-- <span v-html=\"item.value\"></span> -->","personPic":["http://vuedemo.com/../uploads/images/2018-01-03//5a4cbfc15cb36.jpg"]}";}s:6:"COOKIE";a:3:{s:17:"advanced-frontend";s:26:"fb6jf7dffc9ljsvqeiu328ic23";s:14:"_csrf-frontend";s:140:"393be8f20d03d18c83ec6cb59152b45b269d6c36dc8188d3e946155330324191a:2:{i:0;s:14:"_csrf-frontend";i:1;s:32:"�`!��<�B��U�d�iD���D��ɌT��";}";s:16:"advanced-backend";s:26:"ks0t1ne0tu9ml4o9sia763fb07";}s:5:"FILES";a:0:{}s:7:"SESSION";a:2:{s:7:"__flash";a:0:{}s:4:"__id";i:5;}}";s:3:"log";s:37290:"a:1:{s:8:"messages";a:49:{i:0;a:6:{i:0;s:33:"Bootstrap with yii\log\Dispatcher";i:1;i:8;i:2;s:31:"yii\base\Application::bootstrap";i:3;d:1515587467.5039041;i:4;a:0:{}i:5;i:1955048;}i:1;a:6:{i:0;s:21:"Loading module: debug";i:1;i:8;i:2;s:26:"yii\base\Module::getModule";i:3;d:1515587467.5039041;i:4;a:0:{}i:5;i:1956872;}i:2;a:6:{i:0;s:15:"Session started";i:1;i:4;i:2;s:21:"yii\web\Session::open";i:3;d:1515587467.533905;i:4;a:0:{}i:5;i:3031520;}i:3;a:6:{i:0;s:65:"SELECT * FROM `cms_admin_manager` WHERE (`id`=5) AND (`status`=1)";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1515587467.553906;i:4;a:1:{i:0;a:5:{s:4:"file";s:46:"G:\xampp\htdocs\vueDemo\common\models\User.php";s:4:"line";i:48;s:8:"function";s:7:"findOne";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"::";}}i:5;i:4530760;}i:4;a:6:{i:0;s:62:"Opening DB connection: mysql:host=47.91.245.120;dbname=cmsDemo";i:1;i:4;i:2;s:23:"yii\db\Connection::open";i:3;d:1515587467.553906;i:4;a:1:{i:0;a:5:{s:4:"file";s:46:"G:\xampp\htdocs\vueDemo\common\models\User.php";s:4:"line";i:48;s:8:"function";s:7:"findOne";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"::";}}i:5;i:4535560;}i:9;a:6:{i:0;s:42:"SHOW FULL COLUMNS FROM `cms_admin_manager`";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1515587467.6349111;i:4;a:1:{i:0;a:5:{s:4:"file";s:46:"G:\xampp\htdocs\vueDemo\common\models\User.php";s:4:"line";i:48;s:8:"function";s:7:"findOne";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"::";}}i:5;i:4608648;}i:12;a:6:{i:0;s:635:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'cms_admin_manager' AND kcu.table_name = 'cms_admin_manager'";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1515587467.657912;i:4;a:1:{i:0;a:5:{s:4:"file";s:46:"G:\xampp\htdocs\vueDemo\common\models\User.php";s:4:"line";i:48;s:8:"function";s:7:"findOne";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"::";}}i:5;i:4640800;}i:15;a:6:{i:0;s:44:"Bootstrap with yii\debug\Module::bootstrap()";i:1;i:8;i:2;s:31:"yii\base\Application::bootstrap";i:3;d:1515587467.6839139;i:4;a:0:{}i:5;i:5031072;}i:16;a:6:{i:0;s:19:"Loading module: gii";i:1;i:8;i:2;s:26:"yii\base\Module::getModule";i:3;d:1515587467.686914;i:4;a:0:{}i:5;i:5245696;}i:17;a:6:{i:0;s:42:"Bootstrap with yii\gii\Module::bootstrap()";i:1;i:8;i:2;s:31:"yii\base\Application::bootstrap";i:3;d:1515587467.6879139;i:4;a:0:{}i:5;i:5285592;}i:24;a:6:{i:0;s:39:"Route requested: 'content/edit-content'";i:1;i:8;i:2;s:34:"yii\web\Application::handleRequest";i:3;d:1515587467.689914;i:4;a:0:{}i:5;i:5436576;}i:25;a:6:{i:0;s:34:"Route to run: content/edit-content";i:1;i:8;i:2;s:30:"yii\base\Controller::runAction";i:3;d:1515587467.6919141;i:4;a:0:{}i:5;i:5626320;}i:26;a:6:{i:0;s:74:"Running action: backend\controllers\ContentController::actionEditContent()";i:1;i:8;i:2;s:36:"yii\base\InlineAction::runWithParams";i:3;d:1515587467.692914;i:4;a:0:{}i:5;i:5637088;}i:27;a:6:{i:0;s:17:"Begin transaction";i:1;i:8;i:2;s:25:"yii\db\Transaction::begin";i:3;d:1515587467.7069149;i:4;a:1:{i:0;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:144;s:8:"function";s:16:"beginTransaction";s:5:"class";s:17:"yii\db\Connection";s:4:"type";s:2:"->";}}i:5;i:5669672;}i:28;a:6:{i:0;s:126:"SELECT * FROM `cms_model_field` WHERE (`model_id`='59') AND (`status`=1) AND (`is_delete`=2) AND (`is_hide`=2) ORDER BY `sort`";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1515587467.7269161;i:4;a:2:{i:0;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\models\Field.php";s:4:"line";i:99;s:8:"function";s:3:"all";s:5:"class";s:18:"yii\db\ActiveQuery";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:152;s:8:"function";s:13:"getModelField";s:5:"class";s:19:"common\models\Field";s:4:"type";s:2:"->";}}i:5;i:5750560;}i:31;a:6:{i:0;s:34:"SHOW FULL COLUMNS FROM `cms_model`";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1515587467.7679191;i:4;a:3:{i:0;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\models\Model.php";s:4:"line";i:64;s:8:"function";s:7:"findOne";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:139;s:8:"function";s:12:"getModelInfo";s:5:"class";s:19:"common\models\Model";s:4:"type";s:2:"->";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:5956136;}i:34;a:6:{i:0;s:619:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'cms_model' AND kcu.table_name = 'cms_model'";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1515587467.7859199;i:4;a:3:{i:0;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\models\Model.php";s:4:"line";i:64;s:8:"function";s:7:"findOne";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:139;s:8:"function";s:12:"getModelInfo";s:5:"class";s:19:"common\models\Model";s:4:"type";s:2:"->";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:5973632;}i:37;a:6:{i:0;s:41:"SELECT * FROM `cms_model` WHERE `id`='59'";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1515587467.803921;i:4;a:3:{i:0;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\models\Model.php";s:4:"line";i:64;s:8:"function";s:7:"findOne";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:139;s:8:"function";s:12:"getModelInfo";s:5:"class";s:19:"common\models\Model";s:4:"type";s:2:"->";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:5977752;}i:40;a:6:{i:0;s:32:"SHOW FULL COLUMNS FROM `cms_pic`";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1515587467.8219221;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6067552;}i:43;a:6:{i:0;s:615:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'cms_pic' AND kcu.table_name = 'cms_pic'";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1515587467.8369229;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6091320;}i:46;a:6:{i:0;s:32:"SHOW FULL COLUMNS FROM `cms_pic`";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1515587467.853924;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6098408;}i:49;a:6:{i:0;s:615:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'cms_pic' AND kcu.table_name = 'cms_pic'";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1515587467.8749249;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6122184;}i:52;a:6:{i:0;s:32:"SHOW FULL COLUMNS FROM `cms_pic`";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1515587467.9009261;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6117136;}i:55;a:6:{i:0;s:615:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'cms_pic' AND kcu.table_name = 'cms_pic'";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1515587467.9169271;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6140912;}i:58;a:6:{i:0;s:32:"SHOW FULL COLUMNS FROM `cms_pic`";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1515587467.9319279;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6135864;}i:61;a:6:{i:0;s:615:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'cms_pic' AND kcu.table_name = 'cms_pic'";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1515587467.9509289;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6159640;}i:64;a:6:{i:0;s:32:"SHOW FULL COLUMNS FROM `cms_pic`";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1515587467.9639299;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6154592;}i:67;a:6:{i:0;s:615:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'cms_pic' AND kcu.table_name = 'cms_pic'";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1515587467.9829309;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6178632;}i:70;a:6:{i:0;s:32:"SHOW FULL COLUMNS FROM `cms_pic`";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1515587468.000932;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6173576;}i:73;a:6:{i:0;s:615:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'cms_pic' AND kcu.table_name = 'cms_pic'";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1515587468.016933;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6197352;}i:76;a:6:{i:0;s:32:"SHOW FULL COLUMNS FROM `cms_pic`";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1515587468.031934;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6192296;}i:79;a:6:{i:0;s:615:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'cms_pic' AND kcu.table_name = 'cms_pic'";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1515587468.0489349;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6216080;}i:82;a:6:{i:0;s:32:"SHOW FULL COLUMNS FROM `cms_pic`";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1515587468.0659361;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6211016;}i:85;a:6:{i:0;s:615:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'cms_pic' AND kcu.table_name = 'cms_pic'";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1515587468.0819371;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6234792;}i:88;a:6:{i:0;s:32:"SHOW FULL COLUMNS FROM `cms_pic`";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1515587468.1029379;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6229736;}i:91;a:6:{i:0;s:615:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'cms_pic' AND kcu.table_name = 'cms_pic'";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1515587468.1219389;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6253520;}i:94;a:6:{i:0;s:32:"SHOW FULL COLUMNS FROM `cms_pic`";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1515587468.1389401;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6248496;}i:97;a:6:{i:0;s:615:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'cms_pic' AND kcu.table_name = 'cms_pic'";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1515587468.1539409;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6272272;}i:100;a:6:{i:0;s:32:"SHOW FULL COLUMNS FROM `cms_pic`";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1515587468.171942;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6267256;}i:103;a:6:{i:0;s:615:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'cms_pic' AND kcu.table_name = 'cms_pic'";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1515587468.1899431;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6291032;}i:106;a:6:{i:0;s:32:"SHOW FULL COLUMNS FROM `cms_pic`";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1515587468.2089441;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6285976;}i:109;a:6:{i:0;s:615:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'cms_pic' AND kcu.table_name = 'cms_pic'";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1515587468.2279451;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6309752;}i:112;a:6:{i:0;s:32:"SHOW FULL COLUMNS FROM `cms_pic`";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1515587468.2439461;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6304696;}i:115;a:6:{i:0;s:615:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'cms_pic' AND kcu.table_name = 'cms_pic'";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1515587468.2619469;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6328472;}i:118;a:6:{i:0;s:309:"UPDATE `cms_pic` SET `id`=7, `status`=2, `publish_time`=1515612663, `allow_comment`=1, `show_template`='show.php', `title`='标题', `keywords`='', `desc`='', `thumb`='', `personPic`='http://vuedemo.com/../uploads/images/2018-01-03//5a4cbfc15cb36.jpg', `update_at`=1515587467, `create_by`='admin' WHERE id = 7";i:1;i:4;i:2;s:23:"yii\db\Command::execute";i:3;d:1515587468.279948;i:4;a:2:{i:0;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:159;s:8:"function";s:7:"execute";s:5:"class";s:14:"yii\db\Command";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6323856;}i:121;a:6:{i:0;s:37:"SHOW FULL COLUMNS FROM `cms_pic_data`";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1515587468.295949;i:4;a:2:{i:0;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:166;s:8:"function";s:6:"update";s:5:"class";s:14:"yii\db\Command";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6332952;}i:124;a:6:{i:0;s:625:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'cms_pic_data' AND kcu.table_name = 'cms_pic_data'";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1515587468.3139501;i:4;a:2:{i:0;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:166;s:8:"function";s:6:"update";s:5:"class";s:14:"yii\db\Command";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6344224;}i:127;a:6:{i:0;s:563:"UPDATE `cms_pic_data` SET `content`='<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style=\"color: rgb(73, 80, 96); font-family: &quot;Hiragino Sans GB&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, 微软雅黑, Arial, sans-serif; font-size: 12px; font-weight: 700; background-color: rgb(255, 255, 255);\">内容详情123</span></p><!-- <span v-html=\"item.value\"></span> --><!-- <span v-html=\"item.value\"></span> --><!-- <span v-html=\"item.value\"></span> -->' WHERE id = 7";i:1;i:4;i:2;s:23:"yii\db\Command::execute";i:3;d:1515587468.3289509;i:4;a:2:{i:0;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:166;s:8:"function";s:7:"execute";s:5:"class";s:14:"yii\db\Command";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6343240;}i:130;a:6:{i:0;s:18:"Commit transaction";i:1;i:8;i:2;s:26:"yii\db\Transaction::commit";i:3;d:1515587468.342952;i:4;a:1:{i:0;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:163;s:8:"function";s:6:"commit";s:5:"class";s:18:"yii\db\Transaction";s:4:"type";s:2:"->";}}i:5;i:6345448;}}}";s:9:"profiling";s:70513:"a:3:{s:6:"memory";i:6493944;s:4:"time";d:0.90105104446411133;s:8:"messages";a:76:{i:5;a:6:{i:0;s:62:"Opening DB connection: mysql:host=47.91.245.120;dbname=cmsDemo";i:1;i:80;i:2;s:23:"yii\db\Connection::open";i:3;d:1515587467.553906;i:4;a:1:{i:0;a:5:{s:4:"file";s:46:"G:\xampp\htdocs\vueDemo\common\models\User.php";s:4:"line";i:48;s:8:"function";s:7:"findOne";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"::";}}i:5;i:4537064;}i:6;a:6:{i:0;s:62:"Opening DB connection: mysql:host=47.91.245.120;dbname=cmsDemo";i:1;i:96;i:2;s:23:"yii\db\Connection::open";i:3;d:1515587467.61691;i:4;a:1:{i:0;a:5:{s:4:"file";s:46:"G:\xampp\htdocs\vueDemo\common\models\User.php";s:4:"line";i:48;s:8:"function";s:7:"findOne";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"::";}}i:5;i:4545640;}i:7;a:6:{i:0;s:65:"SELECT * FROM `cms_admin_manager` WHERE (`id`=5) AND (`status`=1)";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1515587467.61691;i:4;a:1:{i:0;a:5:{s:4:"file";s:46:"G:\xampp\htdocs\vueDemo\common\models\User.php";s:4:"line";i:48;s:8:"function";s:7:"findOne";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"::";}}i:5;i:4544296;}i:8;a:6:{i:0;s:65:"SELECT * FROM `cms_admin_manager` WHERE (`id`=5) AND (`status`=1)";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1515587467.632911;i:4;a:1:{i:0;a:5:{s:4:"file";s:46:"G:\xampp\htdocs\vueDemo\common\models\User.php";s:4:"line";i:48;s:8:"function";s:7:"findOne";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"::";}}i:5;i:4547776;}i:10;a:6:{i:0;s:42:"SHOW FULL COLUMNS FROM `cms_admin_manager`";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1515587467.6349111;i:4;a:1:{i:0;a:5:{s:4:"file";s:46:"G:\xampp\htdocs\vueDemo\common\models\User.php";s:4:"line";i:48;s:8:"function";s:7:"findOne";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"::";}}i:5;i:4609880;}i:11;a:6:{i:0;s:42:"SHOW FULL COLUMNS FROM `cms_admin_manager`";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1515587467.6569121;i:4;a:1:{i:0;a:5:{s:4:"file";s:46:"G:\xampp\htdocs\vueDemo\common\models\User.php";s:4:"line";i:48;s:8:"function";s:7:"findOne";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"::";}}i:5;i:4624544;}i:13;a:6:{i:0;s:635:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'cms_admin_manager' AND kcu.table_name = 'cms_admin_manager'";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1515587467.657912;i:4;a:1:{i:0;a:5:{s:4:"file";s:46:"G:\xampp\htdocs\vueDemo\common\models\User.php";s:4:"line";i:48;s:8:"function";s:7:"findOne";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"::";}}i:5;i:4643120;}i:14;a:6:{i:0;s:635:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'cms_admin_manager' AND kcu.table_name = 'cms_admin_manager'";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1515587467.6759131;i:4;a:1:{i:0;a:5:{s:4:"file";s:46:"G:\xampp\htdocs\vueDemo\common\models\User.php";s:4:"line";i:48;s:8:"function";s:7:"findOne";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"::";}}i:5;i:4644888;}i:29;a:6:{i:0;s:126:"SELECT * FROM `cms_model_field` WHERE (`model_id`='59') AND (`status`=1) AND (`is_delete`=2) AND (`is_hide`=2) ORDER BY `sort`";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1515587467.7269161;i:4;a:2:{i:0;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\models\Field.php";s:4:"line";i:99;s:8:"function";s:3:"all";s:5:"class";s:18:"yii\db\ActiveQuery";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:152;s:8:"function";s:13:"getModelField";s:5:"class";s:19:"common\models\Field";s:4:"type";s:2:"->";}}i:5;i:5752464;}i:30;a:6:{i:0;s:126:"SELECT * FROM `cms_model_field` WHERE (`model_id`='59') AND (`status`=1) AND (`is_delete`=2) AND (`is_hide`=2) ORDER BY `sort`";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1515587467.7419169;i:4;a:2:{i:0;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\models\Field.php";s:4:"line";i:99;s:8:"function";s:3:"all";s:5:"class";s:18:"yii\db\ActiveQuery";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:152;s:8:"function";s:13:"getModelField";s:5:"class";s:19:"common\models\Field";s:4:"type";s:2:"->";}}i:5;i:5770984;}i:32;a:6:{i:0;s:34:"SHOW FULL COLUMNS FROM `cms_model`";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1515587467.7679191;i:4;a:3:{i:0;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\models\Model.php";s:4:"line";i:64;s:8:"function";s:7:"findOne";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:139;s:8:"function";s:12:"getModelInfo";s:5:"class";s:19:"common\models\Model";s:4:"type";s:2:"->";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:5958872;}i:33;a:6:{i:0;s:34:"SHOW FULL COLUMNS FROM `cms_model`";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1515587467.7859199;i:4;a:3:{i:0;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\models\Model.php";s:4:"line";i:64;s:8:"function";s:7:"findOne";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:139;s:8:"function";s:12:"getModelInfo";s:5:"class";s:19:"common\models\Model";s:4:"type";s:2:"->";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:5971648;}i:35;a:6:{i:0;s:619:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'cms_model' AND kcu.table_name = 'cms_model'";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1515587467.7859199;i:4;a:3:{i:0;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\models\Model.php";s:4:"line";i:64;s:8:"function";s:7:"findOne";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:139;s:8:"function";s:12:"getModelInfo";s:5:"class";s:19:"common\models\Model";s:4:"type";s:2:"->";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:5977440;}i:36;a:6:{i:0;s:619:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'cms_model' AND kcu.table_name = 'cms_model'";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1515587467.803921;i:4;a:3:{i:0;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\models\Model.php";s:4:"line";i:64;s:8:"function";s:7:"findOne";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:139;s:8:"function";s:12:"getModelInfo";s:5:"class";s:19:"common\models\Model";s:4:"type";s:2:"->";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:5980704;}i:38;a:6:{i:0;s:41:"SELECT * FROM `cms_model` WHERE `id`='59'";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1515587467.803921;i:4;a:3:{i:0;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\models\Model.php";s:4:"line";i:64;s:8:"function";s:7:"findOne";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:139;s:8:"function";s:12:"getModelInfo";s:5:"class";s:19:"common\models\Model";s:4:"type";s:2:"->";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:5980416;}i:39;a:6:{i:0;s:41:"SELECT * FROM `cms_model` WHERE `id`='59'";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1515587467.819922;i:4;a:3:{i:0;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\models\Model.php";s:4:"line";i:64;s:8:"function";s:7:"findOne";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:139;s:8:"function";s:12:"getModelInfo";s:5:"class";s:19:"common\models\Model";s:4:"type";s:2:"->";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:5984720;}i:41;a:6:{i:0;s:32:"SHOW FULL COLUMNS FROM `cms_pic`";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1515587467.8219221;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6070216;}i:42;a:6:{i:0;s:32:"SHOW FULL COLUMNS FROM `cms_pic`";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1515587467.835923;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6094480;}i:44;a:6:{i:0;s:615:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'cms_pic' AND kcu.table_name = 'cms_pic'";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1515587467.8369229;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6095048;}i:45;a:6:{i:0;s:615:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'cms_pic' AND kcu.table_name = 'cms_pic'";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1515587467.853924;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6098312;}i:47;a:6:{i:0;s:32:"SHOW FULL COLUMNS FROM `cms_pic`";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1515587467.853924;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6101080;}i:48;a:6:{i:0;s:32:"SHOW FULL COLUMNS FROM `cms_pic`";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1515587467.873925;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6125352;}i:50;a:6:{i:0;s:615:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'cms_pic' AND kcu.table_name = 'cms_pic'";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1515587467.8749249;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6125912;}i:51;a:6:{i:0;s:615:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'cms_pic' AND kcu.table_name = 'cms_pic'";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1515587467.9009261;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6129176;}i:53;a:6:{i:0;s:32:"SHOW FULL COLUMNS FROM `cms_pic`";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1515587467.9009261;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6119808;}i:54;a:6:{i:0;s:32:"SHOW FULL COLUMNS FROM `cms_pic`";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1515587467.9159269;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6144096;}i:56;a:6:{i:0;s:615:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'cms_pic' AND kcu.table_name = 'cms_pic'";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1515587467.9169271;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6144640;}i:57;a:6:{i:0;s:615:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'cms_pic' AND kcu.table_name = 'cms_pic'";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1515587467.9319279;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6147904;}i:59;a:6:{i:0;s:32:"SHOW FULL COLUMNS FROM `cms_pic`";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1515587467.9319279;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6138536;}i:60;a:6:{i:0;s:32:"SHOW FULL COLUMNS FROM `cms_pic`";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1515587467.949929;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6162800;}i:62;a:6:{i:0;s:615:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'cms_pic' AND kcu.table_name = 'cms_pic'";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1515587467.9509289;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6163368;}i:63;a:6:{i:0;s:615:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'cms_pic' AND kcu.table_name = 'cms_pic'";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1515587467.9639299;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6166632;}i:65;a:6:{i:0;s:32:"SHOW FULL COLUMNS FROM `cms_pic`";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1515587467.9639299;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6157520;}i:66;a:6:{i:0;s:32:"SHOW FULL COLUMNS FROM `cms_pic`";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1515587467.981931;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6181792;}i:68;a:6:{i:0;s:615:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'cms_pic' AND kcu.table_name = 'cms_pic'";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1515587467.9829309;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6182360;}i:69;a:6:{i:0;s:615:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'cms_pic' AND kcu.table_name = 'cms_pic'";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1515587468.000932;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6185624;}i:71;a:6:{i:0;s:32:"SHOW FULL COLUMNS FROM `cms_pic`";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1515587468.000932;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6176248;}i:72;a:6:{i:0;s:32:"SHOW FULL COLUMNS FROM `cms_pic`";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1515587468.015933;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6200512;}i:74;a:6:{i:0;s:615:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'cms_pic' AND kcu.table_name = 'cms_pic'";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1515587468.016933;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6201080;}i:75;a:6:{i:0;s:615:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'cms_pic' AND kcu.table_name = 'cms_pic'";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1515587468.031934;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6204344;}i:77;a:6:{i:0;s:32:"SHOW FULL COLUMNS FROM `cms_pic`";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1515587468.031934;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6194976;}i:78;a:6:{i:0;s:32:"SHOW FULL COLUMNS FROM `cms_pic`";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1515587468.047935;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6219248;}i:80;a:6:{i:0;s:615:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'cms_pic' AND kcu.table_name = 'cms_pic'";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1515587468.0489349;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6219808;}i:81;a:6:{i:0;s:615:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'cms_pic' AND kcu.table_name = 'cms_pic'";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1515587468.0649359;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6223072;}i:83;a:6:{i:0;s:32:"SHOW FULL COLUMNS FROM `cms_pic`";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1515587468.0659361;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6213688;}i:84;a:6:{i:0;s:32:"SHOW FULL COLUMNS FROM `cms_pic`";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1515587468.0809369;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6237960;}i:86;a:6:{i:0;s:615:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'cms_pic' AND kcu.table_name = 'cms_pic'";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1515587468.0819371;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6238520;}i:87;a:6:{i:0;s:615:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'cms_pic' AND kcu.table_name = 'cms_pic'";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1515587468.1029379;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6241784;}i:89;a:6:{i:0;s:32:"SHOW FULL COLUMNS FROM `cms_pic`";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1515587468.1029379;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6232408;}i:90;a:6:{i:0;s:32:"SHOW FULL COLUMNS FROM `cms_pic`";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1515587468.120939;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6256696;}i:92;a:6:{i:0;s:615:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'cms_pic' AND kcu.table_name = 'cms_pic'";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1515587468.1219389;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6257248;}i:93;a:6:{i:0;s:615:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'cms_pic' AND kcu.table_name = 'cms_pic'";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1515587468.1389401;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6260512;}i:95;a:6:{i:0;s:32:"SHOW FULL COLUMNS FROM `cms_pic`";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1515587468.1389401;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6251168;}i:96;a:6:{i:0;s:32:"SHOW FULL COLUMNS FROM `cms_pic`";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1515587468.152941;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6275440;}i:98;a:6:{i:0;s:615:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'cms_pic' AND kcu.table_name = 'cms_pic'";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1515587468.1539409;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6276000;}i:99;a:6:{i:0;s:615:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'cms_pic' AND kcu.table_name = 'cms_pic'";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1515587468.1709421;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6279264;}i:101;a:6:{i:0;s:32:"SHOW FULL COLUMNS FROM `cms_pic`";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1515587468.171942;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6269928;}i:102;a:6:{i:0;s:32:"SHOW FULL COLUMNS FROM `cms_pic`";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1515587468.1889429;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6294208;}i:104;a:6:{i:0;s:615:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'cms_pic' AND kcu.table_name = 'cms_pic'";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1515587468.190943;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6294760;}i:105;a:6:{i:0;s:615:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'cms_pic' AND kcu.table_name = 'cms_pic'";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1515587468.2089441;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6298024;}i:107;a:6:{i:0;s:32:"SHOW FULL COLUMNS FROM `cms_pic`";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1515587468.2089441;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6288648;}i:108;a:6:{i:0;s:32:"SHOW FULL COLUMNS FROM `cms_pic`";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1515587468.2269449;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6312912;}i:110;a:6:{i:0;s:615:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'cms_pic' AND kcu.table_name = 'cms_pic'";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1515587468.2279451;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6313480;}i:111;a:6:{i:0;s:615:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'cms_pic' AND kcu.table_name = 'cms_pic'";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1515587468.2439461;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6316744;}i:113;a:6:{i:0;s:32:"SHOW FULL COLUMNS FROM `cms_pic`";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1515587468.2439461;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6307368;}i:114;a:6:{i:0;s:32:"SHOW FULL COLUMNS FROM `cms_pic`";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1515587468.2619469;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6331632;}i:116;a:6:{i:0;s:615:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'cms_pic' AND kcu.table_name = 'cms_pic'";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1515587468.2619469;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6332200;}i:117;a:6:{i:0;s:615:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'cms_pic' AND kcu.table_name = 'cms_pic'";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1515587468.279948;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6335464;}i:119;a:6:{i:0;s:309:"UPDATE `cms_pic` SET `id`=7, `status`=2, `publish_time`=1515612663, `allow_comment`=1, `show_template`='show.php', `title`='标题', `keywords`='', `desc`='', `thumb`='', `personPic`='http://vuedemo.com/../uploads/images/2018-01-03//5a4cbfc15cb36.jpg', `update_at`=1515587467, `create_by`='admin' WHERE id = 7";i:1;i:80;i:2;s:23:"yii\db\Command::execute";i:3;d:1515587468.279948;i:4;a:2:{i:0;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:159;s:8:"function";s:7:"execute";s:5:"class";s:14:"yii\db\Command";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6324920;}i:120;a:6:{i:0;s:309:"UPDATE `cms_pic` SET `id`=7, `status`=2, `publish_time`=1515612663, `allow_comment`=1, `show_template`='show.php', `title`='标题', `keywords`='', `desc`='', `thumb`='', `personPic`='http://vuedemo.com/../uploads/images/2018-01-03//5a4cbfc15cb36.jpg', `update_at`=1515587467, `create_by`='admin' WHERE id = 7";i:1;i:96;i:2;s:23:"yii\db\Command::execute";i:3;d:1515587468.2949491;i:4;a:2:{i:0;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:159;s:8:"function";s:7:"execute";s:5:"class";s:14:"yii\db\Command";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6327248;}i:122;a:6:{i:0;s:37:"SHOW FULL COLUMNS FROM `cms_pic_data`";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1515587468.295949;i:4;a:2:{i:0;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:166;s:8:"function";s:6:"update";s:5:"class";s:14:"yii\db\Command";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6334944;}i:123;a:6:{i:0;s:37:"SHOW FULL COLUMNS FROM `cms_pic_data`";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1515587468.3139501;i:4;a:2:{i:0;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:166;s:8:"function";s:6:"update";s:5:"class";s:14:"yii\db\Command";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6339896;}i:125;a:6:{i:0;s:625:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'cms_pic_data' AND kcu.table_name = 'cms_pic_data'";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1515587468.3139501;i:4;a:2:{i:0;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:166;s:8:"function";s:6:"update";s:5:"class";s:14:"yii\db\Command";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6347296;}i:126;a:6:{i:0;s:625:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'cms_pic_data' AND kcu.table_name = 'cms_pic_data'";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1515587468.3289509;i:4;a:2:{i:0;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:166;s:8:"function";s:6:"update";s:5:"class";s:14:"yii\db\Command";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6349816;}i:128;a:6:{i:0;s:563:"UPDATE `cms_pic_data` SET `content`='<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style=\"color: rgb(73, 80, 96); font-family: &quot;Hiragino Sans GB&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, 微软雅黑, Arial, sans-serif; font-size: 12px; font-weight: 700; background-color: rgb(255, 255, 255);\">内容详情123</span></p><!-- <span v-html=\"item.value\"></span> --><!-- <span v-html=\"item.value\"></span> --><!-- <span v-html=\"item.value\"></span> -->' WHERE id = 7";i:1;i:80;i:2;s:23:"yii\db\Command::execute";i:3;d:1515587468.3289509;i:4;a:2:{i:0;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:166;s:8:"function";s:7:"execute";s:5:"class";s:14:"yii\db\Command";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6345704;}i:129;a:6:{i:0;s:563:"UPDATE `cms_pic_data` SET `content`='<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style=\"color: rgb(73, 80, 96); font-family: &quot;Hiragino Sans GB&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, 微软雅黑, Arial, sans-serif; font-size: 12px; font-weight: 700; background-color: rgb(255, 255, 255);\">内容详情123</span></p><!-- <span v-html=\"item.value\"></span> --><!-- <span v-html=\"item.value\"></span> --><!-- <span v-html=\"item.value\"></span> -->' WHERE id = 7";i:1;i:96;i:2;s:23:"yii\db\Command::execute";i:3;d:1515587468.342952;i:4;a:2:{i:0;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:166;s:8:"function";s:7:"execute";s:5:"class";s:14:"yii\db\Command";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6348544;}}}";s:2:"db";s:69740:"a:1:{s:8:"messages";a:74:{i:7;a:6:{i:0;s:65:"SELECT * FROM `cms_admin_manager` WHERE (`id`=5) AND (`status`=1)";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1515587467.61691;i:4;a:1:{i:0;a:5:{s:4:"file";s:46:"G:\xampp\htdocs\vueDemo\common\models\User.php";s:4:"line";i:48;s:8:"function";s:7:"findOne";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"::";}}i:5;i:4544296;}i:8;a:6:{i:0;s:65:"SELECT * FROM `cms_admin_manager` WHERE (`id`=5) AND (`status`=1)";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1515587467.632911;i:4;a:1:{i:0;a:5:{s:4:"file";s:46:"G:\xampp\htdocs\vueDemo\common\models\User.php";s:4:"line";i:48;s:8:"function";s:7:"findOne";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"::";}}i:5;i:4547776;}i:10;a:6:{i:0;s:42:"SHOW FULL COLUMNS FROM `cms_admin_manager`";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1515587467.6349111;i:4;a:1:{i:0;a:5:{s:4:"file";s:46:"G:\xampp\htdocs\vueDemo\common\models\User.php";s:4:"line";i:48;s:8:"function";s:7:"findOne";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"::";}}i:5;i:4609880;}i:11;a:6:{i:0;s:42:"SHOW FULL COLUMNS FROM `cms_admin_manager`";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1515587467.6569121;i:4;a:1:{i:0;a:5:{s:4:"file";s:46:"G:\xampp\htdocs\vueDemo\common\models\User.php";s:4:"line";i:48;s:8:"function";s:7:"findOne";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"::";}}i:5;i:4624544;}i:13;a:6:{i:0;s:635:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'cms_admin_manager' AND kcu.table_name = 'cms_admin_manager'";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1515587467.657912;i:4;a:1:{i:0;a:5:{s:4:"file";s:46:"G:\xampp\htdocs\vueDemo\common\models\User.php";s:4:"line";i:48;s:8:"function";s:7:"findOne";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"::";}}i:5;i:4643120;}i:14;a:6:{i:0;s:635:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'cms_admin_manager' AND kcu.table_name = 'cms_admin_manager'";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1515587467.6759131;i:4;a:1:{i:0;a:5:{s:4:"file";s:46:"G:\xampp\htdocs\vueDemo\common\models\User.php";s:4:"line";i:48;s:8:"function";s:7:"findOne";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"::";}}i:5;i:4644888;}i:29;a:6:{i:0;s:126:"SELECT * FROM `cms_model_field` WHERE (`model_id`='59') AND (`status`=1) AND (`is_delete`=2) AND (`is_hide`=2) ORDER BY `sort`";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1515587467.7269161;i:4;a:2:{i:0;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\models\Field.php";s:4:"line";i:99;s:8:"function";s:3:"all";s:5:"class";s:18:"yii\db\ActiveQuery";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:152;s:8:"function";s:13:"getModelField";s:5:"class";s:19:"common\models\Field";s:4:"type";s:2:"->";}}i:5;i:5752464;}i:30;a:6:{i:0;s:126:"SELECT * FROM `cms_model_field` WHERE (`model_id`='59') AND (`status`=1) AND (`is_delete`=2) AND (`is_hide`=2) ORDER BY `sort`";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1515587467.7419169;i:4;a:2:{i:0;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\models\Field.php";s:4:"line";i:99;s:8:"function";s:3:"all";s:5:"class";s:18:"yii\db\ActiveQuery";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:152;s:8:"function";s:13:"getModelField";s:5:"class";s:19:"common\models\Field";s:4:"type";s:2:"->";}}i:5;i:5770984;}i:32;a:6:{i:0;s:34:"SHOW FULL COLUMNS FROM `cms_model`";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1515587467.7679191;i:4;a:3:{i:0;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\models\Model.php";s:4:"line";i:64;s:8:"function";s:7:"findOne";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:139;s:8:"function";s:12:"getModelInfo";s:5:"class";s:19:"common\models\Model";s:4:"type";s:2:"->";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:5958872;}i:33;a:6:{i:0;s:34:"SHOW FULL COLUMNS FROM `cms_model`";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1515587467.7859199;i:4;a:3:{i:0;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\models\Model.php";s:4:"line";i:64;s:8:"function";s:7:"findOne";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:139;s:8:"function";s:12:"getModelInfo";s:5:"class";s:19:"common\models\Model";s:4:"type";s:2:"->";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:5971648;}i:35;a:6:{i:0;s:619:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'cms_model' AND kcu.table_name = 'cms_model'";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1515587467.7859199;i:4;a:3:{i:0;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\models\Model.php";s:4:"line";i:64;s:8:"function";s:7:"findOne";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:139;s:8:"function";s:12:"getModelInfo";s:5:"class";s:19:"common\models\Model";s:4:"type";s:2:"->";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:5977440;}i:36;a:6:{i:0;s:619:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'cms_model' AND kcu.table_name = 'cms_model'";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1515587467.803921;i:4;a:3:{i:0;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\models\Model.php";s:4:"line";i:64;s:8:"function";s:7:"findOne";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:139;s:8:"function";s:12:"getModelInfo";s:5:"class";s:19:"common\models\Model";s:4:"type";s:2:"->";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:5980704;}i:38;a:6:{i:0;s:41:"SELECT * FROM `cms_model` WHERE `id`='59'";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1515587467.803921;i:4;a:3:{i:0;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\models\Model.php";s:4:"line";i:64;s:8:"function";s:7:"findOne";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:139;s:8:"function";s:12:"getModelInfo";s:5:"class";s:19:"common\models\Model";s:4:"type";s:2:"->";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:5980416;}i:39;a:6:{i:0;s:41:"SELECT * FROM `cms_model` WHERE `id`='59'";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1515587467.819922;i:4;a:3:{i:0;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\models\Model.php";s:4:"line";i:64;s:8:"function";s:7:"findOne";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:139;s:8:"function";s:12:"getModelInfo";s:5:"class";s:19:"common\models\Model";s:4:"type";s:2:"->";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:5984720;}i:41;a:6:{i:0;s:32:"SHOW FULL COLUMNS FROM `cms_pic`";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1515587467.8219221;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6070216;}i:42;a:6:{i:0;s:32:"SHOW FULL COLUMNS FROM `cms_pic`";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1515587467.835923;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6094480;}i:44;a:6:{i:0;s:615:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'cms_pic' AND kcu.table_name = 'cms_pic'";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1515587467.8369229;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6095048;}i:45;a:6:{i:0;s:615:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'cms_pic' AND kcu.table_name = 'cms_pic'";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1515587467.853924;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6098312;}i:47;a:6:{i:0;s:32:"SHOW FULL COLUMNS FROM `cms_pic`";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1515587467.853924;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6101080;}i:48;a:6:{i:0;s:32:"SHOW FULL COLUMNS FROM `cms_pic`";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1515587467.873925;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6125352;}i:50;a:6:{i:0;s:615:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'cms_pic' AND kcu.table_name = 'cms_pic'";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1515587467.8749249;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6125912;}i:51;a:6:{i:0;s:615:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'cms_pic' AND kcu.table_name = 'cms_pic'";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1515587467.9009261;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6129176;}i:53;a:6:{i:0;s:32:"SHOW FULL COLUMNS FROM `cms_pic`";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1515587467.9009261;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6119808;}i:54;a:6:{i:0;s:32:"SHOW FULL COLUMNS FROM `cms_pic`";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1515587467.9159269;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6144096;}i:56;a:6:{i:0;s:615:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'cms_pic' AND kcu.table_name = 'cms_pic'";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1515587467.9169271;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6144640;}i:57;a:6:{i:0;s:615:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'cms_pic' AND kcu.table_name = 'cms_pic'";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1515587467.9319279;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6147904;}i:59;a:6:{i:0;s:32:"SHOW FULL COLUMNS FROM `cms_pic`";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1515587467.9319279;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6138536;}i:60;a:6:{i:0;s:32:"SHOW FULL COLUMNS FROM `cms_pic`";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1515587467.949929;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6162800;}i:62;a:6:{i:0;s:615:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'cms_pic' AND kcu.table_name = 'cms_pic'";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1515587467.9509289;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6163368;}i:63;a:6:{i:0;s:615:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'cms_pic' AND kcu.table_name = 'cms_pic'";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1515587467.9639299;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6166632;}i:65;a:6:{i:0;s:32:"SHOW FULL COLUMNS FROM `cms_pic`";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1515587467.9639299;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6157520;}i:66;a:6:{i:0;s:32:"SHOW FULL COLUMNS FROM `cms_pic`";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1515587467.981931;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6181792;}i:68;a:6:{i:0;s:615:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'cms_pic' AND kcu.table_name = 'cms_pic'";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1515587467.9829309;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6182360;}i:69;a:6:{i:0;s:615:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'cms_pic' AND kcu.table_name = 'cms_pic'";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1515587468.000932;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6185624;}i:71;a:6:{i:0;s:32:"SHOW FULL COLUMNS FROM `cms_pic`";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1515587468.000932;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6176248;}i:72;a:6:{i:0;s:32:"SHOW FULL COLUMNS FROM `cms_pic`";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1515587468.015933;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6200512;}i:74;a:6:{i:0;s:615:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'cms_pic' AND kcu.table_name = 'cms_pic'";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1515587468.016933;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6201080;}i:75;a:6:{i:0;s:615:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'cms_pic' AND kcu.table_name = 'cms_pic'";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1515587468.031934;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6204344;}i:77;a:6:{i:0;s:32:"SHOW FULL COLUMNS FROM `cms_pic`";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1515587468.031934;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6194976;}i:78;a:6:{i:0;s:32:"SHOW FULL COLUMNS FROM `cms_pic`";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1515587468.047935;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6219248;}i:80;a:6:{i:0;s:615:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'cms_pic' AND kcu.table_name = 'cms_pic'";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1515587468.0489349;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6219808;}i:81;a:6:{i:0;s:615:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'cms_pic' AND kcu.table_name = 'cms_pic'";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1515587468.0649359;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6223072;}i:83;a:6:{i:0;s:32:"SHOW FULL COLUMNS FROM `cms_pic`";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1515587468.0659361;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6213688;}i:84;a:6:{i:0;s:32:"SHOW FULL COLUMNS FROM `cms_pic`";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1515587468.0809369;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6237960;}i:86;a:6:{i:0;s:615:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'cms_pic' AND kcu.table_name = 'cms_pic'";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1515587468.0819371;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6238520;}i:87;a:6:{i:0;s:615:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'cms_pic' AND kcu.table_name = 'cms_pic'";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1515587468.1029379;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6241784;}i:89;a:6:{i:0;s:32:"SHOW FULL COLUMNS FROM `cms_pic`";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1515587468.1029379;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6232408;}i:90;a:6:{i:0;s:32:"SHOW FULL COLUMNS FROM `cms_pic`";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1515587468.120939;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6256696;}i:92;a:6:{i:0;s:615:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'cms_pic' AND kcu.table_name = 'cms_pic'";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1515587468.1219389;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6257248;}i:93;a:6:{i:0;s:615:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'cms_pic' AND kcu.table_name = 'cms_pic'";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1515587468.1389401;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6260512;}i:95;a:6:{i:0;s:32:"SHOW FULL COLUMNS FROM `cms_pic`";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1515587468.1389401;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6251168;}i:96;a:6:{i:0;s:32:"SHOW FULL COLUMNS FROM `cms_pic`";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1515587468.152941;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6275440;}i:98;a:6:{i:0;s:615:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'cms_pic' AND kcu.table_name = 'cms_pic'";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1515587468.1539409;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6276000;}i:99;a:6:{i:0;s:615:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'cms_pic' AND kcu.table_name = 'cms_pic'";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1515587468.1709421;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6279264;}i:101;a:6:{i:0;s:32:"SHOW FULL COLUMNS FROM `cms_pic`";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1515587468.171942;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6269928;}i:102;a:6:{i:0;s:32:"SHOW FULL COLUMNS FROM `cms_pic`";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1515587468.1889429;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6294208;}i:104;a:6:{i:0;s:615:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'cms_pic' AND kcu.table_name = 'cms_pic'";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1515587468.190943;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6294760;}i:105;a:6:{i:0;s:615:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'cms_pic' AND kcu.table_name = 'cms_pic'";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1515587468.2089441;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6298024;}i:107;a:6:{i:0;s:32:"SHOW FULL COLUMNS FROM `cms_pic`";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1515587468.2089441;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6288648;}i:108;a:6:{i:0;s:32:"SHOW FULL COLUMNS FROM `cms_pic`";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1515587468.2269449;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6312912;}i:110;a:6:{i:0;s:615:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'cms_pic' AND kcu.table_name = 'cms_pic'";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1515587468.2279451;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6313480;}i:111;a:6:{i:0;s:615:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'cms_pic' AND kcu.table_name = 'cms_pic'";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1515587468.2439461;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6316744;}i:113;a:6:{i:0;s:32:"SHOW FULL COLUMNS FROM `cms_pic`";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1515587468.2439461;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6307368;}i:114;a:6:{i:0;s:32:"SHOW FULL COLUMNS FROM `cms_pic`";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1515587468.2619469;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6331632;}i:116;a:6:{i:0;s:615:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'cms_pic' AND kcu.table_name = 'cms_pic'";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1515587468.2619469;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6332200;}i:117;a:6:{i:0;s:615:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'cms_pic' AND kcu.table_name = 'cms_pic'";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1515587468.279948;i:4;a:3:{i:0;a:5:{s:4:"file";s:44:"G:\xampp\htdocs\vueDemo\common\lib\Table.php";s:4:"line";i:115;s:8:"function";s:14:"getTableSchema";s:5:"class";s:13:"yii\db\Schema";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:147;s:8:"function";s:11:"checkColumn";s:5:"class";s:16:"common\lib\Table";s:4:"type";s:2:"::";}i:2;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6335464;}i:119;a:6:{i:0;s:309:"UPDATE `cms_pic` SET `id`=7, `status`=2, `publish_time`=1515612663, `allow_comment`=1, `show_template`='show.php', `title`='标题', `keywords`='', `desc`='', `thumb`='', `personPic`='http://vuedemo.com/../uploads/images/2018-01-03//5a4cbfc15cb36.jpg', `update_at`=1515587467, `create_by`='admin' WHERE id = 7";i:1;i:80;i:2;s:23:"yii\db\Command::execute";i:3;d:1515587468.279948;i:4;a:2:{i:0;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:159;s:8:"function";s:7:"execute";s:5:"class";s:14:"yii\db\Command";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6324920;}i:120;a:6:{i:0;s:309:"UPDATE `cms_pic` SET `id`=7, `status`=2, `publish_time`=1515612663, `allow_comment`=1, `show_template`='show.php', `title`='标题', `keywords`='', `desc`='', `thumb`='', `personPic`='http://vuedemo.com/../uploads/images/2018-01-03//5a4cbfc15cb36.jpg', `update_at`=1515587467, `create_by`='admin' WHERE id = 7";i:1;i:96;i:2;s:23:"yii\db\Command::execute";i:3;d:1515587468.2949491;i:4;a:2:{i:0;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:159;s:8:"function";s:7:"execute";s:5:"class";s:14:"yii\db\Command";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6327248;}i:122;a:6:{i:0;s:37:"SHOW FULL COLUMNS FROM `cms_pic_data`";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1515587468.295949;i:4;a:2:{i:0;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:166;s:8:"function";s:6:"update";s:5:"class";s:14:"yii\db\Command";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6334944;}i:123;a:6:{i:0;s:37:"SHOW FULL COLUMNS FROM `cms_pic_data`";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1515587468.3139501;i:4;a:2:{i:0;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:166;s:8:"function";s:6:"update";s:5:"class";s:14:"yii\db\Command";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6339896;}i:125;a:6:{i:0;s:625:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'cms_pic_data' AND kcu.table_name = 'cms_pic_data'";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1515587468.3139501;i:4;a:2:{i:0;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:166;s:8:"function";s:6:"update";s:5:"class";s:14:"yii\db\Command";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6347296;}i:126;a:6:{i:0;s:625:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'cms_pic_data' AND kcu.table_name = 'cms_pic_data'";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1515587468.3289509;i:4;a:2:{i:0;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:166;s:8:"function";s:6:"update";s:5:"class";s:14:"yii\db\Command";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6349816;}i:128;a:6:{i:0;s:563:"UPDATE `cms_pic_data` SET `content`='<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style=\"color: rgb(73, 80, 96); font-family: &quot;Hiragino Sans GB&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, 微软雅黑, Arial, sans-serif; font-size: 12px; font-weight: 700; background-color: rgb(255, 255, 255);\">内容详情123</span></p><!-- <span v-html=\"item.value\"></span> --><!-- <span v-html=\"item.value\"></span> --><!-- <span v-html=\"item.value\"></span> -->' WHERE id = 7";i:1;i:80;i:2;s:23:"yii\db\Command::execute";i:3;d:1515587468.3289509;i:4;a:2:{i:0;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:166;s:8:"function";s:7:"execute";s:5:"class";s:14:"yii\db\Command";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6345704;}i:129;a:6:{i:0;s:563:"UPDATE `cms_pic_data` SET `content`='<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style=\"color: rgb(73, 80, 96); font-family: &quot;Hiragino Sans GB&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, 微软雅黑, Arial, sans-serif; font-size: 12px; font-weight: 700; background-color: rgb(255, 255, 255);\">内容详情123</span></p><!-- <span v-html=\"item.value\"></span> --><!-- <span v-html=\"item.value\"></span> --><!-- <span v-html=\"item.value\"></span> -->' WHERE id = 7";i:1;i:96;i:2;s:23:"yii\db\Command::execute";i:3;d:1515587468.342952;i:4;a:2:{i:0;a:5:{s:4:"file";s:47:"G:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php";s:4:"line";i:166;s:8:"function";s:7:"execute";s:5:"class";s:14:"yii\db\Command";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:65:"G:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php";s:4:"line";i:158;s:8:"function";s:17:"updateAssembleSql";s:5:"class";s:19:"common\lib\sqlQuery";s:4:"type";s:2:"::";}}i:5;i:6348544;}}}";s:6:"assets";s:6:"a:0:{}";s:4:"mail";s:6:"a:0:{}";s:8:"timeline";s:92:"a:3:{s:5:"start";d:1515587467.4719019;s:3:"end";d:1515587468.374953;s:6:"memory";i:6655592;}";s:4:"user";s:1298:"a:5:{s:2:"id";i:5;s:8:"identity";a:11:{s:2:"id";s:1:"5";s:8:"username";s:7:"'admin'";s:8:"auth_key";s:34:"'x0u7ehCYhUCyujOmCVaASB4j0Wzv0EXR'";s:13:"password_hash";s:62:"'$2y$13$nwh1xP/F.DtR4EEWfyabV.qUGFpjEWTU/ai2WaMJcfig.a.R7.d4q'";s:20:"password_reset_token";s:4:"null";s:5:"email";s:19:"'1036753791@qq.com'";s:6:"status";s:1:"1";s:4:"desc";s:2:"''";s:10:"created_at";s:10:"1495095287";s:10:"updated_at";s:10:"1515068951";s:4:"role";s:15:"'administrator'";}s:10:"attributes";a:11:{i:0;a:2:{s:9:"attribute";s:2:"id";s:5:"label";s:2:"Id";}i:1;a:2:{s:9:"attribute";s:8:"username";s:5:"label";s:8:"Username";}i:2;a:2:{s:9:"attribute";s:8:"auth_key";s:5:"label";s:8:"Auth Key";}i:3;a:2:{s:9:"attribute";s:13:"password_hash";s:5:"label";s:13:"Password Hash";}i:4;a:2:{s:9:"attribute";s:20:"password_reset_token";s:5:"label";s:20:"Password Reset Token";}i:5;a:2:{s:9:"attribute";s:5:"email";s:5:"label";s:5:"Email";}i:6;a:2:{s:9:"attribute";s:6:"status";s:5:"label";s:6:"Status";}i:7;a:2:{s:9:"attribute";s:4:"desc";s:5:"label";s:4:"Desc";}i:8;a:2:{s:9:"attribute";s:10:"created_at";s:5:"label";s:10:"Created At";}i:9;a:2:{s:9:"attribute";s:10:"updated_at";s:5:"label";s:10:"Updated At";}i:10;a:2:{s:9:"attribute";s:4:"role";s:5:"label";s:4:"Role";}}s:13:"rolesProvider";N;s:19:"permissionsProvider";N;}";s:6:"router";s:1162:"a:1:{s:8:"messages";a:6:{i:18;a:6:{i:0;a:3:{s:4:"rule";s:3:"gii";s:5:"match";b:0;s:6:"parent";N;}i:1;i:8;i:2;s:32:"yii\web\UrlManager::parseRequest";i:3;d:1515587467.689914;i:4;a:0:{}i:5;i:5431856;}i:19;a:6:{i:0;a:3:{s:4:"rule";s:12:"gii/<id:\w+>";s:5:"match";b:0;s:6:"parent";N;}i:1;i:8;i:2;s:32:"yii\web\UrlManager::parseRequest";i:3;d:1515587467.689914;i:4;a:0:{}i:5;i:5432968;}i:20;a:6:{i:0;a:3:{s:4:"rule";s:41:"gii/<controller:[\w\-]+>/<action:[\w\-]+>";s:5:"match";b:0;s:6:"parent";N;}i:1;i:8;i:2;s:32:"yii\web\UrlManager::parseRequest";i:3;d:1515587467.689914;i:4;a:0:{}i:5;i:5434120;}i:21;a:6:{i:0;a:3:{s:4:"rule";s:5:"debug";s:5:"match";b:0;s:6:"parent";N;}i:1;i:8;i:2;s:32:"yii\web\UrlManager::parseRequest";i:3;d:1515587467.689914;i:4;a:0:{}i:5;i:5435232;}i:22;a:6:{i:0;a:3:{s:4:"rule";s:43:"debug/<controller:[\w\-]+>/<action:[\w\-]+>";s:5:"match";b:0;s:6:"parent";N;}i:1;i:8;i:2;s:32:"yii\web\UrlManager::parseRequest";i:3;d:1515587467.689914;i:4;a:0:{}i:5;i:5436384;}i:23;a:6:{i:0;s:55:"No matching URL rules. Using default URL parsing logic.";i:1;i:8;i:2;s:32:"yii\web\UrlManager::parseRequest";i:3;d:1515587467.689914;i:4;a:0:{}i:5;i:5437192;}}}";s:7:"summary";a:9:{s:3:"tag";s:13:"5a56078ba7372";s:3:"url";s:45:"http://vuedemo.com/admin/content/edit-content";s:4:"ajax";i:1;s:6:"method";s:4:"POST";s:2:"ip";s:9:"127.0.0.1";s:4:"time";d:1515587467.4430001;s:10:"statusCode";i:200;s:8:"sqlCount";i:37;s:9:"mailCount";i:0;}s:10:"exceptions";a:0:{}}
