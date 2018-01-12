@@ -8,6 +8,7 @@ use common\models\Config;
 
 
 class BaseController extends Controller{
+    public $layout=false;
     public $config;
 
     public function init(){
