@@ -49,6 +49,21 @@
         border-bottom: 1px dashed #dddee1;
         height: 50px;
       }
+      .ivu-upload-drag,.ivu-upload-drag:hover{
+        border: none;
+      }
+      .upload-text{
+        width: 18% !important;
+        float: left;
+        margin-right: 12px;
+      }
+      .upload-button{
+        width: 49px;
+        height: 31px;
+        line-height: 31px;
+        cursor: pointer;
+        border-radius: 4px;
+      }
     </style>
 <div class="right-content" id="app" v-cloak>
   <div class="card">
@@ -128,7 +143,7 @@
                     <span class="field-title">允许上传附件大小</span>
                     <p>单位：kb</p>
                   </span>
-                  <i-Input type="text" v-model="fileInline.uploadmaxsize"></i-Input>
+                  <i-Input type="text" v-model="fileInline.uploadmaxsize" number="true"></i-Input>
               </Form-Item>
               <Form-Item label="名称" prop="uploadallowext">
                   <span slot="label">
@@ -147,22 +162,36 @@
                     <Radio label="2">关闭</Radio>
                   </Radio-Group>
               </Form-Item>
-
               <Form-Item label="名称" prop="watermarkimg">
                   <span slot="label">
                     <span class="field-title">水印图片</span>
                   </span>
-                  <Radio-Group v-model="fileInline.watermarkimg">
-                    <Radio label="1">开启</Radio>
-                    <Radio label="2">关闭</Radio>
-                  </Radio-Group>
+                  <template>
+                    <i-Input type="text" v-model="fileInline.watermarkimg" class="upload-text" 
+                    @on-click="handleView()" icon="search" title="点击图标预览">
+                    </i-Input>
+                    <Upload
+                        ref="upload"
+                        :show-upload-list="false"
+                        :on-success="handleSuccess"
+                        :format="['jpg','jpeg','png']"
+                        type="drag"
+                        name="File"
+                        action="/admin/upload/upload"
+                        style="display: inline-block;width:58px;">
+                        <i-Button>上传</i-Button>
+                    </Upload>
+                    <Modal title="View Image" v-model="visible">
+                        <img :src="imgUrl" v-if="visible" style="width: 100%">
+                    </Modal>
+                </template>
               </Form-Item>
               <Form-Item label="名称" prop="watermarkpct">
                   <span slot="label">
                     <span class="field-title">水印透明度</span>
                     <p>最多15个字符；如:意随心</p>
                   </span>
-                  <i-Input type="text" v-model="fileInline.watermarkpct" :maxlength=15></i-Input>
+                  <i-Input type="text" v-model="fileInline.watermarkpct" number="true"></i-Input>
               </Form-Item>
               <Form-Item label="名称" prop="watermarkpos">
                   <span slot="label">
@@ -229,6 +258,9 @@
               },
               loading:false,
               button:1,
+              imgUrl: '/public/admin/img/logo.png',
+              visible: false,
+              uploadList: [],
               basicRules: {
                 sitename: [
                     { maxlength:30, message: '最多30个字符', trigger:'blur'}
@@ -251,18 +283,19 @@
               },
               fileRules: {
                 uploadmaxsize: [
-                    { type:'number', message: '只能为数字1', trigger:'blur'}
+                    { type:'number', message: '只能为数字', trigger:'blur'}
                 ],
-                // watermarkpct: [
-                //     //{ Range:[0,100], message: '最大只能为100', trigger:'blur'},
-                //     { type:'number', message: '只能为数字', trigger:'blur'}
-                // ],
+                watermarkpct: [
+                    { Range:[0,100], message: '范围只能为0~100', trigger:'blur'},
+                    { type:'number', message: '只能为数字', trigger:'blur'}
+                ],
               }
             }
         },
         mounted: function() {
           var _that = this;
           _that.getConfig();
+          _that.uploadList = this.$refs.upload.fileList;
         },
         methods: {
           tabs_change:function(tab_value){
@@ -310,6 +343,15 @@
                     );
                 }
               })
+            },
+            handleView () {
+                this.visible = true;
+            },
+            handleSuccess (res, file) {
+              var img_path = res.data.base_url+'/'+res.data.path+'/'+res.data.name;
+              this.fileInline.watermarkimg = img_path;
+              this.imgUrl = img_path;
+              
             }
         }
     })
