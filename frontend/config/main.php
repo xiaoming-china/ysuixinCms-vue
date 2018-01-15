@@ -12,6 +12,7 @@ return [
     'bootstrap' => ['log'],
     'controllerNamespace' => 'frontend\controllers',
     'viewPath'=>dirname(dirname(__DIR__)).'/web/template',
+    'runtimePath'=>dirname(dirname(__DIR__)).'/web/runtime',
     'components' => [
         'request' => [
             'csrfParam' => '_csrf-frontend',

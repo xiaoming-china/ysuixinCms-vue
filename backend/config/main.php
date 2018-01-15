@@ -10,6 +10,7 @@ return [
     'id' => 'app-backend',
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'backend\controllers',
+    'runtimePath'=>dirname(dirname(__DIR__)).'/web/runtime',
     'bootstrap' => ['log'],
     'modules' => [],
     'components' => [
