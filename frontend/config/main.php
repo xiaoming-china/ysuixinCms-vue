@@ -35,9 +35,9 @@ return [
                 ],
             ],
         ],
-        'errorHandler' => [
-            'errorAction' => 'site/error',
-        ],
+        // 'errorHandler' => [
+        //     'errorAction' => 'site/error',
+        // ],
         'assetManager' => [
             'appendTimestamp' => true,
             'basePath' => '@webroot/public',

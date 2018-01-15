@@ -1,12 +1,14 @@
 <!doctype html>
 <html class="no-js" lang="en">
   <head>
-    <title>意随心</title>
+    <title><?=$title?></title>
+    <meta name="keywords" content="<?=$keywords?>"/>
+    <meta name="description" content="<?=$description?>"/>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style/basic.css" />
-    <link rel="stylesheet" href="style/index.css" />
-    <link rel="stylesheet" href="style/animate.min.css">
+    <link rel="stylesheet" href="/public/home/style/basic.css" />
+    <link rel="stylesheet" href="/public/home/style/index.css" />
+    <link rel="stylesheet" href="/public/home/style/animate.min.css">
     <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -35,9 +37,6 @@
             <li >
               <a href="blog.html">Blog</a>
             </li>
-            <!--<li>
-              <a href="/Home/Photo/index.html">相册</a>
-            </li>-->
             <li >
               <a href="message.html">留言</a>
             </li>
