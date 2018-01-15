@@ -55,8 +55,18 @@ class PublicController extends AdminBaseController{
      * @return string
      */
     public function actionLogout(){
-        Yii::$app->user->logout();
+       Yii::$app->user->logout();
        return $this->ajaxSuccess('退出成功');
+    }
+    /**
+     * [actionLogout 清除缓存]
+     * @author:xiaoming
+     * @date:2018-01-15T14:20:27+0800
+     * @return                        [type] [description]
+     */
+    public function actionCacheFlush(){
+       Yii::$app->cache->flush();
+       return $this->ajaxSuccess('清除成功');
     }
 
 

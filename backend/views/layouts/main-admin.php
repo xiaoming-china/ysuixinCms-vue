@@ -29,9 +29,9 @@
         isset(Yii::$app->user->identity->username) ? 
         Yii::$app->user->identity->username : ''; 
       ?> 
-          <a href="#" id="logout">【退出】</a>
+      <a href="#" id="logout">【退出】</a>
       </span>
-      <span></span>
+      <span><a href="#" id="cache_flush">【清除缓存】</a></span>
     </div> 
   </header>
   <div class="main-content">

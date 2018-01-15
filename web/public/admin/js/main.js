@@ -107,5 +107,20 @@ function $ajax(url, postData, type, succCallback, errorCallback,loading){
               }
         );
     })
+    //清除缓存
+    $('#cache_flush').click(function(){
+        $ajax(
+            '/admin/public/cache-flush',
+             '', 
+             'post',
+              function(res){
+                var vueInstance = new Vue({el: '#app'});// 挂载vue实例到DOM节点
+                vueInstance.$Message.success("清除成功");
+              }, 
+              function(res){
+                console.log('服务器错误');
+              }
+        );
+    })
 }
 
