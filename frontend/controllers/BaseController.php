@@ -14,7 +14,7 @@ class BaseController extends Controller{
     public function init(){
         //加载配置信息
         $this->config = Config::getAllConfig();
-        $this->config['theme'] = Template.$this->config['theme'].'/'.'Page/';
+        $this->config['theme'] = '/'.$this->config['theme'].'/Page/';
     }
 
 
