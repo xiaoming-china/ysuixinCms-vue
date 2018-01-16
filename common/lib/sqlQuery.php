@@ -27,26 +27,41 @@ class sqlQuery extends BaseModel{
 	 * @return          [type]                             [description]
 	 */
 	public static function selectData($table='',$param = []){
-        $pageSize   = $param['pageSize'] == '' ? Yii::$app->params['default_page_size'] : $param['pageSize'];
-        $offset     = ($param['page'] - 1) * $pageSize;
+        $pageSize   = !isset($param['pageSize']) || $param['pageSize'] == '' ? Yii::$app->params['default_page_size'] : $param['pageSize'];
+        $page = !isset($param['page']) || $param['page'] == '' ? 1 : $param['page'];
+        $offset     = ($page - 1) * $pageSize;
         $table_name = Yii::$app->params['tablePrefix'].$table;
 		$sql  = (new Query())->from($table_name.' AS t')->where(['t.is_delete'=>2]);
-        if($param['start_time'] != '' && $param['end_time'] != ''){
-            $start_time = strtotime(date('Y-m-d',strtotime($param['start_time']) - 86400).' 23:59:59');
-            $end_time = strtotime(date('Y-m-d',strtotime($param['end_time']) + 86400).' 00:00:00');
-            $sql->andFilterWhere(['between', 'created_at', $start_time, $end_time]);
+        if(isset($param['start_time']) && isset($param['end_time'])){
+            if($param['start_time'] != '' && $param['end_time'] != ''){
+                $start_time = strtotime(date('Y-m-d',strtotime($param['start_time']) - 86400).' 23:59:59');
+                $end_time = strtotime(date('Y-m-d',strtotime($param['end_time']) + 86400).' 00:00:00');
+                $sql->andFilterWhere(['between', 'created_at', $start_time, $end_time]);
+            }
         }
-		$sql->andFilterWhere(['or', ['like', 'title', $param['keyworlds']], ['like', 'create_by', $param['keyworlds']],['like', 'keywords', $param['keyworlds']]]);
-		if($param['status'] != '-1'){
+        if(isset($param['keywords']) && $param['keywords'] != ''){
+            $sql->andFilterWhere(['or', 
+                ['like', 'title', $param['keyworlds']], 
+                ['like', 'create_by', $param['keyworlds']],
+                ['like', 'keywords', $param['keyworlds']]
+            ]);
+        }
+		if(isset($param['status']) && $param['status'] != '-1'){
 			$sql->andWhere(['=', 'status', $param['status']]);
 		}
         if(isset($param['catId']) && $param['catId'] != ''){
             $sql->andWhere(['=', 'category_id', $param['catId']]);
         }
-		$data['list'] = $sql->orderBy('created_at DESC')
+		$list = $sql->orderBy('created_at DESC')
 		                    ->limit($pageSize)
                             ->offset($offset)
 							->all();
+        foreach ($list as $key => $value) {
+            $list[$key]['created_at'] = date('Y-m-d H:i:s',$value['created_at']);
+            $list[$key]['update_at'] = date('Y-m-d H:i:s',$value['update_at']);
+        }
+        $data['list'] = $list;
+        //p($sql->createCommand()->getRawSql());
         $data['count'] = $sql->count();
         return $data;
 	}

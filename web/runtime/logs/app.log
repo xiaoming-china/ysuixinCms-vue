@@ -2469,3 +2469,2001 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1516083074.177
     'REQUEST_TIME' => 1516083074
 ]
+2018-01-16 14:41:40 [127.0.0.1][-][-][error][yii\base\UnknownMethodException] yii\base\UnknownMethodException: Calling unknown method: common\widgets\ContentWidget::error() in F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Component.php:290
+Stack trace:
+#0 F:\xampp\htdocs\vueDemo\common\widgets\ContentWidget.php(20): yii\base\Component->__call('error', Array)
+#1 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Object.php(107): common\widgets\ContentWidget->init()
+#2 [internal function]: yii\base\Object->__construct(Array)
+#3 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\di\Container.php(381): ReflectionClass->newInstanceArgs(Array)
+#4 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\di\Container.php(156): yii\di\Container->build('common\\widgets\\...', Array, Array)
+#5 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\BaseYii.php(348): yii\di\Container->get('common\\widgets\\...', Array, Array)
+#6 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Widget.php(136): yii\BaseYii::createObject(Array)
+#7 F:\xampp\htdocs\vueDemo\web\template\Default\PageList\Category\category.php(47): yii\base\Widget::widget(Array)
+#8 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\View.php(330): require('F:\\xampp\\htdocs...')
+#9 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\View.php(250): yii\base\View->renderPhpFile('F:\\xampp\\htdocs...', Array)
+#10 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\View.php(152): yii\base\View->renderFile('F:\\xampp\\htdocs...', Array, Object(frontend\controllers\CategoryController))
+#11 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(381): yii\base\View->render('/Default/PageLi...', Array, Object(frontend\controllers\CategoryController))
+#12 F:\xampp\htdocs\vueDemo\frontend\controllers\CategoryController.php(24): yii\base\Controller->render('/Default/PageLi...', Array)
+#13 [internal function]: frontend\controllers\CategoryController->actionList()
+#14 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#15 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#16 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('list', Array)
+#17 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('category/list', Array)
+#18 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#19 F:\xampp\htdocs\vueDemo\web\index.php(23): yii\base\Application->run()
+#20 {main}
+2018-01-16 14:41:40 [127.0.0.1][-][-][info][application] $_GET = [
+    'catid' => '68'
+    'modelid' => ''
+]
+
+$_COOKIE = [
+    'advanced-backend' => 'gt7ebbrrtphuiamf68nbgjldkh'
+    'Hm_lvt_1873856b1a96138cdd16521be8a1dc50' => '1515996193,1516064473'
+    'Hm_lpvt_1873856b1a96138cdd16521be8a1dc50' => '1516083186'
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'vuedemo.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'advanced-backend=gt7ebbrrtphuiamf68nbgjldkh; Hm_lvt_1873856b1a96138cdd16521be8a1dc50=1515996193,1516064473; Hm_lpvt_1873856b1a96138cdd16521be8a1dc50=1516083186'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;F:\\java\\bin;F:\\java\\jre\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;F:\\xampp\\php;F:\\Git\\cmd;F:\\Gow\\bin;C:\\Program Files\\nodejs\\;F:\\java/bin;F:\\java/jre/bin;F:\\python;‪F:\\cmder;F:\\xampp\\php;C:\\Users\\Admin\\AppData\\Roaming\\npm;C:\\Users\\Admin\\AppData\\Local\\Microsoft\\WindowsApps;F:\\cmder;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1 Server at vuedemo.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1'
+    'SERVER_NAME' => 'vuedemo.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'F:/xampp/htdocs/vueDemo/web/index.php'
+    'REMOTE_PORT' => '32876'
+    'REDIRECT_URL' => '/category/list'
+    'REDIRECT_QUERY_STRING' => 'catid=68&modelid='
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'catid=68&modelid='
+    'REQUEST_URI' => '/category/list?catid=68&modelid='
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1516084900.635
+    'REQUEST_TIME' => 1516084900
+]
+2018-01-16 14:43:39 [127.0.0.1][-][-][error][yii\base\ViewNotFoundException] yii\base\ViewNotFoundException: The view file does not exist: F:\xampp\htdocs\vueDemo/web/template\error.php in F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\View.php:229
+Stack trace:
+#0 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\View.php(152): yii\base\View->renderFile('F:\\xampp\\htdocs...', Array, Object(common\widgets\ContentWidget))
+#1 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Widget.php(234): yii\base\View->render('/error', Array, Object(common\widgets\ContentWidget))
+#2 F:\xampp\htdocs\vueDemo\common\widgets\ContentWidget.php(49): yii\base\Widget->render('/error', Array)
+#3 F:\xampp\htdocs\vueDemo\common\widgets\ContentWidget.php(31): common\widgets\ContentWidget->dispatchJump('error', 'error', 3)
+#4 F:\xampp\htdocs\vueDemo\common\widgets\ContentWidget.php(20): common\widgets\ContentWidget->error('error')
+#5 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Object.php(107): common\widgets\ContentWidget->init()
+#6 [internal function]: yii\base\Object->__construct(Array)
+#7 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\di\Container.php(381): ReflectionClass->newInstanceArgs(Array)
+#8 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\di\Container.php(156): yii\di\Container->build('common\\widgets\\...', Array, Array)
+#9 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\BaseYii.php(348): yii\di\Container->get('common\\widgets\\...', Array, Array)
+#10 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Widget.php(136): yii\BaseYii::createObject(Array)
+#11 F:\xampp\htdocs\vueDemo\web\template\Default\PageList\Category\category.php(47): yii\base\Widget::widget(Array)
+#12 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\View.php(330): require('F:\\xampp\\htdocs...')
+#13 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\View.php(250): yii\base\View->renderPhpFile('F:\\xampp\\htdocs...', Array)
+#14 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\View.php(152): yii\base\View->renderFile('F:\\xampp\\htdocs...', Array, Object(frontend\controllers\CategoryController))
+#15 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(381): yii\base\View->render('/Default/PageLi...', Array, Object(frontend\controllers\CategoryController))
+#16 F:\xampp\htdocs\vueDemo\frontend\controllers\CategoryController.php(24): yii\base\Controller->render('/Default/PageLi...', Array)
+#17 [internal function]: frontend\controllers\CategoryController->actionList()
+#18 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#19 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#20 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('list', Array)
+#21 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('category/list', Array)
+#22 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#23 F:\xampp\htdocs\vueDemo\web\index.php(23): yii\base\Application->run()
+#24 {main}
+2018-01-16 14:43:39 [127.0.0.1][-][-][info][application] $_GET = [
+    'catid' => '68'
+    'modelid' => ''
+]
+
+$_COOKIE = [
+    'advanced-backend' => 'gt7ebbrrtphuiamf68nbgjldkh'
+    'Hm_lvt_1873856b1a96138cdd16521be8a1dc50' => '1515996193,1516064473'
+    'Hm_lpvt_1873856b1a96138cdd16521be8a1dc50' => '1516083186'
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'vuedemo.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'advanced-backend=gt7ebbrrtphuiamf68nbgjldkh; Hm_lvt_1873856b1a96138cdd16521be8a1dc50=1515996193,1516064473; Hm_lpvt_1873856b1a96138cdd16521be8a1dc50=1516083186'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;F:\\java\\bin;F:\\java\\jre\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;F:\\xampp\\php;F:\\Git\\cmd;F:\\Gow\\bin;C:\\Program Files\\nodejs\\;F:\\java/bin;F:\\java/jre/bin;F:\\python;‪F:\\cmder;F:\\xampp\\php;C:\\Users\\Admin\\AppData\\Roaming\\npm;C:\\Users\\Admin\\AppData\\Local\\Microsoft\\WindowsApps;F:\\cmder;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1 Server at vuedemo.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1'
+    'SERVER_NAME' => 'vuedemo.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'F:/xampp/htdocs/vueDemo/web/index.php'
+    'REMOTE_PORT' => '33070'
+    'REDIRECT_URL' => '/category/list'
+    'REDIRECT_QUERY_STRING' => 'catid=68&modelid='
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'catid=68&modelid='
+    'REQUEST_URI' => '/category/list?catid=68&modelid='
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1516085019.402
+    'REQUEST_TIME' => 1516085019
+]
+2018-01-16 14:45:17 [127.0.0.1][-][-][error][yii\base\ViewNotFoundException] yii\base\ViewNotFoundException: The view file does not exist: F:\xampp\htdocs\vueDemo/web/template\error.php in F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\View.php:229
+Stack trace:
+#0 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\View.php(152): yii\base\View->renderFile('F:\\xampp\\htdocs...', Array, Object(common\widgets\ContentWidget))
+#1 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Widget.php(234): yii\base\View->render('/error', Array, Object(common\widgets\ContentWidget))
+#2 F:\xampp\htdocs\vueDemo\common\widgets\ContentWidget.php(34): yii\base\Widget->render('/error', Array)
+#3 F:\xampp\htdocs\vueDemo\common\widgets\ContentWidget.php(20): common\widgets\ContentWidget->error('error')
+#4 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Object.php(107): common\widgets\ContentWidget->init()
+#5 [internal function]: yii\base\Object->__construct(Array)
+#6 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\di\Container.php(381): ReflectionClass->newInstanceArgs(Array)
+#7 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\di\Container.php(156): yii\di\Container->build('common\\widgets\\...', Array, Array)
+#8 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\BaseYii.php(348): yii\di\Container->get('common\\widgets\\...', Array, Array)
+#9 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Widget.php(136): yii\BaseYii::createObject(Array)
+#10 F:\xampp\htdocs\vueDemo\web\template\Default\PageList\Category\category.php(47): yii\base\Widget::widget(Array)
+#11 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\View.php(330): require('F:\\xampp\\htdocs...')
+#12 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\View.php(250): yii\base\View->renderPhpFile('F:\\xampp\\htdocs...', Array)
+#13 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\View.php(152): yii\base\View->renderFile('F:\\xampp\\htdocs...', Array, Object(frontend\controllers\CategoryController))
+#14 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(381): yii\base\View->render('/Default/PageLi...', Array, Object(frontend\controllers\CategoryController))
+#15 F:\xampp\htdocs\vueDemo\frontend\controllers\CategoryController.php(24): yii\base\Controller->render('/Default/PageLi...', Array)
+#16 [internal function]: frontend\controllers\CategoryController->actionList()
+#17 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#18 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#19 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('list', Array)
+#20 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('category/list', Array)
+#21 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 F:\xampp\htdocs\vueDemo\web\index.php(23): yii\base\Application->run()
+#23 {main}
+2018-01-16 14:45:17 [127.0.0.1][-][-][info][application] $_GET = [
+    'catid' => '68'
+    'modelid' => ''
+]
+
+$_COOKIE = [
+    'advanced-backend' => 'gt7ebbrrtphuiamf68nbgjldkh'
+    'Hm_lvt_1873856b1a96138cdd16521be8a1dc50' => '1515996193,1516064473'
+    'Hm_lpvt_1873856b1a96138cdd16521be8a1dc50' => '1516083186'
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'vuedemo.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'advanced-backend=gt7ebbrrtphuiamf68nbgjldkh; Hm_lvt_1873856b1a96138cdd16521be8a1dc50=1515996193,1516064473; Hm_lpvt_1873856b1a96138cdd16521be8a1dc50=1516083186'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;F:\\java\\bin;F:\\java\\jre\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;F:\\xampp\\php;F:\\Git\\cmd;F:\\Gow\\bin;C:\\Program Files\\nodejs\\;F:\\java/bin;F:\\java/jre/bin;F:\\python;‪F:\\cmder;F:\\xampp\\php;C:\\Users\\Admin\\AppData\\Roaming\\npm;C:\\Users\\Admin\\AppData\\Local\\Microsoft\\WindowsApps;F:\\cmder;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1 Server at vuedemo.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1'
+    'SERVER_NAME' => 'vuedemo.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'F:/xampp/htdocs/vueDemo/web/index.php'
+    'REMOTE_PORT' => '33229'
+    'REDIRECT_URL' => '/category/list'
+    'REDIRECT_QUERY_STRING' => 'catid=68&modelid='
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'catid=68&modelid='
+    'REQUEST_URI' => '/category/list?catid=68&modelid='
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1516085117.7
+    'REQUEST_TIME' => 1516085117
+]
+2018-01-16 15:06:18 [127.0.0.1][-][-][error][Error] Error: Class 'common\widgets\sqlQuery' not found in F:\xampp\htdocs\vueDemo\common\widgets\ContentWidget.php:24
+Stack trace:
+#0 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Object.php(107): common\widgets\ContentWidget->init()
+#1 [internal function]: yii\base\Object->__construct(Array)
+#2 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\di\Container.php(381): ReflectionClass->newInstanceArgs(Array)
+#3 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\di\Container.php(156): yii\di\Container->build('common\\widgets\\...', Array, Array)
+#4 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\BaseYii.php(348): yii\di\Container->get('common\\widgets\\...', Array, Array)
+#5 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Widget.php(136): yii\BaseYii::createObject(Array)
+#6 F:\xampp\htdocs\vueDemo\web\template\Default\PageList\Category\category.php(30): yii\base\Widget::widget(Array)
+#7 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\View.php(330): require('F:\\xampp\\htdocs...')
+#8 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\View.php(250): yii\base\View->renderPhpFile('F:\\xampp\\htdocs...', Array)
+#9 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\View.php(152): yii\base\View->renderFile('F:\\xampp\\htdocs...', Array, Object(frontend\controllers\CategoryController))
+#10 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(381): yii\base\View->render('/Default/PageLi...', Array, Object(frontend\controllers\CategoryController))
+#11 F:\xampp\htdocs\vueDemo\frontend\controllers\CategoryController.php(24): yii\base\Controller->render('/Default/PageLi...', Array)
+#12 [internal function]: frontend\controllers\CategoryController->actionList()
+#13 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#14 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#15 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('list', Array)
+#16 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('category/list', Array)
+#17 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#18 F:\xampp\htdocs\vueDemo\web\index.php(23): yii\base\Application->run()
+#19 {main}
+2018-01-16 15:06:18 [127.0.0.1][-][-][info][application] $_GET = [
+    'catid' => '68'
+    'modelid' => '58'
+]
+
+$_COOKIE = [
+    'advanced-backend' => 'gt7ebbrrtphuiamf68nbgjldkh'
+    'Hm_lvt_1873856b1a96138cdd16521be8a1dc50' => '1515996193,1516064473'
+    'Hm_lpvt_1873856b1a96138cdd16521be8a1dc50' => '1516083186'
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'vuedemo.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://vuedemo.com/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'advanced-backend=gt7ebbrrtphuiamf68nbgjldkh; Hm_lvt_1873856b1a96138cdd16521be8a1dc50=1515996193,1516064473; Hm_lpvt_1873856b1a96138cdd16521be8a1dc50=1516083186'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;F:\\java\\bin;F:\\java\\jre\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;F:\\xampp\\php;F:\\Git\\cmd;F:\\Gow\\bin;C:\\Program Files\\nodejs\\;F:\\java/bin;F:\\java/jre/bin;F:\\python;‪F:\\cmder;F:\\xampp\\php;C:\\Users\\Admin\\AppData\\Roaming\\npm;C:\\Users\\Admin\\AppData\\Local\\Microsoft\\WindowsApps;F:\\cmder;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1 Server at vuedemo.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1'
+    'SERVER_NAME' => 'vuedemo.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'F:/xampp/htdocs/vueDemo/web/index.php'
+    'REMOTE_PORT' => '35768'
+    'REDIRECT_URL' => '/category/list'
+    'REDIRECT_QUERY_STRING' => 'catid=68&modelid=58'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'catid=68&modelid=58'
+    'REQUEST_URI' => '/category/list?catid=68&modelid=58'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1516086378.496
+    'REQUEST_TIME' => 1516086378
+]
+2018-01-16 15:06:33 [127.0.0.1][-][-][error][yii\base\UnknownMethodException] yii\base\UnknownMethodException: Calling unknown method: common\widgets\ContentWidget::result() in F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Component.php:290
+Stack trace:
+#0 F:\xampp\htdocs\vueDemo\common\widgets\ContentWidget.php(25): yii\base\Component->__call('result', Array)
+#1 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Object.php(107): common\widgets\ContentWidget->init()
+#2 [internal function]: yii\base\Object->__construct(Array)
+#3 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\di\Container.php(381): ReflectionClass->newInstanceArgs(Array)
+#4 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\di\Container.php(156): yii\di\Container->build('common\\widgets\\...', Array, Array)
+#5 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\BaseYii.php(348): yii\di\Container->get('common\\widgets\\...', Array, Array)
+#6 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Widget.php(136): yii\BaseYii::createObject(Array)
+#7 F:\xampp\htdocs\vueDemo\web\template\Default\PageList\Category\category.php(30): yii\base\Widget::widget(Array)
+#8 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\View.php(330): require('F:\\xampp\\htdocs...')
+#9 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\View.php(250): yii\base\View->renderPhpFile('F:\\xampp\\htdocs...', Array)
+#10 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\View.php(152): yii\base\View->renderFile('F:\\xampp\\htdocs...', Array, Object(frontend\controllers\CategoryController))
+#11 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(381): yii\base\View->render('/Default/PageLi...', Array, Object(frontend\controllers\CategoryController))
+#12 F:\xampp\htdocs\vueDemo\frontend\controllers\CategoryController.php(24): yii\base\Controller->render('/Default/PageLi...', Array)
+#13 [internal function]: frontend\controllers\CategoryController->actionList()
+#14 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#15 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#16 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('list', Array)
+#17 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('category/list', Array)
+#18 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#19 F:\xampp\htdocs\vueDemo\web\index.php(23): yii\base\Application->run()
+#20 {main}
+2018-01-16 15:06:33 [127.0.0.1][-][-][info][application] $_GET = [
+    'catid' => '68'
+    'modelid' => '58'
+]
+
+$_COOKIE = [
+    'advanced-backend' => 'gt7ebbrrtphuiamf68nbgjldkh'
+    'Hm_lvt_1873856b1a96138cdd16521be8a1dc50' => '1515996193,1516064473'
+    'Hm_lpvt_1873856b1a96138cdd16521be8a1dc50' => '1516083186'
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'vuedemo.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://vuedemo.com/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'advanced-backend=gt7ebbrrtphuiamf68nbgjldkh; Hm_lvt_1873856b1a96138cdd16521be8a1dc50=1515996193,1516064473; Hm_lpvt_1873856b1a96138cdd16521be8a1dc50=1516083186'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;F:\\java\\bin;F:\\java\\jre\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;F:\\xampp\\php;F:\\Git\\cmd;F:\\Gow\\bin;C:\\Program Files\\nodejs\\;F:\\java/bin;F:\\java/jre/bin;F:\\python;‪F:\\cmder;F:\\xampp\\php;C:\\Users\\Admin\\AppData\\Roaming\\npm;C:\\Users\\Admin\\AppData\\Local\\Microsoft\\WindowsApps;F:\\cmder;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1 Server at vuedemo.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1'
+    'SERVER_NAME' => 'vuedemo.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'F:/xampp/htdocs/vueDemo/web/index.php'
+    'REMOTE_PORT' => '35801'
+    'REDIRECT_URL' => '/category/list'
+    'REDIRECT_QUERY_STRING' => 'catid=68&modelid=58'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'catid=68&modelid=58'
+    'REQUEST_URI' => '/category/list?catid=68&modelid=58'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1516086393.716
+    'REQUEST_TIME' => 1516086393
+]
+2018-01-16 15:06:46 [127.0.0.1][-][-][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined index: pageSize in F:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php:30
+Stack trace:
+#0 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Object.php(107): common\widgets\ContentWidget->init()
+#1 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\di\Container.php(381): common\widgets\ContentWidget->__construct()
+#2 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\di\Container.php(381): ReflectionClass->newInstanceArgs()
+#3 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\di\Container.php(156): yii\di\Container->build()
+#4 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\BaseYii.php(348): yii\di\Container->get()
+#5 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Widget.php(136): yii\BaseYii::createObject()
+#6 F:\xampp\htdocs\vueDemo\web\template\Default\PageList\Category\category.php(30): yii\base\Widget::widget()
+#7 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\View.php(330): yii\web\View->unknown()
+#8 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\View.php(250): yii\web\View->renderPhpFile()
+#9 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\View.php(152): yii\web\View->renderFile()
+#10 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(381): yii\web\View->render()
+#11 F:\xampp\htdocs\vueDemo\frontend\controllers\CategoryController.php(24): frontend\controllers\CategoryController->render()
+#12 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php(57): frontend\controllers\CategoryController->actionList()
+#13 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php(57): ::call_user_func_array:{F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php:57}()
+#14 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams()
+#15 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(523): frontend\controllers\CategoryController->runAction()
+#16 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php(102): yii\web\Application->runAction()
+#17 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest()
+#18 F:\xampp\htdocs\vueDemo\web\index.php(23): yii\web\Application->run()
+#19 {main}
+2018-01-16 15:06:45 [127.0.0.1][-][-][info][application] $_GET = [
+    'catid' => '68'
+    'modelid' => '58'
+]
+
+$_COOKIE = [
+    'advanced-backend' => 'gt7ebbrrtphuiamf68nbgjldkh'
+    'Hm_lvt_1873856b1a96138cdd16521be8a1dc50' => '1515996193,1516064473'
+    'Hm_lpvt_1873856b1a96138cdd16521be8a1dc50' => '1516083186'
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'vuedemo.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://vuedemo.com/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'advanced-backend=gt7ebbrrtphuiamf68nbgjldkh; Hm_lvt_1873856b1a96138cdd16521be8a1dc50=1515996193,1516064473; Hm_lpvt_1873856b1a96138cdd16521be8a1dc50=1516083186'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;F:\\java\\bin;F:\\java\\jre\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;F:\\xampp\\php;F:\\Git\\cmd;F:\\Gow\\bin;C:\\Program Files\\nodejs\\;F:\\java/bin;F:\\java/jre/bin;F:\\python;‪F:\\cmder;F:\\xampp\\php;C:\\Users\\Admin\\AppData\\Roaming\\npm;C:\\Users\\Admin\\AppData\\Local\\Microsoft\\WindowsApps;F:\\cmder;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1 Server at vuedemo.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1'
+    'SERVER_NAME' => 'vuedemo.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'F:/xampp/htdocs/vueDemo/web/index.php'
+    'REMOTE_PORT' => '35830'
+    'REDIRECT_URL' => '/category/list'
+    'REDIRECT_QUERY_STRING' => 'catid=68&modelid=58'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'catid=68&modelid=58'
+    'REQUEST_URI' => '/category/list?catid=68&modelid=58'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1516086405.748
+    'REQUEST_TIME' => 1516086405
+]
+2018-01-16 15:08:09 [127.0.0.1][-][-][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined index: page in F:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php:32
+Stack trace:
+#0 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Object.php(107): common\widgets\ContentWidget->init()
+#1 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\di\Container.php(381): common\widgets\ContentWidget->__construct()
+#2 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\di\Container.php(381): ReflectionClass->newInstanceArgs()
+#3 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\di\Container.php(156): yii\di\Container->build()
+#4 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\BaseYii.php(348): yii\di\Container->get()
+#5 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Widget.php(136): yii\BaseYii::createObject()
+#6 F:\xampp\htdocs\vueDemo\web\template\Default\PageList\Category\category.php(30): yii\base\Widget::widget()
+#7 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\View.php(330): yii\web\View->unknown()
+#8 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\View.php(250): yii\web\View->renderPhpFile()
+#9 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\View.php(152): yii\web\View->renderFile()
+#10 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(381): yii\web\View->render()
+#11 F:\xampp\htdocs\vueDemo\frontend\controllers\CategoryController.php(24): frontend\controllers\CategoryController->render()
+#12 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php(57): frontend\controllers\CategoryController->actionList()
+#13 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php(57): ::call_user_func_array:{F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php:57}()
+#14 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams()
+#15 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(523): frontend\controllers\CategoryController->runAction()
+#16 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php(102): yii\web\Application->runAction()
+#17 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest()
+#18 F:\xampp\htdocs\vueDemo\web\index.php(23): yii\web\Application->run()
+#19 {main}
+2018-01-16 15:08:08 [127.0.0.1][-][-][info][application] $_GET = [
+    'catid' => '68'
+    'modelid' => '58'
+]
+
+$_COOKIE = [
+    'advanced-backend' => 'gt7ebbrrtphuiamf68nbgjldkh'
+    'Hm_lvt_1873856b1a96138cdd16521be8a1dc50' => '1515996193,1516064473'
+    'Hm_lpvt_1873856b1a96138cdd16521be8a1dc50' => '1516083186'
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'vuedemo.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://vuedemo.com/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'advanced-backend=gt7ebbrrtphuiamf68nbgjldkh; Hm_lvt_1873856b1a96138cdd16521be8a1dc50=1515996193,1516064473; Hm_lpvt_1873856b1a96138cdd16521be8a1dc50=1516083186'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;F:\\java\\bin;F:\\java\\jre\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;F:\\xampp\\php;F:\\Git\\cmd;F:\\Gow\\bin;C:\\Program Files\\nodejs\\;F:\\java/bin;F:\\java/jre/bin;F:\\python;‪F:\\cmder;F:\\xampp\\php;C:\\Users\\Admin\\AppData\\Roaming\\npm;C:\\Users\\Admin\\AppData\\Local\\Microsoft\\WindowsApps;F:\\cmder;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1 Server at vuedemo.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1'
+    'SERVER_NAME' => 'vuedemo.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'F:/xampp/htdocs/vueDemo/web/index.php'
+    'REMOTE_PORT' => '35963'
+    'REDIRECT_URL' => '/category/list'
+    'REDIRECT_QUERY_STRING' => 'catid=68&modelid=58'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'catid=68&modelid=58'
+    'REQUEST_URI' => '/category/list?catid=68&modelid=58'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1516086488.97
+    'REQUEST_TIME' => 1516086488
+]
+2018-01-16 15:08:26 [127.0.0.1][-][-][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined index: start_time in F:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php:35
+Stack trace:
+#0 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Object.php(107): common\widgets\ContentWidget->init()
+#1 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\di\Container.php(381): common\widgets\ContentWidget->__construct()
+#2 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\di\Container.php(381): ReflectionClass->newInstanceArgs()
+#3 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\di\Container.php(156): yii\di\Container->build()
+#4 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\BaseYii.php(348): yii\di\Container->get()
+#5 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Widget.php(136): yii\BaseYii::createObject()
+#6 F:\xampp\htdocs\vueDemo\web\template\Default\PageList\Category\category.php(30): yii\base\Widget::widget()
+#7 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\View.php(330): yii\web\View->unknown()
+#8 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\View.php(250): yii\web\View->renderPhpFile()
+#9 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\View.php(152): yii\web\View->renderFile()
+#10 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(381): yii\web\View->render()
+#11 F:\xampp\htdocs\vueDemo\frontend\controllers\CategoryController.php(24): frontend\controllers\CategoryController->render()
+#12 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php(57): frontend\controllers\CategoryController->actionList()
+#13 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php(57): ::call_user_func_array:{F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php:57}()
+#14 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams()
+#15 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(523): frontend\controllers\CategoryController->runAction()
+#16 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php(102): yii\web\Application->runAction()
+#17 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest()
+#18 F:\xampp\htdocs\vueDemo\web\index.php(23): yii\web\Application->run()
+#19 {main}
+2018-01-16 15:08:26 [127.0.0.1][-][-][info][application] $_GET = [
+    'catid' => '68'
+    'modelid' => '58'
+]
+
+$_COOKIE = [
+    'advanced-backend' => 'gt7ebbrrtphuiamf68nbgjldkh'
+    'Hm_lvt_1873856b1a96138cdd16521be8a1dc50' => '1515996193,1516064473'
+    'Hm_lpvt_1873856b1a96138cdd16521be8a1dc50' => '1516083186'
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'vuedemo.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://vuedemo.com/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'advanced-backend=gt7ebbrrtphuiamf68nbgjldkh; Hm_lvt_1873856b1a96138cdd16521be8a1dc50=1515996193,1516064473; Hm_lpvt_1873856b1a96138cdd16521be8a1dc50=1516083186'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;F:\\java\\bin;F:\\java\\jre\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;F:\\xampp\\php;F:\\Git\\cmd;F:\\Gow\\bin;C:\\Program Files\\nodejs\\;F:\\java/bin;F:\\java/jre/bin;F:\\python;‪F:\\cmder;F:\\xampp\\php;C:\\Users\\Admin\\AppData\\Roaming\\npm;C:\\Users\\Admin\\AppData\\Local\\Microsoft\\WindowsApps;F:\\cmder;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1 Server at vuedemo.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1'
+    'SERVER_NAME' => 'vuedemo.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'F:/xampp/htdocs/vueDemo/web/index.php'
+    'REMOTE_PORT' => '35994'
+    'REDIRECT_URL' => '/category/list'
+    'REDIRECT_QUERY_STRING' => 'catid=68&modelid=58'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'catid=68&modelid=58'
+    'REQUEST_URI' => '/category/list?catid=68&modelid=58'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1516086506.818
+    'REQUEST_TIME' => 1516086506
+]
+2018-01-16 15:09:26 [127.0.0.1][-][-][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined index: start_time in F:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php:36
+Stack trace:
+#0 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Object.php(107): common\widgets\ContentWidget->init()
+#1 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\di\Container.php(381): common\widgets\ContentWidget->__construct()
+#2 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\di\Container.php(381): ReflectionClass->newInstanceArgs()
+#3 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\di\Container.php(156): yii\di\Container->build()
+#4 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\BaseYii.php(348): yii\di\Container->get()
+#5 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Widget.php(136): yii\BaseYii::createObject()
+#6 F:\xampp\htdocs\vueDemo\web\template\Default\PageList\Category\category.php(30): yii\base\Widget::widget()
+#7 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\View.php(330): yii\web\View->unknown()
+#8 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\View.php(250): yii\web\View->renderPhpFile()
+#9 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\View.php(152): yii\web\View->renderFile()
+#10 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(381): yii\web\View->render()
+#11 F:\xampp\htdocs\vueDemo\frontend\controllers\CategoryController.php(24): frontend\controllers\CategoryController->render()
+#12 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php(57): frontend\controllers\CategoryController->actionList()
+#13 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php(57): ::call_user_func_array:{F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php:57}()
+#14 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams()
+#15 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(523): frontend\controllers\CategoryController->runAction()
+#16 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php(102): yii\web\Application->runAction()
+#17 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest()
+#18 F:\xampp\htdocs\vueDemo\web\index.php(23): yii\web\Application->run()
+#19 {main}
+2018-01-16 15:09:26 [127.0.0.1][-][-][info][application] $_GET = [
+    'catid' => '68'
+    'modelid' => '58'
+]
+
+$_COOKIE = [
+    'advanced-backend' => 'gt7ebbrrtphuiamf68nbgjldkh'
+    'Hm_lvt_1873856b1a96138cdd16521be8a1dc50' => '1515996193,1516064473'
+    'Hm_lpvt_1873856b1a96138cdd16521be8a1dc50' => '1516083186'
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'vuedemo.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://vuedemo.com/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'advanced-backend=gt7ebbrrtphuiamf68nbgjldkh; Hm_lvt_1873856b1a96138cdd16521be8a1dc50=1515996193,1516064473; Hm_lpvt_1873856b1a96138cdd16521be8a1dc50=1516083186'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;F:\\java\\bin;F:\\java\\jre\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;F:\\xampp\\php;F:\\Git\\cmd;F:\\Gow\\bin;C:\\Program Files\\nodejs\\;F:\\java/bin;F:\\java/jre/bin;F:\\python;‪F:\\cmder;F:\\xampp\\php;C:\\Users\\Admin\\AppData\\Roaming\\npm;C:\\Users\\Admin\\AppData\\Local\\Microsoft\\WindowsApps;F:\\cmder;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1 Server at vuedemo.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1'
+    'SERVER_NAME' => 'vuedemo.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'F:/xampp/htdocs/vueDemo/web/index.php'
+    'REMOTE_PORT' => '36105'
+    'REDIRECT_URL' => '/category/list'
+    'REDIRECT_QUERY_STRING' => 'catid=68&modelid=58'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'catid=68&modelid=58'
+    'REQUEST_URI' => '/category/list?catid=68&modelid=58'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1516086566.386
+    'REQUEST_TIME' => 1516086566
+]
+2018-01-16 15:09:41 [127.0.0.1][-][-][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined index: keyworlds in F:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php:43
+Stack trace:
+#0 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Object.php(107): common\widgets\ContentWidget->init()
+#1 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\di\Container.php(381): common\widgets\ContentWidget->__construct()
+#2 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\di\Container.php(381): ReflectionClass->newInstanceArgs()
+#3 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\di\Container.php(156): yii\di\Container->build()
+#4 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\BaseYii.php(348): yii\di\Container->get()
+#5 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Widget.php(136): yii\BaseYii::createObject()
+#6 F:\xampp\htdocs\vueDemo\web\template\Default\PageList\Category\category.php(30): yii\base\Widget::widget()
+#7 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\View.php(330): yii\web\View->unknown()
+#8 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\View.php(250): yii\web\View->renderPhpFile()
+#9 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\View.php(152): yii\web\View->renderFile()
+#10 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(381): yii\web\View->render()
+#11 F:\xampp\htdocs\vueDemo\frontend\controllers\CategoryController.php(24): frontend\controllers\CategoryController->render()
+#12 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php(57): frontend\controllers\CategoryController->actionList()
+#13 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php(57): ::call_user_func_array:{F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php:57}()
+#14 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams()
+#15 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(523): frontend\controllers\CategoryController->runAction()
+#16 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php(102): yii\web\Application->runAction()
+#17 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest()
+#18 F:\xampp\htdocs\vueDemo\web\index.php(23): yii\web\Application->run()
+#19 {main}
+2018-01-16 15:09:41 [127.0.0.1][-][-][info][application] $_GET = [
+    'catid' => '68'
+    'modelid' => '58'
+]
+
+$_COOKIE = [
+    'advanced-backend' => 'gt7ebbrrtphuiamf68nbgjldkh'
+    'Hm_lvt_1873856b1a96138cdd16521be8a1dc50' => '1515996193,1516064473'
+    'Hm_lpvt_1873856b1a96138cdd16521be8a1dc50' => '1516083186'
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'vuedemo.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://vuedemo.com/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'advanced-backend=gt7ebbrrtphuiamf68nbgjldkh; Hm_lvt_1873856b1a96138cdd16521be8a1dc50=1515996193,1516064473; Hm_lpvt_1873856b1a96138cdd16521be8a1dc50=1516083186'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;F:\\java\\bin;F:\\java\\jre\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;F:\\xampp\\php;F:\\Git\\cmd;F:\\Gow\\bin;C:\\Program Files\\nodejs\\;F:\\java/bin;F:\\java/jre/bin;F:\\python;‪F:\\cmder;F:\\xampp\\php;C:\\Users\\Admin\\AppData\\Roaming\\npm;C:\\Users\\Admin\\AppData\\Local\\Microsoft\\WindowsApps;F:\\cmder;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1 Server at vuedemo.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1'
+    'SERVER_NAME' => 'vuedemo.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'F:/xampp/htdocs/vueDemo/web/index.php'
+    'REMOTE_PORT' => '36134'
+    'REDIRECT_URL' => '/category/list'
+    'REDIRECT_QUERY_STRING' => 'catid=68&modelid=58'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'catid=68&modelid=58'
+    'REQUEST_URI' => '/category/list?catid=68&modelid=58'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1516086581.7
+    'REQUEST_TIME' => 1516086581
+]
+2018-01-16 15:10:40 [127.0.0.1][-][-][error][ParseError] ParseError: syntax error, unexpected ')' in F:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php:42
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('common\\lib\\sqlQ...')
+#1 F:\xampp\htdocs\vueDemo\common\widgets\ContentWidget.php(25): spl_autoload_call('common\\lib\\sqlQ...')
+#2 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Object.php(107): common\widgets\ContentWidget->init()
+#3 [internal function]: yii\base\Object->__construct(Array)
+#4 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\di\Container.php(381): ReflectionClass->newInstanceArgs(Array)
+#5 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\di\Container.php(156): yii\di\Container->build('common\\widgets\\...', Array, Array)
+#6 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\BaseYii.php(348): yii\di\Container->get('common\\widgets\\...', Array, Array)
+#7 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Widget.php(136): yii\BaseYii::createObject(Array)
+#8 F:\xampp\htdocs\vueDemo\web\template\Default\PageList\Category\category.php(30): yii\base\Widget::widget(Array)
+#9 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\View.php(330): require('F:\\xampp\\htdocs...')
+#10 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\View.php(250): yii\base\View->renderPhpFile('F:\\xampp\\htdocs...', Array)
+#11 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\View.php(152): yii\base\View->renderFile('F:\\xampp\\htdocs...', Array, Object(frontend\controllers\CategoryController))
+#12 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(381): yii\base\View->render('/Default/PageLi...', Array, Object(frontend\controllers\CategoryController))
+#13 F:\xampp\htdocs\vueDemo\frontend\controllers\CategoryController.php(24): yii\base\Controller->render('/Default/PageLi...', Array)
+#14 [internal function]: frontend\controllers\CategoryController->actionList()
+#15 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#16 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#17 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('list', Array)
+#18 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('category/list', Array)
+#19 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#20 F:\xampp\htdocs\vueDemo\web\index.php(23): yii\base\Application->run()
+#21 {main}
+2018-01-16 15:10:39 [127.0.0.1][-][-][info][application] $_GET = [
+    'catid' => '68'
+    'modelid' => '58'
+]
+
+$_COOKIE = [
+    'advanced-backend' => 'gt7ebbrrtphuiamf68nbgjldkh'
+    'Hm_lvt_1873856b1a96138cdd16521be8a1dc50' => '1515996193,1516064473'
+    'Hm_lpvt_1873856b1a96138cdd16521be8a1dc50' => '1516083186'
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'vuedemo.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://vuedemo.com/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'advanced-backend=gt7ebbrrtphuiamf68nbgjldkh; Hm_lvt_1873856b1a96138cdd16521be8a1dc50=1515996193,1516064473; Hm_lpvt_1873856b1a96138cdd16521be8a1dc50=1516083186'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;F:\\java\\bin;F:\\java\\jre\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;F:\\xampp\\php;F:\\Git\\cmd;F:\\Gow\\bin;C:\\Program Files\\nodejs\\;F:\\java/bin;F:\\java/jre/bin;F:\\python;‪F:\\cmder;F:\\xampp\\php;C:\\Users\\Admin\\AppData\\Roaming\\npm;C:\\Users\\Admin\\AppData\\Local\\Microsoft\\WindowsApps;F:\\cmder;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1 Server at vuedemo.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1'
+    'SERVER_NAME' => 'vuedemo.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'F:/xampp/htdocs/vueDemo/web/index.php'
+    'REMOTE_PORT' => '36226'
+    'REDIRECT_URL' => '/category/list'
+    'REDIRECT_QUERY_STRING' => 'catid=68&modelid=58'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'catid=68&modelid=58'
+    'REQUEST_URI' => '/category/list?catid=68&modelid=58'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1516086638.852
+    'REQUEST_TIME' => 1516086638
+]
+2018-01-16 15:23:48 [127.0.0.1][-][-][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined variable: template in F:\xampp\htdocs\vueDemo\common\widgets\ContentWidget.php:32
+Stack trace:
+#0 F:\xampp\htdocs\vueDemo\web\template\Default\PageList\Category\category.php(30): yii\base\Widget::widget()
+#1 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\View.php(330): yii\web\View->unknown()
+#2 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\View.php(250): yii\web\View->renderPhpFile()
+#3 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\View.php(152): yii\web\View->renderFile()
+#4 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(381): yii\web\View->render()
+#5 F:\xampp\htdocs\vueDemo\frontend\controllers\CategoryController.php(24): frontend\controllers\CategoryController->render()
+#6 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php(57): frontend\controllers\CategoryController->actionList()
+#7 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php(57): ::call_user_func_array:{F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php:57}()
+#8 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams()
+#9 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(523): frontend\controllers\CategoryController->runAction()
+#10 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php(102): yii\web\Application->runAction()
+#11 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest()
+#12 F:\xampp\htdocs\vueDemo\web\index.php(23): yii\web\Application->run()
+#13 {main}
+2018-01-16 15:23:47 [127.0.0.1][-][-][info][application] $_GET = [
+    'catid' => '68'
+    'modelid' => '58'
+]
+
+$_COOKIE = [
+    'advanced-backend' => 'gt7ebbrrtphuiamf68nbgjldkh'
+    'Hm_lvt_1873856b1a96138cdd16521be8a1dc50' => '1515996193,1516064473'
+    'Hm_lpvt_1873856b1a96138cdd16521be8a1dc50' => '1516083186'
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'vuedemo.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://vuedemo.com/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'advanced-backend=gt7ebbrrtphuiamf68nbgjldkh; Hm_lvt_1873856b1a96138cdd16521be8a1dc50=1515996193,1516064473; Hm_lpvt_1873856b1a96138cdd16521be8a1dc50=1516083186'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;F:\\java\\bin;F:\\java\\jre\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;F:\\xampp\\php;F:\\Git\\cmd;F:\\Gow\\bin;C:\\Program Files\\nodejs\\;F:\\java/bin;F:\\java/jre/bin;F:\\python;‪F:\\cmder;F:\\xampp\\php;C:\\Users\\Admin\\AppData\\Roaming\\npm;C:\\Users\\Admin\\AppData\\Local\\Microsoft\\WindowsApps;F:\\cmder;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1 Server at vuedemo.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1'
+    'SERVER_NAME' => 'vuedemo.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'F:/xampp/htdocs/vueDemo/web/index.php'
+    'REMOTE_PORT' => '37750'
+    'REDIRECT_URL' => '/category/list'
+    'REDIRECT_QUERY_STRING' => 'catid=68&modelid=58'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'catid=68&modelid=58'
+    'REQUEST_URI' => '/category/list?catid=68&modelid=58'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1516087427.25
+    'REQUEST_TIME' => 1516087427
+]
+2018-01-16 15:24:15 [127.0.0.1][-][-][error][Error] Error: Call to undefined function common\widgets\mb_strtr() in F:\xampp\htdocs\vueDemo\common\widgets\ContentWidget.php:32
+Stack trace:
+#0 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Widget.php(139): common\widgets\ContentWidget->run()
+#1 F:\xampp\htdocs\vueDemo\web\template\Default\PageList\Category\category.php(30): yii\base\Widget::widget(Array)
+#2 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\View.php(330): require('F:\\xampp\\htdocs...')
+#3 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\View.php(250): yii\base\View->renderPhpFile('F:\\xampp\\htdocs...', Array)
+#4 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\View.php(152): yii\base\View->renderFile('F:\\xampp\\htdocs...', Array, Object(frontend\controllers\CategoryController))
+#5 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(381): yii\base\View->render('/Default/PageLi...', Array, Object(frontend\controllers\CategoryController))
+#6 F:\xampp\htdocs\vueDemo\frontend\controllers\CategoryController.php(24): yii\base\Controller->render('/Default/PageLi...', Array)
+#7 [internal function]: frontend\controllers\CategoryController->actionList()
+#8 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#9 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#10 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('list', Array)
+#11 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('category/list', Array)
+#12 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 F:\xampp\htdocs\vueDemo\web\index.php(23): yii\base\Application->run()
+#14 {main}
+2018-01-16 15:24:14 [127.0.0.1][-][-][info][application] $_GET = [
+    'catid' => '68'
+    'modelid' => '58'
+]
+
+$_COOKIE = [
+    'advanced-backend' => 'gt7ebbrrtphuiamf68nbgjldkh'
+    'Hm_lvt_1873856b1a96138cdd16521be8a1dc50' => '1515996193,1516064473'
+    'Hm_lpvt_1873856b1a96138cdd16521be8a1dc50' => '1516083186'
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'vuedemo.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://vuedemo.com/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'advanced-backend=gt7ebbrrtphuiamf68nbgjldkh; Hm_lvt_1873856b1a96138cdd16521be8a1dc50=1515996193,1516064473; Hm_lpvt_1873856b1a96138cdd16521be8a1dc50=1516083186'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;F:\\java\\bin;F:\\java\\jre\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;F:\\xampp\\php;F:\\Git\\cmd;F:\\Gow\\bin;C:\\Program Files\\nodejs\\;F:\\java/bin;F:\\java/jre/bin;F:\\python;‪F:\\cmder;F:\\xampp\\php;C:\\Users\\Admin\\AppData\\Roaming\\npm;C:\\Users\\Admin\\AppData\\Local\\Microsoft\\WindowsApps;F:\\cmder;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1 Server at vuedemo.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1'
+    'SERVER_NAME' => 'vuedemo.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'F:/xampp/htdocs/vueDemo/web/index.php'
+    'REMOTE_PORT' => '37796'
+    'REDIRECT_URL' => '/category/list'
+    'REDIRECT_QUERY_STRING' => 'catid=68&modelid=58'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'catid=68&modelid=58'
+    'REQUEST_URI' => '/category/list?catid=68&modelid=58'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1516087454.794
+    'REQUEST_TIME' => 1516087454
+]
+2018-01-16 15:37:52 [127.0.0.1][-][-][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined offset: 0 in F:\xampp\htdocs\vueDemo\common\widgets\ContentWidget.php:31
+Stack trace:
+#0 F:\xampp\htdocs\vueDemo\web\template\Default\PageList\Category\category.php(55): yii\base\Widget::widget()
+#1 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\View.php(330): yii\web\View->unknown()
+#2 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\View.php(250): yii\web\View->renderPhpFile()
+#3 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\View.php(152): yii\web\View->renderFile()
+#4 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(381): yii\web\View->render()
+#5 F:\xampp\htdocs\vueDemo\frontend\controllers\CategoryController.php(24): frontend\controllers\CategoryController->render()
+#6 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php(57): frontend\controllers\CategoryController->actionList()
+#7 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php(57): ::call_user_func_array:{F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php:57}()
+#8 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams()
+#9 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(523): frontend\controllers\CategoryController->runAction()
+#10 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php(102): yii\web\Application->runAction()
+#11 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest()
+#12 F:\xampp\htdocs\vueDemo\web\index.php(23): yii\web\Application->run()
+#13 {main}
+2018-01-16 15:37:51 [127.0.0.1][-][-][info][application] $_GET = [
+    'catid' => '68'
+    'modelid' => '58'
+]
+
+$_COOKIE = [
+    'advanced-backend' => 'gt7ebbrrtphuiamf68nbgjldkh'
+    'Hm_lvt_1873856b1a96138cdd16521be8a1dc50' => '1515996193,1516064473'
+    'Hm_lpvt_1873856b1a96138cdd16521be8a1dc50' => '1516083186'
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'vuedemo.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://vuedemo.com/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'advanced-backend=gt7ebbrrtphuiamf68nbgjldkh; Hm_lvt_1873856b1a96138cdd16521be8a1dc50=1515996193,1516064473; Hm_lpvt_1873856b1a96138cdd16521be8a1dc50=1516083186'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;F:\\java\\bin;F:\\java\\jre\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;F:\\xampp\\php;F:\\Git\\cmd;F:\\Gow\\bin;C:\\Program Files\\nodejs\\;F:\\java/bin;F:\\java/jre/bin;F:\\python;‪F:\\cmder;F:\\xampp\\php;C:\\Users\\Admin\\AppData\\Roaming\\npm;C:\\Users\\Admin\\AppData\\Local\\Microsoft\\WindowsApps;F:\\cmder;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1 Server at vuedemo.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1'
+    'SERVER_NAME' => 'vuedemo.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'F:/xampp/htdocs/vueDemo/web/index.php'
+    'REMOTE_PORT' => '39416'
+    'REDIRECT_URL' => '/category/list'
+    'REDIRECT_QUERY_STRING' => 'catid=68&modelid=58'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'catid=68&modelid=58'
+    'REQUEST_URI' => '/category/list?catid=68&modelid=58'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1516088271.866
+    'REQUEST_TIME' => 1516088271
+]
+2018-01-16 15:40:30 [127.0.0.1][-][-][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined variable: k in F:\xampp\htdocs\vueDemo\common\widgets\ContentWidget.php:32
+Stack trace:
+#0 F:\xampp\htdocs\vueDemo\web\template\Default\PageList\Category\category.php(55): yii\base\Widget::widget()
+#1 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\View.php(330): yii\web\View->unknown()
+#2 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\View.php(250): yii\web\View->renderPhpFile()
+#3 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\View.php(152): yii\web\View->renderFile()
+#4 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(381): yii\web\View->render()
+#5 F:\xampp\htdocs\vueDemo\frontend\controllers\CategoryController.php(24): frontend\controllers\CategoryController->render()
+#6 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php(57): frontend\controllers\CategoryController->actionList()
+#7 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php(57): ::call_user_func_array:{F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php:57}()
+#8 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams()
+#9 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(523): frontend\controllers\CategoryController->runAction()
+#10 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php(102): yii\web\Application->runAction()
+#11 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest()
+#12 F:\xampp\htdocs\vueDemo\web\index.php(23): yii\web\Application->run()
+#13 {main}
+2018-01-16 15:40:29 [127.0.0.1][-][-][info][application] $_GET = [
+    'catid' => '68'
+    'modelid' => '58'
+]
+
+$_COOKIE = [
+    'advanced-backend' => 'gt7ebbrrtphuiamf68nbgjldkh'
+    'Hm_lvt_1873856b1a96138cdd16521be8a1dc50' => '1515996193,1516064473'
+    'Hm_lpvt_1873856b1a96138cdd16521be8a1dc50' => '1516083186'
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'vuedemo.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://vuedemo.com/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'advanced-backend=gt7ebbrrtphuiamf68nbgjldkh; Hm_lvt_1873856b1a96138cdd16521be8a1dc50=1515996193,1516064473; Hm_lpvt_1873856b1a96138cdd16521be8a1dc50=1516083186'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;F:\\java\\bin;F:\\java\\jre\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;F:\\xampp\\php;F:\\Git\\cmd;F:\\Gow\\bin;C:\\Program Files\\nodejs\\;F:\\java/bin;F:\\java/jre/bin;F:\\python;‪F:\\cmder;F:\\xampp\\php;C:\\Users\\Admin\\AppData\\Roaming\\npm;C:\\Users\\Admin\\AppData\\Local\\Microsoft\\WindowsApps;F:\\cmder;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1 Server at vuedemo.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1'
+    'SERVER_NAME' => 'vuedemo.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'F:/xampp/htdocs/vueDemo/web/index.php'
+    'REMOTE_PORT' => '39704'
+    'REDIRECT_URL' => '/category/list'
+    'REDIRECT_QUERY_STRING' => 'catid=68&modelid=58'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'catid=68&modelid=58'
+    'REQUEST_URI' => '/category/list?catid=68&modelid=58'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1516088429.928
+    'REQUEST_TIME' => 1516088429
+]
+2018-01-16 16:04:18 [127.0.0.1][-][-][error][ParseError] ParseError: syntax error, unexpected '}', expecting variable (T_VARIABLE) or '{' or '$' in F:\xampp\htdocs\vueDemo\common\widgets\ContentWidget.php:35
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('common\\widgets\\...')
+#1 F:\xampp\htdocs\vueDemo\web\template\Default\PageList\Category\category.php(27): spl_autoload_call('common\\widgets\\...')
+#2 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\View.php(330): require('F:\\xampp\\htdocs...')
+#3 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\View.php(250): yii\base\View->renderPhpFile('F:\\xampp\\htdocs...', Array)
+#4 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\View.php(152): yii\base\View->renderFile('F:\\xampp\\htdocs...', Array, Object(frontend\controllers\CategoryController))
+#5 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(381): yii\base\View->render('/Default/PageLi...', Array, Object(frontend\controllers\CategoryController))
+#6 F:\xampp\htdocs\vueDemo\frontend\controllers\CategoryController.php(24): yii\base\Controller->render('/Default/PageLi...', Array)
+#7 [internal function]: frontend\controllers\CategoryController->actionList()
+#8 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#9 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#10 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('list', Array)
+#11 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('category/list', Array)
+#12 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 F:\xampp\htdocs\vueDemo\web\index.php(23): yii\base\Application->run()
+#14 {main}
+2018-01-16 16:04:17 [127.0.0.1][-][-][info][application] $_GET = [
+    'catid' => '68'
+    'modelid' => '58'
+]
+
+$_COOKIE = [
+    'advanced-backend' => 'gt7ebbrrtphuiamf68nbgjldkh'
+    'Hm_lvt_1873856b1a96138cdd16521be8a1dc50' => '1515996193,1516064473'
+    'Hm_lpvt_1873856b1a96138cdd16521be8a1dc50' => '1516083186'
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'vuedemo.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://vuedemo.com/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'advanced-backend=gt7ebbrrtphuiamf68nbgjldkh; Hm_lvt_1873856b1a96138cdd16521be8a1dc50=1515996193,1516064473; Hm_lpvt_1873856b1a96138cdd16521be8a1dc50=1516083186'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;F:\\java\\bin;F:\\java\\jre\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;F:\\xampp\\php;F:\\Git\\cmd;F:\\Gow\\bin;C:\\Program Files\\nodejs\\;F:\\java/bin;F:\\java/jre/bin;F:\\python;‪F:\\cmder;F:\\xampp\\php;C:\\Users\\Admin\\AppData\\Roaming\\npm;C:\\Users\\Admin\\AppData\\Local\\Microsoft\\WindowsApps;F:\\cmder;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1 Server at vuedemo.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1'
+    'SERVER_NAME' => 'vuedemo.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'F:/xampp/htdocs/vueDemo/web/index.php'
+    'REMOTE_PORT' => '42310'
+    'REDIRECT_URL' => '/category/list'
+    'REDIRECT_QUERY_STRING' => 'catid=68&modelid=58'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'catid=68&modelid=58'
+    'REQUEST_URI' => '/category/list?catid=68&modelid=58'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1516089856.953
+    'REQUEST_TIME' => 1516089856
+]
+2018-01-16 16:09:59 [127.0.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: category/{thumb} in F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php:127
+Stack trace:
+#0 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('{thumb}', Array)
+#1 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('category/{thumb...', Array)
+#2 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 F:\xampp\htdocs\vueDemo\web\index.php(23): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php:114
+Stack trace:
+#0 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 F:\xampp\htdocs\vueDemo\web\index.php(23): yii\base\Application->run()
+#2 {main}
+2018-01-16 16:09:59 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'advanced-backend' => 'gt7ebbrrtphuiamf68nbgjldkh'
+    'Hm_lvt_1873856b1a96138cdd16521be8a1dc50' => '1515996193,1516064473'
+    'Hm_lpvt_1873856b1a96138cdd16521be8a1dc50' => '1516083186'
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'vuedemo.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36'
+    'HTTP_ACCEPT' => 'image/webp,image/apng,image/*,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://vuedemo.com/category/list?catid=68&modelid=58'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'advanced-backend=gt7ebbrrtphuiamf68nbgjldkh; Hm_lvt_1873856b1a96138cdd16521be8a1dc50=1515996193,1516064473; Hm_lpvt_1873856b1a96138cdd16521be8a1dc50=1516083186'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;F:\\java\\bin;F:\\java\\jre\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;F:\\xampp\\php;F:\\Git\\cmd;F:\\Gow\\bin;C:\\Program Files\\nodejs\\;F:\\java/bin;F:\\java/jre/bin;F:\\python;‪F:\\cmder;F:\\xampp\\php;C:\\Users\\Admin\\AppData\\Roaming\\npm;C:\\Users\\Admin\\AppData\\Local\\Microsoft\\WindowsApps;F:\\cmder;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1 Server at vuedemo.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1'
+    'SERVER_NAME' => 'vuedemo.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'F:/xampp/htdocs/vueDemo/web/index.php'
+    'REMOTE_PORT' => '42623'
+    'REDIRECT_URL' => '/category/{thumb}'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/category/%7Bthumb%7D'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1516090199.173
+    'REQUEST_TIME' => 1516090199
+]
+2018-01-16 16:10:04 [127.0.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: category/{thumb} in F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php:127
+Stack trace:
+#0 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('{thumb}', Array)
+#1 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('category/{thumb...', Array)
+#2 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 F:\xampp\htdocs\vueDemo\web\index.php(23): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php:114
+Stack trace:
+#0 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 F:\xampp\htdocs\vueDemo\web\index.php(23): yii\base\Application->run()
+#2 {main}
+2018-01-16 16:10:04 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'advanced-backend' => 'gt7ebbrrtphuiamf68nbgjldkh'
+    'Hm_lvt_1873856b1a96138cdd16521be8a1dc50' => '1515996193,1516064473'
+    'Hm_lpvt_1873856b1a96138cdd16521be8a1dc50' => '1516083186'
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'vuedemo.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36'
+    'HTTP_ACCEPT' => 'image/webp,image/apng,image/*,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://vuedemo.com/category/list?catid=68&modelid=58'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'advanced-backend=gt7ebbrrtphuiamf68nbgjldkh; Hm_lvt_1873856b1a96138cdd16521be8a1dc50=1515996193,1516064473; Hm_lpvt_1873856b1a96138cdd16521be8a1dc50=1516083186'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;F:\\java\\bin;F:\\java\\jre\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;F:\\xampp\\php;F:\\Git\\cmd;F:\\Gow\\bin;C:\\Program Files\\nodejs\\;F:\\java/bin;F:\\java/jre/bin;F:\\python;‪F:\\cmder;F:\\xampp\\php;C:\\Users\\Admin\\AppData\\Roaming\\npm;C:\\Users\\Admin\\AppData\\Local\\Microsoft\\WindowsApps;F:\\cmder;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1 Server at vuedemo.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1'
+    'SERVER_NAME' => 'vuedemo.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'F:/xampp/htdocs/vueDemo/web/index.php'
+    'REMOTE_PORT' => '42626'
+    'REDIRECT_URL' => '/category/{thumb}'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/category/%7Bthumb%7D'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1516090204.278
+    'REQUEST_TIME' => 1516090204
+]
+2018-01-16 16:12:22 [127.0.0.1][5][gt7ebbrrtphuiamf68nbgjldkh][error][yii\base\UnknownMethodException] yii\base\UnknownMethodException: Calling unknown method: yii\db\Query::getRawSql() in F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Component.php:290
+Stack trace:
+#0 F:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php(55): yii\base\Component->__call('getRawSql', Array)
+#1 F:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php(59): common\lib\sqlQuery::selectData('article', Array)
+#2 [internal function]: backend\controllers\ContentController->actionList()
+#3 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#4 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#5 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('list', Array)
+#6 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('content/list', Array)
+#7 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 F:\xampp\htdocs\vueDemo\web\admin\index.php(20): yii\base\Application->run()
+#9 {main}
+2018-01-16 16:12:21 [127.0.0.1][5][gt7ebbrrtphuiamf68nbgjldkh][info][application] $_GET = [
+    'modelId' => '58'
+    'catId' => '69'
+    'param' => [
+        'modelId' => '58'
+        'catId' => '69'
+        'keyworlds' => ''
+        'status' => '-1'
+        'start_time' => ''
+        'end_time' => ''
+        'total' => '0'
+        'page' => '0'
+        'pageSize' => '20'
+    ]
+]
+
+$_COOKIE = [
+    'advanced-backend' => 'gt7ebbrrtphuiamf68nbgjldkh'
+    'Hm_lvt_1873856b1a96138cdd16521be8a1dc50' => '1515996193,1516064473'
+    'Hm_lpvt_1873856b1a96138cdd16521be8a1dc50' => '1516083186'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 5
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'vuedemo.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36'
+    'HTTP_REFERER' => 'http://vuedemo.com/admin/content/list?modelId=58&catId=69'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'advanced-backend=gt7ebbrrtphuiamf68nbgjldkh; Hm_lvt_1873856b1a96138cdd16521be8a1dc50=1515996193,1516064473; Hm_lpvt_1873856b1a96138cdd16521be8a1dc50=1516083186'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;F:\\java\\bin;F:\\java\\jre\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;F:\\xampp\\php;F:\\Git\\cmd;F:\\Gow\\bin;C:\\Program Files\\nodejs\\;F:\\java/bin;F:\\java/jre/bin;F:\\python;‪F:\\cmder;F:\\xampp\\php;C:\\Users\\Admin\\AppData\\Roaming\\npm;C:\\Users\\Admin\\AppData\\Local\\Microsoft\\WindowsApps;F:\\cmder;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1 Server at vuedemo.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1'
+    'SERVER_NAME' => 'vuedemo.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'F:/xampp/htdocs/vueDemo/web/admin/index.php'
+    'REMOTE_PORT' => '42866'
+    'REDIRECT_URL' => '/admin/content/list'
+    'REDIRECT_QUERY_STRING' => 'modelId=58&catId=69&param%5BmodelId%5D=58&param%5BcatId%5D=69&param%5Bkeyworlds%5D=&param%5Bstatus%5D=-1&param%5Bstart_time%5D=&param%5Bend_time%5D=&param%5Btotal%5D=0&param%5Bpage%5D=0&param%5BpageSize%5D=20'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'modelId=58&catId=69&param%5BmodelId%5D=58&param%5BcatId%5D=69&param%5Bkeyworlds%5D=&param%5Bstatus%5D=-1&param%5Bstart_time%5D=&param%5Bend_time%5D=&param%5Btotal%5D=0&param%5Bpage%5D=0&param%5BpageSize%5D=20'
+    'REQUEST_URI' => '/admin/content/list?modelId=58&catId=69&param%5BmodelId%5D=58&param%5BcatId%5D=69&param%5Bkeyworlds%5D=&param%5Bstatus%5D=-1&param%5Bstart_time%5D=&param%5Bend_time%5D=&param%5Btotal%5D=0&param%5Bpage%5D=0&param%5BpageSize%5D=20'
+    'SCRIPT_NAME' => '/admin/index.php'
+    'PHP_SELF' => '/admin/index.php'
+    'REQUEST_TIME_FLOAT' => 1516090341.94
+    'REQUEST_TIME' => 1516090341
+]
+2018-01-16 16:13:41 [127.0.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: category/{thumb} in F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php:127
+Stack trace:
+#0 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('{thumb}', Array)
+#1 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('category/{thumb...', Array)
+#2 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 F:\xampp\htdocs\vueDemo\web\index.php(23): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php:114
+Stack trace:
+#0 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 F:\xampp\htdocs\vueDemo\web\index.php(23): yii\base\Application->run()
+#2 {main}
+2018-01-16 16:13:41 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'advanced-backend' => 'gt7ebbrrtphuiamf68nbgjldkh'
+    'Hm_lvt_1873856b1a96138cdd16521be8a1dc50' => '1515996193,1516064473'
+    'Hm_lpvt_1873856b1a96138cdd16521be8a1dc50' => '1516083186'
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'vuedemo.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36'
+    'HTTP_ACCEPT' => 'image/webp,image/apng,image/*,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://vuedemo.com/category/list?catid=68&modelid=58'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'advanced-backend=gt7ebbrrtphuiamf68nbgjldkh; Hm_lvt_1873856b1a96138cdd16521be8a1dc50=1515996193,1516064473; Hm_lpvt_1873856b1a96138cdd16521be8a1dc50=1516083186'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;F:\\java\\bin;F:\\java\\jre\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;F:\\xampp\\php;F:\\Git\\cmd;F:\\Gow\\bin;C:\\Program Files\\nodejs\\;F:\\java/bin;F:\\java/jre/bin;F:\\python;‪F:\\cmder;F:\\xampp\\php;C:\\Users\\Admin\\AppData\\Roaming\\npm;C:\\Users\\Admin\\AppData\\Local\\Microsoft\\WindowsApps;F:\\cmder;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1 Server at vuedemo.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1'
+    'SERVER_NAME' => 'vuedemo.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'F:/xampp/htdocs/vueDemo/web/index.php'
+    'REMOTE_PORT' => '43017'
+    'REDIRECT_URL' => '/category/{thumb}'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/category/%7Bthumb%7D'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1516090421.386
+    'REQUEST_TIME' => 1516090421
+]
+2018-01-16 16:17:44 [127.0.0.1][-][-][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Setting unknown property: common\widgets\ContentWidget::modelid in F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Component.php:201
+Stack trace:
+#0 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\BaseYii.php(529): yii\base\Component->__set('modelid', '58')
+#1 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Object.php(105): yii\BaseYii::configure(Object(common\widgets\ContentWidget), Array)
+#2 [internal function]: yii\base\Object->__construct(Array)
+#3 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\di\Container.php(381): ReflectionClass->newInstanceArgs(Array)
+#4 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\di\Container.php(156): yii\di\Container->build('common\\widgets\\...', Array, Array)
+#5 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\BaseYii.php(348): yii\di\Container->get('common\\widgets\\...', Array, Array)
+#6 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Widget.php(136): yii\BaseYii::createObject(Array)
+#7 F:\xampp\htdocs\vueDemo\web\template\Default\PageList\Category\category.php(55): yii\base\Widget::widget(Array)
+#8 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\View.php(330): require('F:\\xampp\\htdocs...')
+#9 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\View.php(250): yii\base\View->renderPhpFile('F:\\xampp\\htdocs...', Array)
+#10 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\View.php(152): yii\base\View->renderFile('F:\\xampp\\htdocs...', Array, Object(frontend\controllers\CategoryController))
+#11 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(381): yii\base\View->render('/Default/PageLi...', Array, Object(frontend\controllers\CategoryController))
+#12 F:\xampp\htdocs\vueDemo\frontend\controllers\CategoryController.php(24): yii\base\Controller->render('/Default/PageLi...', Array)
+#13 [internal function]: frontend\controllers\CategoryController->actionList()
+#14 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#15 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#16 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('list', Array)
+#17 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('category/list', Array)
+#18 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#19 F:\xampp\htdocs\vueDemo\web\index.php(23): yii\base\Application->run()
+#20 {main}
+2018-01-16 16:17:44 [127.0.0.1][-][-][info][application] $_GET = [
+    'catid' => '68'
+    'modelid' => '58'
+]
+
+$_COOKIE = [
+    'advanced-backend' => 'gt7ebbrrtphuiamf68nbgjldkh'
+    'Hm_lvt_1873856b1a96138cdd16521be8a1dc50' => '1515996193,1516064473'
+    'Hm_lpvt_1873856b1a96138cdd16521be8a1dc50' => '1516083186'
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'vuedemo.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://vuedemo.com/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'advanced-backend=gt7ebbrrtphuiamf68nbgjldkh; Hm_lvt_1873856b1a96138cdd16521be8a1dc50=1515996193,1516064473; Hm_lpvt_1873856b1a96138cdd16521be8a1dc50=1516083186'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;F:\\java\\bin;F:\\java\\jre\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;F:\\xampp\\php;F:\\Git\\cmd;F:\\Gow\\bin;C:\\Program Files\\nodejs\\;F:\\java/bin;F:\\java/jre/bin;F:\\python;‪F:\\cmder;F:\\xampp\\php;C:\\Users\\Admin\\AppData\\Roaming\\npm;C:\\Users\\Admin\\AppData\\Local\\Microsoft\\WindowsApps;F:\\cmder;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1 Server at vuedemo.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1'
+    'SERVER_NAME' => 'vuedemo.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'F:/xampp/htdocs/vueDemo/web/index.php'
+    'REMOTE_PORT' => '43454'
+    'REDIRECT_URL' => '/category/list'
+    'REDIRECT_QUERY_STRING' => 'catid=68&modelid=58'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'catid=68&modelid=58'
+    'REQUEST_URI' => '/category/list?catid=68&modelid=58'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1516090664.557
+    'REQUEST_TIME' => 1516090664
+]
+2018-01-16 16:18:29 [127.0.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: category/{thumb} in F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php:127
+Stack trace:
+#0 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('{thumb}', Array)
+#1 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('category/{thumb...', Array)
+#2 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 F:\xampp\htdocs\vueDemo\web\index.php(23): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php:114
+Stack trace:
+#0 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 F:\xampp\htdocs\vueDemo\web\index.php(23): yii\base\Application->run()
+#2 {main}
+2018-01-16 16:18:29 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'advanced-backend' => 'gt7ebbrrtphuiamf68nbgjldkh'
+    'Hm_lvt_1873856b1a96138cdd16521be8a1dc50' => '1515996193,1516064473'
+    'Hm_lpvt_1873856b1a96138cdd16521be8a1dc50' => '1516083186'
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'vuedemo.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36'
+    'HTTP_ACCEPT' => 'image/webp,image/apng,image/*,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://vuedemo.com/category/list?catid=68&modelid=58'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'advanced-backend=gt7ebbrrtphuiamf68nbgjldkh; Hm_lvt_1873856b1a96138cdd16521be8a1dc50=1515996193,1516064473; Hm_lpvt_1873856b1a96138cdd16521be8a1dc50=1516083186'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;F:\\java\\bin;F:\\java\\jre\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;F:\\xampp\\php;F:\\Git\\cmd;F:\\Gow\\bin;C:\\Program Files\\nodejs\\;F:\\java/bin;F:\\java/jre/bin;F:\\python;‪F:\\cmder;F:\\xampp\\php;C:\\Users\\Admin\\AppData\\Roaming\\npm;C:\\Users\\Admin\\AppData\\Local\\Microsoft\\WindowsApps;F:\\cmder;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1 Server at vuedemo.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1'
+    'SERVER_NAME' => 'vuedemo.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'F:/xampp/htdocs/vueDemo/web/index.php'
+    'REMOTE_PORT' => '43536'
+    'REDIRECT_URL' => '/category/{thumb}'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/category/%7Bthumb%7D'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1516090709.786
+    'REQUEST_TIME' => 1516090709
+]
+2018-01-16 16:20:40 [127.0.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: category/{thumb} in F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php:127
+Stack trace:
+#0 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('{thumb}', Array)
+#1 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('category/{thumb...', Array)
+#2 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 F:\xampp\htdocs\vueDemo\web\index.php(23): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php:114
+Stack trace:
+#0 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 F:\xampp\htdocs\vueDemo\web\index.php(23): yii\base\Application->run()
+#2 {main}
+2018-01-16 16:20:40 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'advanced-backend' => 'gt7ebbrrtphuiamf68nbgjldkh'
+    'Hm_lvt_1873856b1a96138cdd16521be8a1dc50' => '1515996193,1516064473'
+    'Hm_lpvt_1873856b1a96138cdd16521be8a1dc50' => '1516083186'
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'vuedemo.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36'
+    'HTTP_ACCEPT' => 'image/webp,image/apng,image/*,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://vuedemo.com/category/list?catid=68&modelid=58'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'advanced-backend=gt7ebbrrtphuiamf68nbgjldkh; Hm_lvt_1873856b1a96138cdd16521be8a1dc50=1515996193,1516064473; Hm_lpvt_1873856b1a96138cdd16521be8a1dc50=1516083186'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;F:\\java\\bin;F:\\java\\jre\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;F:\\xampp\\php;F:\\Git\\cmd;F:\\Gow\\bin;C:\\Program Files\\nodejs\\;F:\\java/bin;F:\\java/jre/bin;F:\\python;‪F:\\cmder;F:\\xampp\\php;C:\\Users\\Admin\\AppData\\Roaming\\npm;C:\\Users\\Admin\\AppData\\Local\\Microsoft\\WindowsApps;F:\\cmder;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1 Server at vuedemo.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1'
+    'SERVER_NAME' => 'vuedemo.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'F:/xampp/htdocs/vueDemo/web/index.php'
+    'REMOTE_PORT' => '43762'
+    'REDIRECT_URL' => '/category/{thumb}'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/category/%7Bthumb%7D'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1516090840.714
+    'REQUEST_TIME' => 1516090840
+]
+2018-01-16 16:37:32 [127.0.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: category/123 in F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php:127
+Stack trace:
+#0 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('123', Array)
+#1 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('category/123', Array)
+#2 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 F:\xampp\htdocs\vueDemo\web\index.php(23): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php:114
+Stack trace:
+#0 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 F:\xampp\htdocs\vueDemo\web\index.php(23): yii\base\Application->run()
+#2 {main}
+2018-01-16 16:37:32 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'advanced-backend' => 'gt7ebbrrtphuiamf68nbgjldkh'
+    'Hm_lvt_1873856b1a96138cdd16521be8a1dc50' => '1515996193,1516064473'
+    'Hm_lpvt_1873856b1a96138cdd16521be8a1dc50' => '1516083186'
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'vuedemo.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://vuedemo.com/category/list?catid=68&modelid=58'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'advanced-backend=gt7ebbrrtphuiamf68nbgjldkh; Hm_lvt_1873856b1a96138cdd16521be8a1dc50=1515996193,1516064473; Hm_lpvt_1873856b1a96138cdd16521be8a1dc50=1516083186'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;F:\\java\\bin;F:\\java\\jre\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;F:\\xampp\\php;F:\\Git\\cmd;F:\\Gow\\bin;C:\\Program Files\\nodejs\\;F:\\java/bin;F:\\java/jre/bin;F:\\python;‪F:\\cmder;F:\\xampp\\php;C:\\Users\\Admin\\AppData\\Roaming\\npm;C:\\Users\\Admin\\AppData\\Local\\Microsoft\\WindowsApps;F:\\cmder;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1 Server at vuedemo.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1'
+    'SERVER_NAME' => 'vuedemo.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'F:/xampp/htdocs/vueDemo/web/index.php'
+    'REMOTE_PORT' => '45578'
+    'REDIRECT_URL' => '/category/123'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/category/123'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1516091852.103
+    'REQUEST_TIME' => 1516091852
+]

@@ -21,51 +21,39 @@
 <!--导航结束-->
     <div class="container main-content" id="articleList">
       <div class="row">
-            <div class="col-md-3 hidden-xs main-pin">
-              <div class="blog-left-box pin">
-                <div class="search-box">
-                    <div class="search bar7">
-                      <form action="?" method="get">
-                        <input type="text" placeholder="请输入您要搜索的内容..." name="keyword" value="">
-                        <button type="submit"></button>
-                      </form>
-                    </div>
-                </div>
-                <div class="type-box">
-                  <li class="type-list on">全部</li>
-                  <li class="type-list">
-                      {{v.name}}
-                  </li>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-9">
+            <div class="col-md-12">
               <div class="blog-right-box">
-                <div class="blog-item">
-                  <div class="blog-item-header">
-                    <h4>
-                      <a v-bind:href = v.url>{{v.title}}</a>
-                    </h4>
-                    <p class="header-info"> 
-                      <span>time：<em>{{v.add_time}}</em></span>
-                      <span>view：<em>{{v.view}}</em></span>
-                    </p>
-                  </div>
-                  <div class="blog-item-content">
-                      <div class="row">
-                        <div class="col-md-12 blog-content">
-                        <img  v-bind:src="v.thumb" class=" pull-left" width="300px" height="200px">
-                         <p>{{v.desc}}</p>
+              <!--内容列表开始-->
+              <?= common\widgets\ContentWidget::widget([
+                'catid'    =>$_GET['catid'],
+                'template' => '
+                      <div class="blog-item">
+                        <div class="blog-item-header">
+                          <h4>
+                            <a href = {url}>{title}111</a>
+                          </h4>
+                          <p class="header-info"> 
+                            <span>time：<em>{created_at}</em></span>
+                            <span>view：<em>{view}</em></span>
+                          </p>
                         </div>
-                      </div>
-                  </div>
-                  <div class="blog-item-fotter">
-                      <span class="tag">tags：</span>
-                      <a href="#" v-for="t in v.tags">
-                        {{t}}
-                      </a>
-                  </div>
-                </div>
+                        <div class="blog-item-content">
+                            <div class="row">
+                              <div class="col-md-12 blog-content">
+                              <img src="{thumb}" class=" pull-left" width="300px" height="200px">
+                               <p>{desc}</p>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="blog-item-fotter">
+                            <span class="tag">tags：</span>
+                            <a href="#" v-for="t in v.tags">
+                              {{t}}
+                            </a>
+                        </div>
+                      </div>'
+              ]) ?>
+              <!--内容列表结束-->
               </div>
             </div>
         </div>
