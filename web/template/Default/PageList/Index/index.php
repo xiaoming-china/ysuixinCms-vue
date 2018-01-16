@@ -15,43 +15,7 @@
   </head>
   <body>
 <!--导航开始-->
-<div class="nav-box">
-  <div class="container">
-      <nav class="navbar nav-nav-box navbar-default navbar-fixed-top nav-top" role="navigation">
-    <div class="container">
-       <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse"
-                data-target="#nav-sub">
-            <span class="sr-only">切换导航</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#">意随心</a>
-    </div>
-    <div class="collapse navbar-collapse" id="nav-sub">
-        <ul class="nav navbar-nav navbar-right">
-            <li class="active">
-              <a href="index.html">首页</a>
-            </li>
-            <li >
-              <a href="blog.html">Blog</a>
-            </li>
-            <li >
-              <a href="message.html">留言</a>
-            </li>
-            <li >
-              <a href="friends.html">收藏圈</a>
-            </li>
-            <li >
-              <a href="about.html">关于</a>
-            </li>
-        </ul>
-    </div>
-    </div>
-  </nav>
-  </div>
-</div>
+<?= common\widgets\NavWidget::widget(['template' => 'nav']) ?>
 <!--导航结束-->
 <div class="cover" style="margin-top: 40px;">
     <div class="row" style="margin: 0;">

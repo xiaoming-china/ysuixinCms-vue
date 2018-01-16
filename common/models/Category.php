@@ -86,7 +86,7 @@ class Category extends BaseModel{
     public function afterSave($insert,$changedAttributes) {
         if($this->url == ''){
             $model = (new Category())->findOne($this->catid);
-            $model->url = 'content-index?a=list&catid='.$this->catid.'&modelid='.$this->modelid;
+            $model->url = '/category/list?catid='.$this->catid.'&modelid='.$this->modelid;
             if($model->save(false)){
                 return true;
             }
@@ -180,6 +180,7 @@ class Category extends BaseModel{
                 $v['title']    = $value['catname'];
                 $v['name']     = $value['catname'];
                 $v['parentid'] = $value['parentid'];
+                $v['nav_url']  = $value['url'];
                 if($value['child'] == self::IS_HAVE_CHILD){
                     $v['url']  = '#';
                 }else{

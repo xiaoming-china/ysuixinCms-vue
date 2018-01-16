@@ -12,7 +12,7 @@ class CategoryController extends BaseController{
      * @date:2018-01-15T15:44:14+0800
      * @return                        [type] [description]
      */
-    public function actionIndex(){
+    public function actionList(){
         $s = $this->CreateSeo(
             $this->config['sitename'], 
             $this->config['siteinfo'], 
