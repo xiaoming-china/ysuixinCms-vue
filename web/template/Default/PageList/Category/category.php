@@ -25,7 +25,6 @@
               <div class="blog-right-box">
               <!--内容列表开始-->
               <?= common\widgets\ContentWidget::widget([
-                'catid'    =>$_GET['catid'],
                 'template' => '
                       <div class="blog-item">
                         <div class="blog-item-header">

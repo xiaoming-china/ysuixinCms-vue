@@ -154,7 +154,7 @@ class Category extends BaseModel{
         }
         $model = new Category();
         $sql = $model->find()
-        ->select('catid,parentid,catname,type,modelid,child')
+        ->select('catid,parentid,catname,type,modelid,child,url')
         ->where(['modelid'=>$model_id,'is_delete'=>$model::DELETE_STATUS_FALSE]);
         if(!$is_page){
             $sql->andwhere(['type'=>1]);

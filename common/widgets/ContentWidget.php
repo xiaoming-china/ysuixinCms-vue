@@ -12,15 +12,17 @@ use yii\helpers\ArrayHelper;
 
 class ContentWidget extends Widget {
     public $template;
-    public $result   = '';  
-    public $catid    = ''; 
+    public $result   = '';
     public $page     = 0; 
     public $pageSize = 20; 
 
 
     public function init() { 
        parent::init();
-       $catid = $this->catid;
+       $catid = !isset($_GET['catid']) || $_GET['catid'] == '' ? '' : $_GET['catid'] ;
+       if($catid == ''){
+        exit('栏目ID不能为空');
+       }
        $param   = [
         'catId'    => $catid,
         'page'     => $this->page,
@@ -44,6 +46,5 @@ class ContentWidget extends Widget {
       }
       return $str;
     }
-
 } 
 ?>
