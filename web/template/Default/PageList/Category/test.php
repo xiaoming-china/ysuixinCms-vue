@@ -1,5 +1,5 @@
-{test}
+{nav}
     {foreach from=$list item=v}  
-     <li><a href="#">{$v.catid}{$v.catname}</a></li>  
+     <li><a href="{$v.url}">{$v.catid}{$v.name}</a></li>  
     {/foreach}  
-{/test}
+{/nav}
