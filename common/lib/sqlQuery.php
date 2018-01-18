@@ -52,15 +52,14 @@ class sqlQuery extends BaseModel{
         if(isset($param['catId']) && $param['catId'] != ''){
             $sql->andWhere(['=', 'category_id', $param['catId']]);
         }
+        $page = new Page($sql->count(),$pageSize);
+        $data['page_show'] = $page->show();
 		$list = $sql->orderBy('created_at DESC')
 		                    ->limit($pageSize)
                             ->offset($offset)
 							->all();
-        foreach ($list as $key => $value) {
-            $list[$key]['created_at'] = date('Y-m-d H:i:s',$value['created_at']);
-            $list[$key]['update_at'] = date('Y-m-d H:i:s',$value['update_at']);
-        }
         $data['list'] = $list;
+
         //p($sql->createCommand()->getRawSql());
         $data['count'] = $sql->count();
         return $data;

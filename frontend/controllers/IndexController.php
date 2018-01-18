@@ -18,11 +18,7 @@ class IndexController extends BaseController{
             $this->config['siteinfo'], 
             $this->config['sitekeywords']
         );
-        if($this->isPost()){
-            return $this->ajaxSuccess('获取成功','',$s);
-        }else{
-            return $this->render($this->config['theme'].'/Index/index',$s);
-        }
+        return $this->render($this->config['theme'].'/Index/index',$s);
     }
 }
 ?>

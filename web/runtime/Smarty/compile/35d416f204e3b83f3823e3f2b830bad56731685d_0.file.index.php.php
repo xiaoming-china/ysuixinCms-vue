@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.31, created on 2018-01-18 14:05:05
+/* Smarty version 3.1.31, created on 2018-01-18 14:20:15
   from "F:\xampp\htdocs\vueDemo\web\template\Default\PageList\Index\index.php" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.31',
-  'unifunc' => 'content_5a60391133c6b2_89212034',
+  'unifunc' => 'content_5a603c9f9cbc17_72584375',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '35d416f204e3b83f3823e3f2b830bad56731685d' => 
     array (
       0 => 'F:\\xampp\\htdocs\\vueDemo\\web\\template\\Default\\PageList\\Index\\index.php',
-      1 => 1516255423,
+      1 => 1516256413,
       2 => 'file',
     ),
   ),
@@ -21,14 +21,17 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:../header.php' => 1,
   ),
 ),false)) {
-function content_5a60391133c6b2_89212034 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a603c9f9cbc17_72584375 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!doctype html>
 <html class="no-js" lang="en">
   <head>
-    <title><?php echo '<?=';?>$title<?php echo '?>';?></title>
-    <meta name="keywords" content="<?php echo '<?=';?>$keywords<?php echo '?>';?>"/>
-    <meta name="description" content="<?php echo '<?=';?>$description<?php echo '?>';?>"/>
+    <title><?php echo $_smarty_tpl->tpl_vars['title']->value;?>
+</title>
+    <meta name="keywords" content="<?php echo $_smarty_tpl->tpl_vars['keywords']->value;?>
+"/>
+    <meta name="description" content="<?php echo $_smarty_tpl->tpl_vars['description']->value;?>
+"/>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/public/home/style/basic.css" />

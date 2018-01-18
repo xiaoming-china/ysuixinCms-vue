@@ -1,15 +1,15 @@
 <?php
-/* Smarty version 3.1.31, created on 2018-01-18 14:23:51
+/* Smarty version 3.1.31, created on 2018-01-18 14:14:44
   from "F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\views\errorHandler\exception.php" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.31',
-  'unifunc' => 'content_5a603d776a6cb4_79724172',
+  'unifunc' => 'content_5a603b54e61478_07657521',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    'b5908bf8f0047b3fc4f4977b41c3d7ccc873aab7' => 
+    'b9e3e71f14a89abdc445a65fbb3333bd2bf28a60' => 
     array (
       0 => 'F:\\xampp\\htdocs\\vueDemo\\vendor\\yiisoft\\yii2\\views\\errorHandler\\exception.php',
       1 => 1513558477,
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a603d776a6cb4_79724172 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a603b54e61478_07657521 (Smarty_Internal_Template $_smarty_tpl) {
 echo '<?php
 ';?>/* @var $this \yii\web\View */
 /* @var $exception \Exception */

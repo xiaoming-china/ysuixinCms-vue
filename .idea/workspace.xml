@@ -2,9 +2,71 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="05527633-7996-45f7-a284-7ac74c635b98" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/backend/views/comment/comment-list.php" afterPath="$PROJECT_DIR$/backend/views/comment/comment-list.php" />
-      <change beforePath="$PROJECT_DIR$/web/public/admin/css/main.css" afterPath="$PROJECT_DIR$/web/public/admin/css/main.css" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/runtime/debug/5a60171c181a4.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/runtime/debug/5a60174627909.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/runtime/debug/5a60183e75d0d.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/runtime/debug/5a601862912ff.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/runtime/debug/5a601862c8a99.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/runtime/debug/5a601872c289e.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/runtime/debug/5a6018731e08a.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/runtime/debug/5a60187cbaf12.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/runtime/debug/5a60188f0bc34.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/runtime/debug/5a6018939658e.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/runtime/debug/5a6018940bb81.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/runtime/debug/5a60189b3eab2.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/runtime/debug/5a60189bc1eef.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/runtime/debug/5a6018c6933ad.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/runtime/debug/5a6018c6e3633.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/runtime/debug/5a6018d830d0b.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/runtime/debug/5a6019188e0b8.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/runtime/debug/5a6019231b41b.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/runtime/debug/5a60198c732bd.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/runtime/debug/5a6033b036807.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/runtime/debug/5a6033d939621.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/runtime/debug/5a6033fa32d2a.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/runtime/debug/5a6034105fc7d.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/runtime/debug/5a60346779be4.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/runtime/debug/5a60349f71de1.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/runtime/debug/5a6034ad1963c.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/runtime/debug/5a6034af788c4.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/runtime/debug/5a6034b1df705.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/runtime/debug/5a60355163599.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/runtime/debug/5a603556962f2.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/runtime/debug/5a60355726980.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/runtime/debug/5a6036e8158d3.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/runtime/debug/5a6037164fe0c.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/runtime/debug/5a6037177875c.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/runtime/debug/5a60373c8251f.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/runtime/debug/5a60373d08403.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/runtime/debug/5a60376e83799.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/runtime/debug/5a60376ec9b00.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/runtime/debug/5a6037f42ef06.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/runtime/debug/5a6037f47abf3.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/runtime/debug/5a6037fe6b292.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/runtime/debug/5a60382056e78.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/runtime/debug/5a6038209a014.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/runtime/debug/5a6038b2f397f.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/runtime/debug/5a6038b392eea.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/runtime/debug/5a6038c1e98f6.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/runtime/debug/5a6038d40be92.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/runtime/debug/5a60391123f8c.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/runtime/debug/5a6039e38c13f.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/runtime/debug/5a6039f8c540c.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/runtime/debug/5a603a540a491.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/runtime/debug/5a603a54bb938.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/template/Default/PageList/sidebar.php" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/lib/sqlQuery.php" afterPath="$PROJECT_DIR$/common/lib/sqlQuery.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/controllers/CategoryController.php" afterPath="$PROJECT_DIR$/frontend/controllers/CategoryController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/controllers/IndexController.php" afterPath="$PROJECT_DIR$/frontend/controllers/IndexController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/public/home/style/basic.css" afterPath="$PROJECT_DIR$/web/public/home/style/basic.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/runtime/Smarty/compile/35d416f204e3b83f3823e3f2b830bad56731685d_0.file.index.php.php" afterPath="$PROJECT_DIR$/web/runtime/Smarty/compile/35d416f204e3b83f3823e3f2b830bad56731685d_0.file.index.php.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/runtime/Smarty/compile/b5908bf8f0047b3fc4f4977b41c3d7ccc873aab7_0.file.exception.php.php" afterPath="$PROJECT_DIR$/web/runtime/Smarty/compile/b5908bf8f0047b3fc4f4977b41c3d7ccc873aab7_0.file.exception.php.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/runtime/Smarty/compile/f07bdfc209279f95a24c10bb21eb042a20b3d46c_0.file.header.php.php" afterPath="$PROJECT_DIR$/web/runtime/Smarty/compile/f07bdfc209279f95a24c10bb21eb042a20b3d46c_0.file.header.php.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/runtime/debug/index.data" afterPath="$PROJECT_DIR$/web/runtime/debug/index.data" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/runtime/logs/app.log" afterPath="$PROJECT_DIR$/web/runtime/logs/app.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/template/Default/PageList/Category/category.php" afterPath="$PROJECT_DIR$/web/template/Default/PageList/Category/category.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/template/Default/PageList/Index/index.php" afterPath="$PROJECT_DIR$/web/template/Default/PageList/Index/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/template/Default/PageList/footer.php" afterPath="$PROJECT_DIR$/web/template/Default/PageList/footer.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -13,17 +75,30 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
   </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/public/admin/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
+            <state relative-caret-position="27">
               <caret line="365" column="12" lean-forward="false" selection-start-line="365" selection-start-column="12" selection-end-line="365" selection-end-column="12" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="footer.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/template/Default/PageList/footer.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -31,8 +106,8 @@
       <file leaf-file-name="comment-list.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backend/views/comment/comment-list.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="623">
-              <caret line="82" column="67" lean-forward="false" selection-start-line="82" selection-start-column="67" selection-end-line="82" selection-end-column="67" />
+            <state relative-caret-position="2214">
+              <caret line="82" column="54" lean-forward="false" selection-start-line="82" selection-start-column="54" selection-end-line="82" selection-end-column="54" />
               <folding />
             </state>
           </provider>
@@ -173,11 +248,11 @@
       <path value="$PROJECT_DIR$/vendor/fzaninotto/faker" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="319" />
-    <option name="y" value="49" />
-    <option name="width" value="1400" />
-    <option name="height" value="1000" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -303,19 +378,18 @@
       <workItem from="1515069131078" duration="2184000" />
       <workItem from="1515212699940" duration="1929000" />
       <workItem from="1515296962384" duration="4679000" />
+      <workItem from="1516260408853" duration="45000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62899000" />
+    <option name="totallyTimeSpent" value="62944000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18020834" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -330,12 +404,10 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6935313" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.History.Properties">
     <option name="COLUMN_ORDER">
@@ -383,13 +455,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/backend/controllers/ContentController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1350">
-          <caret line="56" column="24" lean-forward="false" selection-start-line="56" selection-start-column="24" selection-end-line="56" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/common/lib/ValidateForm.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1920">
@@ -538,27 +603,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../phpcms/api/video_api/video_info.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="7" column="35" lean-forward="true" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../phpcms/phpcms/libs/classes/ip_area.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3420">
-          <caret line="114" column="22" lean-forward="true" selection-start-line="114" selection-start-column="22" selection-end-line="114" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../phpcms/phpcms/libs/classes/mysql.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-10140">
-          <caret line="88" column="34" lean-forward="true" selection-start-line="88" selection-start-column="34" selection-end-line="88" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../phpcms/api/video_api/video_info.php" />
+    <entry file="file://$PROJECT_DIR$/../phpcms/phpcms/libs/classes/ip_area.class.php" />
+    <entry file="file://$PROJECT_DIR$/../phpcms/phpcms/libs/classes/mysql.class.php" />
     <entry file="file://$PROJECT_DIR$/backend/controllers/ModelController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -650,13 +697,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../vding/vding-v2/console/controllers/UpdateProductController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="164" column="0" lean-forward="false" selection-start-line="164" selection-start-column="0" selection-end-line="166" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../vding/vding-v2/console/controllers/UpdateProductController.php" />
     <entry file="file://$PROJECT_DIR$/vendor/yiisoft/yii2/db/ActiveRecord.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1025">
@@ -722,17 +763,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/views/comment/comment-list.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="623">
-          <caret line="82" column="67" lean-forward="false" selection-start-line="82" selection-start-column="67" selection-end-line="82" selection-end-column="67" />
+        <state relative-caret-position="2214">
+          <caret line="82" column="54" lean-forward="false" selection-start-line="82" selection-start-column="54" selection-end-line="82" selection-end-column="54" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/public/admin/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
+        <state relative-caret-position="27">
           <caret line="365" column="12" lean-forward="false" selection-start-line="365" selection-start-column="12" selection-end-line="365" selection-end-column="12" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/template/Default/PageList/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
