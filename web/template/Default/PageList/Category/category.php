@@ -1,9 +1,9 @@
 <!doctype html>
 <html class="no-js" lang="en">
   <head>
-    <title><?=$title?></title>
-    <meta name="keywords" content="<?=$keywords?>"/>
-    <meta name="description" content="<?=$description?>"/>
+    <title><?=$seo['title']?></title>
+    <meta name="keywords" content="<?=$seo['keywords']?>"/>
+    <meta name="description" content="<?=$seo['description']?>"/>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/public/home/style/basic.css" />

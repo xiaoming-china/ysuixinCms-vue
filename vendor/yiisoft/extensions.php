@@ -84,4 +84,13 @@ return array (
       '@trntv/filekit' => $vendorDir . '/trntv/yii2-file-kit/src',
     ),
   ),
+  'yiisoft/yii2-smarty' => 
+  array (
+    'name' => 'yiisoft/yii2-smarty',
+    'version' => '2.0.6.0',
+    'alias' => 
+    array (
+      '@yii/smarty' => $vendorDir . '/yiisoft/yii2-smarty',
+    ),
+  ),
 );

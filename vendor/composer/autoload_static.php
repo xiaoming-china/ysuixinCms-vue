@@ -11,6 +11,7 @@ class ComposerStaticInit215e0c426bae0c8f87f7dcfb70dbf8a8
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
         'a0edc8309cc5e1d60e3047b5df6b7052' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/functions_include.php',
         '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
+        'f084d01b0a599f67676cffef638aa95b' => __DIR__ . '/..' . '/smarty/smarty/libs/bootstrap.php',
         '180092cfc969a12e06f2132a203a3184' => __DIR__ . '/..' . '/codeception/verify/src/Codeception/function.php',
     );
 
@@ -18,6 +19,7 @@ class ComposerStaticInit215e0c426bae0c8f87f7dcfb70dbf8a8
         'y' => 
         array (
             'yii\\swiftmailer\\' => 16,
+            'yii\\smarty\\' => 11,
             'yii\\jui\\' => 8,
             'yii\\imagine\\' => 12,
             'yii\\gii\\' => 8,
@@ -94,6 +96,10 @@ class ComposerStaticInit215e0c426bae0c8f87f7dcfb70dbf8a8
         'yii\\swiftmailer\\' => 
         array (
             0 => __DIR__ . '/..' . '/yiisoft/yii2-swiftmailer',
+        ),
+        'yii\\smarty\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/yiisoft/yii2-smarty',
         ),
         'yii\\jui\\' => 
         array (

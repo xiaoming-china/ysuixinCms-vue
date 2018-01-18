@@ -14,6 +14,17 @@ return [
     'viewPath'=>dirname(dirname(__DIR__)).'/web/template',
     'runtimePath'=>dirname(dirname(__DIR__)).'/web/runtime',
     'components' => [
+        'view' => [
+            'renderers' => [
+                'php' => [
+                    'class' => 'yii\smarty\ViewRenderer',
+                    'cachePath' => dirname(dirname(__DIR__)).'/web/runtime/Smarty/cache',
+                    'options' => [
+                        'plugins_dir' => [dirname(dirname(__DIR__)).'/common/lib/smarty'],
+                    ],
+                ],
+            ],
+        ],
         'request' => [
             'csrfParam' => '_csrf-frontend',
         ],
