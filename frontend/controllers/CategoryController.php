@@ -1,14 +1,14 @@
 <?php
 namespace frontend\controllers;
 
-use frontend\controllers\BaseController;
+use frontend\controllers\FrontendBaseController;
 use yii;
 use common\models\Category;
 use common\lib\sqlQuery;
 
 
 
-class CategoryController extends BaseController{
+class CategoryController extends FrontendBaseController{
     /**
      * [actionIndex 栏目列表]
      * @author:xiaoming

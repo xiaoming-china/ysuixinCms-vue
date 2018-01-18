@@ -1,10 +1,10 @@
 <?php
 namespace frontend\controllers;
 
-use frontend\controllers\BaseController;
+use frontend\controllers\FrontendBaseController;
 use yii;
 
-class IndexController extends BaseController{
+class IndexController extends FrontendBaseController{
 
     /**
      * [actionIndex 前台首页]
