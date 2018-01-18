@@ -34,9 +34,6 @@
 			<table class="table table72 table-striped">
 				<thead>
 					<tr>
-            <th style="width: 40px;">
-              <Checkbox v-model="check_all"></Checkbox>
-            </th> 
 						<th style="width: 40px;">编号</th> 
 						<th style="width: 80px;">名称</th> 
 						<th style="width: 80px;">别名(数据表名)</th> 
@@ -53,7 +50,6 @@
               </td>
           </tr>
 					<tr v-for="(value,key) in modelList" :key="key" v-else>
-            <td><Checkbox v-model="check_all":value="value.id"></Checkbox></td> 
             <td>{{key + 1}}</td>
 						<td>{{value.name}}</td> 
 						<td>{{value.e_name}}</td> 
@@ -81,7 +77,7 @@
       </Page>
   </div>
   <!--模型列表-->
-  <Modal v-model="showAddModel">
+  <Modal v-model="showAddModel" :mask-closable="false">
     <p slot="header">
         <span>添加模型</span>
     </p>
@@ -193,7 +189,6 @@
             model_desc:'',
             status:1
           },
-          check_all:false,
           modelrule:{
               name: [
                   {required: true, message: '名称不能为空', trigger:'blur'},
@@ -312,9 +307,9 @@
           },
           //添加模型
           addModel:function(name){
+              var _that = this;
               this.$refs[name].validate((valid) => {
                 if (valid) {
-                  var _that = this;
                   _that.loading = true;
                   var params = {
                       name: _that.ModelInfo.name,
