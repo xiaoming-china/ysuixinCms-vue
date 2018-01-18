@@ -20,6 +20,8 @@ return [
                     'class' => 'yii\smarty\ViewRenderer',
                     'cachePath' => dirname(dirname(__DIR__)).'/web/runtime/Smarty/cache',
                     'options' => [
+                        'left_delimiter'=>"{{",
+                        'right_delimiter'=>"}}",
                         'plugins_dir' => [dirname(dirname(__DIR__)).'/common/lib/smarty'],
                     ],
                 ],
