@@ -455,8 +455,8 @@
             }
         },
         mounted: function() {
-		      this.modelId = this.request('model_id');
-          this.fieldId = this.request('field_id');
+		      this.modelId = this.request('modelId');
+          this.fieldId = this.request('fieldId');
           this.getFieldInfo();
         },
         methods: {
@@ -499,7 +499,7 @@
             var _that = this;
             $ajax(
               '/admin/field/get-field-info', 
-              {'field_id':_that.fieldId}, 
+              {'fieldId':_that.fieldId}, 
               'get',
               function(res){
                 _that.configParamsShow[res.data.type] = true;

@@ -1,5 +1,4 @@
-
-    <!--主体内容区开始-->
+<!--主体内容区开始-->
     <div class="right-content" id="app" v-cloak>
       <div class="card">
       	<div class="first-title">
@@ -144,8 +143,8 @@
           sortData:[]
         },
         mounted: function() {
-		  this.modelId            = this.request('model_id');
-		  this.searchData.modelId = this.request('model_id');
+		      this.modelId            = this.request('modelId');
+		      this.searchData.modelId = this.request('modelId');
           this.getFieldList();
         },
         methods: {
@@ -298,9 +297,9 @@
           location:function(type,fieldId){
           	var url = '';
           	switch(type){
-          	  case 1:url = '/admin/field/add-field?model_id='+this.modelId;
+          	  case 1:url = '/admin/field/add-field?modelId='+this.modelId;
           		break;
-          	  case 2:url = '/admin/field/edit-field?model_id='+this.modelId+'&field_id='+fieldId;
+          	  case 2:url = '/admin/field/edit-field?modelId='+this.modelId+'&fieldId='+fieldId;
           		break;
           	}
             location.href = url;

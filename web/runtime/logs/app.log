@@ -20367,3 +20367,1807 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1516264433.105
     'REQUEST_TIME' => 1516264433
 ]
+2018-01-22 08:48:21 [127.0.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "favicon.ico". in F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php:532
+Stack trace:
+#0 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('favicon.ico', Array)
+#1 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 F:\xampp\htdocs\vueDemo\web\index.php(23): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php:114
+Stack trace:
+#0 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 F:\xampp\htdocs\vueDemo\web\index.php(23): yii\base\Application->run()
+#2 {main}
+2018-01-22 08:48:21 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'Hm_lvt_1873856b1a96138cdd16521be8a1dc50' => '1515996193,1516064473,1516239140,1516582101'
+    'Hm_lpvt_1873856b1a96138cdd16521be8a1dc50' => '1516582101'
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'vuedemo.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36'
+    'HTTP_ACCEPT' => 'image/webp,image/apng,image/*,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://vuedemo.com/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'Hm_lvt_1873856b1a96138cdd16521be8a1dc50=1515996193,1516064473,1516239140,1516582101; Hm_lpvt_1873856b1a96138cdd16521be8a1dc50=1516582101'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;F:\\java\\bin;F:\\java\\jre\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;F:\\xampp\\php;F:\\Git\\cmd;F:\\Gow\\bin;C:\\Program Files\\nodejs\\;F:\\java/bin;F:\\java/jre/bin;F:\\python;鈥狥:\\cmder;F:\\xampp\\php;C:\\Users\\Admin\\AppData\\Roaming\\npm;C:\\Users\\Admin\\AppData\\Local\\Microsoft\\WindowsApps;F:\\cmder;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1 Server at vuedemo.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1'
+    'SERVER_NAME' => 'vuedemo.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'F:/xampp/htdocs/vueDemo/web/index.php'
+    'REMOTE_PORT' => '5332'
+    'REDIRECT_URL' => '/favicon.ico'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/favicon.ico'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1516582101.142
+    'REQUEST_TIME' => 1516582101
+]
+2018-01-22 09:12:06 [127.0.0.1][-][v8p7r1pkc8ck5f5ekp3peud6d7][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [2002] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ in F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Connection.php:646
+Stack trace:
+#0 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Connection.php(646): PDO->__construct('mysql:host=47.9...', 'cmsDemo', 'huwangmingDemo', NULL)
+#1 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Connection.php(579): yii\db\Connection->createPdoInstance()
+#2 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Connection.php(928): yii\db\Connection->open()
+#3 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Connection.php(915): yii\db\Connection->getMasterPdo()
+#4 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Command.php(219): yii\db\Connection->getSlavePdo()
+#5 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Command.php(910): yii\db\Command->prepare(true)
+#6 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Command.php(376): yii\db\Command->queryInternal('fetch', NULL)
+#7 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Query.php(253): yii\db\Command->queryOne()
+#8 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\ActiveQuery.php(294): yii\db\Query->one(NULL)
+#9 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\BaseActiveRecord.php(107): yii\db\ActiveQuery->one()
+#10 F:\xampp\htdocs\vueDemo\common\models\User.php(48): yii\db\BaseActiveRecord::findOne(Array)
+#11 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\User.php(657): common\models\User::findIdentity(5)
+#12 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\User.php(188): yii\web\User->renewAuthStatus()
+#13 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\User.php(333): yii\web\User->getIdentity()
+#14 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Component.php(132): yii\web\User->getIsGuest()
+#15 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2-debug\panels\UserPanel.php(75): yii\base\Component->__get('isGuest')
+#16 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Object.php(107): yii\debug\panels\UserPanel->init()
+#17 [internal function]: yii\base\Object->__construct(Array)
+#18 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\di\Container.php(381): ReflectionClass->newInstanceArgs(Array)
+#19 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\di\Container.php(156): yii\di\Container->build('yii\\debug\\panel...', Array, Array)
+#20 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\BaseYii.php(348): yii\di\Container->get('yii\\debug\\panel...', Array, Array)
+#21 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2-debug\Module.php(177): yii\BaseYii::createObject(Array)
+#22 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2-debug\Module.php(149): yii\debug\Module->initPanels()
+#23 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Object.php(107): yii\debug\Module->init()
+#24 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(158): yii\base\Object->__construct(Array)
+#25 [internal function]: yii\base\Module->__construct('debug', Object(yii\web\Application), Array)
+#26 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\di\Container.php(375): ReflectionClass->newInstanceArgs(Array)
+#27 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\di\Container.php(156): yii\di\Container->build('yii\\debug\\Modul...', Array, Array)
+#28 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\BaseYii.php(348): yii\di\Container->get('yii\\debug\\Modul...', Array, Array)
+#29 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(423): yii\BaseYii::createObject(Array, Array)
+#30 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(309): yii\base\Module->getModule('debug')
+#31 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php(69): yii\base\Application->bootstrap()
+#32 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(272): yii\web\Application->bootstrap()
+#33 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Object.php(107): yii\base\Application->init()
+#34 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(205): yii\base\Object->__construct(Array)
+#35 F:\xampp\htdocs\vueDemo\web\admin\index.php(18): yii\base\Application->__construct(Array)
+#36 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [2002] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ in F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Connection.php:584
+Stack trace:
+#0 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Connection.php(928): yii\db\Connection->open()
+#1 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Connection.php(915): yii\db\Connection->getMasterPdo()
+#2 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Command.php(219): yii\db\Connection->getSlavePdo()
+#3 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Command.php(910): yii\db\Command->prepare(true)
+#4 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Command.php(376): yii\db\Command->queryInternal('fetch', NULL)
+#5 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Query.php(253): yii\db\Command->queryOne()
+#6 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\ActiveQuery.php(294): yii\db\Query->one(NULL)
+#7 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\BaseActiveRecord.php(107): yii\db\ActiveQuery->one()
+#8 F:\xampp\htdocs\vueDemo\common\models\User.php(48): yii\db\BaseActiveRecord::findOne(Array)
+#9 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\User.php(657): common\models\User::findIdentity(5)
+#10 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\User.php(188): yii\web\User->renewAuthStatus()
+#11 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\User.php(333): yii\web\User->getIdentity()
+#12 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Component.php(132): yii\web\User->getIsGuest()
+#13 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2-debug\panels\UserPanel.php(75): yii\base\Component->__get('isGuest')
+#14 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Object.php(107): yii\debug\panels\UserPanel->init()
+#15 [internal function]: yii\base\Object->__construct(Array)
+#16 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\di\Container.php(381): ReflectionClass->newInstanceArgs(Array)
+#17 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\di\Container.php(156): yii\di\Container->build('yii\\debug\\panel...', Array, Array)
+#18 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\BaseYii.php(348): yii\di\Container->get('yii\\debug\\panel...', Array, Array)
+#19 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2-debug\Module.php(177): yii\BaseYii::createObject(Array)
+#20 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2-debug\Module.php(149): yii\debug\Module->initPanels()
+#21 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Object.php(107): yii\debug\Module->init()
+#22 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(158): yii\base\Object->__construct(Array)
+#23 [internal function]: yii\base\Module->__construct('debug', Object(yii\web\Application), Array)
+#24 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\di\Container.php(375): ReflectionClass->newInstanceArgs(Array)
+#25 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\di\Container.php(156): yii\di\Container->build('yii\\debug\\Modul...', Array, Array)
+#26 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\BaseYii.php(348): yii\di\Container->get('yii\\debug\\Modul...', Array, Array)
+#27 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(423): yii\BaseYii::createObject(Array, Array)
+#28 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(309): yii\base\Module->getModule('debug')
+#29 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php(69): yii\base\Application->bootstrap()
+#30 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(272): yii\web\Application->bootstrap()
+#31 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Object.php(107): yii\base\Application->init()
+#32 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(205): yii\base\Object->__construct(Array)
+#33 F:\xampp\htdocs\vueDemo\web\admin\index.php(18): yii\base\Application->__construct(Array)
+#34 {main}
+Additional Information:
+
+2018-01-22 09:11:45 [127.0.0.1][-][v8p7r1pkc8ck5f5ekp3peud6d7][info][application] $_GET = [
+    'keyworlds' => ''
+    'status' => '-1'
+    'total' => '0'
+    'page' => '0'
+    'pageSize' => '20'
+]
+
+$_COOKIE = [
+    'Hm_lvt_1873856b1a96138cdd16521be8a1dc50' => '1515996193,1516064473,1516239140,1516582101'
+    'Hm_lpvt_1873856b1a96138cdd16521be8a1dc50' => '1516582101'
+    'advanced-backend' => 'v8p7r1pkc8ck5f5ekp3peud6d7'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 5
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'vuedemo.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36'
+    'HTTP_REFERER' => 'http://vuedemo.com/admin/model/model-list'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'Hm_lvt_1873856b1a96138cdd16521be8a1dc50=1515996193,1516064473,1516239140,1516582101; Hm_lpvt_1873856b1a96138cdd16521be8a1dc50=1516582101; advanced-backend=v8p7r1pkc8ck5f5ekp3peud6d7'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;F:\\java\\bin;F:\\java\\jre\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;F:\\xampp\\php;F:\\Git\\cmd;F:\\Gow\\bin;C:\\Program Files\\nodejs\\;F:\\java/bin;F:\\java/jre/bin;F:\\python;鈥狥:\\cmder;F:\\xampp\\php;C:\\Users\\Admin\\AppData\\Roaming\\npm;C:\\Users\\Admin\\AppData\\Local\\Microsoft\\WindowsApps;F:\\cmder;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1 Server at vuedemo.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1'
+    'SERVER_NAME' => 'vuedemo.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'F:/xampp/htdocs/vueDemo/web/admin/index.php'
+    'REMOTE_PORT' => '6806'
+    'REDIRECT_URL' => '/admin/model/model-list'
+    'REDIRECT_QUERY_STRING' => 'keyworlds=&status=-1&total=0&page=0&pageSize=20'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'keyworlds=&status=-1&total=0&page=0&pageSize=20'
+    'REQUEST_URI' => '/admin/model/model-list?keyworlds=&status=-1&total=0&page=0&pageSize=20'
+    'SCRIPT_NAME' => '/admin/index.php'
+    'PHP_SELF' => '/admin/index.php'
+    'REQUEST_TIME_FLOAT' => 1516583505.032
+    'REQUEST_TIME' => 1516583505
+]
+2018-01-22 09:29:15 [127.0.0.1][5][v8p7r1pkc8ck5f5ekp3peud6d7][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined variable: d in F:\xampp\htdocs\vueDemo\backend\controllers\ModelController.php:234
+Stack trace:
+#0 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php(57): ::call_user_func_array:{F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php:57}()
+#1 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams()
+#2 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(523): backend\controllers\ModelController->runAction()
+#3 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php(102): yii\web\Application->runAction()
+#4 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest()
+#5 F:\xampp\htdocs\vueDemo\web\admin\index.php(20): yii\web\Application->run()
+#6 {main}
+2018-01-22 09:29:14 [127.0.0.1][5][v8p7r1pkc8ck5f5ekp3peud6d7][info][application] $_POST = [
+    'id' => '61'
+]
+
+$_COOKIE = [
+    'Hm_lvt_1873856b1a96138cdd16521be8a1dc50' => '1515996193,1516064473,1516239140,1516582101'
+    'Hm_lpvt_1873856b1a96138cdd16521be8a1dc50' => '1516582101'
+    'advanced-backend' => 'v8p7r1pkc8ck5f5ekp3peud6d7'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 5
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'vuedemo.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '5'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_ORIGIN' => 'http://vuedemo.com'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_REFERER' => 'http://vuedemo.com/admin/model/model-list'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'Hm_lvt_1873856b1a96138cdd16521be8a1dc50=1515996193,1516064473,1516239140,1516582101; Hm_lpvt_1873856b1a96138cdd16521be8a1dc50=1516582101; advanced-backend=v8p7r1pkc8ck5f5ekp3peud6d7'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;F:\\java\\bin;F:\\java\\jre\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;F:\\xampp\\php;F:\\Git\\cmd;F:\\Gow\\bin;C:\\Program Files\\nodejs\\;F:\\java/bin;F:\\java/jre/bin;F:\\python;鈥狥:\\cmder;F:\\xampp\\php;C:\\Users\\Admin\\AppData\\Roaming\\npm;C:\\Users\\Admin\\AppData\\Local\\Microsoft\\WindowsApps;F:\\cmder;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1 Server at vuedemo.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1'
+    'SERVER_NAME' => 'vuedemo.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'F:/xampp/htdocs/vueDemo/web/admin/index.php'
+    'REMOTE_PORT' => '8767'
+    'REDIRECT_URL' => '/admin/model/del-model'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/admin/model/del-model'
+    'SCRIPT_NAME' => '/admin/index.php'
+    'PHP_SELF' => '/admin/index.php'
+    'REQUEST_TIME_FLOAT' => 1516584554.803
+    'REQUEST_TIME' => 1516584554
+]
+2018-01-22 09:31:46 [127.0.0.1][5][v8p7r1pkc8ck5f5ekp3peud6d7][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined variable: table in F:\xampp\htdocs\vueDemo\common\lib\Table.php:152
+Stack trace:
+#0 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php(57): backend\controllers\ModelController->actionDelModel()
+#1 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php(57): ::call_user_func_array:{F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php:57}()
+#2 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams()
+#3 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(523): backend\controllers\ModelController->runAction()
+#4 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php(102): yii\web\Application->runAction()
+#5 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest()
+#6 F:\xampp\htdocs\vueDemo\web\admin\index.php(20): yii\web\Application->run()
+#7 {main}
+2018-01-22 09:31:46 [127.0.0.1][5][v8p7r1pkc8ck5f5ekp3peud6d7][info][application] $_POST = [
+    'id' => '62'
+]
+
+$_COOKIE = [
+    'Hm_lvt_1873856b1a96138cdd16521be8a1dc50' => '1515996193,1516064473,1516239140,1516582101'
+    'Hm_lpvt_1873856b1a96138cdd16521be8a1dc50' => '1516582101'
+    'advanced-backend' => 'v8p7r1pkc8ck5f5ekp3peud6d7'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 5
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'vuedemo.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '5'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_ORIGIN' => 'http://vuedemo.com'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_REFERER' => 'http://vuedemo.com/admin/model/model-list'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'Hm_lvt_1873856b1a96138cdd16521be8a1dc50=1515996193,1516064473,1516239140,1516582101; Hm_lpvt_1873856b1a96138cdd16521be8a1dc50=1516582101; advanced-backend=v8p7r1pkc8ck5f5ekp3peud6d7'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;F:\\java\\bin;F:\\java\\jre\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;F:\\xampp\\php;F:\\Git\\cmd;F:\\Gow\\bin;C:\\Program Files\\nodejs\\;F:\\java/bin;F:\\java/jre/bin;F:\\python;鈥狥:\\cmder;F:\\xampp\\php;C:\\Users\\Admin\\AppData\\Roaming\\npm;C:\\Users\\Admin\\AppData\\Local\\Microsoft\\WindowsApps;F:\\cmder;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1 Server at vuedemo.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1'
+    'SERVER_NAME' => 'vuedemo.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'F:/xampp/htdocs/vueDemo/web/admin/index.php'
+    'REMOTE_PORT' => '9033'
+    'REDIRECT_URL' => '/admin/model/del-model'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/admin/model/del-model'
+    'SCRIPT_NAME' => '/admin/index.php'
+    'PHP_SELF' => '/admin/index.php'
+    'REQUEST_TIME_FLOAT' => 1516584706.063
+    'REQUEST_TIME' => 1516584706
+]
+2018-01-22 09:37:30 [127.0.0.1][5][v8p7r1pkc8ck5f5ekp3peud6d7][error][yii\db\Exception] PDOException: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'cms_testy' already exists in F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Command.php:842
+Stack trace:
+#0 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Command.php(842): PDOStatement->execute()
+#1 F:\xampp\htdocs\vueDemo\common\lib\Table.php(172): yii\db\Command->execute()
+#2 F:\xampp\htdocs\vueDemo\backend\controllers\ModelController.php(171): common\lib\Table->tableRename('cms_test_data', 'cms_testy')
+#3 [internal function]: backend\controllers\ModelController->actionEditModel()
+#4 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#5 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#6 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('edit-model', Array)
+#7 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('model/edit-mode...', Array)
+#8 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 F:\xampp\htdocs\vueDemo\web\admin\index.php(20): yii\base\Application->run()
+#10 {main}
+
+Next yii\db\Exception: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'cms_testy' already exists
+The SQL being executed was: RENAME TABLE `cms_test_data` TO `cms_testy` in F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Schema.php:636
+Stack trace:
+#0 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Command.php(852): yii\db\Schema->convertException(Object(PDOException), 'RENAME TABLE `c...')
+#1 F:\xampp\htdocs\vueDemo\common\lib\Table.php(172): yii\db\Command->execute()
+#2 F:\xampp\htdocs\vueDemo\backend\controllers\ModelController.php(171): common\lib\Table->tableRename('cms_test_data', 'cms_testy')
+#3 [internal function]: backend\controllers\ModelController->actionEditModel()
+#4 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#5 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#6 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('edit-model', Array)
+#7 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('model/edit-mode...', Array)
+#8 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 F:\xampp\htdocs\vueDemo\web\admin\index.php(20): yii\base\Application->run()
+#10 {main}
+Additional Information:
+Array
+(
+    [0] => 42S01
+    [1] => 1050
+    [2] => Table 'cms_testy' already exists
+)
+
+2018-01-22 09:37:29 [127.0.0.1][5][v8p7r1pkc8ck5f5ekp3peud6d7][info][application] $_POST = [
+    'modelId' => '63'
+    'name' => 'test2'
+    'e_name' => 'testy'
+    'model_desc' => ''
+    'status' => '1'
+    'desc' => ''
+]
+
+$_COOKIE = [
+    'Hm_lvt_1873856b1a96138cdd16521be8a1dc50' => '1515996193,1516064473,1516239140,1516582101'
+    'Hm_lpvt_1873856b1a96138cdd16521be8a1dc50' => '1516582101'
+    'advanced-backend' => 'v8p7r1pkc8ck5f5ekp3peud6d7'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 5
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'vuedemo.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '61'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_ORIGIN' => 'http://vuedemo.com'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_REFERER' => 'http://vuedemo.com/admin/model/model-list'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'Hm_lvt_1873856b1a96138cdd16521be8a1dc50=1515996193,1516064473,1516239140,1516582101; Hm_lpvt_1873856b1a96138cdd16521be8a1dc50=1516582101; advanced-backend=v8p7r1pkc8ck5f5ekp3peud6d7'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;F:\\java\\bin;F:\\java\\jre\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;F:\\xampp\\php;F:\\Git\\cmd;F:\\Gow\\bin;C:\\Program Files\\nodejs\\;F:\\java/bin;F:\\java/jre/bin;F:\\python;鈥狥:\\cmder;F:\\xampp\\php;C:\\Users\\Admin\\AppData\\Roaming\\npm;C:\\Users\\Admin\\AppData\\Local\\Microsoft\\WindowsApps;F:\\cmder;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1 Server at vuedemo.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1'
+    'SERVER_NAME' => 'vuedemo.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'F:/xampp/htdocs/vueDemo/web/admin/index.php'
+    'REMOTE_PORT' => '9637'
+    'REDIRECT_URL' => '/admin/model/edit-model'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/admin/model/edit-model'
+    'SCRIPT_NAME' => '/admin/index.php'
+    'PHP_SELF' => '/admin/index.php'
+    'REQUEST_TIME_FLOAT' => 1516585049.982
+    'REQUEST_TIME' => 1516585049
+]
+2018-01-22 10:00:30 [127.0.0.1][5][v8p7r1pkc8ck5f5ekp3peud6d7][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined variable: refTable in F:\xampp\htdocs\vueDemo\common\lib\Table.php:138
+Stack trace:
+#0 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php(57): backend\controllers\ModelController->actionAddModel()
+#1 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php(57): ::call_user_func_array:{F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php:57}()
+#2 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams()
+#3 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(523): backend\controllers\ModelController->runAction()
+#4 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php(102): yii\web\Application->runAction()
+#5 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest()
+#6 F:\xampp\htdocs\vueDemo\web\admin\index.php(20): yii\web\Application->run()
+#7 {main}
+2018-01-22 10:00:27 [127.0.0.1][5][v8p7r1pkc8ck5f5ekp3peud6d7][info][application] $_POST = [
+    'name' => 'test'
+    'e_name' => 'test'
+    'status' => '1'
+]
+
+$_COOKIE = [
+    'Hm_lvt_1873856b1a96138cdd16521be8a1dc50' => '1515996193,1516064473,1516239140,1516582101'
+    'Hm_lpvt_1873856b1a96138cdd16521be8a1dc50' => '1516582101'
+    'advanced-backend' => 'v8p7r1pkc8ck5f5ekp3peud6d7'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 5
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'vuedemo.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '30'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_ORIGIN' => 'http://vuedemo.com'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_REFERER' => 'http://vuedemo.com/admin/model/model-list'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'Hm_lvt_1873856b1a96138cdd16521be8a1dc50=1515996193,1516064473,1516239140,1516582101; Hm_lpvt_1873856b1a96138cdd16521be8a1dc50=1516582101; advanced-backend=v8p7r1pkc8ck5f5ekp3peud6d7'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;F:\\java\\bin;F:\\java\\jre\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;F:\\xampp\\php;F:\\Git\\cmd;F:\\Gow\\bin;C:\\Program Files\\nodejs\\;F:\\java/bin;F:\\java/jre/bin;F:\\python;鈥狥:\\cmder;F:\\xampp\\php;C:\\Users\\Admin\\AppData\\Roaming\\npm;C:\\Users\\Admin\\AppData\\Local\\Microsoft\\WindowsApps;F:\\cmder;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1 Server at vuedemo.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1'
+    'SERVER_NAME' => 'vuedemo.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'F:/xampp/htdocs/vueDemo/web/admin/index.php'
+    'REMOTE_PORT' => '12457'
+    'REDIRECT_URL' => '/admin/model/add-model'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/admin/model/add-model'
+    'SCRIPT_NAME' => '/admin/index.php'
+    'PHP_SELF' => '/admin/index.php'
+    'REQUEST_TIME_FLOAT' => 1516586427.229
+    'REQUEST_TIME' => 1516586427
+]
+2018-01-22 10:05:49 [127.0.0.1][5][v8p7r1pkc8ck5f5ekp3peud6d7][error][yii\db\Exception] PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'is_delete' in 'where clause' in F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Command.php:915
+Stack trace:
+#0 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Command.php(915): PDOStatement->execute()
+#1 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Command.php(388): yii\db\Command->queryInternal('fetchColumn', 0)
+#2 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Query.php(433): yii\db\Command->queryScalar()
+#3 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\ActiveQuery.php(339): yii\db\Query->queryScalar('COUNT(*)', Object(yii\db\Connection))
+#4 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Query.php(319): yii\db\ActiveQuery->queryScalar('COUNT(*)', Object(yii\db\Connection))
+#5 F:\xampp\htdocs\vueDemo\backend\controllers\ModelController.php(45): yii\db\Query->count()
+#6 [internal function]: backend\controllers\ModelController->actionModelList()
+#7 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#9 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('model-list', Array)
+#10 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('model/model-lis...', Array)
+#11 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 F:\xampp\htdocs\vueDemo\web\admin\index.php(20): yii\base\Application->run()
+#13 {main}
+
+Next yii\db\Exception: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'is_delete' in 'where clause'
+The SQL being executed was: SELECT COUNT(*) FROM `cms_model` WHERE `is_delete` = 2 in F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Schema.php:636
+Stack trace:
+#0 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Command.php(930): yii\db\Schema->convertException(Object(PDOException), 'SELECT COUNT(*)...')
+#1 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Command.php(388): yii\db\Command->queryInternal('fetchColumn', 0)
+#2 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Query.php(433): yii\db\Command->queryScalar()
+#3 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\ActiveQuery.php(339): yii\db\Query->queryScalar('COUNT(*)', Object(yii\db\Connection))
+#4 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Query.php(319): yii\db\ActiveQuery->queryScalar('COUNT(*)', Object(yii\db\Connection))
+#5 F:\xampp\htdocs\vueDemo\backend\controllers\ModelController.php(45): yii\db\Query->count()
+#6 [internal function]: backend\controllers\ModelController->actionModelList()
+#7 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#9 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('model-list', Array)
+#10 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('model/model-lis...', Array)
+#11 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 F:\xampp\htdocs\vueDemo\web\admin\index.php(20): yii\base\Application->run()
+#13 {main}
+Additional Information:
+Array
+(
+    [0] => 42S22
+    [1] => 1054
+    [2] => Unknown column 'is_delete' in 'where clause'
+)
+
+2018-01-22 10:05:48 [127.0.0.1][5][v8p7r1pkc8ck5f5ekp3peud6d7][info][application] $_GET = [
+    'keyworlds' => ''
+    'status' => '-1'
+    'total' => '0'
+    'page' => '0'
+    'pageSize' => '20'
+]
+
+$_COOKIE = [
+    'Hm_lvt_1873856b1a96138cdd16521be8a1dc50' => '1515996193,1516064473,1516239140,1516582101'
+    'Hm_lpvt_1873856b1a96138cdd16521be8a1dc50' => '1516582101'
+    'advanced-backend' => 'v8p7r1pkc8ck5f5ekp3peud6d7'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 5
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'vuedemo.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36'
+    'HTTP_REFERER' => 'http://vuedemo.com/admin/model/model-list'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'Hm_lvt_1873856b1a96138cdd16521be8a1dc50=1515996193,1516064473,1516239140,1516582101; Hm_lpvt_1873856b1a96138cdd16521be8a1dc50=1516582101; advanced-backend=v8p7r1pkc8ck5f5ekp3peud6d7'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;F:\\java\\bin;F:\\java\\jre\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;F:\\xampp\\php;F:\\Git\\cmd;F:\\Gow\\bin;C:\\Program Files\\nodejs\\;F:\\java/bin;F:\\java/jre/bin;F:\\python;鈥狥:\\cmder;F:\\xampp\\php;C:\\Users\\Admin\\AppData\\Roaming\\npm;C:\\Users\\Admin\\AppData\\Local\\Microsoft\\WindowsApps;F:\\cmder;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1 Server at vuedemo.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1'
+    'SERVER_NAME' => 'vuedemo.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'F:/xampp/htdocs/vueDemo/web/admin/index.php'
+    'REMOTE_PORT' => '13149'
+    'REDIRECT_URL' => '/admin/model/model-list'
+    'REDIRECT_QUERY_STRING' => 'keyworlds=&status=-1&total=0&page=0&pageSize=20'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'keyworlds=&status=-1&total=0&page=0&pageSize=20'
+    'REQUEST_URI' => '/admin/model/model-list?keyworlds=&status=-1&total=0&page=0&pageSize=20'
+    'SCRIPT_NAME' => '/admin/index.php'
+    'PHP_SELF' => '/admin/index.php'
+    'REQUEST_TIME_FLOAT' => 1516586748.909
+    'REQUEST_TIME' => 1516586748
+]
+2018-01-22 10:06:45 [127.0.0.1][5][v8p7r1pkc8ck5f5ekp3peud6d7][error][yii\db\Exception] PDOException: SQLSTATE[HY000]: General error: 1215 Cannot add foreign key constraint in F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Command.php:842
+Stack trace:
+#0 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Command.php(842): PDOStatement->execute()
+#1 F:\xampp\htdocs\vueDemo\common\lib\Table.php(138): yii\db\Command->execute()
+#2 F:\xampp\htdocs\vueDemo\backend\controllers\ModelController.php(110): common\lib\Table::addTable('cms_test', Array)
+#3 [internal function]: backend\controllers\ModelController->actionAddModel()
+#4 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#5 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#6 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('add-model', Array)
+#7 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('model/add-model', Array)
+#8 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 F:\xampp\htdocs\vueDemo\web\admin\index.php(20): yii\base\Application->run()
+#10 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000]: General error: 1215 Cannot add foreign key constraint
+The SQL being executed was: ALTER TABLE `cms_test_data` ADD CONSTRAINT `modelId` FOREIGN KEY (`id`) REFERENCES `CASCADE` (`RESTRICT`) in F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Schema.php:636
+Stack trace:
+#0 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Command.php(852): yii\db\Schema->convertException(Object(PDOException), 'ALTER TABLE `cm...')
+#1 F:\xampp\htdocs\vueDemo\common\lib\Table.php(138): yii\db\Command->execute()
+#2 F:\xampp\htdocs\vueDemo\backend\controllers\ModelController.php(110): common\lib\Table::addTable('cms_test', Array)
+#3 [internal function]: backend\controllers\ModelController->actionAddModel()
+#4 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#5 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#6 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('add-model', Array)
+#7 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('model/add-model', Array)
+#8 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 F:\xampp\htdocs\vueDemo\web\admin\index.php(20): yii\base\Application->run()
+#10 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 1215
+    [2] => Cannot add foreign key constraint
+)
+
+2018-01-22 10:06:45 [127.0.0.1][5][v8p7r1pkc8ck5f5ekp3peud6d7][info][application] $_POST = [
+    'name' => 'test'
+    'e_name' => 'test'
+    'status' => '1'
+]
+
+$_COOKIE = [
+    'Hm_lvt_1873856b1a96138cdd16521be8a1dc50' => '1515996193,1516064473,1516239140,1516582101'
+    'Hm_lpvt_1873856b1a96138cdd16521be8a1dc50' => '1516582101'
+    'advanced-backend' => 'v8p7r1pkc8ck5f5ekp3peud6d7'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 5
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'vuedemo.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '30'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_ORIGIN' => 'http://vuedemo.com'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_REFERER' => 'http://vuedemo.com/admin/model/model-list'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'Hm_lvt_1873856b1a96138cdd16521be8a1dc50=1515996193,1516064473,1516239140,1516582101; Hm_lpvt_1873856b1a96138cdd16521be8a1dc50=1516582101; advanced-backend=v8p7r1pkc8ck5f5ekp3peud6d7'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;F:\\java\\bin;F:\\java\\jre\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;F:\\xampp\\php;F:\\Git\\cmd;F:\\Gow\\bin;C:\\Program Files\\nodejs\\;F:\\java/bin;F:\\java/jre/bin;F:\\python;鈥狥:\\cmder;F:\\xampp\\php;C:\\Users\\Admin\\AppData\\Roaming\\npm;C:\\Users\\Admin\\AppData\\Local\\Microsoft\\WindowsApps;F:\\cmder;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1 Server at vuedemo.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1'
+    'SERVER_NAME' => 'vuedemo.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'F:/xampp/htdocs/vueDemo/web/admin/index.php'
+    'REMOTE_PORT' => '13272'
+    'REDIRECT_URL' => '/admin/model/add-model'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/admin/model/add-model'
+    'SCRIPT_NAME' => '/admin/index.php'
+    'PHP_SELF' => '/admin/index.php'
+    'REQUEST_TIME_FLOAT' => 1516586805.053
+    'REQUEST_TIME' => 1516586805
+]
+2018-01-22 10:12:27 [127.0.0.1][5][v8p7r1pkc8ck5f5ekp3peud6d7][error][yii\db\Exception] PDOException: SQLSTATE[HY000]: General error: 1215 Cannot add foreign key constraint in F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Command.php:842
+Stack trace:
+#0 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Command.php(842): PDOStatement->execute()
+#1 F:\xampp\htdocs\vueDemo\common\lib\Table.php(138): yii\db\Command->execute()
+#2 F:\xampp\htdocs\vueDemo\backend\controllers\ModelController.php(110): common\lib\Table::addTable('cms_test', Array)
+#3 [internal function]: backend\controllers\ModelController->actionAddModel()
+#4 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#5 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#6 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('add-model', Array)
+#7 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('model/add-model', Array)
+#8 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 F:\xampp\htdocs\vueDemo\web\admin\index.php(20): yii\base\Application->run()
+#10 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000]: General error: 1215 Cannot add foreign key constraint
+The SQL being executed was: ALTER TABLE `cms_test_data` ADD CONSTRAINT `modelId` FOREIGN KEY (`id`) REFERENCES `cms_test` (`CASCADE`) ON DELETE RESTRICT in F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Schema.php:636
+Stack trace:
+#0 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Command.php(852): yii\db\Schema->convertException(Object(PDOException), 'ALTER TABLE `cm...')
+#1 F:\xampp\htdocs\vueDemo\common\lib\Table.php(138): yii\db\Command->execute()
+#2 F:\xampp\htdocs\vueDemo\backend\controllers\ModelController.php(110): common\lib\Table::addTable('cms_test', Array)
+#3 [internal function]: backend\controllers\ModelController->actionAddModel()
+#4 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#5 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#6 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('add-model', Array)
+#7 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('model/add-model', Array)
+#8 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 F:\xampp\htdocs\vueDemo\web\admin\index.php(20): yii\base\Application->run()
+#10 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 1215
+    [2] => Cannot add foreign key constraint
+)
+
+2018-01-22 10:12:27 [127.0.0.1][5][v8p7r1pkc8ck5f5ekp3peud6d7][info][application] $_POST = [
+    'name' => 'test'
+    'e_name' => 'test'
+    'desc' => 'test'
+    'status' => '1'
+]
+
+$_COOKIE = [
+    'Hm_lvt_1873856b1a96138cdd16521be8a1dc50' => '1515996193,1516064473,1516239140,1516582101'
+    'Hm_lpvt_1873856b1a96138cdd16521be8a1dc50' => '1516582101'
+    'advanced-backend' => 'v8p7r1pkc8ck5f5ekp3peud6d7'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 5
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'vuedemo.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '40'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_ORIGIN' => 'http://vuedemo.com'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_REFERER' => 'http://vuedemo.com/admin/model/model-list'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'Hm_lvt_1873856b1a96138cdd16521be8a1dc50=1515996193,1516064473,1516239140,1516582101; Hm_lpvt_1873856b1a96138cdd16521be8a1dc50=1516582101; advanced-backend=v8p7r1pkc8ck5f5ekp3peud6d7'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;F:\\java\\bin;F:\\java\\jre\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;F:\\xampp\\php;F:\\Git\\cmd;F:\\Gow\\bin;C:\\Program Files\\nodejs\\;F:\\java/bin;F:\\java/jre/bin;F:\\python;鈥狥:\\cmder;F:\\xampp\\php;C:\\Users\\Admin\\AppData\\Roaming\\npm;C:\\Users\\Admin\\AppData\\Local\\Microsoft\\WindowsApps;F:\\cmder;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1 Server at vuedemo.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1'
+    'SERVER_NAME' => 'vuedemo.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'F:/xampp/htdocs/vueDemo/web/admin/index.php'
+    'REMOTE_PORT' => '13854'
+    'REDIRECT_URL' => '/admin/model/add-model'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/admin/model/add-model'
+    'SCRIPT_NAME' => '/admin/index.php'
+    'PHP_SELF' => '/admin/index.php'
+    'REQUEST_TIME_FLOAT' => 1516587147.219
+    'REQUEST_TIME' => 1516587147
+]
+2018-01-22 14:00:46 [127.0.0.1][5][v8p7r1pkc8ck5f5ekp3peud6d7][error][ArgumentCountError] ArgumentCountError: Too few arguments to function yii\db\Command::addForeignKey(), 4 passed in F:\xampp\htdocs\vueDemo\common\lib\Table.php on line 138 and at least 5 expected in F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Command.php:679
+Stack trace:
+#0 F:\xampp\htdocs\vueDemo\common\lib\Table.php(138): yii\db\Command->addForeignKey('modelId', 'cms_test_data', 'id', 'cms_test')
+#1 F:\xampp\htdocs\vueDemo\backend\controllers\ModelController.php(110): common\lib\Table::addTable('cms_test', Array)
+#2 [internal function]: backend\controllers\ModelController->actionAddModel()
+#3 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#4 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#5 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('add-model', Array)
+#6 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('model/add-model', Array)
+#7 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 F:\xampp\htdocs\vueDemo\web\admin\index.php(20): yii\base\Application->run()
+#9 {main}
+2018-01-22 14:00:46 [127.0.0.1][5][v8p7r1pkc8ck5f5ekp3peud6d7][info][application] $_POST = [
+    'name' => 'test'
+    'e_name' => 'test'
+    'desc' => 'test'
+    'status' => '1'
+]
+
+$_COOKIE = [
+    'Hm_lvt_1873856b1a96138cdd16521be8a1dc50' => '1515996193,1516064473,1516239140,1516582101'
+    'Hm_lpvt_1873856b1a96138cdd16521be8a1dc50' => '1516582101'
+    'advanced-backend' => 'v8p7r1pkc8ck5f5ekp3peud6d7'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 5
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'vuedemo.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '40'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_ORIGIN' => 'http://vuedemo.com'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_REFERER' => 'http://vuedemo.com/admin/model/model-list'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'Hm_lvt_1873856b1a96138cdd16521be8a1dc50=1515996193,1516064473,1516239140,1516582101; Hm_lpvt_1873856b1a96138cdd16521be8a1dc50=1516582101; advanced-backend=v8p7r1pkc8ck5f5ekp3peud6d7'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;F:\\java\\bin;F:\\java\\jre\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;F:\\xampp\\php;F:\\Git\\cmd;F:\\Gow\\bin;C:\\Program Files\\nodejs\\;F:\\java/bin;F:\\java/jre/bin;F:\\python;鈥狥:\\cmder;F:\\xampp\\php;C:\\Users\\Admin\\AppData\\Roaming\\npm;C:\\Users\\Admin\\AppData\\Local\\Microsoft\\WindowsApps;F:\\cmder;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1 Server at vuedemo.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1'
+    'SERVER_NAME' => 'vuedemo.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'F:/xampp/htdocs/vueDemo/web/admin/index.php'
+    'REMOTE_PORT' => '35306'
+    'REDIRECT_URL' => '/admin/model/add-model'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/admin/model/add-model'
+    'SCRIPT_NAME' => '/admin/index.php'
+    'PHP_SELF' => '/admin/index.php'
+    'REQUEST_TIME_FLOAT' => 1516600846.263
+    'REQUEST_TIME' => 1516600846
+]
+2018-01-22 14:06:46 [127.0.0.1][5][v8p7r1pkc8ck5f5ekp3peud6d7][error][ArgumentCountError] ArgumentCountError: Too few arguments to function yii\db\Command::addForeignKey(), 4 passed in F:\xampp\htdocs\vueDemo\common\lib\Table.php on line 141 and at least 5 expected in F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Command.php:679
+Stack trace:
+#0 F:\xampp\htdocs\vueDemo\common\lib\Table.php(141): yii\db\Command->addForeignKey('basic_model_id', 'cms_test_data', 'id', 'cms_test')
+#1 F:\xampp\htdocs\vueDemo\backend\controllers\ModelController.php(110): common\lib\Table::addTable('cms_test', Array)
+#2 [internal function]: backend\controllers\ModelController->actionAddModel()
+#3 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#4 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#5 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('add-model', Array)
+#6 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('model/add-model', Array)
+#7 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 F:\xampp\htdocs\vueDemo\web\admin\index.php(20): yii\base\Application->run()
+#9 {main}
+2018-01-22 14:06:46 [127.0.0.1][5][v8p7r1pkc8ck5f5ekp3peud6d7][info][application] $_POST = [
+    'name' => 'test'
+    'e_name' => 'test'
+    'desc' => 'test'
+    'status' => '1'
+]
+
+$_COOKIE = [
+    'Hm_lvt_1873856b1a96138cdd16521be8a1dc50' => '1515996193,1516064473,1516239140,1516582101'
+    'Hm_lpvt_1873856b1a96138cdd16521be8a1dc50' => '1516582101'
+    'advanced-backend' => 'v8p7r1pkc8ck5f5ekp3peud6d7'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 5
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'vuedemo.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '40'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_ORIGIN' => 'http://vuedemo.com'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_REFERER' => 'http://vuedemo.com/admin/model/model-list'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'Hm_lvt_1873856b1a96138cdd16521be8a1dc50=1515996193,1516064473,1516239140,1516582101; Hm_lpvt_1873856b1a96138cdd16521be8a1dc50=1516582101; advanced-backend=v8p7r1pkc8ck5f5ekp3peud6d7'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;F:\\java\\bin;F:\\java\\jre\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;F:\\xampp\\php;F:\\Git\\cmd;F:\\Gow\\bin;C:\\Program Files\\nodejs\\;F:\\java/bin;F:\\java/jre/bin;F:\\python;鈥狥:\\cmder;F:\\xampp\\php;C:\\Users\\Admin\\AppData\\Roaming\\npm;C:\\Users\\Admin\\AppData\\Local\\Microsoft\\WindowsApps;F:\\cmder;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1 Server at vuedemo.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1'
+    'SERVER_NAME' => 'vuedemo.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'F:/xampp/htdocs/vueDemo/web/admin/index.php'
+    'REMOTE_PORT' => '35941'
+    'REDIRECT_URL' => '/admin/model/add-model'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/admin/model/add-model'
+    'SCRIPT_NAME' => '/admin/index.php'
+    'PHP_SELF' => '/admin/index.php'
+    'REQUEST_TIME_FLOAT' => 1516601206.472
+    'REQUEST_TIME' => 1516601206
+]
+2018-01-22 14:08:02 [127.0.0.1][5][v8p7r1pkc8ck5f5ekp3peud6d7][error][yii\db\Exception] PDOException: SQLSTATE[HY000]: General error: 1215 Cannot add foreign key constraint in F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Command.php:842
+Stack trace:
+#0 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Command.php(842): PDOStatement->execute()
+#1 F:\xampp\htdocs\vueDemo\common\lib\Table.php(143): yii\db\Command->execute()
+#2 F:\xampp\htdocs\vueDemo\backend\controllers\ModelController.php(110): common\lib\Table::addTable('cms_test', Array)
+#3 [internal function]: backend\controllers\ModelController->actionAddModel()
+#4 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#5 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#6 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('add-model', Array)
+#7 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('model/add-model', Array)
+#8 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 F:\xampp\htdocs\vueDemo\web\admin\index.php(20): yii\base\Application->run()
+#10 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000]: General error: 1215 Cannot add foreign key constraint
+The SQL being executed was: ALTER TABLE `cms_test_data` ADD CONSTRAINT `basic_model_id` FOREIGN KEY (`id`) REFERENCES `id` (`cms_test`) in F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Schema.php:636
+Stack trace:
+#0 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Command.php(852): yii\db\Schema->convertException(Object(PDOException), 'ALTER TABLE `cm...')
+#1 F:\xampp\htdocs\vueDemo\common\lib\Table.php(143): yii\db\Command->execute()
+#2 F:\xampp\htdocs\vueDemo\backend\controllers\ModelController.php(110): common\lib\Table::addTable('cms_test', Array)
+#3 [internal function]: backend\controllers\ModelController->actionAddModel()
+#4 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#5 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#6 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('add-model', Array)
+#7 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('model/add-model', Array)
+#8 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 F:\xampp\htdocs\vueDemo\web\admin\index.php(20): yii\base\Application->run()
+#10 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 1215
+    [2] => Cannot add foreign key constraint
+)
+
+2018-01-22 14:08:01 [127.0.0.1][5][v8p7r1pkc8ck5f5ekp3peud6d7][info][application] $_POST = [
+    'name' => 'test'
+    'e_name' => 'test'
+    'status' => '1'
+]
+
+$_COOKIE = [
+    'Hm_lvt_1873856b1a96138cdd16521be8a1dc50' => '1515996193,1516064473,1516239140,1516582101'
+    'Hm_lpvt_1873856b1a96138cdd16521be8a1dc50' => '1516582101'
+    'advanced-backend' => 'v8p7r1pkc8ck5f5ekp3peud6d7'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 5
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'vuedemo.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '30'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_ORIGIN' => 'http://vuedemo.com'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_REFERER' => 'http://vuedemo.com/admin/model/model-list'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'Hm_lvt_1873856b1a96138cdd16521be8a1dc50=1515996193,1516064473,1516239140,1516582101; Hm_lpvt_1873856b1a96138cdd16521be8a1dc50=1516582101; advanced-backend=v8p7r1pkc8ck5f5ekp3peud6d7'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;F:\\java\\bin;F:\\java\\jre\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;F:\\xampp\\php;F:\\Git\\cmd;F:\\Gow\\bin;C:\\Program Files\\nodejs\\;F:\\java/bin;F:\\java/jre/bin;F:\\python;鈥狥:\\cmder;F:\\xampp\\php;C:\\Users\\Admin\\AppData\\Roaming\\npm;C:\\Users\\Admin\\AppData\\Local\\Microsoft\\WindowsApps;F:\\cmder;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1 Server at vuedemo.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1'
+    'SERVER_NAME' => 'vuedemo.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'F:/xampp/htdocs/vueDemo/web/admin/index.php'
+    'REMOTE_PORT' => '36099'
+    'REDIRECT_URL' => '/admin/model/add-model'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/admin/model/add-model'
+    'SCRIPT_NAME' => '/admin/index.php'
+    'PHP_SELF' => '/admin/index.php'
+    'REQUEST_TIME_FLOAT' => 1516601281.697
+    'REQUEST_TIME' => 1516601281
+]
+2018-01-22 14:10:17 [127.0.0.1][5][v8p7r1pkc8ck5f5ekp3peud6d7][error][ParseError] ParseError: syntax error, unexpected 'Yii' (T_STRING) in F:\xampp\htdocs\vueDemo\common\lib\Table.php:139
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('common\\lib\\Tabl...')
+#1 F:\xampp\htdocs\vueDemo\backend\controllers\ModelController.php(96): spl_autoload_call('common\\lib\\Tabl...')
+#2 [internal function]: backend\controllers\ModelController->actionAddModel()
+#3 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#4 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#5 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('add-model', Array)
+#6 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('model/add-model', Array)
+#7 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 F:\xampp\htdocs\vueDemo\web\admin\index.php(20): yii\base\Application->run()
+#9 {main}
+2018-01-22 14:10:16 [127.0.0.1][5][v8p7r1pkc8ck5f5ekp3peud6d7][info][application] $_POST = [
+    'name' => 'test'
+    'e_name' => 'test'
+    'status' => '1'
+]
+
+$_COOKIE = [
+    'Hm_lvt_1873856b1a96138cdd16521be8a1dc50' => '1515996193,1516064473,1516239140,1516582101'
+    'Hm_lpvt_1873856b1a96138cdd16521be8a1dc50' => '1516582101'
+    'advanced-backend' => 'v8p7r1pkc8ck5f5ekp3peud6d7'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 5
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'vuedemo.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '30'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_ORIGIN' => 'http://vuedemo.com'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_REFERER' => 'http://vuedemo.com/admin/model/model-list'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'Hm_lvt_1873856b1a96138cdd16521be8a1dc50=1515996193,1516064473,1516239140,1516582101; Hm_lpvt_1873856b1a96138cdd16521be8a1dc50=1516582101; advanced-backend=v8p7r1pkc8ck5f5ekp3peud6d7'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;F:\\java\\bin;F:\\java\\jre\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;F:\\xampp\\php;F:\\Git\\cmd;F:\\Gow\\bin;C:\\Program Files\\nodejs\\;F:\\java/bin;F:\\java/jre/bin;F:\\python;鈥狥:\\cmder;F:\\xampp\\php;C:\\Users\\Admin\\AppData\\Roaming\\npm;C:\\Users\\Admin\\AppData\\Local\\Microsoft\\WindowsApps;F:\\cmder;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1 Server at vuedemo.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1'
+    'SERVER_NAME' => 'vuedemo.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'F:/xampp/htdocs/vueDemo/web/admin/index.php'
+    'REMOTE_PORT' => '36373'
+    'REDIRECT_URL' => '/admin/model/add-model'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/admin/model/add-model'
+    'SCRIPT_NAME' => '/admin/index.php'
+    'PHP_SELF' => '/admin/index.php'
+    'REQUEST_TIME_FLOAT' => 1516601416.778
+    'REQUEST_TIME' => 1516601416
+]
+2018-01-22 14:18:21 [127.0.0.1][5][m3aiijh1ur5s8gu38u40ngi6q8][error][yii\db\IntegrityException] PDOException: SQLSTATE[23000]: Integrity constraint violation: 1217 Cannot delete or update a parent row: a foreign key constraint fails in F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Command.php:842
+Stack trace:
+#0 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Command.php(842): PDOStatement->execute()
+#1 F:\xampp\htdocs\vueDemo\common\lib\Table.php(161): yii\db\Command->execute()
+#2 F:\xampp\htdocs\vueDemo\backend\controllers\ModelController.php(242): common\lib\Table::dropTable('test')
+#3 [internal function]: backend\controllers\ModelController->actionDelModel()
+#4 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#5 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#6 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('del-model', Array)
+#7 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('model/del-model', Array)
+#8 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 F:\xampp\htdocs\vueDemo\web\admin\index.php(20): yii\base\Application->run()
+#10 {main}
+
+Next yii\db\IntegrityException: SQLSTATE[23000]: Integrity constraint violation: 1217 Cannot delete or update a parent row: a foreign key constraint fails
+The SQL being executed was: DROP TABLE `cms_test` in F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Schema.php:636
+Stack trace:
+#0 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Command.php(852): yii\db\Schema->convertException(Object(PDOException), 'DROP TABLE `cms...')
+#1 F:\xampp\htdocs\vueDemo\common\lib\Table.php(161): yii\db\Command->execute()
+#2 F:\xampp\htdocs\vueDemo\backend\controllers\ModelController.php(242): common\lib\Table::dropTable('test')
+#3 [internal function]: backend\controllers\ModelController->actionDelModel()
+#4 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#5 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#6 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('del-model', Array)
+#7 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('model/del-model', Array)
+#8 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 F:\xampp\htdocs\vueDemo\web\admin\index.php(20): yii\base\Application->run()
+#10 {main}
+Additional Information:
+Array
+(
+    [0] => 23000
+    [1] => 1217
+    [2] => Cannot delete or update a parent row: a foreign key constraint fails
+)
+
+2018-01-22 14:18:20 [127.0.0.1][5][m3aiijh1ur5s8gu38u40ngi6q8][info][application] $_POST = [
+    'id' => '72'
+]
+
+$_COOKIE = [
+    'advanced-backend' => 'm3aiijh1ur5s8gu38u40ngi6q8'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 5
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'vuedemo.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '5'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_ORIGIN' => 'http://vuedemo.com'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_REFERER' => 'http://vuedemo.com/admin/model/model-list'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'advanced-backend=m3aiijh1ur5s8gu38u40ngi6q8'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;F:\\java\\bin;F:\\java\\jre\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;F:\\xampp\\php;F:\\Git\\cmd;F:\\Gow\\bin;C:\\Program Files\\nodejs\\;F:\\java/bin;F:\\java/jre/bin;F:\\python;鈥狥:\\cmder;F:\\xampp\\php;C:\\Users\\Admin\\AppData\\Roaming\\npm;C:\\Users\\Admin\\AppData\\Local\\Microsoft\\WindowsApps;F:\\cmder;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1 Server at vuedemo.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1'
+    'SERVER_NAME' => 'vuedemo.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'F:/xampp/htdocs/vueDemo/web/admin/index.php'
+    'REMOTE_PORT' => '37277'
+    'REDIRECT_URL' => '/admin/model/del-model'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/admin/model/del-model'
+    'SCRIPT_NAME' => '/admin/index.php'
+    'PHP_SELF' => '/admin/index.php'
+    'REQUEST_TIME_FLOAT' => 1516601900.723
+    'REQUEST_TIME' => 1516601900
+]
+2018-01-22 14:20:28 [127.0.0.1][5][m3aiijh1ur5s8gu38u40ngi6q8][error][yii\db\IntegrityException] PDOException: SQLSTATE[23000]: Integrity constraint violation: 1217 Cannot delete or update a parent row: a foreign key constraint fails in F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Command.php:842
+Stack trace:
+#0 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Command.php(842): PDOStatement->execute()
+#1 F:\xampp\htdocs\vueDemo\common\lib\Table.php(161): yii\db\Command->execute()
+#2 F:\xampp\htdocs\vueDemo\backend\controllers\ModelController.php(242): common\lib\Table::dropTable('test')
+#3 [internal function]: backend\controllers\ModelController->actionDelModel()
+#4 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#5 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#6 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('del-model', Array)
+#7 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('model/del-model', Array)
+#8 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 F:\xampp\htdocs\vueDemo\web\admin\index.php(20): yii\base\Application->run()
+#10 {main}
+
+Next yii\db\IntegrityException: SQLSTATE[23000]: Integrity constraint violation: 1217 Cannot delete or update a parent row: a foreign key constraint fails
+The SQL being executed was: DROP TABLE `cms_test` in F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Schema.php:636
+Stack trace:
+#0 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Command.php(852): yii\db\Schema->convertException(Object(PDOException), 'DROP TABLE `cms...')
+#1 F:\xampp\htdocs\vueDemo\common\lib\Table.php(161): yii\db\Command->execute()
+#2 F:\xampp\htdocs\vueDemo\backend\controllers\ModelController.php(242): common\lib\Table::dropTable('test')
+#3 [internal function]: backend\controllers\ModelController->actionDelModel()
+#4 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#5 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#6 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('del-model', Array)
+#7 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('model/del-model', Array)
+#8 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 F:\xampp\htdocs\vueDemo\web\admin\index.php(20): yii\base\Application->run()
+#10 {main}
+Additional Information:
+Array
+(
+    [0] => 23000
+    [1] => 1217
+    [2] => Cannot delete or update a parent row: a foreign key constraint fails
+)
+
+2018-01-22 14:20:27 [127.0.0.1][5][m3aiijh1ur5s8gu38u40ngi6q8][info][application] $_POST = [
+    'id' => '73'
+]
+
+$_COOKIE = [
+    'advanced-backend' => 'm3aiijh1ur5s8gu38u40ngi6q8'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 5
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'vuedemo.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '5'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_ORIGIN' => 'http://vuedemo.com'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_REFERER' => 'http://vuedemo.com/admin/model/model-list'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'advanced-backend=m3aiijh1ur5s8gu38u40ngi6q8'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;F:\\java\\bin;F:\\java\\jre\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;F:\\xampp\\php;F:\\Git\\cmd;F:\\Gow\\bin;C:\\Program Files\\nodejs\\;F:\\java/bin;F:\\java/jre/bin;F:\\python;鈥狥:\\cmder;F:\\xampp\\php;C:\\Users\\Admin\\AppData\\Roaming\\npm;C:\\Users\\Admin\\AppData\\Local\\Microsoft\\WindowsApps;F:\\cmder;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1 Server at vuedemo.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1'
+    'SERVER_NAME' => 'vuedemo.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'F:/xampp/htdocs/vueDemo/web/admin/index.php'
+    'REMOTE_PORT' => '37500'
+    'REDIRECT_URL' => '/admin/model/del-model'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/admin/model/del-model'
+    'SCRIPT_NAME' => '/admin/index.php'
+    'PHP_SELF' => '/admin/index.php'
+    'REQUEST_TIME_FLOAT' => 1516602027.969
+    'REQUEST_TIME' => 1516602027
+]
+2018-01-22 14:31:47 [127.0.0.1][5][m3aiijh1ur5s8gu38u40ngi6q8][error][yii\db\IntegrityException] PDOException: SQLSTATE[23000]: Integrity constraint violation: 1217 Cannot delete or update a parent row: a foreign key constraint fails in F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Command.php:842
+Stack trace:
+#0 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Command.php(842): PDOStatement->execute()
+#1 F:\xampp\htdocs\vueDemo\common\lib\Table.php(161): yii\db\Command->execute()
+#2 F:\xampp\htdocs\vueDemo\backend\controllers\ModelController.php(242): common\lib\Table::dropTable('test')
+#3 [internal function]: backend\controllers\ModelController->actionDelModel()
+#4 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#5 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#6 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('del-model', Array)
+#7 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('model/del-model', Array)
+#8 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 F:\xampp\htdocs\vueDemo\web\admin\index.php(20): yii\base\Application->run()
+#10 {main}
+
+Next yii\db\IntegrityException: SQLSTATE[23000]: Integrity constraint violation: 1217 Cannot delete or update a parent row: a foreign key constraint fails
+The SQL being executed was: DROP TABLE `cms_test` in F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Schema.php:636
+Stack trace:
+#0 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Command.php(852): yii\db\Schema->convertException(Object(PDOException), 'DROP TABLE `cms...')
+#1 F:\xampp\htdocs\vueDemo\common\lib\Table.php(161): yii\db\Command->execute()
+#2 F:\xampp\htdocs\vueDemo\backend\controllers\ModelController.php(242): common\lib\Table::dropTable('test')
+#3 [internal function]: backend\controllers\ModelController->actionDelModel()
+#4 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#5 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#6 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('del-model', Array)
+#7 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('model/del-model', Array)
+#8 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 F:\xampp\htdocs\vueDemo\web\admin\index.php(20): yii\base\Application->run()
+#10 {main}
+Additional Information:
+Array
+(
+    [0] => 23000
+    [1] => 1217
+    [2] => Cannot delete or update a parent row: a foreign key constraint fails
+)
+
+2018-01-22 14:31:47 [127.0.0.1][5][m3aiijh1ur5s8gu38u40ngi6q8][info][application] $_POST = [
+    'id' => '74'
+]
+
+$_COOKIE = [
+    'advanced-backend' => 'm3aiijh1ur5s8gu38u40ngi6q8'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 5
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'vuedemo.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '5'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_ORIGIN' => 'http://vuedemo.com'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_REFERER' => 'http://vuedemo.com/admin/model/model-list'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'advanced-backend=m3aiijh1ur5s8gu38u40ngi6q8'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;F:\\java\\bin;F:\\java\\jre\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;F:\\xampp\\php;F:\\Git\\cmd;F:\\Gow\\bin;C:\\Program Files\\nodejs\\;F:\\java/bin;F:\\java/jre/bin;F:\\python;鈥狥:\\cmder;F:\\xampp\\php;C:\\Users\\Admin\\AppData\\Roaming\\npm;C:\\Users\\Admin\\AppData\\Local\\Microsoft\\WindowsApps;F:\\cmder;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1 Server at vuedemo.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1'
+    'SERVER_NAME' => 'vuedemo.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'F:/xampp/htdocs/vueDemo/web/admin/index.php'
+    'REMOTE_PORT' => '39115'
+    'REDIRECT_URL' => '/admin/model/del-model'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/admin/model/del-model'
+    'SCRIPT_NAME' => '/admin/index.php'
+    'PHP_SELF' => '/admin/index.php'
+    'REQUEST_TIME_FLOAT' => 1516602707.127
+    'REQUEST_TIME' => 1516602707
+]
+2018-01-22 14:32:42 [127.0.0.1][5][m3aiijh1ur5s8gu38u40ngi6q8][error][yii\db\IntegrityException] PDOException: SQLSTATE[23000]: Integrity constraint violation: 1217 Cannot delete or update a parent row: a foreign key constraint fails in F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Command.php:842
+Stack trace:
+#0 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Command.php(842): PDOStatement->execute()
+#1 F:\xampp\htdocs\vueDemo\common\lib\Table.php(161): yii\db\Command->execute()
+#2 F:\xampp\htdocs\vueDemo\backend\controllers\ModelController.php(242): common\lib\Table::dropTable('test')
+#3 [internal function]: backend\controllers\ModelController->actionDelModel()
+#4 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#5 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#6 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('del-model', Array)
+#7 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('model/del-model', Array)
+#8 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 F:\xampp\htdocs\vueDemo\web\admin\index.php(20): yii\base\Application->run()
+#10 {main}
+
+Next yii\db\IntegrityException: SQLSTATE[23000]: Integrity constraint violation: 1217 Cannot delete or update a parent row: a foreign key constraint fails
+The SQL being executed was: DROP TABLE `cms_test` in F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Schema.php:636
+Stack trace:
+#0 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Command.php(852): yii\db\Schema->convertException(Object(PDOException), 'DROP TABLE `cms...')
+#1 F:\xampp\htdocs\vueDemo\common\lib\Table.php(161): yii\db\Command->execute()
+#2 F:\xampp\htdocs\vueDemo\backend\controllers\ModelController.php(242): common\lib\Table::dropTable('test')
+#3 [internal function]: backend\controllers\ModelController->actionDelModel()
+#4 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#5 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#6 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('del-model', Array)
+#7 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('model/del-model', Array)
+#8 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 F:\xampp\htdocs\vueDemo\web\admin\index.php(20): yii\base\Application->run()
+#10 {main}
+Additional Information:
+Array
+(
+    [0] => 23000
+    [1] => 1217
+    [2] => Cannot delete or update a parent row: a foreign key constraint fails
+)
+
+2018-01-22 14:32:41 [127.0.0.1][5][m3aiijh1ur5s8gu38u40ngi6q8][info][application] $_POST = [
+    'id' => '75'
+]
+
+$_COOKIE = [
+    'advanced-backend' => 'm3aiijh1ur5s8gu38u40ngi6q8'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 5
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'vuedemo.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '5'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_ORIGIN' => 'http://vuedemo.com'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_REFERER' => 'http://vuedemo.com/admin/model/model-list'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'advanced-backend=m3aiijh1ur5s8gu38u40ngi6q8'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;F:\\java\\bin;F:\\java\\jre\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;F:\\xampp\\php;F:\\Git\\cmd;F:\\Gow\\bin;C:\\Program Files\\nodejs\\;F:\\java/bin;F:\\java/jre/bin;F:\\python;鈥狥:\\cmder;F:\\xampp\\php;C:\\Users\\Admin\\AppData\\Roaming\\npm;C:\\Users\\Admin\\AppData\\Local\\Microsoft\\WindowsApps;F:\\cmder;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1 Server at vuedemo.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1'
+    'SERVER_NAME' => 'vuedemo.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'F:/xampp/htdocs/vueDemo/web/admin/index.php'
+    'REMOTE_PORT' => '39205'
+    'REDIRECT_URL' => '/admin/model/del-model'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/admin/model/del-model'
+    'SCRIPT_NAME' => '/admin/index.php'
+    'PHP_SELF' => '/admin/index.php'
+    'REQUEST_TIME_FLOAT' => 1516602761.893
+    'REQUEST_TIME' => 1516602761
+]
+2018-01-22 14:43:18 [127.0.0.1][5][m3aiijh1ur5s8gu38u40ngi6q8][error][yii\db\IntegrityException] PDOException: SQLSTATE[23000]: Integrity constraint violation: 1217 Cannot delete or update a parent row: a foreign key constraint fails in F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Command.php:842
+Stack trace:
+#0 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Command.php(842): PDOStatement->execute()
+#1 F:\xampp\htdocs\vueDemo\common\lib\Table.php(161): yii\db\Command->execute()
+#2 F:\xampp\htdocs\vueDemo\backend\controllers\ModelController.php(242): common\lib\Table::dropTable('test')
+#3 [internal function]: backend\controllers\ModelController->actionDelModel()
+#4 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#5 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#6 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('del-model', Array)
+#7 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('model/del-model', Array)
+#8 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 F:\xampp\htdocs\vueDemo\web\admin\index.php(20): yii\base\Application->run()
+#10 {main}
+
+Next yii\db\IntegrityException: SQLSTATE[23000]: Integrity constraint violation: 1217 Cannot delete or update a parent row: a foreign key constraint fails
+The SQL being executed was: DROP TABLE `cms_test` in F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Schema.php:636
+Stack trace:
+#0 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Command.php(852): yii\db\Schema->convertException(Object(PDOException), 'DROP TABLE `cms...')
+#1 F:\xampp\htdocs\vueDemo\common\lib\Table.php(161): yii\db\Command->execute()
+#2 F:\xampp\htdocs\vueDemo\backend\controllers\ModelController.php(242): common\lib\Table::dropTable('test')
+#3 [internal function]: backend\controllers\ModelController->actionDelModel()
+#4 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#5 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#6 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('del-model', Array)
+#7 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('model/del-model', Array)
+#8 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 F:\xampp\htdocs\vueDemo\web\admin\index.php(20): yii\base\Application->run()
+#10 {main}
+Additional Information:
+Array
+(
+    [0] => 23000
+    [1] => 1217
+    [2] => Cannot delete or update a parent row: a foreign key constraint fails
+)
+
+2018-01-22 14:43:17 [127.0.0.1][5][m3aiijh1ur5s8gu38u40ngi6q8][info][application] $_POST = [
+    'id' => '76'
+]
+
+$_COOKIE = [
+    'advanced-backend' => 'm3aiijh1ur5s8gu38u40ngi6q8'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 5
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'vuedemo.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '5'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_ORIGIN' => 'http://vuedemo.com'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_REFERER' => 'http://vuedemo.com/admin/model/model-list'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'advanced-backend=m3aiijh1ur5s8gu38u40ngi6q8'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;F:\\java\\bin;F:\\java\\jre\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;F:\\xampp\\php;F:\\Git\\cmd;F:\\Gow\\bin;C:\\Program Files\\nodejs\\;F:\\java/bin;F:\\java/jre/bin;F:\\python;鈥狥:\\cmder;F:\\xampp\\php;C:\\Users\\Admin\\AppData\\Roaming\\npm;C:\\Users\\Admin\\AppData\\Local\\Microsoft\\WindowsApps;F:\\cmder;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1 Server at vuedemo.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1'
+    'SERVER_NAME' => 'vuedemo.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'F:/xampp/htdocs/vueDemo/web/admin/index.php'
+    'REMOTE_PORT' => '40390'
+    'REDIRECT_URL' => '/admin/model/del-model'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/admin/model/del-model'
+    'SCRIPT_NAME' => '/admin/index.php'
+    'PHP_SELF' => '/admin/index.php'
+    'REQUEST_TIME_FLOAT' => 1516603397.74
+    'REQUEST_TIME' => 1516603397
+]

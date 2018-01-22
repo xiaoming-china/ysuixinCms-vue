@@ -450,7 +450,7 @@
             }
         },
         mounted: function() {
-		      this.modelId = this.request('model_id');
+		      this.modelId = this.request('modelId');
         },
         methods: {
           select_type:function(event){

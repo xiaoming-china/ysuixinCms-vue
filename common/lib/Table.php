@@ -131,9 +131,28 @@ class Table extends BaseModel{
 		}
 		$table_name = Yii::$app->params['tablePrefix'].$table_name;
 		//创建主表
-		 Yii::$app->db->createCommand()->createTable($table_name, $filed)->execute();
-		//创建副表
-        Yii::$app->db->createCommand()->createTable($table_name.self::TABLE_DATA_PREFIX, self::TABLE_DATA)->execute();
+		$r1 = Yii::$app->db->createCommand()->createTable($table_name, $filed)->execute();
+		if($r1 != 0){
+		  return false;
+		}else{
+		  //创建副表
+          $r2 = Yii::$app->db->createCommand()->createTable($table_name.self::TABLE_DATA_PREFIX, self::TABLE_DATA)->execute();
+          //如果副表创建失败，则删除创建的主表
+          if($r2 != 0){
+          	Yii::$app->db->createCommand()->dropTable($table_name)->execute();
+          	return false;
+          }else{
+          	//如果主表和副表都创建成功,再创建副表外键
+	        Yii::$app->db->createCommand()->addForeignKey(
+	        	'basic_model_id',
+	        	$table_name.self::TABLE_DATA_PREFIX, 
+	        	'id',
+	        	$table_name,
+	        	'id', 
+	        	'CASCADE',
+	        	'CASCADE')->execute();
+          }
+		}
 		return true;
 	}
 	/**
@@ -147,10 +166,11 @@ class Table extends BaseModel{
 		if($table_name == ''){
 		  return false;
 		}
-		$table_name = Yii::$app->params['tablePrefix'].$table_name;
-
-		$rs = Yii::$app->db->createCommand()->dropTable($table)->execute();
-		return $rs == 0 ? true : false;
+		$table = Yii::$app->params['tablePrefix'].$table_name;
+		//先删除副表，再删除主表
+		Yii::$app->db->createCommand()->dropTable($table.self::TABLE_DATA_PREFIX)->execute();
+		Yii::$app->db->createCommand()->dropTable($table)->execute();
+		return true;
 	}
 
 	

@@ -7,6 +7,7 @@ namespace backend\controllers;
 use Yii;
 use backend\controllers\AdminBaseController;
 use common\models\Model;
+use common\models\ModelField;
 use common\lib\Page;
 use common\lib\Table;
 use yii\db\Connection;
@@ -31,7 +32,6 @@ class ModelController extends AdminBaseController{
             $offset   = ($page - 1) * $pageSize;
 
             $sql        = (new Model())->find();
-            $sql->andWhere(['=','is_delete',Model::DELETE_STATUS_FALSE]);
             $sql->andFilterWhere(['or',
                 ['like','name',$this->get('keyworlds')],
                 ['like','desc',$this->get('keyworlds')],
@@ -138,7 +138,7 @@ class ModelController extends AdminBaseController{
      * @return           [type]      [description]
      */
     public function actionEditModel(){
-        $id = $this->post('model_id','');
+        $id = $this->post('modelId','');
         if($id == ''){
           return $this->ajaxFail('参数异常,modelID不能为空');
         }
@@ -166,12 +166,13 @@ class ModelController extends AdminBaseController{
                     if($checkTable){
                       return $this->ajaxFail('编辑失败,'.$new_tabe_name.'数据表已存在,请更换别名');
                     }
-                     //修改表名
-                    $re_table_name = $table->tableRename($old_tabe_name,$new_tabe_name);
+                     //修改主表和副表表名
+                    $re_table_name  = $table->tableRename($old_tabe_name,$new_tabe_name);
+                    $re_table_name1 = $table->tableRename($old_tabe_name.Table::TABLE_DATA_PREFIX,$new_tabe_name.Table::TABLE_DATA_PREFIX);
                 }
                
                 $rs = $model->save();//保存model数据
-                if($rs && $re_table_name){
+                if($rs && $re_table_name && $re_table_name1){
                     $transaction->commit();
                     return $this->ajaxSuccess('编辑成功');
                 }
@@ -220,32 +221,35 @@ class ModelController extends AdminBaseController{
         /**
      * @Author:          xiaoming
      * @DateTime:        2017-11-08
-     * @name:description 删除模型；假删除
+     * @name:description 删除模型
      * @copyright:       [copyright]
      * @license:         [license]
      * @return           [type]      [description]
      */
     public function actionDelModel(){
-        if($this->isPost()){
-            $d['id']        = $this->post('id','');
-            $d['is_delete'] = Model::DELETE_STATUS_TRUE;
-
-            $model = (new Model())->findOne($d['id']);
-            if(is_null($model)){
-                return $this->ajaxFail('未找到相关数据');
-            }
-            $model->setScenario('delete_model');
-            if($model->load($d,'') && $model->validate()){
-                $model->is_delete  = $d['is_delete'];
-                $model->updated_at = time();
-                if($model->save()){
-                   return $this->ajaxSuccess('删除成功');
-                }else{
-                    return $this->ajaxFail('删除失败,未知错误');
+        $transaction = Yii::$app->db->beginTransaction();
+        try {
+            if($this->isPost()){
+                $id        = $this->post('id','');
+                if($id == ''){
+                    return $this->ajaxFail('参数异常,modelID不能为空');
                 }
-            }else{
-                return $this->ajaxFail('删除失败.'.current($model->getErrors())[0]);
+                $model = (new Model())->findOne($id);
+                if(is_null($model)){
+                    return $this->ajaxFail('未找到相关数据');
+                }
+                $rs = $model->delete();//删除模型
+                $del_table  = (new table())->dropTable($model->e_name);//删除主表
+                if($rs && $del_table){
+                    $transaction->commit();
+                    return $this->ajaxSuccess('删除成功');
+                }
+                $transaction->rollBack();
+                return $this->ajaxFail('删除失败,未知错误');
             }
+        }catch (Exception $e) {
+           $transaction->rollBack();
+           return $this->ajaxFail('删除失败,未知错误');
         }
     }
 }

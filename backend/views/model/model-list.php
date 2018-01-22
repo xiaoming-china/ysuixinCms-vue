@@ -116,15 +116,15 @@
           <span v-if="!loading">确定</span>
           <span v-else>Loading...</span>
        </i-button>
-       <i-button type="info" @click="showAddModel=false;">取消</i-button>
+       <i-button type="info" @click="hideAddModel('ModelInfo')">取消</i-button>
     </p>
   </Modal>
   <!--编辑模型-->
-  <Modal v-model="editModel">
+  <Modal v-model="editModel" :mask-closable="false">
     <p slot="header">
         <span>编辑模型</span>
     </p>
-    <i-Form ref="ModelInfo" :model="ModelInfo" :rules="modelrule">
+    <i-Form ref="EditModelInfo" :model="ModelInfo" :rules="modelrule">
         <Form-Item label="名称" prop="name">
             <i-Input type="text" 
                     v-model="ModelInfo.name" 
@@ -155,11 +155,11 @@
     </i-Form>
     <br>
     <p slot="footer">
-       <i-button type="primary" @click="editModelInfo('ModelInfo')">
+       <i-button type="primary" @click="editModelInfo('EditModelInfo')">
           <span v-if="!loading">确定</span>
           <span v-else>Loading...</span>
        </i-button>
-       <i-button type="info" @click="hideeditModel('ModelInfo')">取消</i-button>
+       <i-button type="info" @click="hideeditModel('EditModelInfo')">取消</i-button>
     </p>
   </Modal>
 <!--主体内容区结束-->
@@ -183,7 +183,7 @@
           showAddModel:false,
           editModel:false,
           ModelInfo:{
-            model_id:'',
+            modelId:'',
             name:'',
             e_name:'',
             model_desc:'',
@@ -277,7 +277,7 @@
                       _that.searchData.total--;
                     },
                     function(res){
-                      _that.$Message.warning('删除失败;'+res.info);
+                      _that.$Message.warning(res.message);
                     },
                     false
                   );
@@ -322,13 +322,13 @@
                     params, 
                     'post',
                     function(res){
-                      _that.$Message.success('添加成功;');
+                      _that.$Message.success('添加成功');
                       _that.$refs[name].resetFields();
                       _that.showAddModel = false;
                       _that.getModelList();
                     },
                     function(res){
-                       _that.$Message.warning('添加失败;'+res.message);
+                       _that.$Message.warning(res.message);
                     },
                   );
                   _that.loading = false;
@@ -336,7 +336,7 @@
               })
           },
           showEditModel:function(key){
-            this.ModelInfo.model_id = this.modelList[key]['id'];
+            this.ModelInfo.modelId = this.modelList[key]['id'];
             this.ModelInfo.name   = this.modelList[key]['name'];
             this.ModelInfo.e_name = this.modelList[key]['e_name'];
             this.ModelInfo.desc   = this.modelList[key]['desc'];
@@ -345,6 +345,10 @@
           },
           hideeditModel:function(name){
             this.editModel = false;
+            this.$refs[name].resetFields();
+          },
+          hideAddModel:function(name){
+            this.showAddModel = false;
             this.$refs[name].resetFields();
           },
           editModelInfo:function(name){
@@ -372,7 +376,7 @@
           },
           //跳转字段管理
           location:function(modelId){
-            location.href = '/admin/field/field-list?model_id='+modelId;
+            location.href = '/admin/field/field-list?modelId='+modelId;
           },
           //格式化时间戳
           getLocalTime:function(nows) {//格式化时间

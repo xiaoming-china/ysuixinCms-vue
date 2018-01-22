@@ -33,7 +33,6 @@ class Model extends BaseModel{
         $s['edit_model']    = ['name','e_name','status','desc','created_at','updated_at'];
         $s['update_model']  = ['name','status','desc','created_at','updated_at'];
         $s['change_status'] = ['id','status'];
-        $s['delete_model']  = ['id','is_delete'];
         return $s;
     }
 
@@ -43,7 +42,6 @@ class Model extends BaseModel{
             [['name','e_name'], 'string', 'max' => 10,'on'=>['add_model','update_model']],
             [['id'], 'required','on'=>['change_status','delete_model']],
             ['status', 'in', 'range' => [1, 2],'on'=>['change_status','add_model','update_model']],
-            ['is_delete', 'in', 'range' => [1, 2],'on'=>['delete_model']]
         ];
     }
     public function attributeLabels(){
@@ -52,7 +50,6 @@ class Model extends BaseModel{
             'name' => '模型名称',
             'desc' => '模型描述',
             'status' => '模型状态',
-            'is_delete' => '模型是否删除',
             'created_at' => '模型创建时间',
             'updated_at' => '模型更新时间',
         ];

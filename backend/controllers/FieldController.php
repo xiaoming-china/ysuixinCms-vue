@@ -47,7 +47,7 @@ class FieldController extends AdminBaseController{
             if($this->get('status') != '-1'){
                 $sql->andFilterWhere(['=','status',$this->get('status')]);
             }
-            $d['list'] =  $sql->orderBy('is_style ASC,created_at DESC')
+            $d['list'] =  $sql->orderBy('sort ASC,is_style ASC,created_at DESC')
                               ->asArray()
                               ->all();
             return $this->ajaxSuccess('获取成功','',$d);
@@ -192,7 +192,7 @@ class FieldController extends AdminBaseController{
      * @return                        [type] [description]
      */
     public function actionGetFieldInfo(){
-        $fieldId = $this->get('field_id','');
+        $fieldId = $this->get('fieldId','');
         if($fieldId == ''){
            return $this->error('参数异常,字段ID不能为空');
         }
