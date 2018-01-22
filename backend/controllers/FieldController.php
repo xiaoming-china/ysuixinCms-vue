@@ -101,7 +101,7 @@ class FieldController extends AdminBaseController{
                     $addColumn = $table->columnAdd($modelInfo->e_name, $fieldInfo['e_name'], $fieldInfo['type']);
                     if($model->save() && $addColumn){
                         $transaction->commit();
-                       return $this->ajaxSuccess('添加成功',Url::to(['/field/field-list','model_id'=>$modelId]));
+                       return $this->ajaxSuccess('添加成功',Url::to(['/field/field-list','modelId'=>$modelId]));
                     }else{
                         $transaction->rollBack();
                         return $this->ajaxFail('添加失败,未知错误');
@@ -168,7 +168,7 @@ class FieldController extends AdminBaseController{
                     }
                     if($model->save() && $renameColumn){
                         $transaction->commit();
-                       return $this->ajaxSuccess('编辑成功',Url::to(['/field/field-list','model_id'=>$modelId]));
+                       return $this->ajaxSuccess('编辑成功',Url::to(['/field/field-list','modelId'=>$modelId]));
                     }else{
                         $transaction->rollBack();
                         return $this->ajaxFail('编辑失败,未知错误');
@@ -246,7 +246,7 @@ class FieldController extends AdminBaseController{
         /**
      * @Author:          xiaoming
      * @DateTime:        2017-11-08
-     * @name:description 删除字段；假删除
+     * @name:description 删除字段
      * @copyright:       [copyright]
      * @license:         [license]
      * @return           [type]      [description]
@@ -263,8 +263,6 @@ class FieldController extends AdminBaseController{
                 $fail = 0;
                 foreach ($model as $m) {
                     if ($m->is_style != Field::IS_STYLE) {
-                        // $m->is_delete  = Field::DELETE_STATUS_TRUE;
-                        // $m->updated_at = time();
                         $rs = $m->delete();
                         if (!$rs) {
                             $fail++;
