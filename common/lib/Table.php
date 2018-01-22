@@ -8,6 +8,7 @@ use yii;
 use yii\db\Command;
 use yii\db\QueryBuilder;
 use common\models\BaseModel;
+use common\models\Category;
 /**
  * 数据库表操作类
  */
@@ -144,11 +145,20 @@ class Table extends BaseModel{
           }else{
           	//如果主表和副表都创建成功,再创建副表外键
 	        Yii::$app->db->createCommand()->addForeignKey(
-	        	'basic_model_id',
+	        	$table_name.'_model_id',
 	        	$table_name.self::TABLE_DATA_PREFIX, 
 	        	'id',
 	        	$table_name,
 	        	'id', 
+	        	'CASCADE',
+	        	'CASCADE')->execute();
+	        //创建主表栏目外键
+	        Yii::$app->db->createCommand()->addForeignKey(
+	        	$table_name.'content_category_id',
+	        	$table_name,
+	        	'category_id',
+	        	Category::tableName(),
+	        	'catid',
 	        	'CASCADE',
 	        	'CASCADE')->execute();
           }

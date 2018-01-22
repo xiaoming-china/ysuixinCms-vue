@@ -188,7 +188,7 @@
             }
         },
         mounted: function() {
-		      var catid = this.categoryInfo.catid = this.request('catid');
+		      var catid = this.categoryInfo.catid = this.request('catId');
 		      this.getModelList();
 		      this.getCategoryInfo(catid);
         },
@@ -198,11 +198,11 @@
             this.getCategoryList(event);
           }
 	    	},
-	    	getCategoryInfo:function(catid){
+	    	getCategoryInfo:function(cat_id){
 	    		var _that = this;
 	    		$ajax(
 		            '/admin/category/get-category-info',
-		            {catid:catid}, 
+		            {catId:cat_id}, 
 		            'get',
 		            function(res){
 		              _that.categoryInfo = res.data;
@@ -231,7 +231,7 @@
 	    		var _that = this;
 	    		$ajax(
 		            '/admin/category/get-category-list',
-		            {model_id:m_id},
+		            {modelId:m_id},
 		            'get',
 		            function(res){
 		              _that.categoryList = res.data;

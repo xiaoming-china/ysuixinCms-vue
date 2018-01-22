@@ -60,8 +60,7 @@ class ModelController extends AdminBaseController{
      * @return                        [type] [description]
      */
     public function actionGetModelList(){
-        $sql        = (new Model())->find();
-        $sql->andWhere(['=','is_delete',Model::DELETE_STATUS_FALSE]);
+        $sql = (new Model())->find();
         $sql->andFilterWhere(['or',
             ['like','name',$this->get('keyworlds')],
             ['like','desc',$this->get('keyworlds')],

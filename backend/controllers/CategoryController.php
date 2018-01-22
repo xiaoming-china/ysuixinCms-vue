@@ -45,7 +45,7 @@ class CategoryController extends AdminBaseController{
      * @return                        [type] [description]
      */
     public function actionGetCategoryList(){
-        $m_id = $this->get('model_id','');
+        $m_id = $this->get('modelId','');
         if($m_id == ''){
           return $this->ajaxFail('参数异常,模型ID不能为空');
         }
@@ -120,7 +120,7 @@ class CategoryController extends AdminBaseController{
         if($this->isPost()){
             $id = $this->post('catid','');
             if($id == ''){
-              return $this->ajaxFail('参数异常,categoryID不能为空');
+              return $this->ajaxFail('参数异常,栏目ID不能为空');
             }
             $parentid = $this->post('parentid');
             $model = (new Category())->findOne($id);
@@ -170,7 +170,7 @@ class CategoryController extends AdminBaseController{
     /**
      * @Author:          xiaoming
      * @DateTime:        2017-11-08
-     * @name:description 删除栏目；假删除
+     * @name:description 删除栏目
      * @copyright:       [copyright]
      * @license:         [license]
      * @return           [type]      [description]
@@ -186,22 +186,17 @@ class CategoryController extends AdminBaseController{
                 return $this->ajaxFail('未找到相关数据');
             }
             //所有栏目
-            $all_category =(new Category())->find()
-            ->where(['is_delete'=>Model::DELETE_STATUS_FALSE])
-            ->asArray()
-            ->all();
+            $all_category =(new Category())->find()->asArray()->all();
             //当前栏目的所有子级
             $all_child = (new Tree())->getMenuTree($all_category, $id, 0,'parentid','catid');
             array_push($all_child,$id);//将当前的栏目追加到子级数组
             $find_all_category = (new Category())->find()
                         ->where(['and',
-                            ['catid'=>$all_child],
-                            ['is_delete'=>Model::DELETE_STATUS_FALSE]
+                            ['catid'=>$all_child]
                         ])->all();
             $r = true;
             foreach ($find_all_category as $all_model) {
-                $all_model->is_delete = Model::DELETE_STATUS_TRUE;
-                if($all_model->update(false)){
+                if($all_model->delete()){
                     $r = true;
                 }else{
                     $r = false;
@@ -221,12 +216,12 @@ class CategoryController extends AdminBaseController{
      * @DateTime        2017-12-15T21:55:48+0800
      * @return          [type]                   [description]
      */
-    public function actionGetCategoryInfo($catid = ''){
-        if($catid == ''){
+    public function actionGetCategoryInfo($catId = ''){
+        if($catId == ''){
            return $this->ajaxFail('栏目信息获取失败');
         }
         $rs = (new Category())->find()
-                            ->where(['catid'=>$catid])
+                            ->where(['catid'=>$catId])
                             ->asArray()
                             ->one();
         if(empty($rs)){

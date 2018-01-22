@@ -158,7 +158,7 @@
               categoryInfo: {
   	            catname: '',
   	            type:1,
-  	            modelid: '',
+  	            modelId: '',
   	            parentid:"0",
   	            description: '',
   	            image: '',
@@ -173,7 +173,7 @@
                     { required: true, message:'栏目名称不能为空',trigger:'blur'},
                     { max: 10, message:'栏目名称不能大于10个字符',trigger:'blur'}
                 ],
-                modelid: [
+                modelId: [
                     { required: true, message:'请选择所属模型',trigger:'blur'},
                 ],
                 // parentid: [
@@ -189,7 +189,6 @@
             }
         },
         mounted: function() {
-		      this.modelId = this.request('model_id');
 		      this.getModelList();
         },
         methods: {
@@ -217,7 +216,7 @@
 	    		var _that = this;
 	    		$ajax(
 		            '/admin/category/get-category-list',
-		            {model_id:m_id},
+		            {modelId:m_id},
 		            'get',
 		            function(res){
 		              _that.categoryList = res.data;

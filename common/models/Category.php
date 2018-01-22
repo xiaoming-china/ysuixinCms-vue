@@ -86,7 +86,7 @@ class Category extends BaseModel{
     public function afterSave($insert,$changedAttributes) {
         if($this->url == ''){
             $model = (new Category())->findOne($this->catid);
-            $model->url = '/category/list?catid='.$this->catid.'&modelid='.$this->modelid;
+            $model->url = '/category/list?catId='.$this->catid.'&modelId='.$this->modelid;
             if($model->save(false)){
                 return true;
             }

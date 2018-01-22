@@ -143,7 +143,7 @@
           	var info = '';
       			info += '确定删除此栏目？</br>';
       			info += '注意：</br>1)、删除栏目会将栏目的子级全部删除;</br>';
-      			info += '2)、如果此栏目或子级栏目有数据，将不能删除;';
+      			info += '2)、删除栏目会将栏目的所属内容及子级的所属内容全部删除;';
             this.$Modal.confirm({
                 title:'删除确认',
                 width:400,
@@ -195,13 +195,13 @@
           	var url = '';
           	switch(type){
           	  case 1:
-                url = '/admin/content/list?catid='+categoryId+'&modelid='+modelId;
+                url = '/admin/content/list?catId='+categoryId+'&modelId='+modelId;
           		break;
           	  case 2:
-                url = '/admin/category/edit-category?catid='+categoryId;
+                url = '/admin/category/edit-category?catId='+categoryId;
           		break;
               case 3:
-                url = '/admin/content/add-content?catid='+categoryId+'&modelid='+modelId;
+                url = '/admin/content/add-content?catId='+categoryId+'&modelId='+modelId;
               break;
           	}
             location.href = url;
