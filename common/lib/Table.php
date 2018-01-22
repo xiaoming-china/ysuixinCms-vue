@@ -133,6 +133,7 @@ class Table extends BaseModel{
 		$table_name = Yii::$app->params['tablePrefix'].$table_name;
 		//创建主表
 		$r1 = Yii::$app->db->createCommand()->createTable($table_name, $filed)->execute();
+
 		if($r1 != 0){
 		  return false;
 		}else{
@@ -144,7 +145,7 @@ class Table extends BaseModel{
           	return false;
           }else{
           	//如果主表和副表都创建成功,再创建副表外键
-	        Yii::$app->db->createCommand()->addForeignKey(
+	        $f1 = Yii::$app->db->createCommand()->addForeignKey(
 	        	$table_name.'_model_id',
 	        	$table_name.self::TABLE_DATA_PREFIX, 
 	        	'id',
@@ -153,8 +154,8 @@ class Table extends BaseModel{
 	        	'CASCADE',
 	        	'CASCADE')->execute();
 	        //创建主表栏目外键
-	        Yii::$app->db->createCommand()->addForeignKey(
-	        	$table_name.'content_category_id',
+	        $f2 = Yii::$app->db->createCommand()->addForeignKey(
+	        	$table_name.'_content_category_id',
 	        	$table_name,
 	        	'category_id',
 	        	Category::tableName(),

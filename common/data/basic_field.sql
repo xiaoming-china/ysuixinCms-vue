@@ -12,7 +12,6 @@ INSERT INTO @tableName@
 	regular,
 	seetings,
 	status,
-	is_delete,
 	is_hide,
 	created_at,
 	updated_at
@@ -30,7 +29,6 @@ INSERT INTO @tableName@
 	'',
 	'a:6:{s:13:"default_value";s:0:"";s:5:"width";s:0:"";s:6:"height";s:0:"";s:4:"type";s:4:"text";s:10:"min_length";i:1;s:10:"max_length";i:50;}',
 	1,
-	2,
 	2,
 	@createdAt@,
 	@updatedAt@
@@ -50,7 +48,6 @@ INSERT INTO @tableName@
 	regular,
 	seetings,
 	status,
-	is_delete,
 	is_hide,
 	created_at,
 	updated_at
@@ -69,7 +66,6 @@ INSERT INTO @tableName@
 	'',
 	'a:9:{s:9:"watermark";s:0:"";s:11:"many_select";s:0:"";s:13:"default_value";s:0:"";s:4:"type";s:4:"text";s:10:"min_length";i:0;s:10:"max_length";i:300;s:5:"width";s:0:"";s:6:"height";s:0:"";s:12:"allow_format";s:0:"";}',
 	1,
-	2,
 	2,
 	@createdAt@,
 	@updatedAt@
@@ -90,7 +86,6 @@ INSERT INTO @tableName@
 	regular,
 	seetings,
 	status,
-	is_delete,
 	is_hide,
 	created_at,
 	updated_at
@@ -110,7 +105,6 @@ INSERT INTO @tableName@
 	'a:9:{s:9:"watermark";s:5:"false";s:11:"many_select";s:5:"false";s:13:"default_value";s:0:"";s:4:"type";s:4:"text";s:10:"min_length";i:0;s:10:"max_length";i:300;s:5:"width";i:140;s:6:"height";i:140;s:12:"allow_format";s:20:"gif|jpg|jpeg|png|bmp";}',
 	1,
 	2,
-	2,
 	@createdAt@,
 	@updatedAt@
 );
@@ -129,7 +123,6 @@ INSERT INTO @tableName@
 	regular,
 	seetings,
 	status,
-	is_delete,
 	is_hide,
 	created_at,
 	updated_at
@@ -149,7 +142,6 @@ INSERT INTO @tableName@
 	'a:9:{s:9:"watermark";s:0:"";s:11:"many_select";s:0:"";s:13:"default_value";s:0:"";s:4:"type";s:8:"textarea";s:10:"min_length";i:0;s:10:"max_length";i:300;s:5:"width";s:0:"";s:6:"height";s:0:"";s:12:"allow_format";s:0:"";}',
 	1,
 	2,
-	2,
 	@createdAt@,
 	@updatedAt@
 );
@@ -168,7 +160,6 @@ INSERT INTO @tableName@
 	regular,
 	seetings,
 	status,
-	is_delete,
 	is_hide,
 	created_at,
 	updated_at
@@ -188,7 +179,6 @@ INSERT INTO @tableName@
 	'a:9:{s:9:"watermark";s:0:"";s:11:"many_select";s:0:"";s:13:"default_value";s:0:"";s:4:"type";s:6:"editor";s:10:"min_length";i:0;s:10:"max_length";i:0;s:5:"width";s:0:"";s:6:"height";s:0:"";s:12:"allow_format";s:0:"";}',
 	1,
 	2,
-	2,
 	@createdAt@,
 	@updatedAt@
 );
@@ -207,7 +197,6 @@ INSERT INTO @tableName@
 	regular,
 	seetings,
 	status,
-	is_delete,
 	is_hide,
 	created_at,
 	updated_at
@@ -226,7 +215,6 @@ INSERT INTO @tableName@
 	'',
 	'',
 	1,
-	2,
 	1,
 	@createdAt@,
 	@updatedAt@
@@ -246,7 +234,6 @@ INSERT INTO @tableName@
 	regular,
 	seetings,
 	status,
-	is_delete,
 	is_hide,
 	created_at,
 	updated_at
@@ -265,7 +252,6 @@ INSERT INTO @tableName@
 	'',
 	'',
 	1,
-	2,
 	1,
 	@createdAt@,
 	@updatedAt@
@@ -285,7 +271,6 @@ INSERT INTO @tableName@
 	regular,
 	seetings,
 	status,
-	is_delete,
 	is_hide,
 	created_at,
 	updated_at
@@ -304,7 +289,6 @@ INSERT INTO @tableName@
 	'',
 	'',
 	1,
-	2,
 	1,
 	@createdAt@,
 	@updatedAt@
@@ -324,7 +308,6 @@ INSERT INTO @tableName@
 	regular,
 	seetings,
 	status,
-	is_delete,
 	is_hide,
 	created_at,
 	updated_at
@@ -343,7 +326,6 @@ INSERT INTO @tableName@
 	'',
 	'',
 	1,
-	2,
 	1,
 	@createdAt@,
 	@updatedAt@
@@ -363,7 +345,6 @@ INSERT INTO @tableName@
 	regular,
 	seetings,
 	status,
-	is_delete,
 	is_hide,
 	created_at,
 	updated_at
@@ -382,7 +363,6 @@ INSERT INTO @tableName@
 	'',
 	'',
 	1,
-	2,
 	1,
 	@createdAt@,
 	@updatedAt@
@@ -402,7 +382,6 @@ INSERT INTO @tableName@
 	regular,
 	seetings,
 	status,
-	is_delete,
 	is_hide,
 	created_at,
 	updated_at
@@ -421,7 +400,6 @@ INSERT INTO @tableName@
 	'',
 	'',
 	1,
-	2,
 	1,
 	@createdAt@,
 	@updatedAt@
@@ -441,7 +419,6 @@ INSERT INTO @tableName@
 	regular,
 	seetings,
 	status,
-	is_delete,
 	is_hide,
 	created_at,
 	updated_at
@@ -460,7 +437,6 @@ INSERT INTO @tableName@
 	'',
 	'',
 	1,
-	2,
 	1,
 	@createdAt@,
 	@updatedAt@
@@ -480,7 +456,6 @@ INSERT INTO @tableName@
 	regular,
 	seetings,
 	status,
-	is_delete,
 	is_hide,
 	created_at,
 	updated_at
@@ -499,7 +474,6 @@ INSERT INTO @tableName@
 	'',
 	'',
 	1,
-	2,
 	1,
 	@createdAt@,
 	@updatedAt@
@@ -519,7 +493,6 @@ INSERT INTO @tableName@
 	regular,
 	seetings,
 	status,
-	is_delete,
 	is_hide,
 	created_at,
 	updated_at
@@ -538,7 +511,6 @@ INSERT INTO @tableName@
 	'',
 	'',
 	1,
-	2,
 	1,
 	@createdAt@,
 	@updatedAt@
@@ -558,7 +530,6 @@ INSERT INTO @tableName@
 	regular,
 	seetings,
 	status,
-	is_delete,
 	is_hide,
 	created_at,
 	updated_at
@@ -577,7 +548,6 @@ INSERT INTO @tableName@
 	'',
 	'',
 	1,
-	2,
 	1,
 	@createdAt@,
 	@updatedAt@
@@ -597,7 +567,6 @@ INSERT INTO @tableName@
 	regular,
 	seetings,
 	status,
-	is_delete,
 	is_hide,
 	created_at,
 	updated_at
@@ -616,7 +585,6 @@ INSERT INTO @tableName@
 	'',
 	'',
 	1,
-	2,
 	1,
 	@createdAt@,
 	@updatedAt@
