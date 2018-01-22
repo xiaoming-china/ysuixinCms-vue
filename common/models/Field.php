@@ -94,7 +94,6 @@ class Field extends BaseModel{
         $model_field = $this->find()->where([
             'model_id'=>$modelid,
             'status'=>Field::OPEN_STATUS,
-            'is_delete'=>Field::DELETE_STATUS_FALSE,
             'is_hide'=>Field::NO_HIDE
         ])->asArray()->orderBy('sort ASC')->all();
         return $model_field;

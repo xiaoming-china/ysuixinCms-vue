@@ -22759,3 +22759,114 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1516611569.961
     'REQUEST_TIME' => 1516611569
 ]
+2018-01-22 17:08:32 [127.0.0.1][5][m3aiijh1ur5s8gu38u40ngi6q8][error][yii\db\Exception] PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'is_delete' in 'where clause' in F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Command.php:915
+Stack trace:
+#0 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Command.php(915): PDOStatement->execute()
+#1 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#2 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Query.php(213): yii\db\Command->queryAll()
+#3 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\ActiveQuery.php(135): yii\db\Query->all(NULL)
+#4 F:\xampp\htdocs\vueDemo\backend\controllers\FieldController.php(52): yii\db\ActiveQuery->all()
+#5 [internal function]: backend\controllers\FieldController->actionFieldList()
+#6 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#7 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#8 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('field-list', Array)
+#9 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('field/field-lis...', Array)
+#10 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 F:\xampp\htdocs\vueDemo\web\admin\index.php(20): yii\base\Application->run()
+#12 {main}
+
+Next yii\db\Exception: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'is_delete' in 'where clause'
+The SQL being executed was: SELECT * FROM `cms_model_field` WHERE (`model_id`='84') AND (`is_delete` = 2) AND (`is_hide` = 2) ORDER BY `is_style`, `sort`, `created_at` DESC in F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Schema.php:636
+Stack trace:
+#0 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Command.php(930): yii\db\Schema->convertException(Object(PDOException), 'SELECT * FROM `...')
+#1 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#2 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Query.php(213): yii\db\Command->queryAll()
+#3 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\ActiveQuery.php(135): yii\db\Query->all(NULL)
+#4 F:\xampp\htdocs\vueDemo\backend\controllers\FieldController.php(52): yii\db\ActiveQuery->all()
+#5 [internal function]: backend\controllers\FieldController->actionFieldList()
+#6 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#7 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#8 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('field-list', Array)
+#9 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('field/field-lis...', Array)
+#10 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 F:\xampp\htdocs\vueDemo\web\admin\index.php(20): yii\base\Application->run()
+#12 {main}
+Additional Information:
+Array
+(
+    [0] => 42S22
+    [1] => 1054
+    [2] => Unknown column 'is_delete' in 'where clause'
+)
+
+2018-01-22 17:08:30 [127.0.0.1][5][m3aiijh1ur5s8gu38u40ngi6q8][info][application] $_GET = [
+    'modelId' => '84'
+    'keyworlds' => ''
+    'status' => '-1'
+]
+
+$_COOKIE = [
+    'advanced-backend' => 'm3aiijh1ur5s8gu38u40ngi6q8'
+    'Hm_lvt_1873856b1a96138cdd16521be8a1dc50' => '1516609393'
+    'Hm_lpvt_1873856b1a96138cdd16521be8a1dc50' => '1516609426'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 5
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'vuedemo.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36'
+    'HTTP_REFERER' => 'http://vuedemo.com/admin/field/field-list?modelId=84'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'advanced-backend=m3aiijh1ur5s8gu38u40ngi6q8; Hm_lvt_1873856b1a96138cdd16521be8a1dc50=1516609393; Hm_lpvt_1873856b1a96138cdd16521be8a1dc50=1516609426'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;F:\\java\\bin;F:\\java\\jre\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;F:\\xampp\\php;F:\\Git\\cmd;F:\\Gow\\bin;C:\\Program Files\\nodejs\\;F:\\java/bin;F:\\java/jre/bin;F:\\python;‪F:\\cmder;F:\\xampp\\php;C:\\Users\\Admin\\AppData\\Roaming\\npm;C:\\Users\\Admin\\AppData\\Local\\Microsoft\\WindowsApps;F:\\cmder;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1 Server at vuedemo.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1'
+    'SERVER_NAME' => 'vuedemo.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'F:/xampp/htdocs/vueDemo/web/admin/index.php'
+    'REMOTE_PORT' => '55059'
+    'REDIRECT_URL' => '/admin/field/field-list'
+    'REDIRECT_QUERY_STRING' => 'modelId=84&keyworlds=&status=-1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'modelId=84&keyworlds=&status=-1'
+    'REQUEST_URI' => '/admin/field/field-list?modelId=84&keyworlds=&status=-1'
+    'SCRIPT_NAME' => '/admin/index.php'
+    'PHP_SELF' => '/admin/index.php'
+    'REQUEST_TIME_FLOAT' => 1516612110.719
+    'REQUEST_TIME' => 1516612110
+]
