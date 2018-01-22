@@ -256,11 +256,14 @@
           //删除模型
           deleteModel:function(key,id){
             var _that = this;
+            var html = '';
+            html += '<p>删除模型会将模型的数据全部删除。</p>';
+            html += '<p>是否继续删除?</p>';
             this.$Modal.confirm({
                 title:'删除确认',
                 width:300,
                 loading:true,
-                content:'<p>是否删除?</p>',
+                content:html,
                 onOk: () => {
                   _that.loading = true;
                   var params = {

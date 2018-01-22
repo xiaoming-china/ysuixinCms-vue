@@ -86,7 +86,7 @@
 					<td>{{getLocalTime(value.created_at)}}</td>
 			        <td v-if="value.is_style != 1">
 			          <span><a href="#"@click="location(2,value.id);">编辑</a>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
-			          <span><a href="#"@click="deleteField(key,value.id);">删除</a>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+			          <span><a href="#"@click="deleteField(value.id);">删除</a>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
 			          <span>
 			            <a href="#" v-if="value.status == 1" @click="changeStatusField(value.id,2);">禁用</a>&nbsp;&nbsp;|&nbsp;&nbsp;
 			            <a href="#" v-else @click="changeStatusField(value.id,1);">开启</a>&nbsp;&nbsp;|&nbsp;&nbsp;

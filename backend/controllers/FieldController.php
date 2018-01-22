@@ -47,7 +47,7 @@ class FieldController extends AdminBaseController{
             if($this->get('status') != '-1'){
                 $sql->andFilterWhere(['=','status',$this->get('status')]);
             }
-            $d['list'] =  $sql->orderBy('sort ASC,is_style ASC,created_at DESC')
+            $d['list'] =  $sql->orderBy('is_style ASC,sort ASC,created_at DESC')
                               ->asArray()
                               ->all();
             return $this->ajaxSuccess('获取成功','',$d);
@@ -216,6 +216,9 @@ class FieldController extends AdminBaseController{
             $transaction = Yii::$app->db->beginTransaction();
             if($this->isPost()) {
                 $id = $this->post('id', '');
+                if(empty($id)){
+                  return $this->ajaxFail('参数异常,请选择字段');
+                }
                 $status = $this->post('status', '');
                 $model = (new Field())->find()->where(['id' => $id])->all();
                 $fail = 0;
@@ -253,13 +256,16 @@ class FieldController extends AdminBaseController{
             $transaction = Yii::$app->db->beginTransaction();
             if($this->isPost()) {
                 $id = $this->post('id', '');
+                if(empty($id)){
+                  return $this->ajaxFail('参数异常,请选择字段');
+                }
                 $model = (new Field())->find()->where(['id' => $id])->all();
                 $fail = 0;
                 foreach ($model as $m) {
                     if ($m->is_style != Field::IS_STYLE) {
-                        $m->is_delete  = Field::DELETE_STATUS_TRUE;
-                        $m->updated_at = time();
-                        $rs = $m->update(false);
+                        // $m->is_delete  = Field::DELETE_STATUS_TRUE;
+                        // $m->updated_at = time();
+                        $rs = $m->delete();
                         if (!$rs) {
                             $fail++;
                         }
