@@ -167,8 +167,8 @@
                     <span class="field-title">水印图片</span>
                   </span>
                   <template>
-                    <i-Input type="text" v-model="fileInline.watermarkimg" class="upload-text" 
-                    @on-click="handleView()" icon="search" title="点击图标预览">
+                    <i-Input type="text" disabled v-model="fileInline.watermarkimg" class="upload-text" 
+                    @on-click="handleView()" icon="search" title="水印预览">
                     </i-Input>
                     <Upload
                         ref="upload"

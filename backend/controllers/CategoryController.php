@@ -7,6 +7,7 @@ namespace backend\controllers;
 use Yii;
 use backend\controllers\AdminBaseController;
 use common\models\Category;
+use common\models\CategoryData;
 use common\models\Model;
 use yii\db\Connection;
 use yii\helpers\Url;
@@ -65,18 +66,16 @@ class CategoryController extends AdminBaseController{
      * @return           [type]      [description]
      */
     public function actionAddCategory(){
-        $model = new Category();
-        $model->setScenario('add_category');
-        
         if($this->isPost()){
+            $transaction = Yii::$app->db->beginTransaction();
+            $model = new Category();
+            $model->setScenario('add_category');
             $post = Yii::$app->request->post();
             $parentid = $post['parentid'];
             $post['letter'] = (new PinYin())->getAllPY($post['catname']);//拼音转换
-            $transaction = Yii::$app->db->beginTransaction();
-
             try {  
                 if($model->load($post,'') && $model->validate()){
-                    $model_rs = $model->save();
+                    $model_rs = $model->save(false);
                     if($parentid != 0){
                         $parentInfo = (new Category())->findOne($parentid);
                         if(is_null($parentInfo)){
@@ -94,6 +93,18 @@ class CategoryController extends AdminBaseController{
                     if(!$model_rs){
                         $transaction->rollBack();
                         return $this->ajaxFail('添加失败,未知错误');
+                    }else{
+                        //插入categoryDate数据
+                        $post['category_id'] = $model->catid;
+                        $model_data = new CategoryData();
+                        $model_data->setScenario('category_data');
+                        if($model_data->load($post,'') && $model_data->validate()){
+                            $model_data_rs = $model_data->save(false);
+                            if(!$model_data_rs){
+                                $transaction->rollBack();
+                                return $this->ajaxFail('添加失败,未知错误');
+                            }
+                        }
                     }
                     $transaction->commit();
                     return $this->ajaxSuccess('添加成功',Url::to(['/category/category-list']));
@@ -152,6 +163,17 @@ class CategoryController extends AdminBaseController{
                     if(!$model_rs){
                         $transaction->rollBack();
                         return $this->ajaxFail('编辑失败,未知错误');
+                    }else{
+                        //插入categoryDate数据
+                        $model_data = (new CategoryData())->findOne(['category_id'=>$id]);
+                        $model_data->setScenario('category_data');
+                        if($model_data->load($post,'') && $model_data->validate()){
+                            $model_data_rs = $model_data->save(false);
+                            if(!$model_data_rs){
+                                $transaction->rollBack();
+                                return $this->ajaxFail('编辑失败,未知错误');
+                            }
+                        }
                     }
                     $transaction->commit();
                     return $this->ajaxSuccess('编辑成功',Url::to(['/category/category-list']));
@@ -220,13 +242,15 @@ class CategoryController extends AdminBaseController{
         if($catId == ''){
            return $this->ajaxFail('栏目信息获取失败');
         }
-        $rs = (new Category())->find()
-                            ->where(['catid'=>$catId])
-                            ->asArray()
-                            ->one();
-        if(empty($rs)){
-           return $this->ajaxFail('栏目信息获取失败');
-        }
+        $rs = (new \yii\db\Query())
+        ->select('
+            c.catid,c.type,c.modelid,
+            parentid,catname,image,url,ismenu,
+            d.category_keywords,d.category_desc')
+        ->from(Category::tableName().'AS c')
+        ->leftJoin(CategoryData::tableName().' AS d','d.category_id = c.catid')
+        ->where(['c.catid'=>$catId])
+        ->one();
         return $this->ajaxSuccess('获取成功','',$rs);
     }
 

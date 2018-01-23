@@ -28,8 +28,8 @@ class Category extends BaseModel{
     }
     public function scenarios(){
         $s = parent::scenarios();
-        $s['add_category']  = ['catname','modelid','parentid','image','description','url','ismenu','letter','type'];
-        $s['edit_category'] = ['catname','catid','modelid','parentid','image','description','url','ismenu','letter','type'];
+        $s['add_category']  = ['catname','modelid','parentid','image','url','ismenu','letter','type'];
+        $s['edit_category'] = ['catname','catid','modelid','parentid','image','url','ismenu','letter','type'];
         return $s;
     }
     public function rules(){
@@ -37,7 +37,6 @@ class Category extends BaseModel{
             ['catid','required','on'=>['edit_category']],
             [['catname','modelid','letter'],'required','message'=>'{attribute}不能为空','on'=>['add_category','edit_category']],
             [['arrparentid'], 'string', 'max' => 255,'on'=>['add_category','edit_category']],
-            [['description'], 'string', 'max' => 50,'on'=>['add_category','edit_category']],
             [['catname'], 'string', 'max' => 10,'on'=>['add_category','edit_category']],
             [['catdir', 'letter'], 'string', 'max' => 30,'on'=>['add_category','edit_category']],
             [['image', 'parentdir', 'url'], 'string', 'max' => 100,'on'=>['add_category','edit_category']],
@@ -59,7 +58,6 @@ class Category extends BaseModel{
             'arrchildid' => '所有子级',
             'catname' => '栏目名称',
             'image' => '栏目图片',
-            'description' => '栏目描述',
             'parentdir' => '父级目录',
             'catdir' => '栏目目录',
             'url' => '栏目链接',
