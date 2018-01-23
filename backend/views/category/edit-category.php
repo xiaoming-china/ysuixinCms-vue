@@ -113,7 +113,7 @@
                 </Form-Item>
                 <Form-Item label="名称" prop="image">
                   <span slot="label">
-                    <span class="field-title">水印图片</span>
+                    <span class="field-title">栏目缩略图</span>
                   </span>
                   <template>
                     <i-Input type="text" disabled v-model="imgUrl" class="upload-text" 
