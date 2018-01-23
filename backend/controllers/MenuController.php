@@ -11,13 +11,7 @@ use common\lib\DataHandle;
 
 
 class MenuController extends AdminBaseController{
-    public $layout = false;
-    public $uId;
 
-    public function init(){
-        parent::init();
-        $this->uId = getUserInfo('id');
-    }
     /**
      * @Author:          xiaoming
      * @DateTime:        2017-11-07

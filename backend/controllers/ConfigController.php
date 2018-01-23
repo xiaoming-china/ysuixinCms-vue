@@ -12,13 +12,6 @@ use common\models\Config;
 use common\lib\File;
 
 class ConfigController extends AdminBaseController{
-    public $layout = 'main-admin';
-    public $uId;
-
-    public function init(){
-        parent::init();
-        $this->uId = getUserInfo('id');
-    }
     /**
      * @Author:          xiaoming
      * @DateTime:        2017-10-09

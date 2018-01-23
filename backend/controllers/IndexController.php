@@ -12,7 +12,6 @@ use backend\models\SystemInfo;
 
 
 class IndexController extends AdminBaseController{
-   public $layout = 'main-admin';
     /**
      * @Author:          xiaoming
      * @DateTime:        2017-10-09

@@ -11,6 +11,12 @@ use common\controllers\BaseController;
 
 class AdminBaseController extends BaseController{
 	public $layout = 'main-admin';
+    public $uId;
+
+    public function init(){
+        parent::init();
+        $this->uId = getUserInfo('id');
+    }
     /**
      * @Author:          xiaoming
      * @DateTime:        2017-12-04

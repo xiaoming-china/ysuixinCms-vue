@@ -15,7 +15,6 @@ use common\lib\Tree;
 
 
 class CategoryController extends AdminBaseController{
-    public $layout = 'main-admin';
     /**
      * @Author:          xiaoming
      * @DateTime:        2017-11-13

@@ -11,13 +11,6 @@ use backend\models\SystemInfo;
 
 
 class EnclosureController extends AdminBaseController{
-    public $layout = 'main-admin';
-    public $uId;
-
-    public function init(){
-        parent::init();
-        $this->uId = getUserInfo('id');
-    }
     /**
      * @Author:          xiaoming
      * @DateTime:        2017-10-09
