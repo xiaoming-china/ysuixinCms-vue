@@ -7,7 +7,6 @@ namespace backend\controllers;
 use Yii;
 use backend\controllers\AdminBaseController;
 use common\models\Category;
-use common\models\CategoryData;
 use common\models\Model;
 use yii\db\Connection;
 use yii\helpers\Url;
