@@ -28,8 +28,8 @@ class Category extends BaseModel{
     }
     public function scenarios(){
         $s = parent::scenarios();
-        $s['add_category']  = ['catname','modelid','parentid','image','url','ismenu','letter','type'];
-        $s['edit_category'] = ['catname','catid','modelid','parentid','image','url','ismenu','letter','type'];
+        $s['add_category']  = ['catname','modelid','parentid','image','url','ismenu','letter','type','setting'];
+        $s['edit_category'] = ['catname','catid','modelid','parentid','image','url','ismenu','letter','type','setting'];
         return $s;
     }
     public function rules(){
