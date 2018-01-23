@@ -158,7 +158,7 @@ class ModelController extends AdminBaseController{
             $old_tabe_name = $model->e_name;//旧表名
             $new_tabe_name = $d['e_name'];//新表名
             if($model->load($d,'') && $model->validate()){
-                $re_table_name = true;
+                $re_table_name = $re_table_name1 = true;
                 //当旧表名和新表名不相等的时候才修改
                 if($old_tabe_name != $new_tabe_name){
                     $checkTable = $table->checkTable($new_tabe_name);
