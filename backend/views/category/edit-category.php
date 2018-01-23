@@ -72,7 +72,7 @@
               label-position="left"
               :label-width="200">
           <!--1s-->
-          <Tabs value="1">
+          <Tabs :value=tab_value v-on:on-click="tabs_change">
             <Tab-Pane label="基本信息" name="1">
               <Form-Item label="名称" prop="catname">
                     <span slot="label">
@@ -112,10 +112,28 @@
                     </i-select>
                 </Form-Item>
                 <Form-Item label="名称" prop="image">
-                    <span slot="label">
-                      <span class="field-title">栏目缩略图</span>
-                    </span>
-                    <i-Input type="text" v-model="categoryInfo.image"></i-Input>
+                  <span slot="label">
+                    <span class="field-title">水印图片</span>
+                  </span>
+                  <template>
+                    <i-Input type="text" disabled v-model="imgUrl" class="upload-text" 
+                    @on-click="handleView()" icon="search" title="图片预览">
+                    </i-Input>
+                    <Upload
+                        ref="upload"
+                        :show-upload-list="false"
+                        :on-success="handleSuccess"
+                        :format="['jpg','jpeg','png']"
+                        type="drag"
+                        name="File"
+                        action="/admin/upload/upload"
+                        style="display: inline-block;width:58px;">
+                        <i-Button>上传</i-Button>
+                    </Upload>
+                    <Modal title="图片预览" v-model="visible">
+                        <img :src="imgUrl" v-if="visible" style="width: 100%">
+                    </Modal>
+                </template>
               </Form-Item>
               <Form-Item label="名称" prop="url">
                     <span slot="label">
@@ -189,6 +207,10 @@
                 category_keywords:'',
                 category_desc:''
               },
+              tab_value:"1",
+              imgUrl: '/public/admin/img/logo.png',
+              visible: false,
+              uploadList: [],
               modelList:[],
               categoryList:[],
               loading:false,
@@ -216,8 +238,12 @@
 		      var catid = this.categoryInfo.catid = this.request('catId');
 		      this.getModelList();
 		      this.getCategoryInfo(catid);
+          this.uploadList = this.$refs.upload.fileList;
         },
         methods: {
+          tabs_change:function(tab_value){
+            this.tab_value = tab_value;
+          },
 	    	select_model:function(event){
 	    		if(event != ''){
             this.getCategoryList(event);
@@ -231,6 +257,7 @@
 		            'get',
 		            function(res){
 		              _that.categoryInfo = res.data;
+                  _that.imgUrl = res.data.image;
 		              _that.loading = false;
 		            },
 		            function(res){
@@ -289,9 +316,22 @@
 	                      _that.$Message.error('编辑失败;'+res.message);
 	                    },
 	                  );
-	                }
+	                }else{
+                    if(_that.tab_value == "2"){
+                        _that.tab_value = "1";
+                    }
+                  }
 	            })
 	          },
+            handleView () {
+                this.visible = true;
+            },
+            handleSuccess (res, file) {
+              var img_path = res.data.base_url+'/'+res.data.path+'/'+res.data.name;
+              this.categoryInfo.image = img_path;
+              this.imgUrl = img_path;
+              console.log(this.categoryInfo);
+            },
 	      	//获取url参数
     			request: function (name, url) {
     				url = url || window.location.search;

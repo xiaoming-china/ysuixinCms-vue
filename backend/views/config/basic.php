@@ -181,7 +181,7 @@
                         style="display: inline-block;width:58px;">
                         <i-Button>上传</i-Button>
                     </Upload>
-                    <Modal title="View Image" v-model="visible">
+                    <Modal title="图片预览" v-model="visible">
                         <img :src="imgUrl" v-if="visible" style="width: 100%">
                     </Modal>
                 </template>
@@ -329,6 +329,7 @@
               );
           },
           configBasic:function(name) {
+            var _that = this;
               this.$refs[name].validate((valid) => {
                 if (valid) {
                     var _that = this;
@@ -350,6 +351,7 @@
               })
             },
             configFile:function(name) {
+              var _that = this;
               this.$refs[name].validate((valid) => {
                 if (valid) {
                     var _that = this;
@@ -377,7 +379,6 @@
               var img_path = res.data.base_url+'/'+res.data.path+'/'+res.data.name;
               this.fileInline.watermarkimg = img_path;
               this.imgUrl = img_path;
-              
             }
         }
     })

@@ -71,6 +71,7 @@ class CategoryController extends AdminBaseController{
             $model = new Category();
             $model->setScenario('add_category');
             $post = Yii::$app->request->post();
+            // p($post);
             $parentid = $post['parentid'];
             $post['letter'] = (new PinYin())->getAllPY($post['catname']);//拼音转换
             try {  
