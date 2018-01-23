@@ -72,6 +72,7 @@ class CategoryController extends AdminBaseController{
             $parentid = $post['parentid'];
             $post['letter']  = (new PinYin())->getAllPY($post['catname']);//拼音转换
             $post['setting'] = serialize($post['setting']);
+
             try {  
                 if($model->load($post,'') && $model->validate()){
                     $model_rs = $model->save(false);
@@ -128,8 +129,7 @@ class CategoryController extends AdminBaseController{
             }
             $model->setScenario('edit_category');
             $post = Yii::$app->request->post();
-            //拼音转换 
-            $post['letter'] = (new PinYin())->getAllPY($post['catname']);
+            $post['letter'] = (new PinYin())->getAllPY($post['catname']);//拼音转换 
             $post['setting'] = serialize($post['setting']);
             $transaction = Yii::$app->db->beginTransaction();
             try {  

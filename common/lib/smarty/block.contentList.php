@@ -3,15 +3,15 @@ use common\models\Category;
 use common\lib\sqlQuery;
 use common\lib\Page;
 function smarty_block_contentList($args, $con, &$smarty){ 
-	$catid = Yii::$app->request->get('catid','');
+	$catid = Yii::$app->request->get('catId','');
 	$page  = Yii::$app->request->get('page',0);
 	$param = [];
 	if($catid == ''){
-	 return false;
+	 $data['list'] = [];
 	}
 	$category_model = (new Category())->getCategoryModel($catid);
 	if(!$category_model){
-	 return false;
+	 $data['list'] = [];
 	}
 	$param['catId'] = $catid;
 	if(isset($args['num']) && $args['num'] != '' && is_numeric($args['num'])){

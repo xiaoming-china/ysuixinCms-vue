@@ -16,23 +16,15 @@ class CategoryController extends FrontendBaseController{
      * @return                        [type] [description]
      */
     public function actionList(){
-        $catid = Yii::$app->request->get('catid','');
-        $param   = [
-            'catId'    => $catid,
-            'page'     => 0,
-            'pageSize' => 20,
-           ];
+        $catid = Yii::$app->request->get('catId','');
+        $rs = (new Category())->getCategoryInfo($catid);
+        $rs['setting'] = unserialize($rs['setting']);
         $s = $this->CreateSeo(
-            $this->config['sitename'], 
-            $this->config['siteinfo'], 
-            $this->config['sitekeywords']
+            $rs['catname'], 
+            $rs['setting']['category_keywords'], 
+            $rs['setting']['category_desc']
         );
        return $this->render($this->config['theme'].'/Category/Category',$s);
-    }
-    public function actionTest(){
-         
-        
-        return $this->render($this->config['theme'].'/Category/test');
     }
 
 
