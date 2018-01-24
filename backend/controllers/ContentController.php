@@ -13,6 +13,7 @@ use common\lib\ValidateForm;
 use common\models\Field;
 use common\models\Model;
 use common\models\Page;
+use common\lib\Mar;
 use yii\db\Command;
 use yii\helpers\Url;
 
@@ -70,6 +71,12 @@ class ContentController extends AdminBaseController{
      * @return           [type]      [description]
      */
     public function actionAddContent(){
+        //p(new Category());
+        // $user = new Mar('cms_article');
+        // $user->category_id = 102;
+        // $user->title       = 'tttt';
+        // $rs = $user->save();
+        // p($rs);
         $this->layout = false;
         $r = Yii::$app->request;
         try {
@@ -93,6 +100,7 @@ class ContentController extends AdminBaseController{
                 if($validate){
                     //多栏目发布
                     $fail = 0;
+                    $update_data = [];
                     foreach ($category_id as $k => $v){
                         $content_data['category_id'] = $v;
                         $rs = (new sqlQuery())->assembleSql($content_data,$modelid);

@@ -34,7 +34,7 @@
                         </li>
                     {{else}}
                         <li>
-                          <a href="{{$v.url}}">{{$v.name}}</a>
+                          <a href="{{$v.nav_url}}">{{$v.name}}</a>
                         </li>
                     {{/if}}
                 {{/foreach}} 

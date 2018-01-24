@@ -10,6 +10,7 @@ use common\models\Model;
 use common\models\BaseModel;
 use common\lib\Table;
 use yii\Helper\ArrayHelper;
+use common\lib\Mar;
 
 
 /**
@@ -80,15 +81,20 @@ class sqlQuery extends BaseModel{
         $table_name = Yii::$app->params['tablePrefix'].$model_info->e_name;
        //p(Yii::$app->db->createCommand()->insert($table_name, $data)->getRawSql());
         //判断字段属于主表还是副表
+        $model = new Mar($table_name);
+        $model->type = 1;
         $basic = $table_data = [];
         foreach ($data as $k => $v){
             if(Table::checkColumn($model_info->e_name,$k)){
-                $basic[$k] = $v;
+                $model->$k = $v;
+                // $basic[$k] = $v;
             }else{
                 $table_data[$k] = $v;
             }
         }
-
+        $rs = $model->save();
+        return true;
+        p($rs);
         //插入主表数据
         if(!empty($basic)){
             $rs = Yii::$app->db->createCommand()->insert($table_name, $basic)->execute();
@@ -100,12 +106,29 @@ class sqlQuery extends BaseModel{
         if(!empty($table_data)){
 
             $table_data['id'] = Yii::$app->db->getLastInsertID();
-            $rs = Yii::$app->db->createCommand()->insert($table_name.Table::TABLE_DATA_PREFIX, $table_data)->execute();
+            $rs = Yii::$app->db->createCommand()
+                           ->insert($table_name.Table::TABLE_DATA_PREFIX, $table_data)
+                           ->execute();
             if(!$rs){
                 return false;
             }
         }
-        return true;
+
+        //更新主表url
+        if(isset($table_data['id']) && $table_data['id'] != ''){
+            $update_data['url'] = '/show?id='.$table_data['id'];
+            // p(Yii::$app->db->createCommand()
+            //                       ->update($table_name, ['id' => $table_data['id']], $update_data)
+            //                       ->getRawSql());
+            $update_rs = Yii::$app->db->createCommand()
+                                  ->update($table_name, ['id' => $table_data['id']], $update_data)
+                                  ->execute();
+            // p($update_rs);
+            // if(!$update_rs){
+            //     return false;
+            // }   
+        }
+        return $table_data['id'];
     }
     /**
      * [getContent 查询数据]
