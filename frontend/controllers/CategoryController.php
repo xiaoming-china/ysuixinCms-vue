@@ -18,7 +18,6 @@ class CategoryController extends FrontendBaseController{
     public function actionList(){
         $catid = Yii::$app->request->get('catId','');
         $rs = (new Category())->getCategoryInfo($catid);
-        $rs['setting'] = unserialize($rs['setting']);
         $s = $this->CreateSeo(
             $rs['catname'], 
             $rs['setting']['category_keywords'], 

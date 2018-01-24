@@ -1,32 +1,48 @@
-<?php if (!defined('SHUIPF_VERSION')) exit(); ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
-<link href="favicon.ico" rel="shortcut icon" />
-<link rel="canonical" href="{$config_siteurl}" />
-<title><if condition=" isset($SEO['title']) && !empty($SEO['title']) ">{$SEO['title']}</if>{$SEO['site_title']}</title>
-<meta name="description" content="{$SEO['description']}" />
-<meta name="keywords" content="{$SEO['keyword']}" />
-<link href="{$config_siteurl}statics/default/css/article_list.css" rel="stylesheet" type="text/css" />
-<link href="{$config_siteurl}statics/default/css/layout.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript">
-//全局变量
-var GV = {
-    DIMAUB: "{$config_siteurl}",
-    JS_ROOT: "statics/js/"
-};
-</script>
-<script src="{$config_siteurl}statics/js/jquery.js" type="text/javascript"></script>
-<script src="{$config_siteurl}statics/default/js/w3cer.js" type="text/javascript"></script>
-<script type="text/javascript" src="{$config_siteurl}statics/js/ajaxForm.js"></script>
-</head>
-<body>
-<template file="Content/header.php"/>
-标题：{$title}<br/>
-关键字：{$keywords}<br/>
-内容：{$content}<br/>
-<template file="Content/footer.php"/>
-</body>
-</html>
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <title>{{$data['title']}}</title>
+    <meta name="keywords" content="{{$data['keywords']}}"/>
+    <meta name="description" content="{{$data['desc']}}"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/public/home/style/basic.css" />
+    <link rel="stylesheet" href="/public/home/style/index.css" />
+    <link rel="stylesheet" href="/public/home/style/animate.min.css">
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+<!--导航开始-->
+{{include file="../header.php"}}
+<!--导航结束-->
+<div class="container main-content">
+  <div class="row">
+        <div class="col-md-12">
+          <div class="blog-right-box" id="articllDetail">
+            <div class="blog-item">
+              <div class="blog-item-header">
+                <h4 style="text-align:center;">
+                   {{$data['title']}}
+                </h4>
+                <p class="header-info" style="text-align:right;">
+                  <span>time：<em>{{date('Y-m-d H:i:s',$data['created_at'])}}</em></span>
+                </p>
+              </div>
+              <div class="blog-item-detailed">
+                  <div class="row">
+                    <div class="col-md-12 blog-content">
+                     <p>{{$data['content']}}</p>
+                    </div>
+                  </div>
+              </div>
+              <div class="blog-comment-box">
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+</div>
+    
+    {{include file="../footer.php"}}

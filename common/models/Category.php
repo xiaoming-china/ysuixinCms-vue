@@ -84,7 +84,11 @@ class Category extends BaseModel{
     public function afterSave($insert,$changedAttributes) {
         if($this->url == ''){
             $model = (new Category())->findOne($this->catid);
-            $model->url = '/category/list?catId='.$this->catid.'&modelId='.$this->modelid;
+            if($this->type == self::STSTEM_CATEGORY){
+                $model->url = '/category/list?catId='.$this->catid.'&modelId='.$this->modelid;
+            }else{
+                $model->url = '/show?catId='.$this->catid;
+            }
             if($model->save(false)){
                 return true;
             }
@@ -126,6 +130,7 @@ class Category extends BaseModel{
         ->leftJoin(Model::tableName().' AS m','m.id = c.modelid')
         ->where(['c.catid'=>$catid,'c.is_delete'=>Category::DELETE_STATUS_FALSE])
         ->one();
+        $rs['setting'] = unserialize($rs['setting']);
         if($rs === null){
            return false;
         }
