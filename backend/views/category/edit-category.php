@@ -155,20 +155,22 @@
             <!--1s-->
             <!--2s-->
             <Tab-Pane label="SEO信息" name="2">
-                <Form-Item label="名称" prop="seo.category_keywords">
+                <Form-Item label="名称" prop="category_keywords">
                     <span slot="label">
                       <span class="field-title">栏目关键字</span>
                       <p>多个请用,号隔开;</p>
                       <p>最多50个字符</p>
                     </span>
-                    <i-Input type="text" v-model="seo.category_keywords"></i-Input>
+                    <i-Input type="text" 
+                    v-model="categoryInfo.setting.category_keywords">
+                    </i-Input>
                 </Form-Item>
-                <Form-Item label="名称" prop="seo.category_desc">
+                <Form-Item label="名称" prop="category_desc">
                     <span slot="label">
                       <span class="field-title">栏目描述</span>
                       <p>最多200个字符</p>
                     </span>
-                        <i-Input v-model="seo.category_desc" 
+                        <i-Input v-model="categoryInfo.setting.category_desc" 
                         size="small" 
                         type="textarea"
                         :autosize="{minRows: 5,maxRows: 15}">
@@ -204,7 +206,7 @@
                 image: '',
                 url: '',
                 ismenu: 1,
-                seeting:{
+                setting:{
                   category_keywords:'',
                   category_desc:''
                 }
@@ -259,7 +261,6 @@
 		            'get',
 		            function(res){
                   _that.categoryInfo = res.data;
-                  _that.seo          = res.data.setting;
                   _that.imgUrl       = res.data.image;
                   _that.loading      = false;
 		            },

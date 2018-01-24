@@ -15,7 +15,7 @@ class AdminBaseController extends BaseController{
 
     public function init(){
         parent::init();
-        $this->uId = getUserInfo('id');
+        // $this->uId = getUserInfo('id');
     }
     /**
      * @Author:          xiaoming
