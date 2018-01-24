@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.31, created on 2018-01-24 09:37:12
+/* Smarty version 3.1.31, created on 2018-01-24 16:30:40
   from "F:\xampp\htdocs\vueDemo\web\template\Default\PageList\header.php" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.31',
-  'unifunc' => 'content_5a67e348a00f27_65788118',
+  'unifunc' => 'content_5a68443004b296_23745048',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a67e348a00f27_65788118 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a68443004b296_23745048 (Smarty_Internal_Template $_smarty_tpl) {
 if (!is_callable('smarty_block_nav')) require_once 'F:\\xampp\\htdocs\\vueDemo\\common\\lib\\smarty\\block.nav.php';
 ?>
 <!--导航开始-->

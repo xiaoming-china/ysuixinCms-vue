@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.31, created on 2018-01-18 14:20:15
+/* Smarty version 3.1.31, created on 2018-01-24 16:30:34
   from "F:\xampp\htdocs\vueDemo\web\template\Default\PageList\Index\index.php" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.31',
-  'unifunc' => 'content_5a603c9f9cbc17_72584375',
+  'unifunc' => 'content_5a68442ad9ae94_03139159',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:../header.php' => 1,
   ),
 ),false)) {
-function content_5a603c9f9cbc17_72584375 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a68442ad9ae94_03139159 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!doctype html>
 <html class="no-js" lang="en">

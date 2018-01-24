@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.31, created on 2018-01-23 15:35:42
+/* Smarty version 3.1.31, created on 2018-01-24 16:30:39
   from "F:\xampp\htdocs\vueDemo\web\template\Default\PageList\Category\Category.php" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.31',
-  'unifunc' => 'content_5a66e5cece37b4_37283837',
+  'unifunc' => 'content_5a68442ff36ff9_54975078',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:../footer.php' => 1,
   ),
 ),false)) {
-function content_5a66e5cece37b4_37283837 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a68442ff36ff9_54975078 (Smarty_Internal_Template $_smarty_tpl) {
 if (!is_callable('smarty_block_contentList')) require_once 'F:\\xampp\\htdocs\\vueDemo\\common\\lib\\smarty\\block.contentList.php';
 ?>
 <!doctype html>

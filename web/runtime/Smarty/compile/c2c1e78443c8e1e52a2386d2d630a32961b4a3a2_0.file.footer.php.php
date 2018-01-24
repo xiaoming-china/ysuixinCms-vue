@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.31, created on 2018-01-18 15:23:58
+/* Smarty version 3.1.31, created on 2018-01-24 16:30:40
   from "F:\xampp\htdocs\vueDemo\web\template\Default\PageList\footer.php" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.31',
-  'unifunc' => 'content_5a604b8e8b1e44_63971198',
+  'unifunc' => 'content_5a6844304531e1_44456156',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a604b8e8b1e44_63971198 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a6844304531e1_44456156 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div class="container" style="text-align: center;">
 	<div class="container-fluid index-fotter fotter">

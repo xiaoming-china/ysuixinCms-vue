@@ -154,7 +154,7 @@ class ContentController extends AdminBaseController{
                 //验证数据库字段的合法性
                 unset($data['modelId'],$data['catId']);
                 $content_data = (new ValidateForm())->content_data($model_field,$data);
-                $validate = (new ValidateForm())->ValidateForm($model_field,$content_data);
+                $validate     = (new ValidateForm())->ValidateForm($model_field,$content_data);
                 if($validate){
                     $rs = (new sqlQuery())->updateAssembleSql($content_data,$modelid,$id);
                     if(!$rs){

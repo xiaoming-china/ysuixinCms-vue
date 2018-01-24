@@ -210,8 +210,8 @@ class sqlQuery extends BaseModel{
         }
         $table_name = Yii::$app->params['tablePrefix'].$table;
         $rs = Yii::$app->db->createCommand()->delete($table_name, 'id in ('.$id.')')->execute();
-        $rs1 = Yii::$app->db->createCommand()->delete($table_name.Table::TABLE_DATA_PREFIX, 'id in ('.$id.')')->execute();
-        if(!$rs && $rs1){
+        // $rs1 = Yii::$app->db->createCommand()->delete($table_name.Table::TABLE_DATA_PREFIX, 'id in ('.$id.')')->execute();
+        if(!$rs){
             return false;
         }
         return true;

@@ -1,34 +1,23 @@
-2018-01-24 12:54:17 [127.0.0.1][5][2erofuii50u748a6t8vug5si2n][error][yii\base\ErrorException:2] yii\base\ErrorException: Creating default object from empty value in F:\xampp\htdocs\vueDemo\common\lib\Mar.php:124
+2018-01-24 16:31:32 [127.0.0.1][-][-][error][ParseError] ParseError: syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ',' or ')' in F:\xampp\htdocs\vueDemo\frontend\controllers\ShowController.php:26
 Stack trace:
-#0 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\ActiveRecord.php(570): common\lib\Mar->updateInternal()
-#1 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\BaseActiveRecord.php(645): common\lib\Mar->update()
-#2 F:\xampp\htdocs\vueDemo\common\lib\Mar.php(115): common\lib\Mar->save()
-#3 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\ActiveRecord.php(505): common\lib\Mar->afterSave()
-#4 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\ActiveRecord.php(461): common\lib\Mar->insertInternal()
-#5 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\BaseActiveRecord.php(643): common\lib\Mar->insert()
-#6 F:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php(98): common\lib\Mar->save()
-#7 F:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php(106): common\lib\sqlQuery::assembleSql()
-#8 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php(57): backend\controllers\ContentController->actionAddContent()
-#9 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php(57): ::call_user_func_array:{F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php:57}()
-#10 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams()
-#11 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(523): backend\controllers\ContentController->runAction()
-#12 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php(102): yii\web\Application->runAction()
-#13 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest()
-#14 F:\xampp\htdocs\vueDemo\web\admin\index.php(20): yii\web\Application->run()
-#15 {main}
-2018-01-24 12:54:16 [127.0.0.1][5][2erofuii50u748a6t8vug5si2n][info][application] $_POST = [
-    'data' => '{\"modelId\":\"101\",\"catId\":\"\",\"status\":\"1\",\"publish_time\":\"2018-01-24 12:54:16\",\"allow_comment\":1,\"category_id\":[\"102\"],\"show_template\":\"show.php\",\"title\":\"标题\",\"keywords\":\"\",\"thumb\":[],\"desc\":\"\",\"content\":\"\"}'
+#0 [internal function]: yii\BaseYii::autoload('frontend\\contro...')
+#1 [internal function]: spl_autoload_call('frontend\\contro...')
+#2 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(633): class_exists('frontend\\contro...')
+#3 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(591): yii\base\Module->createControllerByID('show')
+#4 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(517): yii\base\Module->createController('')
+#5 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('show', Array)
+#6 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 F:\xampp\htdocs\vueDemo\web\index.php(23): yii\base\Application->run()
+#8 {main}
+2018-01-24 16:31:32 [127.0.0.1][-][-][info][application] $_GET = [
+    'catId' => '103'
+    'id' => '2'
 ]
 
 $_COOKIE = [
     'advanced-backend' => '2erofuii50u748a6t8vug5si2n'
     'Hm_lvt_1873856b1a96138cdd16521be8a1dc50' => '1516755530'
-    'Hm_lpvt_1873856b1a96138cdd16521be8a1dc50' => '1516757537'
-]
-
-$_SESSION = [
-    '__flash' => []
-    '__id' => 5
+    'Hm_lpvt_1873856b1a96138cdd16521be8a1dc50' => '1516781817'
 ]
 
 $_SERVER = [
@@ -47,16 +36,14 @@ $_SERVER = [
     'TMP' => '\\xampp\\tmp'
     'HTTP_HOST' => 'vuedemo.com'
     'HTTP_CONNECTION' => 'keep-alive'
-    'CONTENT_LENGTH' => '377'
-    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
-    'HTTP_ORIGIN' => 'http://vuedemo.com'
-    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
     'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36'
-    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
-    'HTTP_REFERER' => 'http://vuedemo.com/admin/content/add-content?modelid=101&catid=102'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://vuedemo.com/category/list?catId=103&modelId=105'
     'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
     'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
-    'HTTP_COOKIE' => 'advanced-backend=2erofuii50u748a6t8vug5si2n; Hm_lvt_1873856b1a96138cdd16521be8a1dc50=1516755530; Hm_lpvt_1873856b1a96138cdd16521be8a1dc50=1516757537'
+    'HTTP_COOKIE' => 'advanced-backend=2erofuii50u748a6t8vug5si2n; Hm_lvt_1873856b1a96138cdd16521be8a1dc50=1516755530; Hm_lpvt_1873856b1a96138cdd16521be8a1dc50=1516781817'
     'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;F:\\java\\bin;F:\\java\\jre\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;F:\\xampp\\php;F:\\Git\\cmd;F:\\Gow\\bin;C:\\Program Files\\nodejs\\;F:\\java/bin;F:\\java/jre/bin;F:\\python;‪F:\\cmder;F:\\xampp\\php;C:\\Users\\Admin\\AppData\\Roaming\\npm;C:\\Users\\Admin\\AppData\\Local\\Microsoft\\WindowsApps;F:\\cmder;'
     'SystemRoot' => 'C:\\WINDOWS'
     'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
@@ -74,45 +61,40 @@ $_SERVER = [
     'CONTEXT_PREFIX' => ''
     'CONTEXT_DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
     'SERVER_ADMIN' => 'postmaster@localhost'
-    'SCRIPT_FILENAME' => 'F:/xampp/htdocs/vueDemo/web/admin/index.php'
-    'REMOTE_PORT' => '21878'
-    'REDIRECT_URL' => '/admin/content/add-content'
+    'SCRIPT_FILENAME' => 'F:/xampp/htdocs/vueDemo/web/index.php'
+    'REMOTE_PORT' => '44412'
+    'REDIRECT_URL' => '/show'
+    'REDIRECT_QUERY_STRING' => 'catId=103&id=2'
     'GATEWAY_INTERFACE' => 'CGI/1.1'
     'SERVER_PROTOCOL' => 'HTTP/1.1'
-    'REQUEST_METHOD' => 'POST'
-    'QUERY_STRING' => ''
-    'REQUEST_URI' => '/admin/content/add-content'
-    'SCRIPT_NAME' => '/admin/index.php'
-    'PHP_SELF' => '/admin/index.php'
-    'REQUEST_TIME_FLOAT' => 1516769656.027
-    'REQUEST_TIME' => 1516769656
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'catId=103&id=2'
+    'REQUEST_URI' => '/show?catId=103&id=2'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1516782692.403
+    'REQUEST_TIME' => 1516782692
 ]
-2018-01-24 14:23:59 [127.0.0.1][5][2erofuii50u748a6t8vug5si2n][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Setting unknown property: common\lib\Mar::content in F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Component.php:201
+2018-01-24 16:31:32 [127.0.0.1][-][-][error][ParseError] ParseError: syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ',' or ')' in F:\xampp\htdocs\vueDemo\frontend\controllers\ShowController.php:26
 Stack trace:
-#0 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\BaseActiveRecord.php(305): yii\base\Component->__set('content', '<p><span style=...')
-#1 F:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php(92): yii\db\BaseActiveRecord->__set('content', '<p><span style=...')
-#2 F:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php(106): common\lib\sqlQuery::assembleSql(Array, '101')
-#3 [internal function]: backend\controllers\ContentController->actionAddContent()
-#4 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
-#5 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
-#6 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('add-content', Array)
-#7 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('content/add-con...', Array)
-#8 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
-#9 F:\xampp\htdocs\vueDemo\web\admin\index.php(20): yii\base\Application->run()
-#10 {main}
-2018-01-24 14:23:59 [127.0.0.1][5][2erofuii50u748a6t8vug5si2n][info][application] $_POST = [
-    'data' => '{\"modelId\":\"101\",\"catId\":\"\",\"status\":\"1\",\"publish_time\":\"2018-01-24 14:23:58\",\"allow_comment\":1,\"category_id\":[\"102\"],\"show_template\":\"show.php\",\"title\":\"11111\",\"keywords\":\"关键字 多个请用,号隔开\",\"thumb\":[\"http://vuedemo.com/../uploads/images/2018-01-24//5a68267820bdb.jpg\"],\"desc\":\"简介\",\"content\":\"<p><span style=\\\"color: rgb(73, 80, 96); font-family: &quot;Hiragino Sans GB&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, 微软雅黑, Arial, sans-serif; font-size: 12px; font-weight: 700; background-color: rgb(255, 255, 255);\\\">内容详情</span><span style=\\\"color: rgb(73, 80, 96); font-family: &quot;Hiragino Sans GB&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, 微软雅黑, Arial, sans-serif; font-size: 12px; font-weight: 700; background-color: rgb(255, 255, 255);\\\">内容详情</span><span style=\\\"color: rgb(73, 80, 96); font-family: &quot;Hiragino Sans GB&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, 微软雅黑, Arial, sans-serif; font-size: 12px; font-weight: 700; background-color: rgb(255, 255, 255);\\\">内容详情</span><span style=\\\"color: rgb(73, 80, 96); font-family: &quot;Hiragino Sans GB&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, 微软雅黑, Arial, sans-serif; font-size: 12px; font-weight: 700; background-color: rgb(255, 255, 255);\\\">内容详情</span><span style=\\\"color: rgb(73, 80, 96); font-family: &quot;Hiragino Sans GB&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, 微软雅黑, Arial, sans-serif; font-size: 12px; font-weight: 700; background-color: rgb(255, 255, 255);\\\">内容详情</span></p>\"}'
+#0 [internal function]: yii\BaseYii::autoload('frontend\\contro...')
+#1 [internal function]: spl_autoload_call('frontend\\contro...')
+#2 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(633): class_exists('frontend\\contro...')
+#3 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(591): yii\base\Module->createControllerByID('show')
+#4 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(517): yii\base\Module->createController('')
+#5 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('show', Array)
+#6 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 F:\xampp\htdocs\vueDemo\web\index.php(23): yii\base\Application->run()
+#8 {main}
+2018-01-24 16:31:32 [127.0.0.1][-][-][info][application] $_GET = [
+    'catId' => '103'
+    'id' => '2'
 ]
 
 $_COOKIE = [
     'advanced-backend' => '2erofuii50u748a6t8vug5si2n'
     'Hm_lvt_1873856b1a96138cdd16521be8a1dc50' => '1516755530'
-    'Hm_lpvt_1873856b1a96138cdd16521be8a1dc50' => '1516757537'
-]
-
-$_SESSION = [
-    '__flash' => []
-    '__id' => 5
+    'Hm_lpvt_1873856b1a96138cdd16521be8a1dc50' => '1516781817'
 ]
 
 $_SERVER = [
@@ -131,16 +113,11 @@ $_SERVER = [
     'TMP' => '\\xampp\\tmp'
     'HTTP_HOST' => 'vuedemo.com'
     'HTTP_CONNECTION' => 'keep-alive'
-    'CONTENT_LENGTH' => '2608'
-    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
-    'HTTP_ORIGIN' => 'http://vuedemo.com'
-    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_ACCEPT' => 'text/plain'
     'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36'
-    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
-    'HTTP_REFERER' => 'http://vuedemo.com/admin/content/add-content?modelid=101&catid=102'
     'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
     'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
-    'HTTP_COOKIE' => 'advanced-backend=2erofuii50u748a6t8vug5si2n; Hm_lvt_1873856b1a96138cdd16521be8a1dc50=1516755530; Hm_lpvt_1873856b1a96138cdd16521be8a1dc50=1516757537'
+    'HTTP_COOKIE' => 'advanced-backend=2erofuii50u748a6t8vug5si2n; Hm_lvt_1873856b1a96138cdd16521be8a1dc50=1516755530; Hm_lpvt_1873856b1a96138cdd16521be8a1dc50=1516781817'
     'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;F:\\java\\bin;F:\\java\\jre\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;F:\\xampp\\php;F:\\Git\\cmd;F:\\Gow\\bin;C:\\Program Files\\nodejs\\;F:\\java/bin;F:\\java/jre/bin;F:\\python;‪F:\\cmder;F:\\xampp\\php;C:\\Users\\Admin\\AppData\\Roaming\\npm;C:\\Users\\Admin\\AppData\\Local\\Microsoft\\WindowsApps;F:\\cmder;'
     'SystemRoot' => 'C:\\WINDOWS'
     'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
@@ -158,210 +135,39 @@ $_SERVER = [
     'CONTEXT_PREFIX' => ''
     'CONTEXT_DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
     'SERVER_ADMIN' => 'postmaster@localhost'
-    'SCRIPT_FILENAME' => 'F:/xampp/htdocs/vueDemo/web/admin/index.php'
-    'REMOTE_PORT' => '30520'
-    'REDIRECT_URL' => '/admin/content/add-content'
+    'SCRIPT_FILENAME' => 'F:/xampp/htdocs/vueDemo/web/index.php'
+    'REMOTE_PORT' => '44411'
+    'REDIRECT_URL' => '/show'
+    'REDIRECT_QUERY_STRING' => 'catId=103&id=2'
     'GATEWAY_INTERFACE' => 'CGI/1.1'
     'SERVER_PROTOCOL' => 'HTTP/1.1'
-    'REQUEST_METHOD' => 'POST'
-    'QUERY_STRING' => ''
-    'REQUEST_URI' => '/admin/content/add-content'
-    'SCRIPT_NAME' => '/admin/index.php'
-    'PHP_SELF' => '/admin/index.php'
-    'REQUEST_TIME_FLOAT' => 1516775038.978
-    'REQUEST_TIME' => 1516775038
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'catId=103&id=2'
+    'REQUEST_URI' => '/show?catId=103&id=2'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1516782692.604
+    'REQUEST_TIME' => 1516782692
 ]
-2018-01-24 14:24:42 [127.0.0.1][5][2erofuii50u748a6t8vug5si2n][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Setting unknown property: common\lib\Mar::status in F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Component.php:201
+2018-01-24 16:32:10 [127.0.0.1][-][-][error][Error] Error: Class 'frontend\controllers\Category' not found in F:\xampp\htdocs\vueDemo\frontend\controllers\ShowController.php:22
 Stack trace:
-#0 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\BaseActiveRecord.php(305): yii\base\Component->__set('status', '1')
-#1 F:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php(90): yii\db\BaseActiveRecord->__set('status', '1')
-#2 F:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php(106): common\lib\sqlQuery::assembleSql(Array, '101')
-#3 [internal function]: backend\controllers\ContentController->actionAddContent()
-#4 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
-#5 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
-#6 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('add-content', Array)
-#7 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('content/add-con...', Array)
-#8 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
-#9 F:\xampp\htdocs\vueDemo\web\admin\index.php(20): yii\base\Application->run()
-#10 {main}
-2018-01-24 14:24:41 [127.0.0.1][5][2erofuii50u748a6t8vug5si2n][info][application] $_POST = [
-    'data' => '{\"modelId\":\"101\",\"catId\":\"\",\"status\":\"1\",\"publish_time\":\"2018-01-24 14:24:41\",\"allow_comment\":1,\"category_id\":[\"102\"],\"show_template\":\"show.php\",\"title\":\"胜多负少的发送到\",\"keywords\":\"关键字\",\"thumb\":[\"http://vuedemo.com/../uploads/images/2018-01-24//5a6826a5dee48.jpg\"],\"desc\":\"简介\",\"content\":\"<p><span style=\\\"color: rgb(73, 80, 96); font-family: &quot;Hiragino Sans GB&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, 微软雅黑, Arial, sans-serif; font-size: 12px; font-weight: 700; background-color: rgb(255, 255, 255);\\\">内容详情</span></p>\"}'
-]
-
-$_COOKIE = [
-    'advanced-backend' => '2erofuii50u748a6t8vug5si2n'
-    'Hm_lvt_1873856b1a96138cdd16521be8a1dc50' => '1516755530'
-    'Hm_lpvt_1873856b1a96138cdd16521be8a1dc50' => '1516757537'
-]
-
-$_SESSION = [
-    '__flash' => []
-    '__id' => 5
-]
-
-$_SERVER = [
-    'REDIRECT_MIBDIRS' => 'F:/xampp/php/extras/mibs'
-    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
-    'REDIRECT_OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
-    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
-    'REDIRECT_PHPRC' => '\\xampp\\php'
-    'REDIRECT_TMP' => '\\xampp\\tmp'
-    'REDIRECT_STATUS' => '200'
-    'MIBDIRS' => 'F:/xampp/php/extras/mibs'
-    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
-    'OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
-    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
-    'PHPRC' => '\\xampp\\php'
-    'TMP' => '\\xampp\\tmp'
-    'HTTP_HOST' => 'vuedemo.com'
-    'HTTP_CONNECTION' => 'keep-alive'
-    'CONTENT_LENGTH' => '988'
-    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
-    'HTTP_ORIGIN' => 'http://vuedemo.com'
-    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
-    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36'
-    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
-    'HTTP_REFERER' => 'http://vuedemo.com/admin/content/add-content?modelid=101&catid=102'
-    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
-    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
-    'HTTP_COOKIE' => 'advanced-backend=2erofuii50u748a6t8vug5si2n; Hm_lvt_1873856b1a96138cdd16521be8a1dc50=1516755530; Hm_lpvt_1873856b1a96138cdd16521be8a1dc50=1516757537'
-    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;F:\\java\\bin;F:\\java\\jre\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;F:\\xampp\\php;F:\\Git\\cmd;F:\\Gow\\bin;C:\\Program Files\\nodejs\\;F:\\java/bin;F:\\java/jre/bin;F:\\python;‪F:\\cmder;F:\\xampp\\php;C:\\Users\\Admin\\AppData\\Roaming\\npm;C:\\Users\\Admin\\AppData\\Local\\Microsoft\\WindowsApps;F:\\cmder;'
-    'SystemRoot' => 'C:\\WINDOWS'
-    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
-    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
-    'WINDIR' => 'C:\\WINDOWS'
-    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1 Server at vuedemo.com Port 80</address>
-'
-    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1'
-    'SERVER_NAME' => 'vuedemo.com'
-    'SERVER_ADDR' => '127.0.0.1'
-    'SERVER_PORT' => '80'
-    'REMOTE_ADDR' => '127.0.0.1'
-    'DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
-    'REQUEST_SCHEME' => 'http'
-    'CONTEXT_PREFIX' => ''
-    'CONTEXT_DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
-    'SERVER_ADMIN' => 'postmaster@localhost'
-    'SCRIPT_FILENAME' => 'F:/xampp/htdocs/vueDemo/web/admin/index.php'
-    'REMOTE_PORT' => '30614'
-    'REDIRECT_URL' => '/admin/content/add-content'
-    'GATEWAY_INTERFACE' => 'CGI/1.1'
-    'SERVER_PROTOCOL' => 'HTTP/1.1'
-    'REQUEST_METHOD' => 'POST'
-    'QUERY_STRING' => ''
-    'REQUEST_URI' => '/admin/content/add-content'
-    'SCRIPT_NAME' => '/admin/index.php'
-    'PHP_SELF' => '/admin/index.php'
-    'REQUEST_TIME_FLOAT' => 1516775081.911
-    'REQUEST_TIME' => 1516775081
-]
-2018-01-24 14:25:18 [127.0.0.1][5][2erofuii50u748a6t8vug5si2n][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Setting unknown property: common\lib\Mar::status in F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Component.php:201
-Stack trace:
-#0 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\BaseActiveRecord.php(305): yii\base\Component->__set('status', '1')
-#1 F:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php(90): yii\db\BaseActiveRecord->__set('status', '1')
-#2 F:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php(106): common\lib\sqlQuery::assembleSql(Array, '101')
-#3 [internal function]: backend\controllers\ContentController->actionAddContent()
-#4 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
-#5 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
-#6 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('add-content', Array)
-#7 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('content/add-con...', Array)
-#8 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
-#9 F:\xampp\htdocs\vueDemo\web\admin\index.php(20): yii\base\Application->run()
-#10 {main}
-2018-01-24 14:25:17 [127.0.0.1][5][2erofuii50u748a6t8vug5si2n][info][application] $_POST = [
-    'data' => '{\"modelId\":\"101\",\"catId\":\"\",\"status\":\"1\",\"publish_time\":\"2018-01-24 14:25:17\",\"allow_comment\":1,\"category_id\":[\"102\"],\"show_template\":\"show.php\",\"title\":\"标题\",\"keywords\":\"关键字\",\"thumb\":[\"http://vuedemo.com/../uploads/images/2018-01-24//5a6826ca437ab.jpg\"],\"desc\":\"简介\",\"content\":\"<p><span style=\\\"color: rgb(73, 80, 96); font-family: &quot;Hiragino Sans GB&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, 微软雅黑, Arial, sans-serif; font-size: 12px; font-weight: 700; background-color: rgb(255, 255, 255);\\\">内容详情</span></p>\"}'
-]
-
-$_COOKIE = [
-    'advanced-backend' => '2erofuii50u748a6t8vug5si2n'
-    'Hm_lvt_1873856b1a96138cdd16521be8a1dc50' => '1516755530'
-    'Hm_lpvt_1873856b1a96138cdd16521be8a1dc50' => '1516757537'
-]
-
-$_SESSION = [
-    '__flash' => []
-    '__id' => 5
-]
-
-$_SERVER = [
-    'REDIRECT_MIBDIRS' => 'F:/xampp/php/extras/mibs'
-    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
-    'REDIRECT_OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
-    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
-    'REDIRECT_PHPRC' => '\\xampp\\php'
-    'REDIRECT_TMP' => '\\xampp\\tmp'
-    'REDIRECT_STATUS' => '200'
-    'MIBDIRS' => 'F:/xampp/php/extras/mibs'
-    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
-    'OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
-    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
-    'PHPRC' => '\\xampp\\php'
-    'TMP' => '\\xampp\\tmp'
-    'HTTP_HOST' => 'vuedemo.com'
-    'HTTP_CONNECTION' => 'keep-alive'
-    'CONTENT_LENGTH' => '934'
-    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
-    'HTTP_ORIGIN' => 'http://vuedemo.com'
-    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
-    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36'
-    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
-    'HTTP_REFERER' => 'http://vuedemo.com/admin/content/add-content?modelid=101&catid=102'
-    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
-    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
-    'HTTP_COOKIE' => 'advanced-backend=2erofuii50u748a6t8vug5si2n; Hm_lvt_1873856b1a96138cdd16521be8a1dc50=1516755530; Hm_lpvt_1873856b1a96138cdd16521be8a1dc50=1516757537'
-    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;F:\\java\\bin;F:\\java\\jre\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;F:\\xampp\\php;F:\\Git\\cmd;F:\\Gow\\bin;C:\\Program Files\\nodejs\\;F:\\java/bin;F:\\java/jre/bin;F:\\python;‪F:\\cmder;F:\\xampp\\php;C:\\Users\\Admin\\AppData\\Roaming\\npm;C:\\Users\\Admin\\AppData\\Local\\Microsoft\\WindowsApps;F:\\cmder;'
-    'SystemRoot' => 'C:\\WINDOWS'
-    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
-    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
-    'WINDIR' => 'C:\\WINDOWS'
-    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1 Server at vuedemo.com Port 80</address>
-'
-    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1'
-    'SERVER_NAME' => 'vuedemo.com'
-    'SERVER_ADDR' => '127.0.0.1'
-    'SERVER_PORT' => '80'
-    'REMOTE_ADDR' => '127.0.0.1'
-    'DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
-    'REQUEST_SCHEME' => 'http'
-    'CONTEXT_PREFIX' => ''
-    'CONTEXT_DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
-    'SERVER_ADMIN' => 'postmaster@localhost'
-    'SCRIPT_FILENAME' => 'F:/xampp/htdocs/vueDemo/web/admin/index.php'
-    'REMOTE_PORT' => '30684'
-    'REDIRECT_URL' => '/admin/content/add-content'
-    'GATEWAY_INTERFACE' => 'CGI/1.1'
-    'SERVER_PROTOCOL' => 'HTTP/1.1'
-    'REQUEST_METHOD' => 'POST'
-    'QUERY_STRING' => ''
-    'REQUEST_URI' => '/admin/content/add-content'
-    'SCRIPT_NAME' => '/admin/index.php'
-    'PHP_SELF' => '/admin/index.php'
-    'REQUEST_TIME_FLOAT' => 1516775117.952
-    'REQUEST_TIME' => 1516775117
-]
-2018-01-24 14:42:05 [127.0.0.1][5][2erofuii50u748a6t8vug5si2n][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined variable: model1 in F:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php:95
-Stack trace:
-#0 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php(57): backend\controllers\ContentController->actionAddContent()
-#1 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php(57): ::call_user_func_array:{F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php:57}()
-#2 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams()
-#3 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(523): backend\controllers\ContentController->runAction()
-#4 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php(102): yii\web\Application->runAction()
-#5 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest()
-#6 F:\xampp\htdocs\vueDemo\web\admin\index.php(20): yii\web\Application->run()
+#0 [internal function]: frontend\controllers\ShowController->actionIndex()
+#1 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#2 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#3 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('', Array)
+#4 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('show', Array)
+#5 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 F:\xampp\htdocs\vueDemo\web\index.php(23): yii\base\Application->run()
 #7 {main}
-2018-01-24 14:42:04 [127.0.0.1][5][2erofuii50u748a6t8vug5si2n][info][application] $_POST = [
-    'data' => '{\"modelId\":\"101\",\"catId\":\"\",\"status\":\"1\",\"publish_time\":\"2018-01-24 14:42:4\",\"allow_comment\":1,\"category_id\":[\"102\"],\"show_template\":\"show.php\",\"title\":\"标题\",\"keywords\":\"关键字\",\"thumb\":[\"http://vuedemo.com/../uploads/images/2018-01-24//5a682ab81579f.jpg\"],\"desc\":\"简介\",\"content\":\"<p><span style=\\\"color: rgb(73, 80, 96); font-family: &quot;Hiragino Sans GB&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, 微软雅黑, Arial, sans-serif; font-size: 12px; font-weight: 700; background-color: rgb(255, 255, 255);\\\">内容详情</span></p>\"}'
+2018-01-24 16:32:10 [127.0.0.1][-][-][info][application] $_GET = [
+    'catId' => '103'
+    'id' => '2'
 ]
 
 $_COOKIE = [
     'advanced-backend' => '2erofuii50u748a6t8vug5si2n'
     'Hm_lvt_1873856b1a96138cdd16521be8a1dc50' => '1516755530'
-    'Hm_lpvt_1873856b1a96138cdd16521be8a1dc50' => '1516757537'
-]
-
-$_SESSION = [
-    '__flash' => []
-    '__id' => 5
+    'Hm_lpvt_1873856b1a96138cdd16521be8a1dc50' => '1516781817'
 ]
 
 $_SERVER = [
@@ -380,16 +186,14 @@ $_SERVER = [
     'TMP' => '\\xampp\\tmp'
     'HTTP_HOST' => 'vuedemo.com'
     'HTTP_CONNECTION' => 'keep-alive'
-    'CONTENT_LENGTH' => '933'
-    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
-    'HTTP_ORIGIN' => 'http://vuedemo.com'
-    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
     'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36'
-    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
-    'HTTP_REFERER' => 'http://vuedemo.com/admin/content/add-content?modelid=101&catid=102'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://vuedemo.com/category/list?catId=103&modelId=105'
     'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
     'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
-    'HTTP_COOKIE' => 'advanced-backend=2erofuii50u748a6t8vug5si2n; Hm_lvt_1873856b1a96138cdd16521be8a1dc50=1516755530; Hm_lpvt_1873856b1a96138cdd16521be8a1dc50=1516757537'
+    'HTTP_COOKIE' => 'advanced-backend=2erofuii50u748a6t8vug5si2n; Hm_lvt_1873856b1a96138cdd16521be8a1dc50=1516755530; Hm_lpvt_1873856b1a96138cdd16521be8a1dc50=1516781817'
     'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;F:\\java\\bin;F:\\java\\jre\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;F:\\xampp\\php;F:\\Git\\cmd;F:\\Gow\\bin;C:\\Program Files\\nodejs\\;F:\\java/bin;F:\\java/jre/bin;F:\\python;‪F:\\cmder;F:\\xampp\\php;C:\\Users\\Admin\\AppData\\Roaming\\npm;C:\\Users\\Admin\\AppData\\Local\\Microsoft\\WindowsApps;F:\\cmder;'
     'SystemRoot' => 'C:\\WINDOWS'
     'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
@@ -407,76 +211,39 @@ $_SERVER = [
     'CONTEXT_PREFIX' => ''
     'CONTEXT_DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
     'SERVER_ADMIN' => 'postmaster@localhost'
-    'SCRIPT_FILENAME' => 'F:/xampp/htdocs/vueDemo/web/admin/index.php'
-    'REMOTE_PORT' => '32469'
-    'REDIRECT_URL' => '/admin/content/add-content'
+    'SCRIPT_FILENAME' => 'F:/xampp/htdocs/vueDemo/web/index.php'
+    'REMOTE_PORT' => '44474'
+    'REDIRECT_URL' => '/show'
+    'REDIRECT_QUERY_STRING' => 'catId=103&id=2'
     'GATEWAY_INTERFACE' => 'CGI/1.1'
     'SERVER_PROTOCOL' => 'HTTP/1.1'
-    'REQUEST_METHOD' => 'POST'
-    'QUERY_STRING' => ''
-    'REQUEST_URI' => '/admin/content/add-content'
-    'SCRIPT_NAME' => '/admin/index.php'
-    'PHP_SELF' => '/admin/index.php'
-    'REQUEST_TIME_FLOAT' => 1516776124.392
-    'REQUEST_TIME' => 1516776124
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'catId=103&id=2'
+    'REQUEST_URI' => '/show?catId=103&id=2'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1516782730.285
+    'REQUEST_TIME' => 1516782730
 ]
-2018-01-24 14:47:13 [127.0.0.1][5][2erofuii50u748a6t8vug5si2n][error][yii\db\IntegrityException] PDOException: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`cmsDemo`.`cms_article_data`, CONSTRAINT `cms_article_model_id` FOREIGN KEY (`id`) REFERENCES `cms_article` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Command.php:842
+2018-01-24 16:32:10 [127.0.0.1][-][-][error][Error] Error: Class 'frontend\controllers\Category' not found in F:\xampp\htdocs\vueDemo\frontend\controllers\ShowController.php:22
 Stack trace:
-#0 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Command.php(842): PDOStatement->execute()
-#1 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Schema.php(454): yii\db\Command->execute()
-#2 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\ActiveRecord.php(494): yii\db\Schema->insert('cms_article_dat...', Array)
-#3 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\ActiveRecord.php(461): yii\db\ActiveRecord->insertInternal(NULL)
-#4 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\BaseActiveRecord.php(643): yii\db\ActiveRecord->insert(true, NULL)
-#5 F:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php(109): yii\db\BaseActiveRecord->save()
-#6 F:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php(106): common\lib\sqlQuery::assembleSql(Array, '101')
-#7 [internal function]: backend\controllers\ContentController->actionAddContent()
-#8 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
-#9 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
-#10 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('add-content', Array)
-#11 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('content/add-con...', Array)
-#12 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
-#13 F:\xampp\htdocs\vueDemo\web\admin\index.php(20): yii\base\Application->run()
-#14 {main}
-
-Next yii\db\IntegrityException: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`cmsDemo`.`cms_article_data`, CONSTRAINT `cms_article_model_id` FOREIGN KEY (`id`) REFERENCES `cms_article` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
-The SQL being executed was: INSERT INTO `cms_article_data` (`content`, `id`) VALUES ('<p>舒服舒服</p>', 1) in F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Schema.php:636
-Stack trace:
-#0 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Command.php(852): yii\db\Schema->convertException(Object(PDOException), 'INSERT INTO `cm...')
-#1 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Schema.php(454): yii\db\Command->execute()
-#2 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\ActiveRecord.php(494): yii\db\Schema->insert('cms_article_dat...', Array)
-#3 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\ActiveRecord.php(461): yii\db\ActiveRecord->insertInternal(NULL)
-#4 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\BaseActiveRecord.php(643): yii\db\ActiveRecord->insert(true, NULL)
-#5 F:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php(109): yii\db\BaseActiveRecord->save()
-#6 F:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php(106): common\lib\sqlQuery::assembleSql(Array, '101')
-#7 [internal function]: backend\controllers\ContentController->actionAddContent()
-#8 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
-#9 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
-#10 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('add-content', Array)
-#11 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('content/add-con...', Array)
-#12 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
-#13 F:\xampp\htdocs\vueDemo\web\admin\index.php(20): yii\base\Application->run()
-#14 {main}
-Additional Information:
-Array
-(
-    [0] => 23000
-    [1] => 1452
-    [2] => Cannot add or update a child row: a foreign key constraint fails (`cmsDemo`.`cms_article_data`, CONSTRAINT `cms_article_model_id` FOREIGN KEY (`id`) REFERENCES `cms_article` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
-)
-
-2018-01-24 14:47:11 [127.0.0.1][5][2erofuii50u748a6t8vug5si2n][info][application] $_POST = [
-    'data' => '{\"modelId\":\"101\",\"catId\":\"\",\"status\":\"1\",\"publish_time\":\"2018-01-24 14:47:11\",\"allow_comment\":1,\"category_id\":[\"102\"],\"show_template\":\"show.php\",\"title\":\"的是否v是的\",\"keywords\":\"是否v但是\",\"thumb\":[],\"desc\":\"\",\"content\":\"<p>舒服舒服</p>\"}'
+#0 [internal function]: frontend\controllers\ShowController->actionIndex()
+#1 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#2 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#3 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('', Array)
+#4 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('show', Array)
+#5 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 F:\xampp\htdocs\vueDemo\web\index.php(23): yii\base\Application->run()
+#7 {main}
+2018-01-24 16:32:10 [127.0.0.1][-][-][info][application] $_GET = [
+    'catId' => '103'
+    'id' => '2'
 ]
 
 $_COOKIE = [
     'advanced-backend' => '2erofuii50u748a6t8vug5si2n'
     'Hm_lvt_1873856b1a96138cdd16521be8a1dc50' => '1516755530'
-    'Hm_lpvt_1873856b1a96138cdd16521be8a1dc50' => '1516757537'
-]
-
-$_SESSION = [
-    '__flash' => []
-    '__id' => 5
+    'Hm_lpvt_1873856b1a96138cdd16521be8a1dc50' => '1516781817'
 ]
 
 $_SERVER = [
@@ -495,16 +262,11 @@ $_SERVER = [
     'TMP' => '\\xampp\\tmp'
     'HTTP_HOST' => 'vuedemo.com'
     'HTTP_CONNECTION' => 'keep-alive'
-    'CONTENT_LENGTH' => '495'
-    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
-    'HTTP_ORIGIN' => 'http://vuedemo.com'
-    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_ACCEPT' => 'text/plain'
     'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36'
-    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
-    'HTTP_REFERER' => 'http://vuedemo.com/admin/content/add-content?modelid=101&catid=102'
     'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
     'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
-    'HTTP_COOKIE' => 'advanced-backend=2erofuii50u748a6t8vug5si2n; Hm_lvt_1873856b1a96138cdd16521be8a1dc50=1516755530; Hm_lpvt_1873856b1a96138cdd16521be8a1dc50=1516757537'
+    'HTTP_COOKIE' => 'advanced-backend=2erofuii50u748a6t8vug5si2n; Hm_lvt_1873856b1a96138cdd16521be8a1dc50=1516755530; Hm_lpvt_1873856b1a96138cdd16521be8a1dc50=1516781817'
     'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;F:\\java\\bin;F:\\java\\jre\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;F:\\xampp\\php;F:\\Git\\cmd;F:\\Gow\\bin;C:\\Program Files\\nodejs\\;F:\\java/bin;F:\\java/jre/bin;F:\\python;‪F:\\cmder;F:\\xampp\\php;C:\\Users\\Admin\\AppData\\Roaming\\npm;C:\\Users\\Admin\\AppData\\Local\\Microsoft\\WindowsApps;F:\\cmder;'
     'SystemRoot' => 'C:\\WINDOWS'
     'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
@@ -522,76 +284,39 @@ $_SERVER = [
     'CONTEXT_PREFIX' => ''
     'CONTEXT_DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
     'SERVER_ADMIN' => 'postmaster@localhost'
-    'SCRIPT_FILENAME' => 'F:/xampp/htdocs/vueDemo/web/admin/index.php'
-    'REMOTE_PORT' => '33033'
-    'REDIRECT_URL' => '/admin/content/add-content'
+    'SCRIPT_FILENAME' => 'F:/xampp/htdocs/vueDemo/web/index.php'
+    'REMOTE_PORT' => '44473'
+    'REDIRECT_URL' => '/show'
+    'REDIRECT_QUERY_STRING' => 'catId=103&id=2'
     'GATEWAY_INTERFACE' => 'CGI/1.1'
     'SERVER_PROTOCOL' => 'HTTP/1.1'
-    'REQUEST_METHOD' => 'POST'
-    'QUERY_STRING' => ''
-    'REQUEST_URI' => '/admin/content/add-content'
-    'SCRIPT_NAME' => '/admin/index.php'
-    'PHP_SELF' => '/admin/index.php'
-    'REQUEST_TIME_FLOAT' => 1516776431.801
-    'REQUEST_TIME' => 1516776431
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'catId=103&id=2'
+    'REQUEST_URI' => '/show?catId=103&id=2'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1516782730.507
+    'REQUEST_TIME' => 1516782730
 ]
-2018-01-24 14:49:10 [127.0.0.1][5][2erofuii50u748a6t8vug5si2n][error][yii\db\IntegrityException] PDOException: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`cmsDemo`.`cms_article_data`, CONSTRAINT `cms_article_model_id` FOREIGN KEY (`id`) REFERENCES `cms_article` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Command.php:842
+2018-01-24 16:32:29 [127.0.0.1][-][-][error][Error] Error: Class 'frontend\controllers\Category' not found in F:\xampp\htdocs\vueDemo\frontend\controllers\ShowController.php:22
 Stack trace:
-#0 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Command.php(842): PDOStatement->execute()
-#1 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Schema.php(454): yii\db\Command->execute()
-#2 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\ActiveRecord.php(494): yii\db\Schema->insert('cms_article_dat...', Array)
-#3 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\ActiveRecord.php(461): yii\db\ActiveRecord->insertInternal(NULL)
-#4 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\BaseActiveRecord.php(643): yii\db\ActiveRecord->insert(true, NULL)
-#5 F:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php(109): yii\db\BaseActiveRecord->save()
-#6 F:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php(106): common\lib\sqlQuery::assembleSql(Array, '101')
-#7 [internal function]: backend\controllers\ContentController->actionAddContent()
-#8 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
-#9 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
-#10 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('add-content', Array)
-#11 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('content/add-con...', Array)
-#12 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
-#13 F:\xampp\htdocs\vueDemo\web\admin\index.php(20): yii\base\Application->run()
-#14 {main}
-
-Next yii\db\IntegrityException: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`cmsDemo`.`cms_article_data`, CONSTRAINT `cms_article_model_id` FOREIGN KEY (`id`) REFERENCES `cms_article` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
-The SQL being executed was: INSERT INTO `cms_article_data` (`content`, `id`) VALUES ('<p><span style=\"color: rgb(73, 80, 96); font-family: &quot;Hiragino Sans GB&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, 微软雅黑, Arial, sans-serif; font-size: 12px; font-weight: 700; background-color: rgb(255, 255, 255);\">标题</span></p>', 1) in F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Schema.php:636
-Stack trace:
-#0 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Command.php(852): yii\db\Schema->convertException(Object(PDOException), 'INSERT INTO `cm...')
-#1 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Schema.php(454): yii\db\Command->execute()
-#2 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\ActiveRecord.php(494): yii\db\Schema->insert('cms_article_dat...', Array)
-#3 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\ActiveRecord.php(461): yii\db\ActiveRecord->insertInternal(NULL)
-#4 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\BaseActiveRecord.php(643): yii\db\ActiveRecord->insert(true, NULL)
-#5 F:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php(109): yii\db\BaseActiveRecord->save()
-#6 F:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php(106): common\lib\sqlQuery::assembleSql(Array, '101')
-#7 [internal function]: backend\controllers\ContentController->actionAddContent()
-#8 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
-#9 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
-#10 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('add-content', Array)
-#11 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('content/add-con...', Array)
-#12 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
-#13 F:\xampp\htdocs\vueDemo\web\admin\index.php(20): yii\base\Application->run()
-#14 {main}
-Additional Information:
-Array
-(
-    [0] => 23000
-    [1] => 1452
-    [2] => Cannot add or update a child row: a foreign key constraint fails (`cmsDemo`.`cms_article_data`, CONSTRAINT `cms_article_model_id` FOREIGN KEY (`id`) REFERENCES `cms_article` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
-)
-
-2018-01-24 14:49:08 [127.0.0.1][5][2erofuii50u748a6t8vug5si2n][info][application] $_POST = [
-    'data' => '{\"modelId\":\"101\",\"catId\":\"\",\"status\":\"1\",\"publish_time\":\"2018-01-24 14:49:8\",\"allow_comment\":1,\"category_id\":[\"102\"],\"show_template\":\"show.php\",\"title\":\"标题\",\"keywords\":\"标题\",\"thumb\":[],\"desc\":\"标题\",\"content\":\"<p><span style=\\\"color: rgb(73, 80, 96); font-family: &quot;Hiragino Sans GB&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, 微软雅黑, Arial, sans-serif; font-size: 12px; font-weight: 700; background-color: rgb(255, 255, 255);\\\">标题</span></p>\"}'
+#0 [internal function]: frontend\controllers\ShowController->actionIndex()
+#1 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#2 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#3 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('', Array)
+#4 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('show', Array)
+#5 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 F:\xampp\htdocs\vueDemo\web\index.php(23): yii\base\Application->run()
+#7 {main}
+2018-01-24 16:32:29 [127.0.0.1][-][-][info][application] $_GET = [
+    'catId' => '103'
+    'id' => '2'
 ]
 
 $_COOKIE = [
     'advanced-backend' => '2erofuii50u748a6t8vug5si2n'
     'Hm_lvt_1873856b1a96138cdd16521be8a1dc50' => '1516755530'
-    'Hm_lpvt_1873856b1a96138cdd16521be8a1dc50' => '1516757537'
-]
-
-$_SESSION = [
-    '__flash' => []
-    '__id' => 5
+    'Hm_lpvt_1873856b1a96138cdd16521be8a1dc50' => '1516781817'
 ]
 
 $_SERVER = [
@@ -610,16 +335,14 @@ $_SERVER = [
     'TMP' => '\\xampp\\tmp'
     'HTTP_HOST' => 'vuedemo.com'
     'HTTP_CONNECTION' => 'keep-alive'
-    'CONTENT_LENGTH' => '816'
-    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
-    'HTTP_ORIGIN' => 'http://vuedemo.com'
-    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
     'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36'
-    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
-    'HTTP_REFERER' => 'http://vuedemo.com/admin/content/add-content?modelid=101&catid=102'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://vuedemo.com/category/list?catId=103&modelId=105'
     'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
     'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
-    'HTTP_COOKIE' => 'advanced-backend=2erofuii50u748a6t8vug5si2n; Hm_lvt_1873856b1a96138cdd16521be8a1dc50=1516755530; Hm_lpvt_1873856b1a96138cdd16521be8a1dc50=1516757537'
+    'HTTP_COOKIE' => 'advanced-backend=2erofuii50u748a6t8vug5si2n; Hm_lvt_1873856b1a96138cdd16521be8a1dc50=1516755530; Hm_lpvt_1873856b1a96138cdd16521be8a1dc50=1516781817'
     'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;F:\\java\\bin;F:\\java\\jre\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;F:\\xampp\\php;F:\\Git\\cmd;F:\\Gow\\bin;C:\\Program Files\\nodejs\\;F:\\java/bin;F:\\java/jre/bin;F:\\python;‪F:\\cmder;F:\\xampp\\php;C:\\Users\\Admin\\AppData\\Roaming\\npm;C:\\Users\\Admin\\AppData\\Local\\Microsoft\\WindowsApps;F:\\cmder;'
     'SystemRoot' => 'C:\\WINDOWS'
     'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
@@ -637,45 +360,39 @@ $_SERVER = [
     'CONTEXT_PREFIX' => ''
     'CONTEXT_DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
     'SERVER_ADMIN' => 'postmaster@localhost'
-    'SCRIPT_FILENAME' => 'F:/xampp/htdocs/vueDemo/web/admin/index.php'
-    'REMOTE_PORT' => '33251'
-    'REDIRECT_URL' => '/admin/content/add-content'
+    'SCRIPT_FILENAME' => 'F:/xampp/htdocs/vueDemo/web/index.php'
+    'REMOTE_PORT' => '44495'
+    'REDIRECT_URL' => '/show'
+    'REDIRECT_QUERY_STRING' => 'catId=103&id=2'
     'GATEWAY_INTERFACE' => 'CGI/1.1'
     'SERVER_PROTOCOL' => 'HTTP/1.1'
-    'REQUEST_METHOD' => 'POST'
-    'QUERY_STRING' => ''
-    'REQUEST_URI' => '/admin/content/add-content'
-    'SCRIPT_NAME' => '/admin/index.php'
-    'PHP_SELF' => '/admin/index.php'
-    'REQUEST_TIME_FLOAT' => 1516776548.748
-    'REQUEST_TIME' => 1516776548
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'catId=103&id=2'
+    'REQUEST_URI' => '/show?catId=103&id=2'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1516782749.782
+    'REQUEST_TIME' => 1516782749
 ]
-2018-01-24 15:00:55 [127.0.0.1][5][2erofuii50u748a6t8vug5si2n][error][yii\base\InvalidConfigException] yii\base\InvalidConfigException: "common\lib\Mar" must have a primary key. in F:\xampp\htdocs\vueDemo\common\lib\Mar.php:107
+2018-01-24 16:32:30 [127.0.0.1][-][-][error][Error] Error: Class 'frontend\controllers\Category' not found in F:\xampp\htdocs\vueDemo\frontend\controllers\ShowController.php:22
 Stack trace:
-#0 F:\xampp\htdocs\vueDemo\common\lib\Mar.php(77): common\lib\Mar::findByConditionx('cms_article_dat...', '15')
-#1 F:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php(177): common\lib\Mar::findOnex('cms_article_dat...', '15')
-#2 F:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php(159): common\lib\sqlQuery::updateAssembleSql(Array, '101', '15')
-#3 [internal function]: backend\controllers\ContentController->actionEditContent()
-#4 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
-#5 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
-#6 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('edit-content', Array)
-#7 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('content/edit-co...', Array)
-#8 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
-#9 F:\xampp\htdocs\vueDemo\web\admin\index.php(20): yii\base\Application->run()
-#10 {main}
-2018-01-24 15:00:54 [127.0.0.1][5][2erofuii50u748a6t8vug5si2n][info][application] $_POST = [
-    'data' => '{\"modelId\":\"101\",\"catId\":\"102\",\"id\":\"15\",\"status\":\"1\",\"publish_time\":\"2018-01-24 15:0:54\",\"allow_comment\":\"1\",\"show_template\":\"show.php\",\"title\":\"标题1\",\"keywords\":\"标题1\",\"thumb\":[\"\"],\"desc\":\"标题1\",\"content\":\"<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;标题1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p><!-- <span v-html=\\\"item.value\\\"></span> --><!-- <span v-html=\\\"item.value\\\"></span> -->\"}'
+#0 [internal function]: frontend\controllers\ShowController->actionIndex()
+#1 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#2 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#3 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('', Array)
+#4 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('show', Array)
+#5 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 F:\xampp\htdocs\vueDemo\web\index.php(23): yii\base\Application->run()
+#7 {main}
+2018-01-24 16:32:30 [127.0.0.1][-][-][info][application] $_GET = [
+    'catId' => '103'
+    'id' => '2'
 ]
 
 $_COOKIE = [
     'advanced-backend' => '2erofuii50u748a6t8vug5si2n'
     'Hm_lvt_1873856b1a96138cdd16521be8a1dc50' => '1516755530'
-    'Hm_lpvt_1873856b1a96138cdd16521be8a1dc50' => '1516757537'
-]
-
-$_SESSION = [
-    '__flash' => []
-    '__id' => 5
+    'Hm_lpvt_1873856b1a96138cdd16521be8a1dc50' => '1516781817'
 ]
 
 $_SERVER = [
@@ -694,16 +411,11 @@ $_SERVER = [
     'TMP' => '\\xampp\\tmp'
     'HTTP_HOST' => 'vuedemo.com'
     'HTTP_CONNECTION' => 'keep-alive'
-    'CONTENT_LENGTH' => '739'
-    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
-    'HTTP_ORIGIN' => 'http://vuedemo.com'
-    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_ACCEPT' => 'text/plain'
     'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36'
-    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
-    'HTTP_REFERER' => 'http://vuedemo.com/admin/content/edit-content?modelid=101&catid=102&id=15'
     'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
     'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
-    'HTTP_COOKIE' => 'advanced-backend=2erofuii50u748a6t8vug5si2n; Hm_lvt_1873856b1a96138cdd16521be8a1dc50=1516755530; Hm_lpvt_1873856b1a96138cdd16521be8a1dc50=1516757537'
+    'HTTP_COOKIE' => 'advanced-backend=2erofuii50u748a6t8vug5si2n; Hm_lvt_1873856b1a96138cdd16521be8a1dc50=1516755530; Hm_lpvt_1873856b1a96138cdd16521be8a1dc50=1516781817'
     'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;F:\\java\\bin;F:\\java\\jre\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;F:\\xampp\\php;F:\\Git\\cmd;F:\\Gow\\bin;C:\\Program Files\\nodejs\\;F:\\java/bin;F:\\java/jre/bin;F:\\python;‪F:\\cmder;F:\\xampp\\php;C:\\Users\\Admin\\AppData\\Roaming\\npm;C:\\Users\\Admin\\AppData\\Local\\Microsoft\\WindowsApps;F:\\cmder;'
     'SystemRoot' => 'C:\\WINDOWS'
     'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
@@ -721,52 +433,30 @@ $_SERVER = [
     'CONTEXT_PREFIX' => ''
     'CONTEXT_DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
     'SERVER_ADMIN' => 'postmaster@localhost'
-    'SCRIPT_FILENAME' => 'F:/xampp/htdocs/vueDemo/web/admin/index.php'
-    'REMOTE_PORT' => '34667'
-    'REDIRECT_URL' => '/admin/content/edit-content'
+    'SCRIPT_FILENAME' => 'F:/xampp/htdocs/vueDemo/web/index.php'
+    'REMOTE_PORT' => '44507'
+    'REDIRECT_URL' => '/show'
+    'REDIRECT_QUERY_STRING' => 'catId=103&id=2'
     'GATEWAY_INTERFACE' => 'CGI/1.1'
     'SERVER_PROTOCOL' => 'HTTP/1.1'
-    'REQUEST_METHOD' => 'POST'
-    'QUERY_STRING' => ''
-    'REQUEST_URI' => '/admin/content/edit-content'
-    'SCRIPT_NAME' => '/admin/index.php'
-    'PHP_SELF' => '/admin/index.php'
-    'REQUEST_TIME_FLOAT' => 1516777254.076
-    'REQUEST_TIME' => 1516777254
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'catId=103&id=2'
+    'REQUEST_URI' => '/show?catId=103&id=2'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1516782750.137
+    'REQUEST_TIME' => 1516782750
 ]
-2018-01-24 15:02:02 [127.0.0.1][5][2erofuii50u748a6t8vug5si2n][error][yii\db\Exception] yii\db\Exception: common\lib\Mar does not have a primary key. You should either define a primary key for the corresponding table or override the primaryKey() method. in F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\BaseActiveRecord.php:1107
-Stack trace:
-#0 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\BaseActiveRecord.php(766): yii\db\BaseActiveRecord->getOldPrimaryKey(true)
-#1 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\ActiveRecord.php(570): yii\db\BaseActiveRecord->updateInternal(NULL)
-#2 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\BaseActiveRecord.php(645): yii\db\ActiveRecord->update(true, NULL)
-#3 F:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php(184): yii\db\BaseActiveRecord->save()
-#4 F:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php(159): common\lib\sqlQuery::updateAssembleSql(Array, '101', '15')
-#5 [internal function]: backend\controllers\ContentController->actionEditContent()
-#6 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
-#7 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
-#8 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('edit-content', Array)
-#9 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('content/edit-co...', Array)
-#10 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
-#11 F:\xampp\htdocs\vueDemo\web\admin\index.php(20): yii\base\Application->run()
-#12 {main}
-Additional Information:
-Array
-(
-)
-
-2018-01-24 15:02:00 [127.0.0.1][5][2erofuii50u748a6t8vug5si2n][info][application] $_POST = [
-    'data' => '{\"modelId\":\"101\",\"catId\":\"102\",\"id\":\"15\",\"status\":\"1\",\"publish_time\":\"2018-01-24 15:2:0\",\"allow_comment\":\"1\",\"show_template\":\"show.php\",\"title\":\"标题1\",\"keywords\":\"标题1\",\"thumb\":[\"\"],\"desc\":\"标题1\",\"content\":\"<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;标题1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p><!-- <span v-html=\\\"item.value\\\"></span> --><!-- <span v-html=\\\"item.value\\\"></span> -->\"}'
+2018-01-24 16:39:17 [127.0.0.1][-][-][error][SmartyCompilerException]  --> Smarty Compiler: Syntax error in template "file:F:\xampp\htdocs\vueDemo\web\template\Default\PageList\Show\show.php"  on line 30 "<span>time：<em>{{time}}</em></span>" unknown tag "time" <-- 
+2018-01-24 16:39:17 [127.0.0.1][-][-][info][application] $_GET = [
+    'catId' => '103'
+    'id' => '2'
 ]
 
 $_COOKIE = [
     'advanced-backend' => '2erofuii50u748a6t8vug5si2n'
     'Hm_lvt_1873856b1a96138cdd16521be8a1dc50' => '1516755530'
-    'Hm_lpvt_1873856b1a96138cdd16521be8a1dc50' => '1516757537'
-]
-
-$_SESSION = [
-    '__flash' => []
-    '__id' => 5
+    'Hm_lpvt_1873856b1a96138cdd16521be8a1dc50' => '1516781817'
 ]
 
 $_SERVER = [
@@ -785,16 +475,14 @@ $_SERVER = [
     'TMP' => '\\xampp\\tmp'
     'HTTP_HOST' => 'vuedemo.com'
     'HTTP_CONNECTION' => 'keep-alive'
-    'CONTENT_LENGTH' => '738'
-    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
-    'HTTP_ORIGIN' => 'http://vuedemo.com'
-    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
     'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36'
-    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
-    'HTTP_REFERER' => 'http://vuedemo.com/admin/content/edit-content?modelid=101&catid=102&id=15'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://vuedemo.com/category/list?catId=103&modelId=105'
     'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
     'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
-    'HTTP_COOKIE' => 'advanced-backend=2erofuii50u748a6t8vug5si2n; Hm_lvt_1873856b1a96138cdd16521be8a1dc50=1516755530; Hm_lpvt_1873856b1a96138cdd16521be8a1dc50=1516757537'
+    'HTTP_COOKIE' => 'advanced-backend=2erofuii50u748a6t8vug5si2n; Hm_lvt_1873856b1a96138cdd16521be8a1dc50=1516755530; Hm_lpvt_1873856b1a96138cdd16521be8a1dc50=1516781817'
     'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;F:\\java\\bin;F:\\java\\jre\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;F:\\xampp\\php;F:\\Git\\cmd;F:\\Gow\\bin;C:\\Program Files\\nodejs\\;F:\\java/bin;F:\\java/jre/bin;F:\\python;‪F:\\cmder;F:\\xampp\\php;C:\\Users\\Admin\\AppData\\Roaming\\npm;C:\\Users\\Admin\\AppData\\Local\\Microsoft\\WindowsApps;F:\\cmder;'
     'SystemRoot' => 'C:\\WINDOWS'
     'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
@@ -812,79 +500,30 @@ $_SERVER = [
     'CONTEXT_PREFIX' => ''
     'CONTEXT_DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
     'SERVER_ADMIN' => 'postmaster@localhost'
-    'SCRIPT_FILENAME' => 'F:/xampp/htdocs/vueDemo/web/admin/index.php'
-    'REMOTE_PORT' => '34818'
-    'REDIRECT_URL' => '/admin/content/edit-content'
+    'SCRIPT_FILENAME' => 'F:/xampp/htdocs/vueDemo/web/index.php'
+    'REMOTE_PORT' => '45269'
+    'REDIRECT_URL' => '/show'
+    'REDIRECT_QUERY_STRING' => 'catId=103&id=2'
     'GATEWAY_INTERFACE' => 'CGI/1.1'
     'SERVER_PROTOCOL' => 'HTTP/1.1'
-    'REQUEST_METHOD' => 'POST'
-    'QUERY_STRING' => ''
-    'REQUEST_URI' => '/admin/content/edit-content'
-    'SCRIPT_NAME' => '/admin/index.php'
-    'PHP_SELF' => '/admin/index.php'
-    'REQUEST_TIME_FLOAT' => 1516777320.86
-    'REQUEST_TIME' => 1516777320
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'catId=103&id=2'
+    'REQUEST_URI' => '/show?catId=103&id=2'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1516783157.505
+    'REQUEST_TIME' => 1516783157
 ]
-2018-01-24 15:27:24 [127.0.0.1][5][2erofuii50u748a6t8vug5si2n][error][yii\db\Exception] PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'integer(11) default 0,
-	`content` text default ""
-)' at line 2 in F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Command.php:842
-Stack trace:
-#0 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Command.php(842): PDOStatement->execute()
-#1 F:\xampp\htdocs\vueDemo\common\lib\Table.php(141): yii\db\Command->execute()
-#2 F:\xampp\htdocs\vueDemo\backend\controllers\ModelController.php(108): common\lib\Table::addTable('cms_article', Array)
-#3 [internal function]: backend\controllers\ModelController->actionAddModel()
-#4 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
-#5 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
-#6 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('add-model', Array)
-#7 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('model/add-model', Array)
-#8 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
-#9 F:\xampp\htdocs\vueDemo\web\admin\index.php(20): yii\base\Application->run()
-#10 {main}
-
-Next yii\db\Exception: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'integer(11) default 0,
-	`content` text default ""
-)' at line 2
-The SQL being executed was: CREATE TABLE `cms_article_data` (
-	`id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY integer(11) default 0,
-	`content` text default ""
-) in F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Schema.php:636
-Stack trace:
-#0 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Command.php(852): yii\db\Schema->convertException(Object(PDOException), 'CREATE TABLE `c...')
-#1 F:\xampp\htdocs\vueDemo\common\lib\Table.php(141): yii\db\Command->execute()
-#2 F:\xampp\htdocs\vueDemo\backend\controllers\ModelController.php(108): common\lib\Table::addTable('cms_article', Array)
-#3 [internal function]: backend\controllers\ModelController->actionAddModel()
-#4 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
-#5 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
-#6 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('add-model', Array)
-#7 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('model/add-model', Array)
-#8 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
-#9 F:\xampp\htdocs\vueDemo\web\admin\index.php(20): yii\base\Application->run()
-#10 {main}
-Additional Information:
-Array
-(
-    [0] => 42000
-    [1] => 1064
-    [2] => You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'integer(11) default 0,
-	`content` text default ""
-)' at line 2
-)
-
-2018-01-24 15:27:23 [127.0.0.1][5][2erofuii50u748a6t8vug5si2n][info][application] $_POST = [
-    'name' => '文章'
-    'e_name' => 'article'
-    'status' => '1'
+2018-01-24 16:39:18 [127.0.0.1][-][-][error][SmartyCompilerException]  --> Smarty Compiler: Syntax error in template "file:F:\xampp\htdocs\vueDemo\web\template\Default\PageList\Show\show.php"  on line 30 "<span>time：<em>{{time}}</em></span>" unknown tag "time" <-- 
+2018-01-24 16:39:18 [127.0.0.1][-][-][info][application] $_GET = [
+    'catId' => '103'
+    'id' => '2'
 ]
 
 $_COOKIE = [
     'advanced-backend' => '2erofuii50u748a6t8vug5si2n'
     'Hm_lvt_1873856b1a96138cdd16521be8a1dc50' => '1516755530'
-    'Hm_lpvt_1873856b1a96138cdd16521be8a1dc50' => '1516757537'
-]
-
-$_SESSION = [
-    '__flash' => []
-    '__id' => 5
+    'Hm_lpvt_1873856b1a96138cdd16521be8a1dc50' => '1516781817'
 ]
 
 $_SERVER = [
@@ -903,16 +542,11 @@ $_SERVER = [
     'TMP' => '\\xampp\\tmp'
     'HTTP_HOST' => 'vuedemo.com'
     'HTTP_CONNECTION' => 'keep-alive'
-    'CONTENT_LENGTH' => '47'
-    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
-    'HTTP_ORIGIN' => 'http://vuedemo.com'
-    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_ACCEPT' => 'text/plain'
     'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36'
-    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
-    'HTTP_REFERER' => 'http://vuedemo.com/admin/model/model-list'
     'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
     'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
-    'HTTP_COOKIE' => 'advanced-backend=2erofuii50u748a6t8vug5si2n; Hm_lvt_1873856b1a96138cdd16521be8a1dc50=1516755530; Hm_lpvt_1873856b1a96138cdd16521be8a1dc50=1516757537'
+    'HTTP_COOKIE' => 'advanced-backend=2erofuii50u748a6t8vug5si2n; Hm_lvt_1873856b1a96138cdd16521be8a1dc50=1516755530; Hm_lpvt_1873856b1a96138cdd16521be8a1dc50=1516781817'
     'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;F:\\java\\bin;F:\\java\\jre\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;F:\\xampp\\php;F:\\Git\\cmd;F:\\Gow\\bin;C:\\Program Files\\nodejs\\;F:\\java/bin;F:\\java/jre/bin;F:\\python;‪F:\\cmder;F:\\xampp\\php;C:\\Users\\Admin\\AppData\\Roaming\\npm;C:\\Users\\Admin\\AppData\\Local\\Microsoft\\WindowsApps;F:\\cmder;'
     'SystemRoot' => 'C:\\WINDOWS'
     'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
@@ -930,79 +564,30 @@ $_SERVER = [
     'CONTEXT_PREFIX' => ''
     'CONTEXT_DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
     'SERVER_ADMIN' => 'postmaster@localhost'
-    'SCRIPT_FILENAME' => 'F:/xampp/htdocs/vueDemo/web/admin/index.php'
-    'REMOTE_PORT' => '37670'
-    'REDIRECT_URL' => '/admin/model/add-model'
+    'SCRIPT_FILENAME' => 'F:/xampp/htdocs/vueDemo/web/index.php'
+    'REMOTE_PORT' => '45268'
+    'REDIRECT_URL' => '/show'
+    'REDIRECT_QUERY_STRING' => 'catId=103&id=2'
     'GATEWAY_INTERFACE' => 'CGI/1.1'
     'SERVER_PROTOCOL' => 'HTTP/1.1'
-    'REQUEST_METHOD' => 'POST'
-    'QUERY_STRING' => ''
-    'REQUEST_URI' => '/admin/model/add-model'
-    'SCRIPT_NAME' => '/admin/index.php'
-    'PHP_SELF' => '/admin/index.php'
-    'REQUEST_TIME_FLOAT' => 1516778843.665
-    'REQUEST_TIME' => 1516778843
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'catId=103&id=2'
+    'REQUEST_URI' => '/show?catId=103&id=2'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1516783158.054
+    'REQUEST_TIME' => 1516783158
 ]
-2018-01-24 15:31:19 [127.0.0.1][5][2erofuii50u748a6t8vug5si2n][error][yii\db\Exception] PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'PRIMARY KEY,
-	`content` text default ""
-)' at line 2 in F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Command.php:842
-Stack trace:
-#0 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Command.php(842): PDOStatement->execute()
-#1 F:\xampp\htdocs\vueDemo\common\lib\Table.php(141): yii\db\Command->execute()
-#2 F:\xampp\htdocs\vueDemo\backend\controllers\ModelController.php(108): common\lib\Table::addTable('cms_article', Array)
-#3 [internal function]: backend\controllers\ModelController->actionAddModel()
-#4 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
-#5 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
-#6 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('add-model', Array)
-#7 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('model/add-model', Array)
-#8 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
-#9 F:\xampp\htdocs\vueDemo\web\admin\index.php(20): yii\base\Application->run()
-#10 {main}
-
-Next yii\db\Exception: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'PRIMARY KEY,
-	`content` text default ""
-)' at line 2
-The SQL being executed was: CREATE TABLE `cms_article_data` (
-	`id` PRIMARY KEY,
-	`content` text default ""
-) in F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Schema.php:636
-Stack trace:
-#0 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\db\Command.php(852): yii\db\Schema->convertException(Object(PDOException), 'CREATE TABLE `c...')
-#1 F:\xampp\htdocs\vueDemo\common\lib\Table.php(141): yii\db\Command->execute()
-#2 F:\xampp\htdocs\vueDemo\backend\controllers\ModelController.php(108): common\lib\Table::addTable('cms_article', Array)
-#3 [internal function]: backend\controllers\ModelController->actionAddModel()
-#4 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
-#5 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
-#6 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('add-model', Array)
-#7 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('model/add-model', Array)
-#8 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
-#9 F:\xampp\htdocs\vueDemo\web\admin\index.php(20): yii\base\Application->run()
-#10 {main}
-Additional Information:
-Array
-(
-    [0] => 42000
-    [1] => 1064
-    [2] => You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'PRIMARY KEY,
-	`content` text default ""
-)' at line 2
-)
-
-2018-01-24 15:31:18 [127.0.0.1][5][2erofuii50u748a6t8vug5si2n][info][application] $_POST = [
-    'name' => '文章'
-    'e_name' => 'article'
-    'status' => '1'
+2018-01-24 16:39:20 [127.0.0.1][-][-][error][SmartyCompilerException]  --> Smarty Compiler: Syntax error in template "file:F:\xampp\htdocs\vueDemo\web\template\Default\PageList\Show\show.php"  on line 30 "<span>time：<em>{{time}}</em></span>" unknown tag "time" <-- 
+2018-01-24 16:39:20 [127.0.0.1][-][-][info][application] $_GET = [
+    'catId' => '103'
+    'id' => '2'
 ]
 
 $_COOKIE = [
     'advanced-backend' => '2erofuii50u748a6t8vug5si2n'
     'Hm_lvt_1873856b1a96138cdd16521be8a1dc50' => '1516755530'
-    'Hm_lpvt_1873856b1a96138cdd16521be8a1dc50' => '1516757537'
-]
-
-$_SESSION = [
-    '__flash' => []
-    '__id' => 5
+    'Hm_lpvt_1873856b1a96138cdd16521be8a1dc50' => '1516781817'
 ]
 
 $_SERVER = [
@@ -1021,16 +606,14 @@ $_SERVER = [
     'TMP' => '\\xampp\\tmp'
     'HTTP_HOST' => 'vuedemo.com'
     'HTTP_CONNECTION' => 'keep-alive'
-    'CONTENT_LENGTH' => '47'
-    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
-    'HTTP_ORIGIN' => 'http://vuedemo.com'
-    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
     'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36'
-    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
-    'HTTP_REFERER' => 'http://vuedemo.com/admin/model/model-list'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://vuedemo.com/category/list?catId=103&modelId=105'
     'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
     'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
-    'HTTP_COOKIE' => 'advanced-backend=2erofuii50u748a6t8vug5si2n; Hm_lvt_1873856b1a96138cdd16521be8a1dc50=1516755530; Hm_lpvt_1873856b1a96138cdd16521be8a1dc50=1516757537'
+    'HTTP_COOKIE' => 'advanced-backend=2erofuii50u748a6t8vug5si2n; Hm_lvt_1873856b1a96138cdd16521be8a1dc50=1516755530; Hm_lpvt_1873856b1a96138cdd16521be8a1dc50=1516781817'
     'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;F:\\java\\bin;F:\\java\\jre\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;F:\\xampp\\php;F:\\Git\\cmd;F:\\Gow\\bin;C:\\Program Files\\nodejs\\;F:\\java/bin;F:\\java/jre/bin;F:\\python;‪F:\\cmder;F:\\xampp\\php;C:\\Users\\Admin\\AppData\\Roaming\\npm;C:\\Users\\Admin\\AppData\\Local\\Microsoft\\WindowsApps;F:\\cmder;'
     'SystemRoot' => 'C:\\WINDOWS'
     'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
@@ -1048,44 +631,30 @@ $_SERVER = [
     'CONTEXT_PREFIX' => ''
     'CONTEXT_DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
     'SERVER_ADMIN' => 'postmaster@localhost'
-    'SCRIPT_FILENAME' => 'F:/xampp/htdocs/vueDemo/web/admin/index.php'
-    'REMOTE_PORT' => '38204'
-    'REDIRECT_URL' => '/admin/model/add-model'
+    'SCRIPT_FILENAME' => 'F:/xampp/htdocs/vueDemo/web/index.php'
+    'REMOTE_PORT' => '45277'
+    'REDIRECT_URL' => '/show'
+    'REDIRECT_QUERY_STRING' => 'catId=103&id=2'
     'GATEWAY_INTERFACE' => 'CGI/1.1'
     'SERVER_PROTOCOL' => 'HTTP/1.1'
-    'REQUEST_METHOD' => 'POST'
-    'QUERY_STRING' => ''
-    'REQUEST_URI' => '/admin/model/add-model'
-    'SCRIPT_NAME' => '/admin/index.php'
-    'PHP_SELF' => '/admin/index.php'
-    'REQUEST_TIME_FLOAT' => 1516779078.794
-    'REQUEST_TIME' => 1516779078
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'catId=103&id=2'
+    'REQUEST_URI' => '/show?catId=103&id=2'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1516783160.321
+    'REQUEST_TIME' => 1516783160
 ]
-2018-01-24 15:33:41 [127.0.0.1][5][2erofuii50u748a6t8vug5si2n][error][ArgumentCountError] ArgumentCountError: Too few arguments to function common\lib\Mar::findOnex(), 1 passed in F:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php on line 177 and exactly 2 expected in F:\xampp\htdocs\vueDemo\common\lib\Mar.php:75
-Stack trace:
-#0 F:\xampp\htdocs\vueDemo\common\lib\sqlQuery.php(177): common\lib\Mar::findOnex('cms_article_dat...')
-#1 F:\xampp\htdocs\vueDemo\backend\controllers\ContentController.php(159): common\lib\sqlQuery::updateAssembleSql(Array, '105', '1')
-#2 [internal function]: backend\controllers\ContentController->actionEditContent()
-#3 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
-#4 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
-#5 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('edit-content', Array)
-#6 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('content/edit-co...', Array)
-#7 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
-#8 F:\xampp\htdocs\vueDemo\web\admin\index.php(20): yii\base\Application->run()
-#9 {main}
-2018-01-24 15:33:40 [127.0.0.1][5][2erofuii50u748a6t8vug5si2n][info][application] $_POST = [
-    'data' => '{\"modelId\":\"105\",\"catId\":\"103\",\"id\":\"1\",\"status\":\"1\",\"publish_time\":\"2018-01-24 15:33:40\",\"allow_comment\":\"1\",\"show_template\":\"show.php\",\"title\":\"撒出生地1\",\"keywords\":\"是否是我的\",\"thumb\":[\"\"],\"desc\":\"\",\"content\":\"<p>是否水电费1</p><!-- <span v-html=\\\"item.value\\\"></span> -->\"}'
+2018-01-24 16:39:21 [127.0.0.1][-][-][error][SmartyCompilerException]  --> Smarty Compiler: Syntax error in template "file:F:\xampp\htdocs\vueDemo\web\template\Default\PageList\Show\show.php"  on line 30 "<span>time：<em>{{time}}</em></span>" unknown tag "time" <-- 
+2018-01-24 16:39:20 [127.0.0.1][-][-][info][application] $_GET = [
+    'catId' => '103'
+    'id' => '2'
 ]
 
 $_COOKIE = [
     'advanced-backend' => '2erofuii50u748a6t8vug5si2n'
     'Hm_lvt_1873856b1a96138cdd16521be8a1dc50' => '1516755530'
-    'Hm_lpvt_1873856b1a96138cdd16521be8a1dc50' => '1516757537'
-]
-
-$_SESSION = [
-    '__flash' => []
-    '__id' => 5
+    'Hm_lpvt_1873856b1a96138cdd16521be8a1dc50' => '1516781817'
 ]
 
 $_SERVER = [
@@ -1104,16 +673,11 @@ $_SERVER = [
     'TMP' => '\\xampp\\tmp'
     'HTTP_HOST' => 'vuedemo.com'
     'HTTP_CONNECTION' => 'keep-alive'
-    'CONTENT_LENGTH' => '570'
-    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
-    'HTTP_ORIGIN' => 'http://vuedemo.com'
-    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_ACCEPT' => 'text/plain'
     'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36'
-    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
-    'HTTP_REFERER' => 'http://vuedemo.com/admin/content/edit-content?modelid=105&catid=103&id=1'
     'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
     'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
-    'HTTP_COOKIE' => 'advanced-backend=2erofuii50u748a6t8vug5si2n; Hm_lvt_1873856b1a96138cdd16521be8a1dc50=1516755530; Hm_lpvt_1873856b1a96138cdd16521be8a1dc50=1516757537'
+    'HTTP_COOKIE' => 'advanced-backend=2erofuii50u748a6t8vug5si2n; Hm_lvt_1873856b1a96138cdd16521be8a1dc50=1516755530; Hm_lpvt_1873856b1a96138cdd16521be8a1dc50=1516781817'
     'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;F:\\java\\bin;F:\\java\\jre\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;F:\\xampp\\php;F:\\Git\\cmd;F:\\Gow\\bin;C:\\Program Files\\nodejs\\;F:\\java/bin;F:\\java/jre/bin;F:\\python;‪F:\\cmder;F:\\xampp\\php;C:\\Users\\Admin\\AppData\\Roaming\\npm;C:\\Users\\Admin\\AppData\\Local\\Microsoft\\WindowsApps;F:\\cmder;'
     'SystemRoot' => 'C:\\WINDOWS'
     'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
@@ -1131,16 +695,187 @@ $_SERVER = [
     'CONTEXT_PREFIX' => ''
     'CONTEXT_DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
     'SERVER_ADMIN' => 'postmaster@localhost'
-    'SCRIPT_FILENAME' => 'F:/xampp/htdocs/vueDemo/web/admin/index.php'
-    'REMOTE_PORT' => '38459'
-    'REDIRECT_URL' => '/admin/content/edit-content'
+    'SCRIPT_FILENAME' => 'F:/xampp/htdocs/vueDemo/web/index.php'
+    'REMOTE_PORT' => '45278'
+    'REDIRECT_URL' => '/show'
+    'REDIRECT_QUERY_STRING' => 'catId=103&id=2'
     'GATEWAY_INTERFACE' => 'CGI/1.1'
     'SERVER_PROTOCOL' => 'HTTP/1.1'
-    'REQUEST_METHOD' => 'POST'
-    'QUERY_STRING' => ''
-    'REQUEST_URI' => '/admin/content/edit-content'
-    'SCRIPT_NAME' => '/admin/index.php'
-    'PHP_SELF' => '/admin/index.php'
-    'REQUEST_TIME_FLOAT' => 1516779220.377
-    'REQUEST_TIME' => 1516779220
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'catId=103&id=2'
+    'REQUEST_URI' => '/show?catId=103&id=2'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1516783160.751
+    'REQUEST_TIME' => 1516783160
+]
+2018-01-24 16:41:32 [127.0.0.1][-][-][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined index: title in F:\xampp\htdocs\vueDemo\web\runtime\Smarty\compile\d0a75cd59e8fb7d48d13a8a39c1cd7bd581984a2_0.file.show.php.php:30
+Stack trace:
+#0 F:\xampp\htdocs\vueDemo\vendor\smarty\smarty\libs\sysplugins\smarty_template_compiled.php(172): Smarty_Template_Compiled->getRenderedTemplateCode()
+#1 F:\xampp\htdocs\vueDemo\vendor\smarty\smarty\libs\sysplugins\smarty_internal_template.php(206): Smarty_Template_Compiled->render()
+#2 F:\xampp\htdocs\vueDemo\vendor\smarty\smarty\libs\sysplugins\smarty_internal_templatebase.php(216): Smarty_Internal_Template->render()
+#3 F:\xampp\htdocs\vueDemo\vendor\smarty\smarty\libs\sysplugins\smarty_internal_templatebase.php(107): Smarty_Internal_Template->_execute()
+#4 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2-smarty\ViewRenderer.php(254): Smarty_Internal_Template->fetch()
+#5 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\View.php(248): yii\smarty\ViewRenderer->render()
+#6 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\View.php(152): yii\web\View->renderFile()
+#7 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(381): yii\web\View->render()
+#8 F:\xampp\htdocs\vueDemo\frontend\controllers\ShowController.php(27): frontend\controllers\ShowController->render()
+#9 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php(57): frontend\controllers\ShowController->actionIndex()
+#10 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php(57): ::call_user_func_array:{F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php:57}()
+#11 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams()
+#12 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(523): frontend\controllers\ShowController->runAction()
+#13 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php(102): yii\web\Application->runAction()
+#14 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest()
+#15 F:\xampp\htdocs\vueDemo\web\index.php(23): yii\web\Application->run()
+#16 {main}
+2018-01-24 16:41:32 [127.0.0.1][-][-][info][application] $_GET = [
+    'catId' => '103'
+    'id' => '2'
+]
+
+$_COOKIE = [
+    'advanced-backend' => '2erofuii50u748a6t8vug5si2n'
+    'Hm_lvt_1873856b1a96138cdd16521be8a1dc50' => '1516755530'
+    'Hm_lpvt_1873856b1a96138cdd16521be8a1dc50' => '1516781817'
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'vuedemo.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://vuedemo.com/category/list?catId=103&modelId=105'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'advanced-backend=2erofuii50u748a6t8vug5si2n; Hm_lvt_1873856b1a96138cdd16521be8a1dc50=1516755530; Hm_lpvt_1873856b1a96138cdd16521be8a1dc50=1516781817'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;F:\\java\\bin;F:\\java\\jre\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;F:\\xampp\\php;F:\\Git\\cmd;F:\\Gow\\bin;C:\\Program Files\\nodejs\\;F:\\java/bin;F:\\java/jre/bin;F:\\python;‪F:\\cmder;F:\\xampp\\php;C:\\Users\\Admin\\AppData\\Roaming\\npm;C:\\Users\\Admin\\AppData\\Local\\Microsoft\\WindowsApps;F:\\cmder;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1 Server at vuedemo.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1'
+    'SERVER_NAME' => 'vuedemo.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'F:/xampp/htdocs/vueDemo/web/index.php'
+    'REMOTE_PORT' => '45482'
+    'REDIRECT_URL' => '/show'
+    'REDIRECT_QUERY_STRING' => 'catId=103&id=2'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'catId=103&id=2'
+    'REQUEST_URI' => '/show?catId=103&id=2'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1516783292.095
+    'REQUEST_TIME' => 1516783292
+]
+2018-01-24 16:41:56 [127.0.0.1][-][-][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined index: keywords in F:\xampp\htdocs\vueDemo\web\runtime\Smarty\compile\d0a75cd59e8fb7d48d13a8a39c1cd7bd581984a2_0.file.show.php.php:32
+Stack trace:
+#0 F:\xampp\htdocs\vueDemo\vendor\smarty\smarty\libs\sysplugins\smarty_template_compiled.php(172): Smarty_Template_Compiled->getRenderedTemplateCode()
+#1 F:\xampp\htdocs\vueDemo\vendor\smarty\smarty\libs\sysplugins\smarty_internal_template.php(206): Smarty_Template_Compiled->render()
+#2 F:\xampp\htdocs\vueDemo\vendor\smarty\smarty\libs\sysplugins\smarty_internal_templatebase.php(216): Smarty_Internal_Template->render()
+#3 F:\xampp\htdocs\vueDemo\vendor\smarty\smarty\libs\sysplugins\smarty_internal_templatebase.php(107): Smarty_Internal_Template->_execute()
+#4 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2-smarty\ViewRenderer.php(254): Smarty_Internal_Template->fetch()
+#5 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\View.php(248): yii\smarty\ViewRenderer->render()
+#6 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\View.php(152): yii\web\View->renderFile()
+#7 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(381): yii\web\View->render()
+#8 F:\xampp\htdocs\vueDemo\frontend\controllers\ShowController.php(27): frontend\controllers\ShowController->render()
+#9 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php(57): frontend\controllers\ShowController->actionIndex()
+#10 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php(57): ::call_user_func_array:{F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\InlineAction.php:57}()
+#11 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams()
+#12 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Module.php(523): frontend\controllers\ShowController->runAction()
+#13 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\web\Application.php(102): yii\web\Application->runAction()
+#14 F:\xampp\htdocs\vueDemo\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest()
+#15 F:\xampp\htdocs\vueDemo\web\index.php(23): yii\web\Application->run()
+#16 {main}
+2018-01-24 16:41:56 [127.0.0.1][-][-][info][application] $_GET = [
+    'catId' => '103'
+    'id' => '2'
+]
+
+$_COOKIE = [
+    'advanced-backend' => '2erofuii50u748a6t8vug5si2n'
+    'Hm_lvt_1873856b1a96138cdd16521be8a1dc50' => '1516755530'
+    'Hm_lpvt_1873856b1a96138cdd16521be8a1dc50' => '1516781817'
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'F:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'F:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'vuedemo.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://vuedemo.com/category/list?catId=103&modelId=105'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'advanced-backend=2erofuii50u748a6t8vug5si2n; Hm_lvt_1873856b1a96138cdd16521be8a1dc50=1516755530; Hm_lpvt_1873856b1a96138cdd16521be8a1dc50=1516781817'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;F:\\java\\bin;F:\\java\\jre\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;F:\\xampp\\php;F:\\Git\\cmd;F:\\Gow\\bin;C:\\Program Files\\nodejs\\;F:\\java/bin;F:\\java/jre/bin;F:\\python;‪F:\\cmder;F:\\xampp\\php;C:\\Users\\Admin\\AppData\\Roaming\\npm;C:\\Users\\Admin\\AppData\\Local\\Microsoft\\WindowsApps;F:\\cmder;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1 Server at vuedemo.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1'
+    'SERVER_NAME' => 'vuedemo.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/xampp/htdocs/vueDemo/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'F:/xampp/htdocs/vueDemo/web/index.php'
+    'REMOTE_PORT' => '45523'
+    'REDIRECT_URL' => '/show'
+    'REDIRECT_QUERY_STRING' => 'catId=103&id=2'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'catId=103&id=2'
+    'REQUEST_URI' => '/show?catId=103&id=2'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1516783316.55
+    'REQUEST_TIME' => 1516783316
 ]
