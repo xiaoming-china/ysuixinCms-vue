@@ -71,12 +71,6 @@ class ContentController extends AdminBaseController{
      * @return           [type]      [description]
      */
     public function actionAddContent(){
-        //p(new Category());
-        // $user = new Mar('cms_article');
-        // $user->category_id = 102;
-        // $user->title       = 'tttt';
-        // $rs = $user->save();
-        // p($rs);
         $this->layout = false;
         $r = Yii::$app->request;
         try {

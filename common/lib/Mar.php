@@ -113,9 +113,12 @@ class Mar extends ActiveRecord
     public function afterSave($insert,$changedAttributes) {
          if($this->type == 1 && $insert){
             $this->url = '/content/show?catId='.$this->category_id.'&id='.$this->id;
-            $this->save();
-            return true;
+            $rs = $this->save();
+            if($rs){
+                return true;
+            }
+            return false;
          }
-        return false;
+         return true;
     }
 }

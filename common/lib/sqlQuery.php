@@ -65,7 +65,14 @@ class sqlQuery extends BaseModel{
         $data['count'] = $sql->count();
         return $data;
 	}
-	//组装数据插入sql
+	/**
+     * [assembleSql 组装数据插入sql]
+     * @author:xiaoming
+     * @date:2018-01-24T14:43:26+0800
+     * @param                         [type] $data    [description]
+     * @param                         string $modelid [description]
+     * @return                        [type]          [description]
+     */
     public static function assembleSql($data = [],$modelid = ''){
         if(empty($data) || $modelid == ''){
             return false;
@@ -79,56 +86,32 @@ class sqlQuery extends BaseModel{
             BaseModel::E('模型数据异常');
         }
         $table_name = Yii::$app->params['tablePrefix'].$model_info->e_name;
-       //p(Yii::$app->db->createCommand()->insert($table_name, $data)->getRawSql());
-        //判断字段属于主表还是副表
-        $model = new Mar($table_name);
+        $model = new Mar($table_name);//主表模型
         $model->type = 1;
-        $basic = $table_data = [];
+        //判断字段属于主表还是副表
         foreach ($data as $k => $v){
             if(Table::checkColumn($model_info->e_name,$k)){
                 $model->$k = $v;
-                // $basic[$k] = $v;
-            }else{
-                $table_data[$k] = $v;
             }
         }
-        $rs = $model->save();
+        $rs  = $model->save();//保存主表数据
+        if(!$rs){
+            return false;
+        }else{
+            $model1 = new Mar($table_name.Table::TABLE_DATA_PREFIX);//副表模型
+            $model1->type = 2;
+            foreach ($data as $k => $v){
+                if(!Table::checkColumn($model_info->e_name,$k)){
+                    $model1->$k = $v;
+                }
+            }
+            $model1->id = $model->id;
+            $rs1 = $model1->save();//保存副表数据
+            if(!$rs1){
+                return false;
+            }
+        }
         return true;
-        p($rs);
-        //插入主表数据
-        if(!empty($basic)){
-            $rs = Yii::$app->db->createCommand()->insert($table_name, $basic)->execute();
-            if(!$rs){
-                return false;
-            }
-        }
-        //插入副表数据
-        if(!empty($table_data)){
-
-            $table_data['id'] = Yii::$app->db->getLastInsertID();
-            $rs = Yii::$app->db->createCommand()
-                           ->insert($table_name.Table::TABLE_DATA_PREFIX, $table_data)
-                           ->execute();
-            if(!$rs){
-                return false;
-            }
-        }
-
-        //更新主表url
-        if(isset($table_data['id']) && $table_data['id'] != ''){
-            $update_data['url'] = '/show?id='.$table_data['id'];
-            // p(Yii::$app->db->createCommand()
-            //                       ->update($table_name, ['id' => $table_data['id']], $update_data)
-            //                       ->getRawSql());
-            $update_rs = Yii::$app->db->createCommand()
-                                  ->update($table_name, ['id' => $table_data['id']], $update_data)
-                                  ->execute();
-            // p($update_rs);
-            // if(!$update_rs){
-            //     return false;
-            // }   
-        }
-        return $table_data['id'];
     }
     /**
      * [getContent 查询数据]
@@ -165,9 +148,17 @@ class sqlQuery extends BaseModel{
         $rs = $sql->one();
         return $rs;
     }
-    //组装数据更新sql
+    /**
+     * [updateAssembleSql 组装数据更新sql]
+     * @author:xiaoming
+     * @date:2018-01-24T15:35:41+0800
+     * @param                         [type] $data    [description]
+     * @param                         string $modelid [description]
+     * @param                         string $id      [description]
+     * @return                        [type]          [description]
+     */
     public static function updateAssembleSql($data = [],$modelid = '',$id = ''){
-        if(empty($data) || $modelid == ''||$id == ''){
+        if(empty($data) || $modelid == ''|| $id == ''){
             return false;
         }
         $data['update_at']     = time();
@@ -178,30 +169,28 @@ class sqlQuery extends BaseModel{
             BaseModel::E('模型数据异常');
         }
         $table_name = Yii::$app->params['tablePrefix'].$model_info->e_name;
+
+        $model = Mar::findOnex($table_name, $id);//主表模型
+        $model->type = 1;
         //判断字段属于主表还是副表
-        $basic = $table_data = [];
         foreach ($data as $k => $v){
             if(Table::checkColumn($model_info->e_name,$k)){
-                $basic[$k] = $v;
-            }else{
-                $table_data[$k] = $v;
+                $model->$k = $v;
             }
         }
-        //p(Yii::$app->db->createCommand()->update($table_name, $basic, 'id = '.$id)->getRawSql());
-        //插入主表数据
-        if(!empty($basic)){
-            $rs = Yii::$app->db->createCommand()->update(
-                $table_name, 
-                $basic, 
-                'id = '.$id)->execute();
-            if(!$rs){
-                return false;
+        $rs  = $model->save();//保存主表数据
+        if(!$rs){
+            return false;
+        }else{
+            $model1 = Mar::findOnex($table_name.Table::TABLE_DATA_PREFIX, $id);//副表模型
+            $model1->type = 2;
+            foreach ($data as $k => $v){
+                if(!Table::checkColumn($model_info->e_name,$k)){
+                    $model1->$k = $v;
+                }
             }
-        }
-        //插入副表数据
-        if(!empty($table_data)){
-          $rs = Yii::$app->db->createCommand()->update($table_name.Table::TABLE_DATA_PREFIX, $table_data, 'id = '.$id)->execute();
-            if(!$rs){
+            $rs1 = $model1->save();//保存副表数据
+            if(!$rs1){
                 return false;
             }
         }

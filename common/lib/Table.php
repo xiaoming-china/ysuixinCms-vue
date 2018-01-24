@@ -37,7 +37,7 @@ class Table extends BaseModel{
 		];
         //副表
         const TABLE_DATA = [
-            'id'          =>'integer(11) default 0',
+            'id'          =>'int PRIMARY KEY',
             'content'     =>'text default ""',
         ];
 		//字段类型
