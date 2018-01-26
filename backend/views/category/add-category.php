@@ -193,7 +193,7 @@
           return {
               categoryInfo: {
                 catname: '',
-                type:1,
+                type:"1",
                 modelid: '',
                 parentid:"0",
                 image: '',
