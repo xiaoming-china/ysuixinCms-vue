@@ -11,7 +11,8 @@
     <script src="/public/admin/js/jquery.nicescroll.js"></script>
     <script src="/public/admin/js/main.js"></script>
     <script src="/public/admin/js/menu.js"></script>
-    <script src="http://vuejs.org/js/vue.min.js"></script>
+    <!-- <script src="http://vuejs.org/js/vue.min.js"></script> -->
+    <script src="https://cdn.bootcss.com/vue/2.5.13/vue.min.js"></script>
     <script src="http://unpkg.com/iview/dist/iview.min.js"></script>
     <script src="/public/admin/js/jquery.ztree.core.js"></script>
 </head>
